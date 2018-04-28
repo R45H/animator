@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'FontAwesome';
+	src: url($path + 'fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
+	src: url($path + 'fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+		url($path + 'fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+		url($path + 'fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+		url($path + 'fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+		url($path + 'fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* HelveticaNeueCyr */
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: url($path + 'fonts/helveticaneuecyr/roman/helveticaneuecyr-roman.eot');
+	src: url($path + 'fonts/helveticaneuecyr/roman/helveticaneuecyr-roman.woff2') format('woff2'),
+		url($path + 'fonts/helveticaneuecyr/roman/helveticaneuecyr-roman.woff') format('woff'),
+		url($path + 'fonts/helveticaneuecyr/roman/helveticaneuecyr-roman.ttf') format('truetype'),
+		url($path + 'fonts/helveticaneuecyr/roman/helveticaneuecyr-roman.svg#helveticaneuecyr-roman') format('svg'),
+		url($path + 'fonts/helveticaneuecyr/roman/helveticaneuecyr-roman.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: url($path + 'fonts/helveticaneuecyr/italic/helveticaneuecyr-italic.eot');
+	src: url($path + 'fonts/helveticaneuecyr/italic/helveticaneuecyr-italic.woff2') format('woff2'),
+		url($path + 'fonts/helveticaneuecyr/italic/helveticaneuecyr-italic.woff') format('woff'),
+		url($path + 'fonts/helveticaneuecyr/italic/helveticaneuecyr-italic.ttf') format('truetype'),
+		url($path + 'fonts/helveticaneuecyr/italic/helveticaneuecyr-italic.svg#helveticaneuecyr-italic') format('svg'),
+		url($path + 'fonts/helveticaneuecyr/italic/helveticaneuecyr-italic.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: url($path + 'fonts/helveticaneuecyr/light/helveticaneuecyr-light.eot');
+	src: url($path + 'fonts/helveticaneuecyr/light/helveticaneuecyr-light.woff2') format('woff2'),
+		url($path + 'fonts/helveticaneuecyr/light/helveticaneuecyr-light.woff') format('woff'),
+		url($path + 'fonts/helveticaneuecyr/light/helveticaneuecyr-light.ttf') format('truetype'),
+		url($path + 'fonts/helveticaneuecyr/light/helveticaneuecyr-light.svg#helveticaneuecyr-light') format('svg'),
+		url($path + 'fonts/helveticaneuecyr/light/helveticaneuecyr-light.eot?#iefix') format('embedded-opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: url($path + 'fonts/helveticaneuecyr/lightitalic/helveticaneuecyr-lightitalic.eot');
+	src: url($path + 'fonts/helveticaneuecyr/lightitalic/helveticaneuecyr-lightitalic.woff2') format('woff2'),
+		url($path + 'fonts/helveticaneuecyr/lightitalic/helveticaneuecyr-lightitalic.woff') format('woff'),
+		url($path + 'fonts/helveticaneuecyr/lightitalic/helveticaneuecyr-lightitalic.ttf') format('truetype'),
+		url($path + 'fonts/helveticaneuecyr/lightitalic/helveticaneuecyr-lightitalic.svg#helveticaneuecyr-lightitalic') format('svg'),
+		url($path + 'fonts/helveticaneuecyr/lightitalic/helveticaneuecyr-lightitalic.eot?#iefix') format('embedded-opentype');
+	font-weight: 300;
+	font-style: italic;
+}
+/* ========== */
