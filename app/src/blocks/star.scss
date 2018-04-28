@@ -1,0 +1,39 @@
+$name: star;
+
+.#{$name} {
+	@extend %transition;
+	color: $color-main;
+	stroke: $color-main;
+	fill: transparent;
+	width: 25px;
+	cursor: pointer;
+	font-size: 10px;
+	text-align: center;
+	user-select: none;
+
+	&:hover {
+		color: $color-second;
+		fill: $color-second;
+		stroke: $color-second;
+	}
+
+	&:active {
+		color: $color-second-active;
+		fill: $color-second-active;
+		stroke: $color-second-active;
+	}
+
+	&__icon {
+		height: 23px;
+		display: block;
+	}
+
+	&__num {
+		display: block;
+		margin-top: 3px;
+	}
+
+	&_fill {
+		fill: $color-main;
+	}
+}

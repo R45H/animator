@@ -1,0 +1,8 @@
+include ../mixins/svg
+
+mixin star(num)
+	.star(class= num ? 'star_fill' : '')
+		+svg('star', 'star__icon')
+
+		if (num)
+			span.star__num= num

@@ -1,3 +1,5 @@
+include ../mixins/star
+
 .container
 	.row.main__separator
 		.col-2
@@ -24,3 +26,9 @@
 			.btn.btn_fill .btn.btn_fill
 		.col-3
 			.btn.btn_wide .btn.btn_wide
+
+	.row.main__separator
+		.col-1
+			+star
+		.col-1
+			+star(999)
