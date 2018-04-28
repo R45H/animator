@@ -1,0 +1,55 @@
+$name: btn;
+
+.#{$name} {
+	@extend %transition;
+	display: inline-block;
+	position: relative;
+	font-family: $font-main;
+	font-size: 15px;
+	font-weight: normal;
+	color: $color-main;
+	border: 1px solid;
+	border-radius: 3px;
+	background-color: transparent;
+	text-align: center;
+	cursor: pointer;
+	line-height: 1.2;
+	outline: none;
+	padding: 10px 40px;
+	word-break: break-word;
+
+	&:hover {
+		color: $color-second;
+		fill: $color-second;
+	}
+
+	&:active {
+		color: $color-second-active;
+		fill: $color-second-active;
+	}
+
+	&_fill {
+		color: white;
+		border-color: $color-main;
+		background: $color-main;
+
+		&:hover {
+			color: white;
+			fill: white;
+			border-color: $color-second;
+			background-color: $color-second;
+		}
+
+		&:active {
+			color: white;
+			fill: white;
+			border-color: $color-second-active;
+			background-color: $color-second-active;
+		}
+	}
+
+	&_wide {
+		display: block;
+		width: 100%;
+	}
+}

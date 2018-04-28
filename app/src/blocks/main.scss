@@ -2,4 +2,14 @@ $name: main;
 
 .#{$name} {
 	flex: 1 0 auto;
+
+	&__separator {
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $color-text;
+
+		&:first-child {
+			margin-top: 30px;
+		}
+	}
 }
