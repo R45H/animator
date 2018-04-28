@@ -73,14 +73,18 @@ a {
 
 	&:not([class]),
 	&[class=''] {
+		@extend %transition;
 		color: $color-text;
 		border-bottom: 1px solid $color-text;
-		transition: $duration / 2 linear;
 
 		&:hover {
+			color: $color-second;
+			border-bottom-color: $color-second;
+		}
+
+		&:active {
 			color: $color-second-active;
 			border-bottom-color: $color-second-active;
-			transition: none;
 		}
 	}
 }
