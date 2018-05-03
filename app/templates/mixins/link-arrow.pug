@@ -1,0 +1,18 @@
+include svg
+
+mixin link-arrow(data)
+	a.link-arrow(
+		class= data.dir == 'left' ? 'link-arrow_left' : ''
+		class= data.disabled ? 'link-arrow_disabled' : ''
+		class= attributes.class
+		href= data.href
+	)
+
+		if data.dir == 'left'
+			+svg('arrow-right', 'link-arrow__icon')
+
+		span.link-arrow__text
+			block
+
+		if data.dir != 'left'
+			+svg('arrow-right', 'link-arrow__icon')

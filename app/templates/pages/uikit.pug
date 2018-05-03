@@ -2,6 +2,7 @@ include ../mixins/star
 include ../mixins/select
 include ../components/social
 include ../mixins/news
+include ../mixins/link-arrow
 
 .container
 	.row.main__separator
@@ -47,5 +48,21 @@ include ../mixins/news
 	.row.main__separator
 		.col-10.offset-sm-1.main__space-col
 			+news(news[0])(class='news_arrow')
-		.col-10.offset-sm-1.main__space-col
+		.col-10.offset-sm-1
 			+news(news[1])
+
+	.row.main__separator
+		.col-4
+			+link-arrow({
+				href: '#'
+			}) .link-arrow
+		.col-4
+			+link-arrow({
+				href: '#',
+				dir: 'left'
+			}) .link-arrow.link-arrow_left
+		.col-4
+			+link-arrow({
+				href: '#',
+				disabled: true
+			}) .link-arrow.link-arrow_disabled
