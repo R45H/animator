@@ -1,6 +1,7 @@
 include ../mixins/star
 include ../mixins/select
 include ../components/social
+include ../mixins/news
 
 .container
 	.row.main__separator
@@ -42,3 +43,9 @@ include ../components/social
 	.row.main__separator
 		.col-2
 			+social(social)
+
+	.row.main__separator
+		.col-10.offset-sm-1.main__space-col
+			+news(news[0])(class='news_arrow')
+		.col-10.offset-sm-1.main__space-col
+			+news(news[1])

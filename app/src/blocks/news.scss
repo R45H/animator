@@ -1,0 +1,182 @@
+$name: news;
+$transition: $duration linear;
+
+.#{$name} {
+	display: block;
+	border: 1px solid $color-light;
+	border-radius: 3px;
+	overflow: hidden;
+	padding: 20px;
+	position: relative;
+	transition: $transition;
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: no-repeat center / cover;
+		z-index: -1;
+		opacity: 0;
+		transition: $transition;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $color-fog;
+			opacity: .7;
+		}
+	}
+
+	&__icon {
+		width: 45px;
+		height: 45px;
+		fill: $color-third;
+		margin-bottom: 10px;
+		transition: $transition;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		display: block;
+		position: relative;
+		bottom: 0;
+		transition: $transition;
+	}
+
+	&__date {
+		font-size: 11px;
+		display: flex;
+		align-items: center;
+		height: 12px;
+		opacity: 1;
+		margin-bottom: 10px;
+		transition: $transition;
+	}
+
+	&__date-img {
+		width: 12px;
+		height: 12px;
+		margin-right: 7px;
+		fill: $color-text;
+		transition: $transition;
+	}
+
+	&__date-text {
+
+	}
+
+	&__text {
+		position: relative;
+		top: 0;
+		transition: $transition;
+	}
+
+	&__arrow {
+		display: none;
+
+		@include screen-sm() {
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 0;
+			height: 100%;
+			right: 0;
+			width: 70px;
+			fill: $color-light;
+			transition: $transition;
+		}
+	}
+
+	&__arrow-icon {
+
+		@include screen-sm() {
+			transform: rotate(-90deg);
+			width: 25px;
+		}
+	}
+
+	&_arrow {
+
+		@include screen-sm() {
+			padding-right: 70px;
+		}
+
+		.#{$name} {
+			// =====
+
+			&__arrow {
+
+				@include screen-sm() {
+					display: flex;
+				}
+			}
+		}
+	}
+}
+
+a.#{$name} {
+
+	&:hover {
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				opacity: 1;
+			}
+
+			&__title,
+			&__text,
+			&__date {
+				color: white;
+			}
+
+			&__date-img,
+			&__arrow,
+			&__icon {
+				fill: white;
+			}
+		}
+	}
+
+	&_hidden-date {
+
+		.#{$name} {
+			// =====
+
+			&__title {
+				margin-bottom: 0;
+			}
+
+			&__date {
+				margin: 3px 0;
+				opacity: 0;
+			}
+		}
+
+		&:hover {
+
+			.#{$name} {
+				// =====
+
+				&__date {
+					opacity: 1;
+				}
+
+				&__title {
+					bottom: 6px;
+				}
+
+				&__text {
+					top: 6px;
+				}
+			}
+		}
+	}
+}
