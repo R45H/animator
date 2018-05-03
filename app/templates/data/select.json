@@ -1,0 +1,12 @@
+{
+	"select": [
+		{
+			"value": "city-msc",
+			"text": "Москва"
+		},
+		{
+			"value": "city-spb",
+			"text": "Санкт-Петербург"
+		}
+	]
+}

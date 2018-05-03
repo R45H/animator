@@ -1,0 +1,116 @@
+$name: select;
+
+.#{$name} {
+
+	&__current {
+		@extend .btn;
+		fill: $color-main;
+		outline: none;
+		padding-left: 20px;
+		padding-right: 51px;
+		margin: 0;
+		appearance: none;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 20px;
+			right: 20px;
+			height: 1px;
+			background: lighten($color-main, 30%);
+			display: none;
+		}
+
+		&_active {
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+			border-bottom-color: transparent;
+
+			&::before {
+				display: block;
+			}
+
+			&:hover {
+				color: $color-main;
+				fill: $color-main;
+			}
+
+			.#{$name} {
+				// =====
+
+				&__icon {
+					transform: translateY(-50%) rotate(180deg);
+				}
+			}
+		}
+
+		&.ui-button {
+			width: auto;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		width: 11px;
+		height: 6px;
+		transform: translateY(-50%);
+		transition: transform $duration / 2 ease;
+	}
+
+	&__text {
+		margin: 0;
+	}
+
+	&__list {
+		z-index: 10;
+		border: 0;
+
+		.ui-menu {
+			list-style-type: none;
+			padding: 0;
+			margin: -1px 0 0;
+			color: $color-main;
+			border: 1px solid;
+			border-top: none;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			max-height: 20em;
+			position: relative;
+			outline: none;
+		}
+
+		.ui-menu-item {
+
+			&:first-child {
+
+				.ui-menu-item-wrapper {
+					padding-top: 10px;
+				}
+			}
+
+			&:last-child {
+
+				.ui-menu-item-wrapper {
+					padding-bottom: 10px;
+				}
+			}
+		}
+
+		.ui-menu-item-wrapper {
+			@extend %transition;
+			cursor: pointer;
+			padding: 5px 20px;
+
+			&.ui-state-active {
+				color: $color-second;
+			}
+
+			&:active {
+				color: $color-second-active;
+			}
+		}
+	}
+}
