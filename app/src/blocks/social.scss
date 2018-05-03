@@ -1,0 +1,66 @@
+$name: social;
+
+.#{$name} {
+	display: inline-block;
+
+	&__wrap {
+		margin: -5px;
+	}
+
+	&__link {
+		@extend %transition;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: $color-main;
+		border: 1px solid;
+		border-radius: 2px;
+		font-size: 19px;
+		width: 30px;
+		height: 30px;
+		margin: 5px;
+
+		&:hover {
+			color: $color-second;
+		}
+
+		&:active {
+			color: $color-second-active;
+		}
+
+		&_vk {
+
+			&:hover {
+				color: white;
+				background-color: $color-vk;
+				border-color: $color-vk;
+			}
+
+			&:active {
+				color: white;
+				background-color: darken($color-vk, 10%);
+				border-color: darken($color-vk, 10%);
+			}
+		}
+
+		&_facebook {
+
+			&:hover {
+				color: white;
+				background-color: $color-fb;
+				border-color: $color-fb;
+			}
+
+			&:active {
+				color: white;
+				background-color: darken($color-fb, 10%);
+				border-color: darken($color-fb, 10%);
+			}
+		}
+	}
+
+	&__icon {
+		width: 100%;
+		height: 100%;
+	}
+}
