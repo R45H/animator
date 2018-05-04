@@ -3,7 +3,7 @@ $name: link-arrow;
 .#{$name} {
 	@extend %transition;
 	display: inline-flex;
-	align-items: center;
+	align-items: baseline;
 	color: $color-text;
 	fill: currentColor;
 
@@ -19,6 +19,7 @@ $name: link-arrow;
 		width: 2em;
 		height: .8em;
 		margin-left: .7em;
+		align-self: center;
 	}
 
 	&__text {
