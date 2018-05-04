@@ -1,0 +1,57 @@
+$name: link-line;
+
+.#{$name} {
+	@extend %transition;
+	display: inline-block;
+	position: relative;
+	padding: 0 1rem;
+	line-height: 1.8;
+
+	&::before,
+	&::after {
+		transition: $duration / 2 ease;
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: .25em;
+		background: no-repeat left / auto 100%;
+		border-top-right-radius: 50%;
+		border-bottom-right-radius: 50%;
+		opacity: 0;
+	}
+
+	&::before {
+		background-image: url($path + 'img/icons/line-hover.svg');
+	}
+
+	&::after {
+		background-image: url($path + 'img/icons/line-active.svg');
+	}
+
+	&:hover {
+		color: $color-second;
+
+		&::before {
+			opacity: 1;
+		}
+
+		&::after {
+			transition: none;
+		}
+	}
+
+	&:active {
+		color: $color-second-active;
+
+		&::before {
+			transition: none;
+		}
+
+		&::after {
+			transition: none;
+			opacity: 1;
+		}
+	}
+}
