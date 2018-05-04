@@ -1,5 +1,6 @@
-mixin select(data)
-	select.select
+mixin select(data, opts)
+	.select(class= opts && opts.wide ? 'select_wide' : '')
+		select.select__origin
 
-		each val in data
-			option(value= val.value)= val.text
+			each val in data
+				option(value= val.value)= val.text

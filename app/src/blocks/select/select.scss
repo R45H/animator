@@ -1,6 +1,7 @@
 $name: select;
 
 .#{$name} {
+	display: inline-block;
 
 	&__current {
 		@extend .btn;
@@ -110,6 +111,17 @@ $name: select;
 
 			&:active {
 				color: $color-second-active;
+			}
+		}
+	}
+
+	&_wide {
+		display: block;
+
+		.#{$name} {
+
+			&__current {
+				width: 100%;
 			}
 		}
 	}
