@@ -3,6 +3,7 @@ include ../mixins/select
 include ../components/social
 include ../mixins/news
 include ../mixins/link-arrow
+include ../mixins/logo
 
 .container
 	.row.main__separator
@@ -66,3 +67,11 @@ include ../mixins/link-arrow
 				href: '#',
 				disabled: true
 			}) .link-arrow.link-arrow_disabled
+
+	.row.main__separator
+		.col-6
+			+logo()
+		.col-6
+			+logo({
+				link: false
+			})

@@ -1,0 +1,14 @@
+include global
+
+mixin logo(data)
+
+	+tag((data && data.link === false) ? '' : 'a')(
+		class='logo'
+		class= attributes.class
+		href= global[0].link_home
+	)
+		img.logo__img(
+			src='img/logo.svg'
+			alt= global[0].name
+			title= global[0].name
+		)
