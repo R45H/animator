@@ -1,0 +1,43 @@
+$name: wrapper;
+
+.#{$name} {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	&_home {
+
+		@include screen-lg() {
+			overflow: auto;
+		}
+
+		&::before,
+		&::after {
+
+			@include screen-lg() {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 50%;
+				height: 100%;
+				z-index: -1;
+			}
+		}
+
+		&::after {
+
+			@include screen-lg() {
+				background: rgba($color-fourth, .8);
+			}
+		}
+
+		&::before {
+
+			@include screen-lg() {
+				filter: grayscale(1);
+				background: url($path + 'img/content/greet.jpg') no-repeat center / cover;
+			}
+		}
+	}
+}

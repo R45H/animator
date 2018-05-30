@@ -1,2 +1,17 @@
+include ../mixins/webc
+include ../components/social
+
 // FOOTER
-footer.footer
+footer.footer(class= page.isHome ? 'footer_home' : '')
+	.container.footer__wrap
+
+		.footer__social-wrap
+			+social(social)
+
+		.footer__text-wrap
+
+			.footer__text-col
+				div © animator-city.ru, 2018
+
+			.footer__text-col
+				+webc

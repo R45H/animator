@@ -1,2 +1,25 @@
+include ../mixins/star
+include ../mixins/select
+include ../mixins/logo
+
 // HEADER
-header.header
+header.header(class= page.isHome ? 'header_home' : '')
+	.container.header__wrap
+		.header__row
+			
+			.header__col
+				.header__logo-wrap
+					+logo({
+						link: !page.isHome
+					})
+				
+			.header__col
+				.header__btns-wrap
+					.header__btns-col.header__btns-col_fixed
+						+star(999)
+					.header__btns-col.header__btns-col_grow
+						+select(select, {
+							wide: true
+						})
+					.header__btns-col
+						a.btn.btn_fill.btn_wide(href='#') Личный кабинет

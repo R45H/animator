@@ -8,12 +8,14 @@ html(lang="ru")
 
 		title #{page.title} | #{global[0].name}
 	body
-		//-include ../partials/header
 
-		main.main
-			block content
+		.wrapper(class= page.isHome ? 'wrapper_home' : '')
+			include ../partials/header
 
-		//-include ../partials/footer
+			main.main
+				block content
+
+			include ../partials/footer
 
 		// END OF VISIBLE CONTENT
 

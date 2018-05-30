@@ -16,6 +16,8 @@
 @import 'blocks/link-arrow'; // Ссылка со стрелкой
 @import 'blocks/logo'; // Логотип
 @import 'blocks/link-line'; // Ссылка с декоративным подчёркиванием
+@import 'blocks/greet/greet'; // Баннер на главной странице
+@import 'blocks/webc';
 /* Blocks will be inserted here */
 // =====
 
@@ -24,4 +26,5 @@
 @import 'blocks/footer'; // Подвал
 @import 'blocks/section'; // Секция контента
 @import 'blocks/main'; // Контейнер контента
+@import 'blocks/wrapper'; // Внешний контейнер
 // =====

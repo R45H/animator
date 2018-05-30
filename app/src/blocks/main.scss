@@ -16,4 +16,11 @@ $name: main;
 	&__space-col {
 		margin-bottom: 30px;
 	}
+
+	&__footer-spacer {
+
+		@include screen-lg() {
+			margin-bottom: 85px;
+		}
+	}
 }

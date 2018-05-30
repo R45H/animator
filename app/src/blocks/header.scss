@@ -2,4 +2,132 @@ $name: header;
 
 .#{$name} {
 	flex: 0 0 auto;
+
+	@include screen-lg() {
+		height: $height-header / 2;
+	}
+
+	&__wrap {
+		border-bottom: 1px solid $color-gray;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+		@include screen-lg() {
+			height: 100%;
+		}
+	}
+
+	&__row {
+		margin: 0 -15px;
+
+		@include screen-lg() {
+			display: flex;
+			justify-content: space-between;
+			height: 100%;
+		}
+	}
+
+	&__col {
+		height: 100%;
+		padding: 0 15px;
+		margin-bottom: 30px;
+
+		@include screen-lg() {
+			margin-bottom: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__logo-wrap {
+
+		@include screen-lg() {
+			display: inline-block;
+			height: 100%;
+			width: 260px;
+		}
+	}
+
+	&__btns-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: -7px;
+		height: 100%;
+
+		@include screen-lg() {
+			flex-wrap: nowrap;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		@include screen-xl() {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+
+	&__btns-col {
+		padding: 0 7px;
+		margin: 7px 0;
+		flex: auto;
+
+		@include screen-lg() {
+			flex: none;
+			margin: 0;
+		}
+
+		@include screen-xl() {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		&_fixed {
+			flex: none;
+		}
+
+		&_grow {
+
+			@include screen-lg() {
+				flex: auto;
+			}
+		}
+	}
+
+	&_home {
+
+		@include screen-lg() {
+			height: $height-header;
+		}
+
+		.#{$name} {
+			// =====
+
+			&__wrap {
+				border-bottom: none;
+				padding-bottom: 30px;
+
+				@include screen-sm() {
+					padding-top: 30px;
+				}
+			}
+
+			&__col {
+
+				@include screen-lg() {
+					width: 50%;
+				}
+			}
+
+			&__logo-wrap {
+
+				@include screen-lg() {
+					display: block;
+					width: auto;
+				}
+			}
+		}
+	}
 }

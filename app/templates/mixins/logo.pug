@@ -2,7 +2,7 @@ include global
 
 mixin logo(data)
 
-	+tag((data && data.link === false) ? '' : 'a')(
+	+g-tag((data && data.link === false) ? '' : 'a')(
 		class='logo'
 		class= attributes.class
 		href= global[0].link_home

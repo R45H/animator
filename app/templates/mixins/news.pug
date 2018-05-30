@@ -3,7 +3,7 @@ include svg
 
 mixin news(data)
 
-	+tag(data.link ? 'a' : '')(
+	+g-tag(data.link ? 'a' : '')(
 		class= data.date ? 'news news_hidden-date' : 'news'
 		class= attributes.class
 		href= data.link

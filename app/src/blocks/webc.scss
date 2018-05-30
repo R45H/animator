@@ -1,0 +1,42 @@
+$name: webc;
+
+.#{$name} {
+
+	&__text,
+	&__link {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__text {
+		margin-right: .7em;
+	}
+
+	&__img {
+		display: block;
+		width: 55px;
+		max-height: 25px;
+
+		.cls-1,
+		.cls-2 {
+			fill: $color-text;
+			transition: $duration / 2 linear;
+		}
+
+		&:hover {
+
+			.cls-1,
+			.cls-2 {
+				transition: none;
+			}
+
+			.cls-1 {
+				fill: $color-webcenter-2;
+			}
+
+			.cls-2 {
+				fill: $color-webcenter-1;
+			}
+		}
+	}
+}

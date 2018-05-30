@@ -2,4 +2,67 @@ $name: footer;
 
 .#{$name} {
 	flex: 0 0 auto;
+	position: relative;
+
+	&__wrap {
+		border-top: 1px solid $color-gray;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	&__social-wrap {
+		text-align: center;
+		margin-bottom: 15px;
+
+		@include screen-lg() {
+			margin-bottom: 25px;
+			position: absolute;
+			bottom: 100%;
+			right: 15px;
+		}
+	}
+
+	&__text-wrap {
+		margin: 0 -15px -5px;
+		text-align: center;
+		font-size: 13px;
+
+		@include screen-sm() {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__text-col {
+		padding: 0 15px;
+		margin-bottom: 5px;
+	}
+
+	&_home {
+
+		.#{$name} {
+			// =====
+
+			&__wrap {
+				border-top: none;
+
+				@include screen-lg() {
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+			}
+
+			&__social-wrap {
+
+				@include screen-lg() {
+					margin-bottom: 70px;
+				}
+			}
+
+			&__text-wrap {
+				display: none;
+			}
+		}
+	}
 }
