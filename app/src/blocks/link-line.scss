@@ -4,8 +4,11 @@ $name: link-line;
 	@extend %transition;
 	display: inline-block;
 	position: relative;
-	padding: 0 1rem;
-	line-height: 1.8;
+	line-height: 1.4;
+	min-width: 55px;
+	text-align: center;
+	font-size: 7rem;
+	color: $color-third;
 
 	&::before,
 	&::after {
@@ -15,7 +18,7 @@ $name: link-line;
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		height: .25em;
+		height: .15em;
 		background: no-repeat left / auto 100%;
 		border-top-right-radius: 50%;
 		border-bottom-right-radius: 50%;
