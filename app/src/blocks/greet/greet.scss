@@ -4,7 +4,6 @@ $name: greet;
 	position: relative;
 
 	@include screen-lg() {
-		min-height: calc(100vh - #{$height-header});
 		display: flex;
 		flex-direction: column;
 	}
@@ -30,6 +29,7 @@ $name: greet;
 		padding: 0 15px 30px;
 
 		@include screen-lg() {
+			min-height: calc(100vh - #{$height-header});
 			padding-bottom: 70px;
 			display: flex;
 			flex-direction: column;
