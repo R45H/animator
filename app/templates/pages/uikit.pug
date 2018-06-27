@@ -14,7 +14,36 @@ include ../mixins/logo
 		.col-6
 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur cumque est in ipsa minima nobis nostrum nulla omnis, quaerat? Alias, autem eius explicabo incidunt ipsum magni officia quo rerum?
 		.col-2
+
+	.row.main__separator
+		.col-2
 			a.link(href='#') .link
+		.col-3
+			a.link.link_line_none(href='#') .link.link_line_none
+		.col-3
+			a.link.link_icon_before(href='#')
+				| .link.link_icon_before
+				+svg('tel', 'link__icon')
+		.col-3
+			a.link.link_icon_after(href='#')
+				| .link.link_icon_after
+				+svg('tel', 'link__icon link__icon_after')
+
+	.row.main__separator
+		.col-4
+			+link-arrow .link-arrow
+		.col-4
+			+link-arrow({
+				dir: 'left'
+			}) .link-arrow.link-arrow_left
+		.col-4
+			+link-arrow({
+				disabled: true
+			}) .link-arrow.link-arrow_disabled
+
+	.row.main__separator
+		.col-8
+			a.link-line(href='#') .link-line
 
 	.row.main__separator
 		.col-3
@@ -55,22 +84,6 @@ include ../mixins/logo
 			+news(news[0])(class='news_arrow')
 		.col-10.offset-sm-1
 			+news(news[1])
-
-	.row.main__separator
-		.col-4
-			+link-arrow .link-arrow
-		.col-4
-			+link-arrow({
-				dir: 'left'
-			}) .link-arrow.link-arrow_left
-		.col-4
-			+link-arrow({
-				disabled: true
-			}) .link-arrow.link-arrow_disabled
-
-	.row.main__separator
-		.col-8
-			a.link-line(href='#') .link-line
 
 	.row.main__separator
 		.col-6
