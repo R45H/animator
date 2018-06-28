@@ -1,0 +1,30 @@
+$name: tags;
+
+.#{$name} {
+	@extend %transition;
+	color: $color-gray;
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	fill: $color-gray;
+
+	&:hover {
+		fill: $color-second;
+	}
+
+	&:active {
+		fill: $color-second-active;
+	}
+
+	&__icon {
+		width: 1em;
+		height: 1em;
+		margin-right: .5em;
+	}
+}
+
+a.#{$name}__item {
+	@extend a:not([class]);
+	color: $color-gray;
+	border-bottom: none;
+}

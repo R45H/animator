@@ -4,6 +4,7 @@ include ../components/social
 include ../mixins/news
 include ../mixins/link-arrow
 include ../mixins/logo
+include ../mixins/tags
 
 .container
 	.row.main__separator
@@ -68,18 +69,32 @@ include ../mixins/logo
 			.btn.btn_wide .btn.btn_wide
 
 	.row.main__separator
-		.col-1
-			+star
-		.col-1
-			+star(999)
-
-	.row.main__separator
 		.col-3
 			+select(select)
 		.col-3
 			+select(select, {
 				wide: true
 			})
+
+	.row.main__separator
+		.col-4
+			+tags([
+				'аниматор',
+				'фотограф',
+				'актёр'
+			])
+		.col-4
+			+tags([
+				{"name": "аниматор", "link": "#"},
+				{"name": "фотограф", "link": "#"},
+				{"name": "актёр", "link": "#"}
+			])
+
+	.row.main__separator
+		.col-1
+			+star
+		.col-1
+			+star(999)
 
 	.row.main__separator
 		.col-2

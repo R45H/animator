@@ -1,0 +1,19 @@
+include global
+include svg
+
+mixin tags(data)
+	.tags(class= attributes.class)
+		+svg('tags', 'tags__icon')
+
+		.tags__wrap
+
+			each val, i in data
+
+				+g-tag((typeof val == 'object' && val.link) ? 'a' : 'span')(
+					class='tags__item',
+					href= val.link
+				)= val.name || val
+
+				if i < data.length - 1
+					| ,
+					|
