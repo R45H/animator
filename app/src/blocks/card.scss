@@ -1,0 +1,105 @@
+$name: card;
+
+.#{$name} {
+	@extend %radius;
+	border: 1px solid $color-gray-light;
+	overflow: hidden;
+
+	@include screen-md() {
+		display: flex;
+	}
+
+	&__img-wrap {
+		display: block;
+		flex: none;
+		overflow: hidden;
+		border-bottom: 1px solid $color-gray-light;
+
+		@include screen-md() {
+			width: 275px;
+			border-bottom: none;
+			border-right: 1px solid $color-gray-light;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		padding-bottom: 100%;
+		height: 100%;
+		background: no-repeat center / cover;
+		transition: $duration linear;
+
+		&:hover {
+			transform: scale(1.03) rotate(-.5deg);
+		}
+	}
+
+	&__content-wrap {
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+
+		@include screen-sm() {
+			padding: 30px;
+		}
+	}
+
+	&__row {
+		margin-bottom: 15px;
+	}
+
+	&__top {
+
+		@include screen-sm() {
+			display: flex;
+			align-items: baseline;
+		}
+	}
+
+	&__title-wrap {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 15px;
+
+		@include screen-sm() {
+			margin-right: 1em;
+		}
+	}
+
+	&__title {
+		line-height: 1.2;
+	}
+
+	&__star-wrap {
+		margin-left: 1em;
+	}
+
+	&__tel-wrap {
+		margin-left: auto;
+		white-space: nowrap;
+		margin-bottom: 15px;
+	}
+
+	&__tags {
+		display: flex;
+	}
+
+	&__text {
+
+	}
+
+	&__btn-wrap {
+		margin: auto -15px -15px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__btn {
+		padding: 0 15px;
+		margin-bottom: 15px;
+		flex: 1 0 50%;
+		white-space: nowrap;
+	}
+}

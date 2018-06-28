@@ -1,0 +1,36 @@
+include ../mixins/star
+include ../mixins/svg
+include ../mixins/tags
+
+mixin card(data)
+	.card(class= attributes.class)
+
+		a.card__img-wrap(href= data.link)
+			.card__img(
+				style='background-image: url(' + data.img + ');'
+				role='img'
+				aria-label= data.title
+				title= data.title
+			)
+
+		.card__content-wrap
+
+			.card__top
+				.card__title-wrap
+					a.link.link_line_none.title.title_sm.card__title(href= data.link)= data.title
+					.card__star-wrap
+						+star
+				.card__tel-wrap
+					a.link.link_line_none.link_icon_before(href='tel:' + data.tel.link)= data.tel.name
+						+svg('tel', 'link__icon')
+
+			.card__row.card__tags
+				+tags(data.tags)
+
+			.card__row.card__text= data.desc
+
+			.card__btn-wrap
+				.card__btn
+					a.btn.btn_wide.btn_sm.btn_fill(href='#') Пригласить аниматора
+				.card__btn
+					a.btn.btn_wide.btn_sm(href= data.link) Посмотреть профиль

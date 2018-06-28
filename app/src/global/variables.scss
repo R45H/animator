@@ -8,6 +8,7 @@ $color-fog: #4c8773;
 
 $color-text: #666;
 $color-gray: #ccc;
+$color-gray-light: #ececec;
 
 $color-webcenter-1: #ff141f;
 $color-webcenter-2: #334b61;
@@ -33,8 +34,6 @@ $height-header: 180px;
 // МИКСИНЫ ДЛЯ ТЕКУЩЕГО ПРОЕКТА
 // ----------------------------
 
-// ----------------------------
-
 // Анимация по hover
 %transition {
 	transition: $duration / 2 linear;
@@ -43,6 +42,13 @@ $height-header: 180px;
 		transition: none;
 	}
 }
+
+// Радиус скругления по умолчанию
+%radius {
+	border-radius: 3px;
+}
+
+// ----------------------------
 
 // -------------
 // ОБЩИЕ МИКСИНЫ

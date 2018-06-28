@@ -2,13 +2,13 @@ $name: news;
 $transition: $duration linear;
 
 .#{$name} {
+	@extend %radius;
 	display: block;
-	border: 1px solid $color-light;
-	border-radius: 3px;
-	overflow: hidden;
+	border: 1px solid $color-gray-light;
 	padding: 20px;
 	position: relative;
 	transition: $transition;
+	overflow: hidden;
 
 	&__img {
 		position: absolute;
@@ -88,7 +88,7 @@ $transition: $duration linear;
 			height: 100%;
 			right: 0;
 			width: 70px;
-			fill: $color-light;
+			fill: $color-gray-light;
 			transition: $transition;
 		}
 	}

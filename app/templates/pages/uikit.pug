@@ -5,6 +5,7 @@ include ../mixins/news
 include ../mixins/link-arrow
 include ../mixins/logo
 include ../mixins/tags
+include ../mixins/card
 
 .container
 	.row.main__separator
@@ -67,6 +68,8 @@ include ../mixins/tags
 			.btn.btn_fill .btn.btn_fill
 		.col-3
 			.btn.btn_wide .btn.btn_wide
+		.col-3
+			.btn.btn_sm .btn.btn_sm
 
 	.row.main__separator
 		.col-3
@@ -105,6 +108,10 @@ include ../mixins/tags
 			+news(news[0])(class='news_arrow')
 		.col-10.offset-sm-1
 			+news(news[1])
+
+	.row.main__separator
+		.col
+			+card(card[0])
 
 	.row.main__separator
 		.col-6
