@@ -27,6 +27,7 @@ $name: select;
 			border-bottom-right-radius: 0;
 			border-bottom-left-radius: 0;
 			border-bottom-color: transparent;
+			background: rgba(white, .8);
 
 			&::before {
 				display: block;
@@ -68,6 +69,7 @@ $name: select;
 	&__list {
 		z-index: 10;
 		border: 0;
+		background: rgba(white, .8);
 
 		.ui-menu {
 			list-style-type: none;
