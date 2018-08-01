@@ -14,3 +14,4 @@
 //=require '../libs/jquery-ui/ui/unique-id.js'
 //=require '../libs/jquery-ui/ui/widgets/menu.js'
 //=require '../libs/jquery-ui/ui/widgets/selectmenu.js'
+//=require '../libs/jquery-ui/ui/widgets/datepicker.js'

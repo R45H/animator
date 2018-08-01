@@ -37,9 +37,22 @@ $name: card;
 	}
 
 	&__content-wrap {
+		flex: auto;
 		padding: 15px;
 		display: flex;
 		flex-direction: column;
+
+		@include screen-sm() {
+			padding: 30px;
+		}
+	}
+
+	&__date-wrap {
+		flex: none;
+		padding: 15px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
 
 		@include screen-sm() {
 			padding: 30px;
@@ -55,6 +68,8 @@ $name: card;
 		@include screen-sm() {
 			display: flex;
 			align-items: baseline;
+			justify-content: space-between;
+			flex-wrap: wrap;
 		}
 	}
 
@@ -78,7 +93,6 @@ $name: card;
 	}
 
 	&__tel-wrap {
-		margin-left: auto;
 		white-space: nowrap;
 		margin-bottom: 15px;
 	}
@@ -105,6 +119,27 @@ $name: card;
 
 		@include screen-lg() {
 			max-width: 320px;
+		}
+	}
+
+	&_thin {
+
+		.#{$name} {
+			// =====
+
+			&__content-wrap {
+
+				@include screen-sm() {
+					padding: 15px 15px 15px 30px;
+				}
+			}
+
+			&__date-wrap {
+
+				@include screen-sm() {
+					padding: 15px;
+				}
+			}
 		}
 	}
 }

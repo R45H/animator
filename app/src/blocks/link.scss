@@ -46,4 +46,36 @@ $name: link;
 	&_line_none {
 		border-bottom: none;
 	}
+
+	&_color_1 {
+		color: $color-third;
+		border-color: $color-third;
+	}
+}
+
+span.#{$name} {
+
+	&:hover,
+	&:active {
+		color: inherit;
+		border-color: inherit;
+	}
+
+	&_icon_before,
+	&_icon_after {
+
+		&:hover,
+		&:active {
+			fill: $color-third;
+		}
+	}
+
+	&_color_1 {
+		color: $color-third;
+
+		&:hover,
+		&:active {
+			color: $color-third;
+		}
+	}
 }

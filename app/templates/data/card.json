@@ -25,12 +25,31 @@
 				{"name": "творчество", "link": "#"}
 			],
 			"params": [
-				{
-					"title": "Метро",
-					"value": "Академическая"
-				}
+				{"title": "Метро", "value": "Академическая"}
 			],
 			"btn_profile": true
+		},
+		{
+			"img": "img/content/card.jpg",
+			"link": "#",
+			"title": "Оскар Лазарев",
+			"tel": {
+				"link": "+72146544487",
+				"name": "+7 (214) 654-44-87"
+			},
+			"tags": [
+				{"name": "аниматор", "link": "#"},
+				{"name": "фотограф", "link": "#"},
+				{"name": "актёр", "link": "#"}
+			],
+			"params": [
+				{"title": "Стоимость", "value": "2000 руб./час"},
+				{"title": "Опыт:", "value": "37 проведённых праздников"},
+				{"title": "Возраст", "value": "34 года"}
+			],
+			"params_sm": true,
+			"btn_animator": true,
+			"date": true
 		}
 	]
 }

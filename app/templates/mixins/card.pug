@@ -1,3 +1,4 @@
+include ../components/date
 include ../mixins/star
 include ../mixins/svg
 include ../mixins/tags
@@ -33,7 +34,7 @@ mixin card(data)
 
 			if data.params
 				.card__row
-					+params(data.params)
+					+params(data.params)(class= data.params_sm ? 'params_sm' : '')
 
 			if data.desc
 				.card__row
@@ -48,3 +49,7 @@ mixin card(data)
 				if data.btn_profile
 					.card__btn
 						a.btn.btn_wide.btn_sm(href= data.link) Посмотреть профиль
+
+		if data.date
+			.card__date-wrap
+				+date

@@ -1,6 +1,7 @@
+include ../components/social
+include ../components/date
 include ../mixins/star
 include ../mixins/select
-include ../components/social
 include ../mixins/news
 include ../mixins/link-arrow
 include ../mixins/logo
@@ -27,11 +28,17 @@ include ../mixins/params
 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur cumque est in ipsa minima nobis nostrum nulla omnis, quaerat? Alias, autem eius explicabo incidunt ipsum magni officia quo rerum?
 		.col-2
 
-	.row.main__separator
-		.col-2
+	.row.main__space-col
+		.col-1
 			a.link(href='#') .link
-		.col-3
+		.col-1
+			span.link span.link
+		.col-2
 			a.link.link_line_none(href='#') .link.link_line_none
+		.col-2
+			a.link.link_color_1(href='#') .link.link_color_1
+
+	.row.main__separator
 		.col-3
 			a.link.link_icon_before(href='#')
 				| .link.link_icon_before
@@ -40,6 +47,10 @@ include ../mixins/params
 			a.link.link_icon_after(href='#')
 				| .link.link_icon_after
 				+svg('tel', 'link__icon link__icon_after')
+		.col-3
+			span.link.link_icon_before
+				| span.link.link_icon_before
+				+svg('tel', 'link__icon')
 
 	.row.main__separator
 		.col-4
@@ -116,6 +127,10 @@ include ../mixins/params
 			+params(params)(class='params_sm')
 
 	.row.main__separator
+		.col
+			+date
+
+	.row.main__separator
 		.col-10.offset-sm-1.main__space-col
 			+news(news[0])(class='news_arrow')
 		.col-10.offset-sm-1
@@ -126,6 +141,8 @@ include ../mixins/params
 			+card(card[0])
 		.col-12.main__space-col
 			+card(card[1])
+		.col-12.main__space-col
+			+card(card[2])(class='card_thin')
 
 	.row.main__separator
 		.col-6

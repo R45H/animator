@@ -7,6 +7,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/greet/greet.js'
 	}());
+	(function() {
+		//=require 'blocks/date/date.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
