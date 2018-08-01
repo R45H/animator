@@ -2,9 +2,11 @@ $name: select;
 
 .#{$name} {
 	display: inline-block;
+	max-width: 100%;
 
 	&__current {
 		@extend .btn;
+		max-width: 100%;
 		fill: $color-main;
 		outline: none;
 		padding-left: 20px;
@@ -115,6 +117,36 @@ $name: select;
 				color: $color-second-active;
 			}
 		}
+
+		&_simple {
+
+			.ui-menu {
+				color: $color-text-dark;
+				border: 1px solid $color-gray;
+			}
+
+			.ui-menu-item {
+
+				&:first-child {
+
+					.ui-menu-item-wrapper {
+						padding-top: 6px;
+					}
+				}
+
+				&:last-child {
+
+					.ui-menu-item-wrapper {
+						padding-bottom: 6px;
+					}
+				}
+			}
+
+			.ui-menu-item-wrapper {
+				padding: 3px 20px 3px 6px;
+				line-height: 1.2;
+			}
+		}
 	}
 
 	&_wide {
@@ -124,6 +156,46 @@ $name: select;
 
 			&__current {
 				width: 100%;
+			}
+		}
+	}
+
+	&_simple {
+
+		.#{$name} {
+			// =====
+
+			&__current {
+				fill: $color-text;
+				color: $color-text-dark;
+				border-radius: 0;
+				border: none;
+				border-bottom: 1px solid $color-gray;
+				padding: 6px 31px 6px 0;
+
+				&::before {
+					display: none;
+				}
+				
+				&:hover {
+					color: $color-second;
+				}
+
+				&:active {
+					color: $color-second-active;
+				}
+
+				&_active {
+
+					&:hover {
+						color: $color-text-dark;
+						fill: $color-text;
+					}
+				}
+			}
+
+			&__icon {
+				right: 0;
 			}
 		}
 	}

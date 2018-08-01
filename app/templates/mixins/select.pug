@@ -1,5 +1,8 @@
 mixin select(data, opts)
-	.select(class= opts && opts.wide ? 'select_wide' : '')
+	.select(
+		class= opts && opts.wide ? 'select_wide' : ''
+		class= attributes.class
+	)
 		select.select__origin
 
 			each val in data
