@@ -1,6 +1,7 @@
 include ../mixins/star
 include ../mixins/svg
 include ../mixins/tags
+include ../mixins/params
 
 mixin card(data)
 	.card(class= attributes.class)
@@ -17,20 +18,33 @@ mixin card(data)
 
 			.card__top
 				.card__title-wrap
-					a.link.link_line_none.title.title_sm.card__title(href= data.link)= data.title
+					a.link.link_line_none.title.title_sm.title_color_dark.card__title(href= data.link)= data.title
 					.card__star-wrap
 						+star
-				.card__tel-wrap
-					a.link.link_line_none.link_icon_before(href='tel:' + data.tel.link)= data.tel.name
-						+svg('tel', 'link__icon')
+
+				if data.tel
+					.card__tel-wrap
+						a.link.link_line_none.link_icon_before(href='tel:' + data.tel.link)= data.tel.name
+							+svg('tel', 'link__icon')
 
 			.card__row.card__tags
 				+tags(data.tags)
 
-			.card__row.card__text= data.desc
+
+			if data.params
+				.card__row
+					+params(data.params)
+
+			if data.desc
+				.card__row
+					.card__text= data.desc
 
 			.card__btn-wrap
-				.card__btn
-					a.btn.btn_wide.btn_sm.btn_fill(href='#') Пригласить аниматора
-				.card__btn
-					a.btn.btn_wide.btn_sm(href= data.link) Посмотреть профиль
+
+				if data.btn_animator
+					.card__btn
+						a.btn.btn_wide.btn_sm.btn_fill(href='#') Пригласить аниматора
+
+				if data.btn_profile
+					.card__btn
+						a.btn.btn_wide.btn_sm(href= data.link) Посмотреть профиль

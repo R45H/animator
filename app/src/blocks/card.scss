@@ -16,7 +16,8 @@ $name: card;
 		border-bottom: 1px solid $color-gray-light;
 
 		@include screen-md() {
-			width: 275px;
+			width: 30%;
+			max-width: 300px;
 			border-bottom: none;
 			border-right: 1px solid $color-gray-light;
 		}
@@ -101,5 +102,9 @@ $name: card;
 		margin-bottom: 15px;
 		flex: 1 0 50%;
 		white-space: nowrap;
+
+		@include screen-lg() {
+			max-width: 320px;
+		}
 	}
 }

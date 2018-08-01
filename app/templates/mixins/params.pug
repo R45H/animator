@@ -1,0 +1,8 @@
+mixin params(data)
+	.params(class= attributes.class)
+		.params__wrap
+
+			each val in data
+				.params__row
+					.params__title= val.title + ':'
+					.params__value= val.value

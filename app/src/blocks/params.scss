@@ -1,0 +1,31 @@
+$name: params;
+
+.#{$name} {
+
+	&__wrap {
+		display: inline-block;
+	}
+
+	&__row {
+		margin-bottom: 5px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		color: $color-gray;
+		display: inline-block;
+		margin-right: 5px;
+	}
+
+	&__value {
+		color: $color-text;
+		display: inline-block;
+	}
+
+	&_sm {
+		font-size: 13px;
+	}
+}
