@@ -24,11 +24,11 @@ $name: date;
 			left: 50%;
 			transform: translate(-50%, -50%);
 		}
-		
+
 		&:hover {
 			background-color: $color-light;
 		}
-		
+
 		&:active {
 			background-color: darken($color-light, 5%);
 		}

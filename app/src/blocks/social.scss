@@ -57,6 +57,21 @@ $name: social;
 				border-color: darken($color-fb, 10%);
 			}
 		}
+
+		&_instagram {
+
+			&:hover {
+				color: white;
+				background-color: $color-insta;
+				border-color: $color-insta;
+			}
+
+			&:active {
+				color: white;
+				background-color: darken($color-insta, 10%);
+				border-color: darken($color-insta, 10%);
+			}
+		}
 	}
 
 	&__icon {
