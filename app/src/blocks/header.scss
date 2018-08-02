@@ -2,13 +2,14 @@ $name: header;
 
 .#{$name} {
 	flex: 0 0 auto;
+	background: linear-gradient(to bottom, white, transparent);
 
 	@include screen-lg() {
-		height: $height-header / 2;
+		height: $height-header;
+		padding-bottom: $height-header - 90px;
 	}
 
 	&__wrap {
-		border-bottom: 1px solid $color-gray;
 		padding-top: 15px;
 		padding-bottom: 15px;
 
@@ -99,14 +100,15 @@ $name: header;
 	&_home {
 
 		@include screen-lg() {
-			height: $height-header;
+			height: $height-header-home;
+			padding-bottom: 0;
+			background: transparent;
 		}
 
 		.#{$name} {
 			// =====
 
 			&__wrap {
-				border-bottom: none;
 				padding-bottom: 30px;
 
 				@include screen-sm() {

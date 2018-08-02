@@ -30,7 +30,7 @@ $name: greet;
 		padding: 0 15px 30px;
 
 		@include screen-lg() {
-			min-height: calc(100vh - #{$height-header});
+			min-height: calc(100vh - #{$height-header-home});
 			padding-bottom: 70px;
 			display: flex;
 			flex-direction: column;
@@ -48,7 +48,7 @@ $name: greet;
 			justify-content: center;
 
 			@include screen-lg() {
-				padding-bottom: $height-header;
+				padding-bottom: $height-header-home;
 				padding-left: 30px;
 				order: 1;
 			}

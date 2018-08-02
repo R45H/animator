@@ -5,7 +5,6 @@ $name: footer;
 	position: relative;
 
 	&__wrap {
-		border-top: 1px solid $color-gray;
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}
@@ -45,7 +44,6 @@ $name: footer;
 			// =====
 
 			&__wrap {
-				border-top: none;
 
 				@include screen-lg() {
 					padding-top: 0;
