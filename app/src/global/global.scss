@@ -26,6 +26,7 @@ body {
 	color: $color-text;
 	line-height: 1.4;
 	font-weight: 300;
+	background: url($path + 'img/background-icons.svg');
 
 	&.noscroll {
 		overflow: hidden;
