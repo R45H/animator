@@ -1,0 +1,11 @@
+$name: banner;
+
+.#{$name} {
+	@extend %radius;
+	border: 1px solid $color-gray-light;
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	padding-bottom: 100%;
+	background: $color-gray-light no-repeat center / cover;
+}

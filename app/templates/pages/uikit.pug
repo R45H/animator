@@ -8,6 +8,7 @@ include ../mixins/logo
 include ../mixins/tags
 include ../mixins/card
 include ../mixins/params
+include ../mixins/banner
 
 .section
 	.container
@@ -156,5 +157,9 @@ include ../mixins/params
 				+logo({
 					link: false
 				})
+
+		.row.main__separator
+			.col-4
+				+banner
 
 		.main__footer-spacer
