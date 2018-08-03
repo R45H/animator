@@ -3,6 +3,7 @@ $name: text;
 .#{$name} {
 
 	p {
+		text-indent: 4rem;
 
 		&:first-child {
 			margin-top: 0;

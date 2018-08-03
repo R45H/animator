@@ -131,6 +131,10 @@ $name: card;
 			&__content-wrap {
 
 				@include screen-sm() {
+					padding: 15px;
+				}
+
+				@include screen-xl() {
 					padding: 15px 15px 15px 30px;
 				}
 			}
@@ -138,6 +142,14 @@ $name: card;
 			&__date-wrap {
 
 				@include screen-sm() {
+					padding: 15px;
+				}
+
+				@include screen-md() {
+					padding: 15px 15px 15px 0;
+				}
+
+				@include screen-xl() {
 					padding: 15px;
 				}
 			}
