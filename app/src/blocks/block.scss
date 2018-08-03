@@ -1,0 +1,25 @@
+$name: block;
+
+.#{$name} {
+	@extend %radius;
+	border: 1px solid $color-gray-light;
+	overflow: hidden;
+	background: white;
+	padding: 15px;
+
+	&_md {
+		padding: 15px 20px;
+
+		@include screen-sm() {
+			padding: 20px 25px;
+		}
+	}
+
+	&_lg {
+		padding: 15px 20px;
+
+		@include screen-sm() {
+			padding: 25px 30px;
+		}
+	}
+}
