@@ -3,7 +3,10 @@ include ../mixins/select
 include ../mixins/logo
 
 // HEADER
-header.header(class= page.isHome ? 'header_home' : '')
+header.header(
+	class= page.isHome ? 'header_home' : ''
+	style= page.img ? 'background-image: url(' + page.img + ');' : null
+)
 	.container.header__wrap
 		.header__row
 			
@@ -23,3 +26,10 @@ header.header(class= page.isHome ? 'header_home' : '')
 						})
 					.header__btns-col
 						a.btn.btn_fill.btn_wide(href='#') Личный кабинет
+
+	if page.img
+		.header__bg-outer
+			.container.header__bg-wrap
+				.row.header__bg-row
+					.col-md-10.offset-md-1.header__bg-col
+						h1.title.title_color_white.title_lg.header__title= page.title

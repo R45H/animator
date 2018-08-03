@@ -2,11 +2,30 @@ $name: header;
 
 .#{$name} {
 	flex: 0 0 auto;
-	background: linear-gradient(to bottom, white, transparent);
+	z-index: 1;
+	background: no-repeat center / cover;
+	position: relative;
 
-	@include screen-lg() {
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	&::before {
 		height: $height-header;
-		padding-bottom: $height-header - 90px;
+		max-height: 100%;
+		background: linear-gradient(to bottom, white, transparent);
+	}
+
+	&::after {
+		height: 100%;
+		background: $color-gray-dark;
+		opacity: .6;
+		z-index: -1;
 	}
 
 	&__wrap {
@@ -14,7 +33,7 @@ $name: header;
 		padding-bottom: 15px;
 
 		@include screen-lg() {
-			height: 100%;
+			height: $height-header / 2;
 		}
 	}
 
@@ -97,12 +116,55 @@ $name: header;
 		}
 	}
 
+	&__bg-outer {
+		padding: 15px 0;
+		overflow: hidden;
+
+		@include screen-sm() {
+			min-height: 230px;
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__bg-wrap {
+
+		@include screen-sm() {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__bg-row {
+
+		@include screen-sm() {
+			flex-grow: 1;
+		}
+	}
+
+	&__bg-col {
+
+		@include screen-sm() {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: flex-end;
+		}
+	}
+
+	&__title {
+		text-align: center;
+
+		@include screen-sm() {
+			text-align: left;
+			margin-top: auto;
+		}
+	}
+
 	&_home {
 
-		@include screen-lg() {
-			height: $height-header-home;
-			padding-bottom: 0;
-			background: transparent;
+		&::before,
+		&::after {
+			display: none;
 		}
 
 		.#{$name} {
@@ -113,6 +175,10 @@ $name: header;
 
 				@include screen-sm() {
 					padding-top: 30px;
+				}
+
+				@include screen-lg() {
+					height: $height-header;
 				}
 			}
 

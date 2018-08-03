@@ -9,147 +9,152 @@ include ../mixins/tags
 include ../mixins/card
 include ../mixins/params
 
-.container
-	.row.main__space-col
-		.col-2
-			h2.title .title
-		.col-2
-			h2.title.title_sm .title.title_sm
-		.col-4
-			h2.title.title_color_1 .title.title_color_1
-		.col-4
-			h2.title.title_color_2 .title.title_color_2
-	.row.main__separator
-		.col-4
-			h2.title.title_color_dark .title.title_color_dark
+.section
+	.container
+		.row.main__space-col
+			.col-2
+				h2.title .title
+			.col-2
+				h2.title.title_sm .title.title_sm
+			.col-4
+				h2.title.title_lg .title.title_lg
+			.col-4
+				h2.title.title_color_1 .title.title_color_1
+		.row.main__space-col
+			.col-4
+				h2.title.title_color_2 .title.title_color_2
+			.col-4
+				h2.title.title_color_dark .title.title_color_dark
+			.col-4.main__bg_black
+				h2.title.title_color_white .title.title_color_white
 
-	.row.main__separator
-		.col-6
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur cumque est in ipsa minima nobis nostrum nulla omnis, quaerat? Alias, autem eius explicabo incidunt ipsum magni officia quo rerum?
-		.col-2
+		.row.main__separator
+			.col-6
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur cumque est in ipsa minima nobis nostrum nulla omnis, quaerat? Alias, autem eius explicabo incidunt ipsum magni officia quo rerum?
+			.col-2
 
-	.row.main__space-col
-		.col-1
-			a.link(href='#') .link
-		.col-1
-			span.link span.link
-		.col-2
-			a.link.link_line_none(href='#') .link.link_line_none
-		.col-2
-			a.link.link_color_1(href='#') .link.link_color_1
+		.row.main__space-col
+			.col-1
+				a.link(href='#') .link
+			.col-1
+				span.link span.link
+			.col-2
+				a.link.link_line_none(href='#') .link.link_line_none
+			.col-2
+				a.link.link_color_1(href='#') .link.link_color_1
 
-	.row.main__separator
-		.col-3
-			a.link.link_icon_before(href='#')
-				| .link.link_icon_before
-				+svg('tel', 'link__icon')
-		.col-3
-			a.link.link_icon_after(href='#')
-				| .link.link_icon_after
-				+svg('tel', 'link__icon link__icon_after')
-		.col-3
-			span.link.link_icon_before
-				| span.link.link_icon_before
-				+svg('tel', 'link__icon')
+		.row.main__separator
+			.col-3
+				a.link.link_icon_before(href='#')
+					| .link.link_icon_before
+					+svg('tel', 'link__icon')
+			.col-3
+				a.link.link_icon_after(href='#')
+					| .link.link_icon_after
+					+svg('tel', 'link__icon link__icon_after')
+			.col-3
+				span.link.link_icon_before
+					| span.link.link_icon_before
+					+svg('tel', 'link__icon')
 
-	.row.main__separator
-		.col-4
-			+link-arrow .link-arrow
-		.col-4
-			+link-arrow({
-				dir: 'left'
-			}) .link-arrow.link-arrow_left
-		.col-4
-			+link-arrow({
-				disabled: true
-			}) .link-arrow.link-arrow_disabled
+		.row.main__separator
+			.col-4
+				+link-arrow .link-arrow
+			.col-4
+				+link-arrow({
+					dir: 'left'
+				}) .link-arrow.link-arrow_left
+			.col-4
+				+link-arrow({
+					disabled: true
+				}) .link-arrow.link-arrow_disabled
 
-	.row.main__separator
-		.col-8
-			a.link-line(href='#') .link-line
+		.row.main__separator
+			.col-8
+				a.link-line(href='#') .link-line
 
-	.row.main__separator
-		.col-3
-			.btn .btn
-		.col-3
-			a.btn(href='#') a.btn
-		.col-3
-			input.btn(type='button' value='input.btn')
-		.col-3
-			button.btn button.btn
+		.row.main__separator
+			.col-3
+				.btn .btn
+			.col-3
+				a.btn(href='#') a.btn
+			.col-3
+				input.btn(type='button' value='input.btn')
+			.col-3
+				button.btn button.btn
 
-	.row.main__separator
-		.col-3
-			.btn.btn_fill .btn.btn_fill
-		.col-3
-			.btn.btn_wide .btn.btn_wide
-		.col-3
-			.btn.btn_sm .btn.btn_sm
+		.row.main__separator
+			.col-3
+				.btn.btn_fill .btn.btn_fill
+			.col-3
+				.btn.btn_wide .btn.btn_wide
+			.col-3
+				.btn.btn_sm .btn.btn_sm
 
-	.row.main__separator
-		.col-3
-			+select(select)
-		.col-3
-			+select(select, {
-				wide: true
-			})
-		.col-3
-			+select(select)(class='select_simple')
+		.row.main__separator
+			.col-3
+				+select(select)
+			.col-3
+				+select(select, {
+					wide: true
+				})
+			.col-3
+				+select(select)(class='select_simple')
 
-	.row.main__separator
-		.col-4
-			+tags([
-				'аниматор',
-				'фотограф',
-				'актёр'
-			])
-		.col-4
-			+tags([
-				{"name": "аниматор", "link": "#"},
-				{"name": "фотограф", "link": "#"},
-				{"name": "актёр", "link": "#"}
-			])
+		.row.main__separator
+			.col-4
+				+tags([
+					'аниматор',
+					'фотограф',
+					'актёр'
+				])
+			.col-4
+				+tags([
+					{"name": "аниматор", "link": "#"},
+					{"name": "фотограф", "link": "#"},
+					{"name": "актёр", "link": "#"}
+				])
 
-	.row.main__separator
-		.col-1
-			+star
-		.col-1
-			+star(999)
+		.row.main__separator
+			.col-1
+				+star
+			.col-1
+				+star(999)
 
-	.row.main__separator
-		.col-2
-			+social(social)
+		.row.main__separator
+			.col-2
+				+social(social)
 
-	.row.main__separator
-		.col-3
-			+params(params)
-		.col-3
-			+params(params)(class='params_sm')
+		.row.main__separator
+			.col-3
+				+params(params)
+			.col-3
+				+params(params)(class='params_sm')
 
-	.row.main__separator
-		.col
-			+date
+		.row.main__separator
+			.col
+				+date
 
-	.row.main__separator
-		.col-10.offset-sm-1.main__space-col
-			+news(news[0])(class='news_arrow')
-		.col-10.offset-sm-1
-			+news(news[1])
+		.row.main__separator
+			.col-10.offset-sm-1.main__space-col
+				+news(news[0])(class='news_arrow')
+			.col-10.offset-sm-1
+				+news(news[1])
 
-	.row.main__separator
-		.col-12.main__space-col
-			+card(card[0])
-		.col-12.main__space-col
-			+card(card[1])
-		.col-12.main__space-col
-			+card(card[2])(class='card_thin')
+		.row.main__separator
+			.col-12.main__space-col
+				+card(card[0])
+			.col-12.main__space-col
+				+card(card[1])
+			.col-12.main__space-col
+				+card(card[2])(class='card_thin')
 
-	.row.main__separator
-		.col-6
-			+logo()
-		.col-6
-			+logo({
-				link: false
-			})
+		.row.main__separator
+			.col-6
+				+logo()
+			.col-6
+				+logo({
+					link: false
+				})
 
-	.main__footer-spacer
+		.main__footer-spacer

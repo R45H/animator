@@ -8,6 +8,10 @@ $name: title;
 		font-size: 20px;
 	}
 
+	&_lg {
+		font-size: 5rem;
+	}
+
 	&_color_1 {
 		color: $color-main;
 	}
@@ -18,5 +22,9 @@ $name: title;
 
 	&_color_dark {
 		color: $color-text-dark;
+	}
+
+	&_color_white {
+		color: white;
 	}
 }
