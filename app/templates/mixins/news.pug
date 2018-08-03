@@ -17,17 +17,18 @@ mixin news(data)
 				title= data.imgDesc
 			)
 
-		if data.icon
-			+svg(data.icon, 'news__icon')
+		.news__wrap
+			if data.icon
+				+svg(data.icon, 'news__icon')
 
-		h3.title.title_sm.title_color_2.news__title= data.title
+			h3.title.title_sm.title_color_2.news__title= data.title
 
-		if data.date
-			.news__date
-				+svg('calendar', 'news__date-img')
-				span.news__date-text= data.date
+			if data.date
+				.news__date
+					+svg('calendar', 'news__date-img')
+					span.news__date-text= data.date
 
-		.text.news__text!= data.text
+			.text.news__text!= data.text
 
 		if attributes.class == 'news_arrow'
 			.news__arrow

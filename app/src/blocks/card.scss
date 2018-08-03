@@ -4,6 +4,7 @@ $name: card;
 	@extend %radius;
 	border: 1px solid $color-gray-light;
 	overflow: hidden;
+	background: white;
 
 	@include screen-md() {
 		display: flex;

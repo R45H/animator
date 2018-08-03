@@ -9,6 +9,12 @@ $transition: $duration linear;
 	position: relative;
 	transition: $transition;
 	overflow: hidden;
+	background: white;
+
+	&__wrap {
+		position: relative;
+		z-index: 1;
+	}
 
 	&__img {
 		position: absolute;
@@ -17,7 +23,6 @@ $transition: $duration linear;
 		width: 100%;
 		height: 100%;
 		background: no-repeat center / cover;
-		z-index: -1;
 		opacity: 0;
 		transition: $transition;
 

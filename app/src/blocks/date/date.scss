@@ -3,6 +3,7 @@ $name: date;
 .#{$name} {
 	@extend %radius;
 	border: 1px solid $color-gray-light;
+	background: white;
 	overflow: hidden;
 	position: relative;
 	display: inline-block;
