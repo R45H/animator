@@ -12,8 +12,10 @@ include ../mixins/link-arrow
 				.greet__row.greet__link-outer
 
 					each val in menu
-						.greet__link-wrap
-							a.link-line(href= val.link)= val.name
+
+						if val.name_for_main
+							.greet__link-wrap
+								a.link-line(href= val.link)= val.name_for_main
 
 			.greet__col.greet__col_left
 

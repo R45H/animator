@@ -117,7 +117,7 @@ $name: header;
 	}
 
 	&__bg-outer {
-		padding: 15px 0;
+		padding: 15px 0 0;
 		overflow: hidden;
 
 		@include screen-sm() {
@@ -153,11 +153,17 @@ $name: header;
 
 	&__title {
 		text-align: center;
+		padding-bottom: 30px;
 
 		@include screen-sm() {
 			text-align: left;
 			margin-top: auto;
+			margin-bottom: auto;
 		}
+	}
+
+	&__bread {
+		padding-bottom: 30px;
 	}
 
 	&_home {

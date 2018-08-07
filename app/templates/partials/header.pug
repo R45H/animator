@@ -1,6 +1,7 @@
 include ../mixins/star
 include ../mixins/select
 include ../mixins/logo
+include ../mixins/bread
 
 // HEADER
 header.header.wrapper__header(
@@ -32,6 +33,8 @@ header.header.wrapper__header(
 			.container.header__bg-wrap
 				.row.header__bg-row
 					.col-md-10.offset-md-1.header__bg-col
+
+						+bread(class='header__bread')
 
 						if page.hasTitle
 							h1.title.title_color_white.title_lg.header__title= page.title

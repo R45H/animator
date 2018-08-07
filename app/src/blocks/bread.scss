@@ -1,0 +1,36 @@
+$name: bread;
+
+.#{$name} {
+	list-style-type: none;
+
+	&__item {
+		display: inline-block;
+		position: relative;
+
+		&::after {
+			content: '/';
+			position: absolute;
+			right: 0;
+			width: 20px;
+			text-align: center;
+			color: white;
+		}
+
+		&:last-child {
+
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	&__link {
+		color: white;
+		margin-right: 20px;
+		text-decoration: line-through;
+	}
+
+	&__text {
+		color: white;
+	}
+}
