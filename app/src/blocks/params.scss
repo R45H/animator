@@ -3,26 +3,41 @@ $name: params;
 .#{$name} {
 
 	&__wrap {
-		display: inline-block;
+		display: table;
+		width: auto;
 	}
 
 	&__row {
-		margin-bottom: 5px;
+		display: table-row;
+		padding-bottom: 5px;
 
 		&:last-child {
-			margin-bottom: 0;
+
+			.#{$name} {
+				// =====
+
+				&__title {
+					padding-bottom: 0;
+				}
+
+				&__value {
+					padding-bottom: 0;
+				}
+			}
 		}
 	}
 
 	&__title {
 		color: $color-gray;
-		display: inline-block;
-		margin-right: 5px;
+		display: table-cell;
+		padding-right: 5px;
+		padding-bottom: 5px;
 	}
 
 	&__value {
 		color: $color-text;
-		display: inline-block;
+		display: table-cell;
+		padding-bottom: 5px;
 	}
 
 	&_sm {
