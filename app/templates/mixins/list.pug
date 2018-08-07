@@ -1,0 +1,10 @@
+include svg
+
+mixin list(data)
+	.list(class= attributes.class)
+		ul.list__wrap
+
+			each val in data
+				li.list__item
+					+svg('list', 'list__icon')
+					.list__text= val
