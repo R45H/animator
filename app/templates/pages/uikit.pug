@@ -136,11 +136,13 @@ include ../mixins/banner
 			.col
 				+date
 
-		.row.main__separator
-			.col-10.offset-sm-1.main__space-col
-				+news(news[0])(class='news_arrow')
+		.row.main__space-col
 			.col-10.offset-sm-1
-				+news(news[1])
+				+news(news[0])
+
+		.row.main__separator
+			.col-10.offset-sm-1
+				+news(news[0])(class='news_arrow')
 
 		.row.main__separator
 			.col-12.main__space-col
