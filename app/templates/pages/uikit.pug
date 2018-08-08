@@ -76,6 +76,8 @@ include ../mixins/fancybox
 		.row.main__separator
 			.col-3
 				+list(list)
+			.col-3
+				+list(list)(class='list_sm')
 
 		.row.main__separator
 			.col-5
@@ -173,7 +175,7 @@ include ../mixins/fancybox
 			.col-4
 				+banner
 
-		.row.main__separator
+		.row.main__space-col
 			.col-8.main__space-col
 				.block
 					h2.title.title_sm.main__space-bot-half .block
@@ -185,9 +187,21 @@ include ../mixins/fancybox
 					h2.title.title_sm.main__space-bot-half .block.block_text
 					.text
 						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
-			.col-8.main__space-col
+			.col-8
 				.block.block_lg
 					.title.title_sm .block.block_lg
+		.row.main__separator
+			.col-6.main__space-col
+				.block.block_height_full
+					h2.title.title_sm.main__space-bot-half .block.block_height_full
+					.text
+						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
+						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
+			.col-6.main__space-col
+				.block.block_height_full
+					h2.title.title_sm.main__space-bot-half .block.block_height_full
+					.text
+						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
 
 		.row.main__separator
 			.col-3
@@ -206,14 +220,29 @@ include ../mixins/fancybox
 
 		.row.main__separator
 			.col-sm-6.main__space-col
-				+slider(slider[0])
+				+slider({
+					title: '.slider',
+					list: g_img_list
+				})
 			.col-sm-6.main__space-col
-				+slider(slider[1])(class='slider_narrow')
-			.col-sm-6
-				+slider(slider[2])(dataRows='2')
+				+slider({
+					title: '.slider.slider_narrow',
+					list: g_img_list
+				})(class='slider_narrow')
 			.col-sm-6.main__space-col
-				+slider(slider[3])(dataCols='2')
-			.col-sm-6
-				+slider(slider[4])(dataSmCols='2' dataLgCols='3')
+				+slider({
+					title: '.slider[data-rows=2]',
+					list: g_img_list
+				})(dataRows='2')
+			.col-sm-6.main__space-col
+				+slider({
+					title: '.slider[data-cols=2]',
+					list: g_img_list
+				})(dataCols='2')
+			.col-sm-6.main__space-col
+				+slider({
+					title: '.slider[data-sm-cols=2&data-lg-cols=3]',
+					list: g_img_list
+				})(dataSmCols='2' dataLgCols='3')
 
 	.main__footer-spacer
