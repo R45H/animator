@@ -189,7 +189,15 @@ include ../mixins/list
 					.title.title_sm .block.block_lg
 
 		.row.main__separator
-			.col-sm-9
-				+slider(slider)
+			.col-sm-6.main__space-col
+				+slider(slider[0])
+			.col-sm-6.main__space-col
+				+slider(slider[1])(class='slider_narrow')
+			.col-sm-6
+				+slider(slider[2])(dataRows='2')
+			.col-sm-6.main__space-col
+				+slider(slider[3])(dataCols='2')
+			.col-sm-6
+				+slider(slider[4])(dataSmCols='2' dataLgCols='3')
 
 	.main__footer-spacer

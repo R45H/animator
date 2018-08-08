@@ -1,9 +1,53 @@
 {
-	"slider": {
-		"title": "Украшение помещений",
-		"list": [
-			"img/content/slider/01.jpg",
-			"img/content/slider/02.jpg"
-		]
-	}
+	"slider": [
+		{
+			"title": ".slider",
+			"list": [
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg",
+				"img/content/slider/01.jpg"
+			]
+		},
+		{
+			"title": ".slider.slider_narrow",
+			"list": [
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg",
+				"img/content/slider/01.jpg"
+			]
+		},
+		{
+			"title": ".slider[data-rows=2]",
+			"list": [
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg",
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg",
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg"
+			]
+		},
+		{
+			"title": ".slider[data-cols=2]",
+			"list": [
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg",
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg",
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg"
+			]
+		},
+		{
+			"title": ".slider[data-sm-cols=2 data-lg-cols=3]",
+			"list": [
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg",
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg",
+				"img/content/slider/01.jpg",
+				"img/content/slider/02.jpg"
+			]
+		}
+	]
 }

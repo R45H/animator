@@ -11,6 +11,10 @@ $name: slider;
 		padding: 0 20px 20px;
 	}
 
+	.slick-list {
+		margin: -10px;
+	}
+
 	.slick-slide {
 
 		> div {
@@ -106,14 +110,16 @@ $name: slider;
 	}
 
 	&__body {
-
+		overflow: hidden;
 	}
 
 	&__item {
-
+		padding: 10px;
 	}
 
 	&__link {
+		@extend %radius;
+		overflow: hidden;
 		display: block;
 		outline: none;
 	}
@@ -121,6 +127,17 @@ $name: slider;
 	&__img {
 		display: block;
 		background: no-repeat center / cover;
-		padding-bottom: 50%;
+		padding-bottom: 75%;
+	}
+
+	&_narrow {
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				padding-bottom: 50%;
+			}
+		}
 	}
 }
