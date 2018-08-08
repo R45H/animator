@@ -25,7 +25,16 @@ mixin slider(data)
 
 		.slider__body
 
-			each val in data.list
+			each val, i in data.list
 				.slider__item
-					a.slider__link(href='#')
-						.slider__img(style='background-image: url(' + val + ');')
+					a.slider__link.fancybox(
+						href= val
+						data-fancybox='group-' + data.title
+						data-caption= data.title
+					)
+						.slider__img(
+							style='background-image: url(' + val + ');'
+							role='img'
+							aria-label='img-' + (i + 1)
+							title='img-' + (i + 1)
+						)
