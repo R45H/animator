@@ -1,0 +1,126 @@
+$name: slider;
+
+.#{$name} {
+	@extend %radius;
+	border: 1px solid $color-gray-light;
+	overflow: hidden;
+	background: white;
+	padding: 0 15px 15px;
+
+	@include screen-sm() {
+		padding: 0 20px 20px;
+	}
+
+	.slick-slide {
+
+		> div {
+			display: flex;
+		}
+	}
+
+	&__header {
+		position: relative;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+		@include screen-sm() {
+			padding-top: 20px;
+		}
+	}
+
+	&__title {
+		padding-right: 85px;
+
+		@include screen-sm() {
+			padding-right: 110px;
+		}
+	}
+
+	&__arrows-wrap {
+		position: absolute;
+		top: 0;
+		right: -15px;
+		height: 100%;
+
+		@include screen-sm() {
+			right: -20px;
+		}
+	}
+
+	&__arrow {
+		@extend %transition;
+		color: $color-text;
+		fill: currentColor;
+		padding: 5px 15px;
+		border: none;
+		height: 100%;
+		outline: none;
+		background: none;
+		cursor: pointer;
+
+		@include screen-sm() {
+			padding: 10px 20px;
+		}
+
+		&:hover {
+			color: $color-second;
+		}
+
+		&:active {
+			color: $color-second-active;
+		}
+
+		&_prev {
+			padding-right: 5px;
+			padding-left: 15px;
+
+			@include screen-sm() {
+				padding-right: 15px;
+				padding-left: 20px;
+			}
+
+			.#{$name} {
+				// =====
+
+				&__arrow-icon {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		&_next {
+			padding-left: 5px;
+			padding-right: 15px;
+
+			@include screen-sm() {
+				padding-left: 15px;
+				padding-right: 20px;
+			}
+		}
+	}
+
+	&__arrow-icon {
+		display: block;
+		width: 2em;
+		height: 2em;
+	}
+
+	&__body {
+
+	}
+
+	&__item {
+
+	}
+
+	&__link {
+		display: block;
+		outline: none;
+	}
+
+	&__img {
+		display: block;
+		background: no-repeat center / cover;
+		padding-bottom: 50%;
+	}
+}

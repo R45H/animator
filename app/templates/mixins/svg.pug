@@ -4,5 +4,5 @@ mixin svg(fileName, classes)
 		- fileName= 'svg-' + fileName;
 	- }
 
-	svg(class= classes || '')
+	svg(class= classes || null)
 		use(xlink:href="img/sprite.svg#" + fileName)

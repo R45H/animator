@@ -1,5 +1,6 @@
 include ../components/social
 include ../components/date
+include ../components/slider
 include ../mixins/star
 include ../mixins/select
 include ../mixins/news
@@ -172,14 +173,23 @@ include ../mixins/list
 				+banner
 
 		.row.main__separator
-			.col-4
+			.col-8.main__space-col
 				.block
-					.title.title_sm .block
-			.col-4
-				.block.block_md
-					.title.title_sm .block.block_md
-			.col-4
+					h2.title.title_sm.main__space-bot-half .block
+					.text
+						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
+
+			.col-8.main__space-col
+				.block.block_text
+					h2.title.title_sm.main__space-bot-half .block.block_text
+					.text
+						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
+			.col-8.main__space-col
 				.block.block_lg
 					.title.title_sm .block.block_lg
+
+		.row.main__separator
+			.col-sm-9
+				+slider(slider)
 
 	.main__footer-spacer

@@ -1,0 +1,19 @@
+include ../mixins/svg
+
+mixin slider(data)
+	.slider(class= attributes.class)
+
+		.slider__header
+			.title.title_sm.title_color_2.slider__title= data.title
+			.slider__arrows-wrap
+				button.slider__arrow.slider__arrow_prev
+					+svg('arrow-right', 'slider__arrow-icon')
+				button.slider__arrow.slider__arrow_next
+					+svg('arrow-right', 'slider__arrow-icon')
+
+		.slider__body
+
+			each val in data.list
+				.slider__item
+					a.slider__link(href='#')
+						.slider__img(style='background-image: url(' + val + ');')
