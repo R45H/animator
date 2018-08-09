@@ -14,7 +14,13 @@
 		{
 			"link": "#",
 			"name": "Калькулятор",
-			"name_for_main": "Фотографы"
+			"name_for_main": "Фотографы",
+			"sub": [
+				{
+					"link": "detail-photographer.html",
+					"name": "Страница фотографа"
+				}
+			]
 		},
 		{
 			"link": "#",

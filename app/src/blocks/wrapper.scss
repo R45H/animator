@@ -58,4 +58,22 @@ $name: wrapper;
 			}
 		}
 	}
+
+	&_color_fifth {
+
+		.#{$name} {
+			// =====
+
+			&__header {
+
+				&::after {
+					background-color: $color-fifth;
+				}
+			}
+
+			&__text {
+				color: $color-fifth;
+			}
+		}
+	}
 }

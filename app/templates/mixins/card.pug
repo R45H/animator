@@ -29,15 +29,14 @@ mixin card(data)
 						a.link.link_line_none.link_icon_before(href='tel:' + data.tel.link)= data.tel.name
 							+svg('tel', 'link__icon')
 
-			.card__row.card__tags
-				+tags(data.tags)
-
 			if data.tel_down
 				.card__row
 					.card__tel-wrap.card__tel-wrap_space_none
 						a.link.link_line_none.link_icon_before(href='tel:' + data.tel.link)= data.tel.name
 							+svg('tel', 'link__icon')
 
+			.card__row.card__tags
+				+tags(data.tags)
 
 			if data.params
 				.card__row
@@ -49,9 +48,9 @@ mixin card(data)
 
 			.card__btn-wrap
 
-				if data.btn_animator
+				if data.btn_invite
 					.card__btn
-						a.btn.btn_wide.btn_sm.btn_fill(href='#') Пригласить аниматора
+						a.btn.btn_wide.btn_sm.btn_fill(href='#')= data.btn_invite
 
 				if data.btn_profile
 					.card__btn

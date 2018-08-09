@@ -1,7 +1,7 @@
 {
 	"card": [
 		{
-			"img": "img/content/card.jpg",
+			"img": "img/content/card/01.jpg",
 			"link": "#",
 			"title": "Оскар Лазарев",
 			"tel": {
@@ -14,11 +14,11 @@
 				{"name": "актёр", "link": "#"}
 			],
 			"desc": "<p>Популяционный индекс, а там действительно могли быть видны звезды, о чем свидетельствует Фукидид точно решает близкий метеорный дождь.</p>",
-			"btn_animator": true,
+			"btn_invite": "Пригласить аниматора",
 			"btn_profile": true
 		},
 		{
-			"img": "img/content/card.jpg",
+			"img": "img/content/card/01.jpg",
 			"link": "#",
 			"title": "Общество Юных Архитекторов",
 			"tags": [
@@ -30,7 +30,7 @@
 			"btn_profile": true
 		},
 		{
-			"img": "img/content/card.jpg",
+			"img": "img/content/card/01.jpg",
 			"link": "#",
 			"title": "Оскар Лазарев",
 			"tel": {
@@ -48,7 +48,28 @@
 				{"title": "Стоимость", "value": "2000 руб./час"}
 			],
 			"params_sm": true,
-			"btn_animator": true,
+			"btn_invite": "Пригласить аниматора",
+			"date": true,
+			"tel_down": true
+		},
+		{
+			"img": "img/content/card/02.jpg",
+			"link": "#",
+			"title": "Оскар Лазарев",
+			"tel": {
+				"link": "+72146544487",
+				"name": "+7 (214) 654-44-87"
+			},
+			"tags": [
+				{"name": "фотограф", "link": "#"}
+			],
+			"params": [
+				{"title": "Опыт", "value": "37 фотосессий"},
+				{"title": "Возраст", "value": "34 года"},
+				{"title": "Стоимость", "value": "2000 руб./час"}
+			],
+			"params_sm": true,
+			"btn_invite": "Пригласить фотографа",
 			"date": true,
 			"tel_down": true
 		}

@@ -88,6 +88,10 @@ $name: card;
 		@include screen-sm() {
 			margin-right: 1em;
 		}
+
+		&_space_sm {
+			margin-bottom: 5px;
+		}
 	}
 
 	&__title {
