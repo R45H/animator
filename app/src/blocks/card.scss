@@ -5,23 +5,32 @@ $name: card;
 	border: 1px solid $color-gray-light;
 	overflow: hidden;
 	background: white;
+	padding: 15px;
 
 	@include screen-md() {
 		display: flex;
+		padding: 30px;
 	}
 
 	&__img-wrap {
 		display: block;
 		flex: none;
-		overflow: hidden;
-		border-bottom: 1px solid $color-gray-light;
+		padding-bottom: 15px;
 
 		@include screen-md() {
 			width: 30%;
 			max-width: 300px;
-			border-bottom: none;
-			border-right: 1px solid $color-gray-light;
+			padding-bottom: 0;
+			padding-right: 30px;
 		}
+	}
+
+	&__img-link {
+		@extend %radius;
+		border: 1px solid $color-gray-light;
+		overflow: hidden;
+		display: block;
+		width: 100%;
 	}
 
 	&__img {
@@ -39,24 +48,20 @@ $name: card;
 
 	&__content-wrap {
 		flex: auto;
-		padding: 15px;
 		display: flex;
 		flex-direction: column;
-
-		@include screen-sm() {
-			padding: 30px;
-		}
 	}
 
 	&__date-wrap {
 		flex: none;
-		padding: 15px;
+		padding-top: 15px;
 		display: flex;
 		align-items: flex-start;
 		justify-content: center;
 
-		@include screen-sm() {
-			padding: 30px;
+		@include screen-md() {
+			padding-top: 0;
+			padding-left: 30px;
 		}
 	}
 
@@ -96,6 +101,10 @@ $name: card;
 	&__tel-wrap {
 		white-space: nowrap;
 		margin-bottom: 15px;
+
+		&_space_none {
+			margin-bottom: 0;
+		}
 	}
 
 	&__tags {
@@ -125,32 +134,24 @@ $name: card;
 
 	&_thin {
 
+		@include screen-md() {
+			padding: 15px;
+		}
+
 		.#{$name} {
 			// =====
 
-			&__content-wrap {
+			&__img-wrap {
 
-				@include screen-sm() {
-					padding: 15px;
-				}
-
-				@include screen-xl() {
-					padding: 15px 15px 15px 30px;
+				@include screen-md() {
+					padding-right: 15px;
 				}
 			}
 
 			&__date-wrap {
 
-				@include screen-sm() {
-					padding: 15px;
-				}
-
 				@include screen-md() {
-					padding: 15px 15px 15px 0;
-				}
-
-				@include screen-xl() {
-					padding: 15px;
+					padding-left: 15px;
 				}
 			}
 		}
