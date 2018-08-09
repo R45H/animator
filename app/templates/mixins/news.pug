@@ -26,7 +26,7 @@ mixin news(data)
 					+svg('calendar', 'news__date-img')
 					span.news__date-text= data.date
 
-			.news__text!= data.text
+			.text.news__text!= data.text
 
 		if attributes.class == 'news_arrow'
 			.news__arrow
