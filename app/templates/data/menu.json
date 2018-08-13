@@ -25,7 +25,13 @@
 		{
 			"link": "#",
 			"name": "Калькулятор",
-			"name_for_main": "Площадки"
+			"name_for_main": "Площадки",
+			"sub": [
+				{
+					"link": "detail-area.html",
+					"name": "Страница площадки"
+				}
+			]
 		},
 		{
 			"link": "#",

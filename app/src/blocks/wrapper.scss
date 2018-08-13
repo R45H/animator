@@ -76,4 +76,22 @@ $name: wrapper;
 			}
 		}
 	}
+
+	&_color_sixth {
+
+		.#{$name} {
+			// =====
+
+			&__header {
+
+				&::after {
+					background-color: $color-sixth;
+				}
+			}
+
+			&__text {
+				color: $color-sixth;
+			}
+		}
+	}
 }

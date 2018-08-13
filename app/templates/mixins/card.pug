@@ -36,7 +36,7 @@ mixin card(data)
 							+svg('tel', 'link__icon')
 
 			.card__row.card__tags
-				+tags(data.tags)
+				+tags(data.tags)(class='tags_color_gray tags_sm')
 
 			if data.params
 				.card__row

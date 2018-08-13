@@ -1,31 +1,94 @@
 $name: tags;
 
 .#{$name} {
-	@extend %transition;
-	color: $color-gray;
-	display: inline-flex;
-	flex-wrap: wrap;
-	align-items: center;
-	fill: $color-gray;
-	font-size: 13px;
+	display: flex;
 
-	&:hover {
-		fill: $color-second;
+	&__outer {
+		@extend %transition;
+		position: relative;
+		fill: $color-third;
+
+		&:hover {
+			fill: $color-second;
+		}
+
+		&:active {
+			fill: $color-second-active;
+		}
 	}
 
-	&:active {
-		fill: $color-second-active;
+	&__wrap {
+		padding-left: 30px;
+	}
+
+	&__item {
+
 	}
 
 	&__icon {
-		width: 1em;
-		height: 1em;
-		margin-right: .5em;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 30px;
+		height: 20px;
+		padding-right: 5px;
 	}
-}
 
-a.#{$name}__item {
-	@extend a:not([class]);
-	color: $color-gray;
-	border-bottom: none;
+	&_sm {
+		font-size: 13px;
+
+		.#{$name} {
+			// =====
+
+			&__wrap {
+				padding-left: 1.5em;
+			}
+
+			&__icon {
+				width: 1em;
+				height: 1em;
+				padding: 0;
+			}
+		}
+	}
+
+	&_color_gray {
+
+		.#{$name} {
+			// =====
+
+			&__outer {
+				fill: $color-gray;
+				color: $color-gray;
+
+				&:hover {
+					fill: $color-second;
+				}
+
+				&:active {
+					fill: $color-second-active;
+				}
+			}
+
+			&__item {
+				color: $color-gray;
+			}
+		}
+
+		a.#{$name} {
+			// =====
+
+			&__item {
+
+				&:hover {
+					@extend a:not([class]):hover;
+				}
+
+				&:active {
+					@extend a:not([class]):active;
+				}
+			}
+		}
+	}
 }

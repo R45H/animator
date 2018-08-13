@@ -20,12 +20,14 @@ include ../mixins/fancybox
 				h2.title .title
 			.col-2
 				h2.title.title_sm .title.title_sm
-			.col-4
+			.col-2
+				h2.title.title_md .title.title_md
+			.col-3
 				h2.title.title_lg .title.title_lg
-			.col-4
+			.col-3
 				h2.title.title_color_1 .title.title_color_1
 		.row.main__space-col
-			.col-4
+			.col-3
 				h2.title.title_color_2 .title.title_color_2
 			.col-4
 				h2.title.title_color_dark .title.title_color_dark
@@ -44,6 +46,8 @@ include ../mixins/fancybox
 				span.link span.link
 			.col-2
 				a.link.link_line_none(href='#') .link.link_line_none
+			.col-2
+				a.link.link_nowrap(href='#') .link.link_nowrap
 			.col-2
 				a.link.link_color_1(href='#') .link.link_color_1
 
@@ -114,18 +118,46 @@ include ../mixins/fancybox
 				+select(select)(class='select_simple')
 
 		.row.main__separator
-			.col-4
-				+tags([
-					'аниматор',
-					'фотограф',
-					'актёр'
-				])
-			.col-4
-				+tags([
-					{"name": "аниматор", "link": "#"},
-					{"name": "фотограф", "link": "#"},
-					{"name": "актёр", "link": "#"}
-				])
+			.col-3
+				+tags({
+					icon: 'tags',
+					delimiter: ',',
+					items: [
+						{"name": "аниматор", "link": "#"},
+						{"name": "фотограф", "link": "#"},
+						{"name": "актёр", "link": "#"}
+					]
+				})
+			.col-3
+				+tags({
+					icon: 'tags',
+					delimiter: ',',
+					items: [
+						'аниматор',
+						'фотограф',
+						'актёр'
+					]
+				})
+			.col-3
+				+tags({
+					icon: 'tags',
+					delimiter: ',',
+					items: [
+						{"name": "аниматор", "link": "#"},
+						{"name": "фотограф", "link": "#"},
+						{"name": "актёр", "link": "#"}
+					]
+				})(class='tags_sm')
+			.col-3
+				+tags({
+					icon: 'tags',
+					delimiter: ',',
+					items: [
+						{"name": "аниматор", "link": "#"},
+						{"name": "фотограф", "link": "#"},
+						{"name": "актёр", "link": "#"}
+					]
+				})(class='tags_color_gray')
 
 		.row.main__separator
 			.col-1
@@ -229,6 +261,10 @@ include ../mixins/fancybox
 					title: '.slider.slider_narrow',
 					list: g_img_list
 				})(class='slider_narrow')
+			.col-sm-6.main__space-col
+				+slider({
+					list: g_img_list
+				})(class='slider_arrows_inner')
 			.col-sm-6.main__space-col
 				+slider({
 					title: '.slider[data-rows=2]',

@@ -46,6 +46,7 @@ $name: slider;
 		top: 0;
 		right: -15px;
 		height: 100%;
+		display: flex;
 
 		@include screen-sm() {
 			right: -20px;
@@ -144,5 +145,51 @@ $name: slider;
 
 	&_height_full {
 		height: 100%;
+	}
+
+	&_arrows_inner {
+		position: relative;
+
+		.#{$name} {
+			// =====
+
+			&__header {
+				position: static;
+				padding-bottom: 0;
+			}
+
+			&__title {
+				display: none;
+			}
+
+			&__arrows-wrap {
+				z-index: 1;
+				height: auto;
+				top: auto;
+				bottom: 30px;
+				right: 30px;
+
+				@include screen-sm() {
+					bottom: 40px;
+					right: 40px;
+				}
+			}
+
+			&__arrow {
+				padding-top: 0;
+				padding-bottom: 0;
+				background: rgba(white, .6);
+
+				&_prev {
+					border-top-left-radius: 3px;
+					border-bottom-left-radius: 3px;
+				}
+
+				&_next {
+					border-top-right-radius: 3px;
+					border-bottom-right-radius: 3px;
+				}
+			}
+		}
 	}
 }

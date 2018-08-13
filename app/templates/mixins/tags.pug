@@ -3,17 +3,17 @@ include svg
 
 mixin tags(data)
 	.tags(class= attributes.class)
-		+svg('tags', 'tags__icon')
+		.tags__outer
+			+svg(data.icon, 'tags__icon')
 
-		.tags__wrap
+			.tags__wrap
 
-			each val, i in data
+				each val, i in data.items
 
-				+g-tag((typeof val == 'object' && val.link) ? 'a' : 'span')(
-					class='tags__item',
-					href= val.link
-				)= val.name || val
+					+g-tag((typeof val == 'object' && val.link) ? 'a' : 'span')(
+						class='link link_line_none link_nowrap tags__item',
+						href= val.link
+					)= val.name || val
 
-				if i < data.length - 1
-					| ,
-					|
+					if i < data.items.length - 1
+						span.tags__delimiter= data.delimiter + ' '

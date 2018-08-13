@@ -47,6 +47,10 @@ $name: link;
 		border-bottom: none;
 	}
 
+	&_nowrap {
+		white-space: nowrap;
+	}
+
 	&_color_1 {
 		color: $color-third;
 		border-color: $color-third;
