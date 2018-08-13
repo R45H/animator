@@ -41,6 +41,24 @@ $name: wrapper;
 		}
 	}
 
+	&_color_second {
+
+		.#{$name} {
+			// =====
+
+			&__header {
+
+				&::after {
+					background-color: $color-second;
+				}
+			}
+
+			&__text {
+				color: $color-second;
+			}
+		}
+	}
+
 	&_color_fourth {
 
 		.#{$name} {

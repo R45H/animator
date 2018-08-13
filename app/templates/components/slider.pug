@@ -32,7 +32,7 @@ mixin slider(data)
 				.slider__item
 					a.slider__link.fancybox(
 						href= val
-						data-fancybox='group-' + data.title
+						data-fancybox='group-' + (data.title || '1')
 						data-caption= data.title
 					)
 						.slider__img(
