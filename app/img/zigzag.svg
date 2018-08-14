@@ -1,23 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="698" height="473" viewBox="0 0 698 473">
-  <defs>
-    <style>
-      .cls-1 {
-        fill-opacity: 0;
-      }
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 698 473" width="698" height="473">
+	<defs>
+		<style>
+			.cls-1 {
+				fill: none;
+			}
 
-      .cls-2 {
-        fill: #eee26a;
-      }
+			.cls-2 {
+				clip-path: url(#clip-path);
+			}
 
-      .cls-3 {
-        fill: #f6e96f;
-      }
-    </style>
-  </defs>
-  <rect class="cls-1" width="698" height="473"/>
-  <path class="cls-2" d="M347,236,585,0H698V123L348,473,0,123V0H111Z"/>
-  <path class="cls-3" d="M0,123,348,473,698,123V362L584,473H112.5L0,362Z"/>
-  <path class="cls-3" d="M348,237,111,0H585Z"/>
-  <path class="cls-2" d="M698,473V362L584,473Z"/>
-  <path class="cls-2" d="M0,362,112.5,473H0Z"/>
+			.cls-3 {
+				fill: #fff;
+			}
+
+			.cls-4 {
+				fill-opacity: 0;
+			}
+
+			.cls-5 {
+				fill: #eee26a;
+			}
+
+			.cls-6 {
+				fill: #f6e96f;
+			}
+		</style>
+		<clipPath id="clip-path">
+			<rect class="cls-1" width="698" height="473"/>
+		</clipPath>
+	</defs>
+	<g class="cls-2">
+		<rect class="cls-3" width="698" height="473"/>
+		<rect class="cls-4" width="699" height="473"/>
+		<path class="cls-5" d="M698,473V359.5L581,473Z"/>
+		<path class="cls-5" d="M0,356,118.5,473H0Z"/>
+		<path class="cls-6" d="M699,362.16V117L348,458.52V473H584.67Z"/>
+		<path class="cls-6" d="M0,362.16V117L351,458.52V473H114.33Z"/>
+		<path class="cls-5" d="M348,235,583,0H698V123L348,473,0,123V0H113Z"/>
+		<path class="cls-6" d="M348,237,111,0H585Z"/>
+	</g>
 </svg>
