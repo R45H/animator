@@ -1,2 +1,16 @@
+include global
+
 mixin banner(data)
-	a.banner(href='#')
+	- data = data || {}
+
+	+g-tag(data && data.link ? 'a' : '')(
+		class='banner'
+		class= attributes.class
+		href= data.link
+	)
+		.banner__img(
+			style= data && data.img ? 'background-image: url(' + data.img + ');' : ''
+			role='img'
+			aria-label='Image'
+			title='Image'
+		)

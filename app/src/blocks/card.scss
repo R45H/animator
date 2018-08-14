@@ -40,10 +40,6 @@ $name: card;
 		height: 100%;
 		background: no-repeat center / cover;
 		transition: $duration linear;
-
-		&:hover {
-			transform: scale(1.03) rotate(-.5deg);
-		}
 	}
 
 	&__content-wrap {
@@ -157,6 +153,20 @@ $name: card;
 				@include screen-md() {
 					padding-left: 15px;
 				}
+			}
+		}
+	}
+}
+
+a.#{$name}__img-link {
+
+	&:hover {
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				transform: scale(1.03) rotate(-.5deg);
 			}
 		}
 	}

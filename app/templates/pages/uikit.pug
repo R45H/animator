@@ -213,7 +213,18 @@ include ../mixins/fancybox
 
 		.row.main__separator
 			.col-4
-				+banner
+				+banner({
+					img: 'img/content/news/01.jpg'
+				})
+			.col-4
+				+banner({
+					link: '#',
+					img: 'img/content/news/01.jpg'
+				})
+			.col-4
+				+banner({
+					img: 'img/content/news/01.jpg'
+				})(class='banner_wide')
 
 		.row.main__space-col
 			.col-8.main__space-col

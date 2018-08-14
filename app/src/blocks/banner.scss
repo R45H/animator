@@ -6,6 +6,37 @@ $name: banner;
 	overflow: hidden;
 	display: block;
 	width: 100%;
-	padding-bottom: 100%;
-	background: $color-gray-light no-repeat center / cover;
+
+	&__img {
+		display: block;
+		width: 100%;
+		padding-bottom: 100%;
+		background: $color-gray-light no-repeat center / cover;
+		transition: $duration linear;
+	}
+
+	&_wide {
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				padding-bottom: 50%;
+			}
+		}
+	}
+}
+
+a.#{$name} {
+
+	&:hover {
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				transform: scale(1.03) rotate(-.5deg);
+			}
+		}
+	}
 }
