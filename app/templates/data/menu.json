@@ -47,6 +47,10 @@
 		{
 			"link": "news.html",
 			"name": "Новости"
+		},
+		{
+			"link": "stock.html",
+			"name": "Акции"
 		}
 	]
 }
