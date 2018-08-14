@@ -166,6 +166,14 @@ $name: header;
 		padding-bottom: 30px;
 	}
 
+	&__date-wrap {
+		padding-bottom: 15px;
+	}
+
+	&__date {
+		font-size: 13px;
+	}
+
 	&_home {
 
 		&::before,
@@ -202,6 +210,20 @@ $name: header;
 					width: auto;
 				}
 			}
+		}
+	}
+}
+
+span.#{$name} {
+
+	&__date {
+		color: white;
+		fill: white;
+
+		&:hover,
+		&:active {
+			color: white;
+			fill: white;
 		}
 	}
 }

@@ -14,4 +14,50 @@ $name: text;
 			margin-bottom: 0;
 		}
 	}
+
+	&_colored {
+
+		p {
+
+			&::first-letter {
+				font-size: 1.7em;
+				line-height: 0;
+			}
+
+			&:nth-child(5n+1) {
+
+				&::first-letter {
+					color: $color-sixth;
+				}
+			}
+
+			&:nth-child(5n+2) {
+
+				&::first-letter {
+					color: $color-eighth-dark;
+				}
+			}
+
+			&:nth-child(5n+3) {
+
+				&::first-letter {
+					color: $color-fifth;
+				}
+			}
+
+			&:nth-child(5n+4) {
+
+				&::first-letter {
+					color: $color-seventh;
+				}
+			}
+
+			&:nth-child(5n+5) {
+
+				&::first-letter {
+					color: $color-fourth-dark;
+				}
+			}
+		}
+	}
 }

@@ -46,11 +46,23 @@
 		},
 		{
 			"link": "news.html",
-			"name": "Новости"
+			"name": "Новости",
+			"sub": [
+				{
+					"link": "news-detail.html",
+					"name": "Названы лучшие актёры 2017 года"
+				}
+			]
 		},
 		{
 			"link": "stock.html",
-			"name": "Акции"
+			"name": "Акции",
+			"sub": [
+				{
+					"link": "stock-detail.html",
+					"name": "Квест для детей в подарок ко дню рождения"
+				}
+			]
 		}
 	]
 }

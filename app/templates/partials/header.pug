@@ -37,4 +37,9 @@ header.header.wrapper__header(
 						+bread(class='header__bread')
 
 						if page.hasTitle
-							h1.title.title_color_white.title_lg.title_bold.header__title= page.title
+							h1.title.title_color_white.header__title(class= page.hasTitle !== 'small' ? 'title_lg title_bold' : '')= page.title
+
+						if page.date
+							.header__date-wrap
+								span.link.link_line_none.link_icon_before.header__date= page.date
+									+svg('calendar', 'link__icon')
