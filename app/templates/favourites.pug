@@ -1,0 +1,14 @@
+extends layouts/default
+
+block vars
+	-
+		page = {
+			title: 'Избранное',
+			link: 'favourites.html',
+			img: 'img/content/header/07.jpg',
+			hasTitle: true,
+			color: 'seventh'
+		}
+
+block content
+	include pages/favourites

@@ -29,8 +29,9 @@ mixin card(data)
 						a.link.link_line_none.link_icon_before.wrapper__link(href='tel:' + data.tel.link)= data.tel.name
 							+svg('tel', 'link__icon')
 
-			.card__row.card__tags
-				+tags(data.tags)(class='tags_color_gray tags_sm')
+			if data.tags
+				.card__row.card__tags
+					+tags(data.tags)(class='tags_color_gray tags_sm')
 
 			if data.tel_down
 				.card__row

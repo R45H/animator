@@ -1,9 +1,10 @@
 include ../mixins/svg
 
 mixin star(num)
-	.star(
+	a.star(
 		class= num ? 'star_fill' : ''
 		class= attributes.class
+		href= attributes.href || '#'
 	)
 		+svg('star', 'star__icon')
 

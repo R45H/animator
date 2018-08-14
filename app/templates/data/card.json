@@ -2,7 +2,7 @@
 	"card": [
 		{
 			"img": "img/content/card/01.jpg",
-			"link": "#",
+			"link": "detail-animator.html",
 			"title": "Оскар Лазарев",
 			"tel": {
 				"link": "+72146544487",
@@ -23,7 +23,7 @@
 		},
 		{
 			"img": "img/content/card/01.jpg",
-			"link": "#",
+			"link": "detail-area.html",
 			"title": "Общество Юных Архитекторов",
 			"tags": {
 				"icon": "tags",
@@ -39,7 +39,7 @@
 		},
 		{
 			"img": "img/content/card/01.jpg",
-			"link": "#",
+			"link": "detail-animator.html",
 			"title": "Оскар Лазарев",
 			"tel": {
 				"link": "+72146544487",
@@ -66,7 +66,7 @@
 		},
 		{
 			"img": "img/content/card/02.jpg",
-			"link": "#",
+			"link": "detail-photographer.html",
 			"title": "Оскар Лазарев",
 			"tel": {
 				"link": "+72146544487",
@@ -88,6 +88,17 @@
 			"btn_invite": "Пригласить фотографа",
 			"date": true,
 			"tel_down": true
+		},
+		{
+			"img": "img/content/card/03.jpg",
+			"link": "detail-service.html",
+			"title": "Украшение помещений",
+			"tel": {
+				"link": "+72146544487",
+				"name": "+7 (214) 654-44-87"
+			},
+			"desc": "<p>Популяционный индекс, а там действительно могли быть видны звезды, о чем свидетельствует Фукидид точно решает близкий метеорный дождь.</p>",
+			"btn_profile": true
 		}
 	]
 }
