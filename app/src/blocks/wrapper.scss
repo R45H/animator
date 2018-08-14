@@ -138,6 +138,35 @@ $name: wrapper;
 					}
 				}
 			}
+
+			&__pagination {
+
+				span.pagination {
+					// =====
+
+					&__num-text {
+						color: $color-second;
+					}
+				}
+			}
+
+			&__news {
+
+				.news {
+					// =====
+
+					&__img {
+
+						&::after {
+							background-color: $color-second;
+						}
+					}
+
+					&__title {
+						color: $color-second;
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -270,6 +299,35 @@ $name: wrapper;
 								@extend .tags__outer:active;
 							}
 						}
+					}
+				}
+			}
+
+			&__pagination {
+
+				span.pagination {
+					// =====
+
+					&__num-text {
+						color: $color-fourth;
+					}
+				}
+			}
+
+			&__news {
+
+				.news {
+					// =====
+
+					&__img {
+
+						&::after {
+							background-color: $color-fourth;
+						}
+					}
+
+					&__title {
+						color: $color-fourth;
 					}
 				}
 			}
@@ -408,6 +466,35 @@ $name: wrapper;
 					}
 				}
 			}
+
+			&__pagination {
+
+				span.pagination {
+					// =====
+
+					&__num-text {
+						color: $color-fifth;
+					}
+				}
+			}
+
+			&__news {
+
+				.news {
+					// =====
+
+					&__img {
+
+						&::after {
+							background-color: $color-fifth;
+						}
+					}
+
+					&__title {
+						color: $color-fifth;
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -543,6 +630,35 @@ $name: wrapper;
 					}
 				}
 			}
+
+			&__pagination {
+
+				span.pagination {
+					// =====
+
+					&__num-text {
+						color: $color-sixth;
+					}
+				}
+			}
+
+			&__news {
+
+				.news {
+					// =====
+
+					&__img {
+
+						&::after {
+							background-color: $color-sixth;
+						}
+					}
+
+					&__title {
+						color: $color-sixth;
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -675,6 +791,35 @@ $name: wrapper;
 								@extend .tags__outer:active;
 							}
 						}
+					}
+				}
+			}
+
+			&__pagination {
+
+				span.pagination {
+					// =====
+
+					&__num-text {
+						color: $color-seventh;
+					}
+				}
+			}
+
+			&__news {
+
+				.news {
+					// =====
+
+					&__img {
+
+						&::after {
+							background-color: $color-seventh;
+						}
+					}
+
+					&__title {
+						color: $color-seventh;
 					}
 				}
 			}

@@ -1,7 +1,7 @@
 include ../mixins/link-arrow
 
 mixin pagination(num, active)
-	.pagination
+	.pagination(class= attributes.class)
 
 		.pagination__col.pagination__arrow-prev
 			+link-arrow({

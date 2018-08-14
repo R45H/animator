@@ -28,6 +28,6 @@ mixin news(data)
 
 			.text.news__text!= data.text
 
-		if attributes.class == 'news_arrow'
+		if attributes.class && ~attributes.class.indexOf('news_arrow')
 			.news__arrow
 				+svg('arrow-down', 'news__arrow-icon')

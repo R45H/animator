@@ -1,0 +1,14 @@
+extends layouts/default
+
+block vars
+	-
+		page = {
+			title: 'Лента новостей',
+			link: 'news.html',
+			img: 'img/content/header/05.jpg',
+			hasTitle: true,
+			color: 'seventh'
+		}
+
+block content
+	include pages/news
