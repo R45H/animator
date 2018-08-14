@@ -11,8 +11,7 @@ $name: wrapper;
 			overflow: auto;
 		}
 
-		&::before,
-		&::after {
+		&::before {
 
 			@include screen-lg() {
 				content: '';
@@ -22,21 +21,7 @@ $name: wrapper;
 				width: 50%;
 				height: 100%;
 				z-index: -1;
-			}
-		}
-
-		&::after {
-
-			@include screen-lg() {
-				background: rgba($color-fourth, .8);
-			}
-		}
-
-		&::before {
-
-			@include screen-lg() {
-				filter: grayscale(1);
-				background: url($path + 'img/content/greet.jpg') no-repeat center / cover;
+				background: url($path + 'img/zigzag.svg');
 			}
 		}
 	}
