@@ -2,6 +2,7 @@ $name: bread;
 
 .#{$name} {
 	list-style-type: none;
+	font-size: 13px;
 
 	&__item {
 		display: inline-block;
