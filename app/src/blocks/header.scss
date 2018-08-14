@@ -121,7 +121,7 @@ $name: header;
 		overflow: hidden;
 
 		@include screen-sm() {
-			min-height: 230px;
+			min-height: 300px;
 			display: flex;
 			justify-content: center;
 		}
