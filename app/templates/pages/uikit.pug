@@ -1,6 +1,7 @@
 include ../components/social
 include ../components/date
 include ../components/slider
+include ../components/pagination
 include ../mixins/star
 include ../mixins/select
 include ../mixins/news
@@ -76,6 +77,10 @@ include ../mixins/fancybox
 				+link-arrow({
 					disabled: true
 				}) .link-arrow.link-arrow_disabled
+
+		.row.main__separator
+			.col-12
+				+pagination(10, 1)
 
 		.row.main__separator
 			.col-3

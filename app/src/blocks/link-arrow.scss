@@ -3,9 +3,10 @@ $name: link-arrow;
 .#{$name} {
 	@extend %transition;
 	display: inline-flex;
-	align-items: baseline;
+	align-items: center;
 	color: $color-text;
 	fill: currentColor;
+	height: 100%;
 
 	&:hover {
 		color: $color-second;
@@ -19,7 +20,6 @@ $name: link-arrow;
 		width: 2em;
 		height: .8em;
 		margin-left: .7em;
-		align-self: center;
 	}
 
 	&__text {

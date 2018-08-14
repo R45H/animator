@@ -1,0 +1,27 @@
+include ../mixins/link-arrow
+
+mixin pagination(num, active)
+	.pagination
+
+		.pagination__col.pagination__arrow-prev
+			+link-arrow({
+				dir: 'left',
+				disabled: active === 1
+			}) Назад
+
+		.pagination__col.pagination__arrow-next
+			+link-arrow({
+				disabled: active === num
+			}) Вперёд
+
+		.pagination__col.pagination__num-wrap
+			ul.pagination__num-i
+
+				- for(var i = 1; i <= num; i++) {
+					li.pagination__num
+
+						if i === active
+							span.pagination__num-text= i
+						else
+							a.link.link_line_none.pagination__num-text(href='#')= i
+				- }

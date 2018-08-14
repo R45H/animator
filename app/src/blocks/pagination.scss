@@ -1,0 +1,74 @@
+$name: pagination;
+
+.#{$name} {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	@include screen-sm() {
+		flex-wrap: nowrap;
+	}
+
+	&__arrow-prev {
+		flex: none;
+		height: 2.5em;
+
+		@include screen-sm() {
+			height: auto;
+		}
+	}
+
+	&__arrow-next {
+		flex: none;
+		height: 2.5em;
+
+		@include screen-sm() {
+			order: 1;
+			height: auto;
+		}
+	}
+
+	&__num-wrap {
+		width: 100%;
+
+		@include screen-sm() {
+			width: auto;
+		}
+	}
+
+	&__num-i {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@include screen-sm() {
+			padding: 0 15px;
+		}
+	}
+
+	&__num {
+
+	}
+
+	&__num-text {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 20px;
+		width: 2em;
+		height: 2em;
+		color: $color-main;
+	}
+}
+
+span.#{$name} {
+	// =====
+
+	&__num-text {
+		color: $color-third;
+		cursor: text;
+	}
+}
