@@ -56,6 +56,123 @@ $name: wrapper;
 			&__text {
 				color: $color-second;
 			}
+
+			&__fill {
+				fill: $color-second;
+			}
+
+			&__link {
+				fill: $color-second;
+
+				&.link_color_1 {
+					color: $color-second;
+					border-color: $color-second;
+
+					&:hover {
+						@extend a:not([class]):hover;
+					}
+
+					&:active {
+						@extend a:not([class]):active;
+					}
+				}
+
+				&:hover {
+					@extend .link_icon_before:hover;
+				}
+
+				&:active {
+					@extend .link_icon_before:active;
+				}
+			}
+
+			&__star {
+				color: $color-second;
+				stroke: $color-second;
+
+				&:hover {
+					@extend .star:hover;
+				}
+
+				&:active {
+					@extend .star:active;
+				}
+
+				&.star {
+					// =====
+
+					&_fill {
+						fill: $color-second;
+
+						&:hover {
+							@extend .star:hover;
+						}
+
+						&:active {
+							@extend .star:active;
+						}
+					}
+				}
+			}
+
+			&__tags {
+
+				.tags {
+					// =====
+
+					&__outer {
+						fill: $color-second;
+
+						&:hover {
+							@extend .tags__outer:hover;
+						}
+
+						&:active {
+							@extend .tags__outer:active;
+						}
+					}
+				}
+
+				&.tags_color_gray {
+
+					.tags {
+						// =====
+
+						&__outer {
+							fill: $color-gray;
+							color: $color-gray;
+
+							&:hover {
+								@extend .tags__outer:hover;
+							}
+
+							&:active {
+								@extend .tags__outer:active;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		span.#{$name} {
+			// =====
+
+			&__link {
+
+				&.link_color_1 {
+
+					&:hover,
+					&:active {
+						color: $color-second;
+					}
+				}
+
+				&:hover,
+				&:active {
+					fill: $color-second;
+				}
+			}
 		}
 	}
 
@@ -72,7 +189,124 @@ $name: wrapper;
 			}
 
 			&__text {
-				color: $color-fourth;
+				color: $color-fourth-dark;
+			}
+
+			&__fill {
+				fill: $color-fourth-dark;
+			}
+
+			&__link {
+				fill: $color-fourth-dark;
+
+				&.link_color_1 {
+					color: $color-fourth-dark;
+					border-color: $color-fourth-dark;
+
+					&:hover {
+						@extend a:not([class]):hover;
+					}
+
+					&:active {
+						@extend a:not([class]):active;
+					}
+				}
+
+				&:hover {
+					@extend .link_icon_before:hover;
+				}
+
+				&:active {
+					@extend .link_icon_before:active;
+				}
+			}
+
+			&__star {
+				color: $color-fourth-dark;
+				stroke: $color-fourth-dark;
+
+				&:hover {
+					@extend .star:hover;
+				}
+
+				&:active {
+					@extend .star:active;
+				}
+
+				&.star {
+					// =====
+
+					&_fill {
+						fill: $color-fourth-dark;
+
+						&:hover {
+							@extend .star:hover;
+						}
+
+						&:active {
+							@extend .star:active;
+						}
+					}
+				}
+			}
+
+			&__tags {
+
+				.tags {
+					// =====
+
+					&__outer {
+						fill: $color-fourth-dark;
+
+						&:hover {
+							@extend .tags__outer:hover;
+						}
+
+						&:active {
+							@extend .tags__outer:active;
+						}
+					}
+				}
+
+				&.tags_color_gray {
+
+					.tags {
+						// =====
+
+						&__outer {
+							fill: $color-gray;
+							color: $color-gray;
+
+							&:hover {
+								@extend .tags__outer:hover;
+							}
+
+							&:active {
+								@extend .tags__outer:active;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		span.#{$name} {
+			// =====
+
+			&__link {
+
+				&.link_color_1 {
+
+					&:hover,
+					&:active {
+						color: $color-fourth-dark;
+					}
+				}
+
+				&:hover,
+				&:active {
+					fill: $color-fourth-dark;
+				}
 			}
 		}
 	}
@@ -92,6 +326,123 @@ $name: wrapper;
 			&__text {
 				color: $color-fifth;
 			}
+
+			&__fill {
+				fill: $color-fifth;
+			}
+
+			&__link {
+				fill: $color-fifth;
+
+				&.link_color_1 {
+					color: $color-fifth;
+					border-color: $color-fifth;
+
+					&:hover {
+						@extend a:not([class]):hover;
+					}
+
+					&:active {
+						@extend a:not([class]):active;
+					}
+				}
+
+				&:hover {
+					@extend .link_icon_before:hover;
+				}
+
+				&:active {
+					@extend .link_icon_before:active;
+				}
+			}
+
+			&__star {
+				color: $color-fifth;
+				stroke: $color-fifth;
+
+				&:hover {
+					@extend .star:hover;
+				}
+
+				&:active {
+					@extend .star:active;
+				}
+
+				&.star {
+					// =====
+
+					&_fill {
+						fill: $color-fifth;
+
+						&:hover {
+							@extend .star:hover;
+						}
+
+						&:active {
+							@extend .star:active;
+						}
+					}
+				}
+			}
+
+			&__tags {
+
+				.tags {
+					// =====
+
+					&__outer {
+						fill: $color-fifth;
+
+						&:hover {
+							@extend .tags__outer:hover;
+						}
+
+						&:active {
+							@extend .tags__outer:active;
+						}
+					}
+				}
+
+				&.tags_color_gray {
+
+					.tags {
+						// =====
+
+						&__outer {
+							fill: $color-gray;
+							color: $color-gray;
+
+							&:hover {
+								@extend .tags__outer:hover;
+							}
+
+							&:active {
+								@extend .tags__outer:active;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		span.#{$name} {
+			// =====
+
+			&__link {
+
+				&.link_color_1 {
+
+					&:hover,
+					&:active {
+						color: $color-fifth;
+					}
+				}
+
+				&:hover,
+				&:active {
+					fill: $color-fifth;
+				}
+			}
 		}
 	}
 
@@ -109,6 +460,258 @@ $name: wrapper;
 
 			&__text {
 				color: $color-sixth;
+			}
+
+			&__fill {
+				fill: $color-sixth;
+			}
+
+			&__link {
+				fill: $color-sixth;
+
+				&.link_color_1 {
+					color: $color-sixth;
+					border-color: $color-sixth;
+
+					&:hover {
+						@extend a:not([class]):hover;
+					}
+
+					&:active {
+						@extend a:not([class]):active;
+					}
+				}
+
+				&:hover {
+					@extend .link_icon_before:hover;
+				}
+
+				&:active {
+					@extend .link_icon_before:active;
+				}
+			}
+
+			&__star {
+				color: $color-sixth;
+				stroke: $color-sixth;
+
+				&:hover {
+					@extend .star:hover;
+				}
+
+				&:active {
+					@extend .star:active;
+				}
+
+				&.star {
+					// =====
+
+					&_fill {
+						fill: $color-sixth;
+
+						&:hover {
+							@extend .star:hover;
+						}
+
+						&:active {
+							@extend .star:active;
+						}
+					}
+				}
+			}
+
+			&__tags {
+
+				.tags {
+					// =====
+
+					&__outer {
+						fill: $color-sixth;
+
+						&:hover {
+							@extend .tags__outer:hover;
+						}
+
+						&:active {
+							@extend .tags__outer:active;
+						}
+					}
+				}
+
+				&.tags_color_gray {
+
+					.tags {
+						// =====
+
+						&__outer {
+							fill: $color-gray;
+							color: $color-gray;
+
+							&:hover {
+								@extend .tags__outer:hover;
+							}
+
+							&:active {
+								@extend .tags__outer:active;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		span.#{$name} {
+			// =====
+
+			&__link {
+
+				&.link_color_1 {
+
+					&:hover,
+					&:active {
+						color: $color-sixth;
+					}
+				}
+
+				&:hover,
+				&:active {
+					fill: $color-sixth;
+				}
+			}
+		}
+	}
+
+	&_color_seventh {
+
+		.#{$name} {
+			// =====
+
+			&__header {
+
+				&::after {
+					background-color: $color-seventh;
+				}
+			}
+
+			&__text {
+				color: $color-seventh;
+			}
+
+			&__fill {
+				fill: $color-seventh;
+			}
+
+			&__link {
+				fill: $color-seventh;
+
+				&.link_color_1 {
+					color: $color-seventh;
+					border-color: $color-seventh;
+
+					&:hover {
+						@extend a:not([class]):hover;
+					}
+
+					&:active {
+						@extend a:not([class]):active;
+					}
+				}
+
+				&:hover {
+					@extend .link_icon_before:hover;
+				}
+
+				&:active {
+					@extend .link_icon_before:active;
+				}
+			}
+
+			&__star {
+				color: $color-seventh;
+				stroke: $color-seventh;
+
+				&:hover {
+					@extend .star:hover;
+				}
+
+				&:active {
+					@extend .star:active;
+				}
+
+				&.star {
+					// =====
+
+					&_fill {
+						fill: $color-seventh;
+
+						&:hover {
+							@extend .star:hover;
+						}
+
+						&:active {
+							@extend .star:active;
+						}
+					}
+				}
+			}
+
+			&__tags {
+
+				.tags {
+					// =====
+
+					&__outer {
+						fill: $color-seventh;
+
+						&:hover {
+							@extend .tags__outer:hover;
+						}
+
+						&:active {
+							@extend .tags__outer:active;
+						}
+					}
+				}
+
+				&.tags_color_gray {
+
+					.tags {
+						// =====
+
+						&__outer {
+							fill: $color-gray;
+							color: $color-gray;
+
+							&:hover {
+								@extend .tags__outer:hover;
+							}
+
+							&:active {
+								@extend .tags__outer:active;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		span.#{$name} {
+			// =====
+
+			&__link {
+
+				&.link_color_1 {
+
+					&:hover,
+					&:active {
+						color: $color-seventh;
+					}
+				}
+
+				&:hover,
+				&:active {
+					fill: $color-seventh;
+				}
 			}
 		}
 	}

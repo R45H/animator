@@ -22,17 +22,17 @@ mixin card(data)
 				.card__title-wrap
 					a.link.link_line_none.title.title_sm.title_color_dark.card__title(href= data.link)= data.title
 					.card__star-wrap
-						+star
+						+star(class='wrapper__star')
 
 				if data.tel && !data.tel_down
 					.card__tel-wrap
-						a.link.link_line_none.link_icon_before(href='tel:' + data.tel.link)= data.tel.name
+						a.link.link_line_none.link_icon_before.wrapper__link(href='tel:' + data.tel.link)= data.tel.name
 							+svg('tel', 'link__icon')
 
 			if data.tel_down
 				.card__row
 					.card__tel-wrap.card__tel-wrap_space_none
-						a.link.link_line_none.link_icon_before(href='tel:' + data.tel.link)= data.tel.name
+						a.link.link_line_none.link_icon_before.wrapper__link(href='tel:' + data.tel.link)= data.tel.name
 							+svg('tel', 'link__icon')
 
 			.card__row.card__tags

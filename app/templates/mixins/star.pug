@@ -1,7 +1,10 @@
 include ../mixins/svg
 
 mixin star(num)
-	.star(class= num ? 'star_fill' : '')
+	.star(
+		class= num ? 'star_fill' : ''
+		class= attributes.class
+	)
 		+svg('star', 'star__icon')
 
 		if (num)
