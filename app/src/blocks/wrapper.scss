@@ -26,170 +26,6 @@ $name: wrapper;
 		}
 	}
 
-	&_color_second {
-
-		.#{$name} {
-			// =====
-
-			&__header {
-
-				&::after {
-					background-color: $color-second;
-				}
-			}
-
-			&__text {
-				color: $color-second;
-			}
-
-			&__fill {
-				fill: $color-second;
-			}
-
-			&__link {
-				fill: $color-second;
-
-				&.link_color_1 {
-					color: $color-second;
-					border-color: $color-second;
-
-					&:hover {
-						@extend a:not([class]):hover;
-					}
-
-					&:active {
-						@extend a:not([class]):active;
-					}
-				}
-
-				&:hover {
-					@extend .link_icon_before:hover;
-				}
-
-				&:active {
-					@extend .link_icon_before:active;
-				}
-			}
-
-			&__star {
-				color: $color-second;
-				stroke: $color-second;
-
-				&:hover {
-					@extend .star:hover;
-				}
-
-				&:active {
-					@extend .star:active;
-				}
-
-				&.star {
-					// =====
-
-					&_fill {
-						fill: $color-second;
-
-						&:hover {
-							@extend .star:hover;
-						}
-
-						&:active {
-							@extend .star:active;
-						}
-					}
-				}
-			}
-
-			&__tags {
-
-				.tags {
-					// =====
-
-					&__outer {
-						fill: $color-second;
-
-						&:hover {
-							@extend .tags__outer:hover;
-						}
-
-						&:active {
-							@extend .tags__outer:active;
-						}
-					}
-				}
-
-				&.tags_color_gray {
-
-					.tags {
-						// =====
-
-						&__outer {
-							fill: $color-gray;
-							color: $color-gray;
-
-							&:hover {
-								@extend .tags__outer:hover;
-							}
-
-							&:active {
-								@extend .tags__outer:active;
-							}
-						}
-					}
-				}
-			}
-
-			&__pagination {
-
-				span.pagination {
-					// =====
-
-					&__num-text {
-						color: $color-second;
-					}
-				}
-			}
-
-			&__news {
-
-				.news {
-					// =====
-
-					&__img {
-
-						&::after {
-							background-color: $color-second;
-						}
-					}
-
-					&__title {
-						color: $color-second;
-					}
-				}
-			}
-		}
-
-		span.#{$name} {
-			// =====
-
-			&__link {
-
-				&.link_color_1 {
-
-					&:hover,
-					&:active {
-						color: $color-second;
-					}
-				}
-
-				&:hover,
-				&:active {
-					fill: $color-second;
-				}
-			}
-		}
-	}
-
 	&_color_fourth {
 
 		.#{$name} {
@@ -309,7 +145,7 @@ $name: wrapper;
 					// =====
 
 					&__num-text {
-						color: $color-fourth;
+						color: $color-fourth-dark;
 					}
 				}
 			}
@@ -327,7 +163,7 @@ $name: wrapper;
 					}
 
 					&__title {
-						color: $color-fourth;
+						color: $color-fourth-dark;
 					}
 				}
 			}
@@ -841,6 +677,170 @@ $name: wrapper;
 				&:hover,
 				&:active {
 					fill: $color-seventh;
+				}
+			}
+		}
+	}
+
+	&_color_eighth {
+
+		.#{$name} {
+			// =====
+
+			&__header {
+
+				&::after {
+					background-color: $color-eighth;
+				}
+			}
+
+			&__text {
+				color: $color-eighth-dark;
+			}
+
+			&__fill {
+				fill: $color-eighth-dark;
+			}
+
+			&__link {
+				fill: $color-eighth-dark;
+
+				&.link_color_1 {
+					color: $color-eighth-dark;
+					border-color: $color-eighth-dark;
+
+					&:hover {
+						@extend a:not([class]):hover;
+					}
+
+					&:active {
+						@extend a:not([class]):active;
+					}
+				}
+
+				&:hover {
+					@extend .link_icon_before:hover;
+				}
+
+				&:active {
+					@extend .link_icon_before:active;
+				}
+			}
+
+			&__star {
+				color: $color-eighth-dark;
+				stroke: $color-eighth-dark;
+
+				&:hover {
+					@extend .star:hover;
+				}
+
+				&:active {
+					@extend .star:active;
+				}
+
+				&.star {
+					// =====
+
+					&_fill {
+						fill: $color-eighth-dark;
+
+						&:hover {
+							@extend .star:hover;
+						}
+
+						&:active {
+							@extend .star:active;
+						}
+					}
+				}
+			}
+
+			&__tags {
+
+				.tags {
+					// =====
+
+					&__outer {
+						fill: $color-eighth-dark;
+
+						&:hover {
+							@extend .tags__outer:hover;
+						}
+
+						&:active {
+							@extend .tags__outer:active;
+						}
+					}
+				}
+
+				&.tags_color_gray {
+
+					.tags {
+						// =====
+
+						&__outer {
+							fill: $color-eighth-dark;
+							color: $color-eighth-dark;
+
+							&:hover {
+								@extend .tags__outer:hover;
+							}
+
+							&:active {
+								@extend .tags__outer:active;
+							}
+						}
+					}
+				}
+			}
+
+			&__pagination {
+
+				span.pagination {
+					// =====
+
+					&__num-text {
+						color: $color-eighth-dark;
+					}
+				}
+			}
+
+			&__news {
+
+				.news {
+					// =====
+
+					&__img {
+
+						&::after {
+							background-color: $color-eighth;
+						}
+					}
+
+					&__title {
+						color: $color-eighth-dark;
+					}
+				}
+			}
+		}
+
+		span.#{$name} {
+			// =====
+
+			&__link {
+
+				&.link_color_1 {
+
+					&:hover,
+					&:active {
+						color: $color-eighth-dark;
+					}
+				}
+
+				&:hover,
+				&:active {
+					fill: $color-eighth-dark;
 				}
 			}
 		}
