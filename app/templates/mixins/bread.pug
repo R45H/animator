@@ -13,6 +13,7 @@ mixin bread
 					span.bread__text= val.name
 
 				- hasMenuItem = true;
+				- break;
 
 			else
 
@@ -27,6 +28,7 @@ mixin bread
 								span.bread__text= sub.name
 
 							- hasMenuItem = true;
+							- break;
 
 		if !hasMenuItem
 			li.bread__item

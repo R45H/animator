@@ -5,6 +5,83 @@ $name: wrapper;
 	display: flex;
 	flex-direction: column;
 
+	&__header {
+
+		&_with-tabs {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__tab {
+		margin-bottom: -50px;
+	}
+
+	&__tab-header {
+		position: relative;
+		margin-bottom: -1px;
+
+		@include screen-sm() {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__tab-btn {
+		@extend %transition;
+		display: block;
+		text-align: center;
+		padding: 20px 40px;
+		font-size: 20px;
+		background-color: transparent;
+		border: 1px solid transparent;
+		border-bottom: none;
+		outline: none;
+		color: white;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		overflow: hidden;
+		font-weight: normal;
+		cursor: pointer;
+
+		&:hover {
+			background-color: rgba(white, .3);
+		}
+
+		&:active {
+			background-color: rgba(white, .4);
+		}
+
+		&_active {
+			color: $color-third;
+			border-color: $color-gray-light;
+			background-color: white;
+			cursor: default;
+
+			&:hover,
+			&:active {
+				background-color: white;
+			}
+		}
+	}
+
+	&__tab-body {
+		@extend %radius;
+		border: 1px solid $color-gray-light;
+		overflow: hidden;
+		background: white;
+		display: flex;
+		height: 130px;
+		padding: 30px;
+	}
+
+	&__tab-panel {
+		display: none;
+
+		&_visible {
+			display: block;
+		}
+	}
+
 	&_home {
 
 		@include screen-lg() {
@@ -165,6 +242,13 @@ $name: wrapper;
 					&__title {
 						color: $color-fourth-dark;
 					}
+				}
+			}
+
+			&__tab-btn {
+
+				&_active {
+					color: $color-fourth-dark;
 				}
 			}
 		}
@@ -331,6 +415,13 @@ $name: wrapper;
 					}
 				}
 			}
+
+			&__tab-btn {
+
+				&_active {
+					color: $color-fifth;
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -493,6 +584,13 @@ $name: wrapper;
 					&__title {
 						color: $color-sixth;
 					}
+				}
+			}
+
+			&__tab-btn {
+
+				&_active {
+					color: $color-sixth;
 				}
 			}
 		}
@@ -659,6 +757,13 @@ $name: wrapper;
 					}
 				}
 			}
+
+			&__tab-btn {
+
+				&_active {
+					color: $color-seventh;
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -821,6 +926,13 @@ $name: wrapper;
 					&__title {
 						color: $color-eighth-dark;
 					}
+				}
+			}
+
+			&__tab-btn {
+
+				&_active {
+					color: $color-eighth-dark;
 				}
 			}
 		}

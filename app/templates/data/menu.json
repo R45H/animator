@@ -1,7 +1,7 @@
 {
 	"menu": [
 		{
-			"link": "#",
+			"link": "calculator.html#animator",
 			"name": "Калькулятор",
 			"name_for_main": "Аниматоры",
 			"sub": [
@@ -12,7 +12,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "calculator.html#photographer",
 			"name": "Калькулятор",
 			"name_for_main": "Фотографы",
 			"sub": [
@@ -23,7 +23,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "calculator.html#area",
 			"name": "Калькулятор",
 			"name_for_main": "Площадки",
 			"sub": [
@@ -34,7 +34,7 @@
 			]
 		},
 		{
-			"link": "#",
+			"link": "calculator.html#service",
 			"name": "Калькулятор",
 			"name_for_main": "Услуги",
 			"sub": [

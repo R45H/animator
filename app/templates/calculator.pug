@@ -1,0 +1,20 @@
+extends layouts/default
+
+block vars
+	-
+		page = {
+			title: 'Калькулятор',
+			link: 'calculator.html',
+			img: 'img/content/header/01.jpg',
+			color: 'fourth',
+			tabs: true,
+			imgList: {
+				fourth: 'img/content/header/01.jpg',
+				fifth: 'img/content/header/02.jpg',
+				sixth: 'img/content/header/03.jpg',
+				seventh: 'img/content/header/04.jpg'
+			}
+		}
+
+block content
+	include pages/calculator

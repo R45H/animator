@@ -6,7 +6,9 @@ include ../mixins/bread
 // HEADER
 header.header.wrapper__header(
 	class= page.isHome ? 'header_home' : ''
+	class= page.tabs ? 'wrapper__header_with-tabs' : ''
 	style= page.img ? 'background-image: url(' + page.img + ');' : null
+	data-images= page.imgList ? page.imgList : null
 )
 	.container.header__wrap
 		.header__row
@@ -43,3 +45,45 @@ header.header.wrapper__header(
 							.header__date-wrap
 								span.link.link_line_none.link_icon_before.header__date= page.date
 									+svg('calendar', 'link__icon')
+
+	if page.tabs
+		.container
+			.row
+				.col-md-10.offset-md-1
+					.wrapper__tab
+
+						.wrapper__tab-header
+
+							button.wrapper__tab-btn.js-wrapper__set-color(
+								data-tab-link='tab-1'
+								data-color='fourth'
+								data-onload='animator'
+							) Аниматоры
+
+							button.wrapper__tab-btn.js-wrapper__set-color(
+								data-tab-link='tab-2'
+								data-color='fifth'
+								data-onload='photographer'
+							) Фотографы
+
+							button.wrapper__tab-btn.js-wrapper__set-color(
+								data-tab-link='tab-3'
+								data-color='sixth'
+								data-onload='area'
+							) Площадки
+
+							button.wrapper__tab-btn.js-wrapper__set-color(
+								data-tab-link='tab-4'
+								data-color='seventh'
+								data-onload='service'
+							) Услуги
+
+						.wrapper__tab-body
+							.wrapper__tab-panel(data-tab-target='tab-1')
+								div target=1
+							.wrapper__tab-panel(data-tab-target='tab-2')
+								div target=2
+							.wrapper__tab-panel(data-tab-target='tab-3')
+								div target=3
+							.wrapper__tab-panel(data-tab-target='tab-4')
+								div target=4
