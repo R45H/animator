@@ -2,11 +2,13 @@ $name: link-line;
 
 .#{$name} {
 	@extend %transition;
-	display: inline-block;
-	position: relative;
-	line-height: 1.4;
-	min-width: 55px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
 	text-align: center;
+	position: relative;
+	line-height: 1.2;
+	min-width: 55px;
 	font-size: 7rem;
 	color: $color-third;
 
@@ -14,9 +16,6 @@ $name: link-line;
 	&::after {
 		transition: $duration / 2 ease;
 		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
 		width: 100%;
 		height: .15em;
 		background: no-repeat left / auto 100%;
@@ -27,10 +26,14 @@ $name: link-line;
 
 	&::before {
 		background-image: url($path + 'img/icons/line-hover.svg');
+		order: 1;
+		margin-top: -.15em;
+		z-index: 1;
 	}
 
 	&::after {
 		background-image: url($path + 'img/icons/line-active.svg');
+		z-index: 2;
 	}
 
 	&:hover {
@@ -60,11 +63,15 @@ $name: link-line;
 
 	&_simple {
 		font-size: inherit;
-		line-height: 1.8;
+		line-height: 1.2;
 
 		&::before,
 		&::after {
 			height: .3em;
+		}
+
+		&::before {
+			margin-top: -.3em;
 		}
 	}
 }
