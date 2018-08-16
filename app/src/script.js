@@ -5,6 +5,9 @@ $(function() {
 		//=require 'blocks/select/select.js'
 	}());
 	(function() {
+		//=require 'blocks/wrapper/wrapper.js'
+	}());
+	(function() {
 		//=require 'blocks/greet/greet.js'
 	}());
 	(function() {
@@ -12,9 +15,6 @@ $(function() {
 	}());
 	(function() {
 		//=require 'blocks/slider/slider.js'
-	}());
-	(function() {
-		//=require 'blocks/wrapper/wrapper.js'
 	}());
 	/* Blocks will be inserted here */
 });

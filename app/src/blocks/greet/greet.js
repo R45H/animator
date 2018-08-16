@@ -53,6 +53,8 @@ $btnRight.on('click', function() {
 			.text($nextSlide.attr('data-title'))
 			.addClass(classTitleVisible);
 
+		$btnLeft.attr('data-color', '');
+		$btnRight.attr('data-color', $nextSlide.next().attr('data-greet-color') || '');
 		$btnLeftInner.text('Главная');
 		$btnRightInner.text($nextSlide.next().attr('data-title'));
 
@@ -72,6 +74,8 @@ $btnRight.on('click', function() {
 			.text('')
 			.removeClass(classTitleVisible);
 
+		$btnLeft.attr('data-color', $prevSlide.attr('data-greet-color') || '');
+		$btnRight.attr('data-color', $nextSlide.attr('data-greet-color') || '');
 		$btnLeftInner.text($prevSlide.attr('data-title'));
 		$btnRightInner.text($nextSlide.attr('data-title'));
 
@@ -83,12 +87,15 @@ $btnRight.on('click', function() {
 	$nextSlide.addClass(classSlideVisible);
 	$title.text($nextSlide.attr('data-title'));
 
+	$btnLeft.attr('data-color', $currentSlide.attr('data-greet-color') || '');
 	$btnLeftInner.text($currentSlide.attr('data-title'));
 
 	/* Если есть следующий слайд */
 	if ($nextSlide.next().length) {
+		$btnRight.attr('data-color', $nextSlide.next().attr('data-greet-color') || '');
 		$btnRightInner.text($nextSlide.next().attr('data-title'));
 	} else {
+		$btnRight.attr('data-color', '');
 		$btnRightInner.text('Главная');
 	}
 });
@@ -108,6 +115,8 @@ $btnLeft.on('click', function() {
 			.text($nextSlide.attr('data-title'))
 			.addClass(classTitleVisible);
 
+		$btnRight.attr('data-color', '');
+		$btnLeft.attr('data-color', $nextSlide.prev().attr('data-greet-color') || '');
 		$btnRightInner.text('Главная');
 		$btnLeftInner.text($nextSlide.prev().attr('data-title'));
 
@@ -126,8 +135,11 @@ $btnLeft.on('click', function() {
 			.text('')
 			.removeClass(classTitleVisible);
 
+		$btnLeft.attr('data-color', $slides.last().attr('data-greet-color') || '');
+		$btnRight.attr('data-color', $currentSlide.attr('data-greet-color') || '');
 		$btnLeftInner.text($slides.last().attr('data-title'));
 		$btnRightInner.text($currentSlide.attr('data-title'));
+
 		return;
 	}
 
@@ -136,29 +148,24 @@ $btnLeft.on('click', function() {
 	$nextSlide.addClass(classSlideVisible);
 	$title.text($nextSlide.attr('data-title'));
 
+	$btnRight.attr('data-color', $currentSlide.attr('data-greet-color'));
 	$btnRightInner.text($currentSlide.attr('data-title'));
 
 	/* Если есть следующий слайд */
 	if ($nextSlide.prev().length) {
+		$btnLeft.attr('data-color', $nextSlide.prev().attr('data-greet-color') || '');
 		$btnLeftInner.text($nextSlide.prev().attr('data-title'));
 	} else {
+		$btnLeft.attr('data-color', '');
 		$btnLeftInner.text('Главная');
 	}
 });
 
 function greetInit() {
 
-	$btnLeftInner
-		.text(
-			$slides
-				.last()
-				.attr('data-title')
-		);
+	$btnLeft.attr('data-color', $slides.last().attr('data-greet-color') || '');
+	$btnRight.attr('data-color', $slides.first().attr('data-greet-color') || '');
 
-	$btnRightInner
-		.text(
-			$slides
-				.first()
-				.attr('data-title')
-		);
+	$btnLeftInner.text($slides.last().attr('data-title'));
+	$btnRightInner.text($slides.first().attr('data-title'));
 }

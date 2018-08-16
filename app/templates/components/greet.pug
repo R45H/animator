@@ -23,29 +23,35 @@ include ../mixins/link-arrow
 					.greet__slider.greet__slider_home
 
 						.greet__slider-wrap
-							.greet__slider-item(data-title='Акции')
+							.greet__slider-item(
+								data-title='Акции'
+								data-greet-color='eighth'
+							)
 
 								- for (var i = 0; i < 2; i++) {
 									.main__space-col
-										+news(news[1])
+										+news(news[1])(class='wrapper__news')
 								- }
 
 								.main__space-col.text-center
 									a.btn(href='stock.html') Смотреть все акции
 
-							.greet__slider-item(data-title='Новости')
+							.greet__slider-item(
+								data-title='Новости'
+								data-greet-color='seventh'
+							)
 
 								- for (var i = 0; i < 3; i++) {
 									.main__space-col
-										+news(news[0])
+										+news(news[0])(class='wrapper__news')
 								- }
 
 								.main__space-col.text-center
 									a.btn(href='news.html') Читать все новости
 
 						.greet__slider-link-wrap
-							.greet__slider-title
+							.greet__slider-title.wrapper__text
 							+link-arrow({
 								dir: 'left'
-							})(class='greet__slider-btn greet__slider-btn_left')
-							+link-arrow()(class='greet__slider-btn greet__slider-btn_right')
+							})(class='greet__slider-btn greet__slider-btn_left js-wrapper__set-color')
+							+link-arrow()(class='greet__slider-btn greet__slider-btn_right js-wrapper__set-color')

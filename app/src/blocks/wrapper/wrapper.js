@@ -6,7 +6,7 @@ var
 	$header = $block.find('.' + classBlock + '__header'), // Шапка сайта
 	headerImages = $header.attr('data-images') ? JSON.parse($header.attr('data-images')) : null; // Картинки шапки, привязанные к цветам
 
-/* Обработка клика */
+/* Обработка клика (смена цвета) */
 $setters.on('click', function(e) {
 	var
 		$this = $(this),
@@ -37,12 +37,18 @@ $setters.on('click', function(e) {
 	}
 	/* ===== */
 
+	/* Если новый цвет не задан, останавливаемся на сбросе */
+	if (!color) {
+		return;
+	}
+	/* ===== */
+
 	/* Установка нового цвета */
 	$block.addClass(classColorNew);
 	/* ===== */
 
 	/* Смена изображения шапки */
-	if (headerImages[color]) {
+	if (headerImages && headerImages[color]) {
 		$header.css('background-image', 'url(' + headerImages[color] + ')');
 	}
 	/* ===== */
