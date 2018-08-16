@@ -126,9 +126,8 @@ $btnLeft.on('click', function() {
 			.text('')
 			.removeClass(classTitleVisible);
 
-		$btnLeftInner.text($slides.first().attr('data-title'));
-		$btnRightInner.text($nextSlide.attr('data-title'));
-
+		$btnLeftInner.text($slides.last().attr('data-title'));
+		$btnRightInner.text($currentSlide.attr('data-title'));
 		return;
 	}
 
