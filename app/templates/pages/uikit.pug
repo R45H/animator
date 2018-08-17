@@ -247,12 +247,33 @@ include ../mixins/radio
 				+params(params)(class='params_sm')
 
 		.row.main__separator
+			.col-4
+				.params-lg
+					.params-lg__wrap
+						.params-lg__row
+							.params-lg__title Заголовок
+							.params-lg__value
+								input.input(type='text' placeholder='Значение')
+						.params-lg__row
+							.params-lg__title Очень длинный заголовок
+							.params-lg__value
+								input.input(type='text' placeholder='Значение')
+						.params-lg__row
+							.params-lg__title Заголовок
+							.params-lg__value
+								textarea.input(placeholder='Значение')
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title Заголовок
+							.params-lg__value
+								textarea.input(placeholder='Значение')
+
+		.row.main__separator
 			.col
 				+date
 
 		.row.main__separator
 			.col-3
-				a.link(href='#' data-modal='modal') .modal
+				a.link(href='#' data-modal='modalInviteAnimator') .modal
 
 		.row.main__space-col
 			.col-10.offset-sm-1

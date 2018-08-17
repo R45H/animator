@@ -25,7 +25,6 @@ $name: modal;
 		height: 100%;
 		width: 100%;
 		background-color: white;
-		text-align: center;
 		position: relative;
 		transform: scale(.9);
 		overflow: auto;
@@ -55,6 +54,7 @@ $name: modal;
 
 	&__head {
 		padding: 30px 45px 15px;
+		text-align: center;
 	}
 
 	&__close {
@@ -118,7 +118,7 @@ $name: modal;
 
 	&__body {
 		position: relative;
-		padding: 15px 45px 30px;
+		padding: 15px 70px 50px;
 
 		@include screen-sm(max) {
 			height: 100%;

@@ -47,7 +47,7 @@ function toggleModal(action, modalId) {
 		classVisible = classBlock + '_visible',
 		classWrap = classBlock + '__wrap',
 		classWrapVisible = classBlock + '__wrap_visible',
-		classInput = 'input__item',
+		classInput = 'input',
 		classFog = 'fog',
 		$wrap = $modal.find('.' + classWrap),
 		delay = 300,

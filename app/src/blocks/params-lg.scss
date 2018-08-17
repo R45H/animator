@@ -1,0 +1,82 @@
+$name: params-lg;
+
+.#{$name} {
+
+	&__wrap {
+		width: 100%;
+
+		@include screen-sm() {
+			display: table;
+		}
+	}
+
+	&__row {
+
+		@include screen-sm() {
+			display: table-row;
+		}
+
+		&:last-child {
+
+			.#{$name} {
+				// =====
+
+				&__title {
+
+					@include screen-sm() {
+						padding-bottom: 0;
+					}
+				}
+
+				&__value {
+					padding-bottom: 0;
+				}
+			}
+		}
+
+		&_valign_baseline {
+
+			.#{$name} {
+				// =====
+
+				&__title {
+
+					@include screen-sm() {
+						vertical-align: baseline;
+					}
+				}
+
+				&__value {
+
+					@include screen-sm() {
+						vertical-align: baseline;
+					}
+				}
+			}
+		}
+	}
+
+	&__title {
+		color: $color-text-dark;
+		font-weight: normal;
+		padding-bottom: 5px;
+
+		@include screen-sm() {
+			display: table-cell;
+			padding-right: 20px;
+			padding-bottom: 20px;
+			text-align: right;
+			vertical-align: middle;
+		}
+	}
+
+	&__value {
+		padding-bottom: 20px;
+
+		@include screen-sm() {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: left;
+		}
+	}
+}

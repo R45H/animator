@@ -1,9 +1,68 @@
 // MODAL
-#modal.modal
+#modalInviteAnimator.modal
 	.modal__wrap
 
 		.modal__head
-			h2.title.title_sm.title_color_1 Заголовок
+			h2.title.title_sm.title_color_1 Пригласить аниматора
 			button.modal__close(data-modal-close)
 
 		.modal__body
+			.params-lg
+				.params-lg__wrap
+
+					.params-lg__row
+						.params-lg__title
+							label(for='paramsLgModalAnimator1') Имя
+						.params-lg__value
+							input#paramsLgModalAnimator1.input(type='text' placeholder='Как Вас зовут?')
+
+					.params-lg__row
+						.params-lg__title
+							label(for='paramsLgModalAnimator2') Телефон
+						.params-lg__value
+							input#paramsLgModalAnimator2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+					.params-lg__row.params-lg__row_valign_baseline
+						.params-lg__title
+							label(for='paramsLgModalAnimator3') Сообщение
+						.params-lg__value
+							textarea#paramsLgModalAnimator3.input(placeholder='Текст сообщения...')
+
+					.params-lg__row
+						.params-lg__title
+						.params-lg__value
+							input.btn.btn_fill.btn_sm(type='submit' value='Пригласить аниматора')
+
+#modalInvitePhotographer.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1 Пригласить фотографа
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			.params-lg
+				.params-lg__wrap
+
+					.params-lg__row
+						.params-lg__title
+							label(for='paramsLgModalPhotographer1') Имя
+						.params-lg__value
+							input#paramsLgModalPhotographer1.input(type='text' placeholder='Как Вас зовут?')
+
+					.params-lg__row
+						.params-lg__title
+							label(for='paramsLgModalPhotographer2') Телефон
+						.params-lg__value
+							input#paramsLgModalPhotographer2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+					.params-lg__row.params-lg__row_valign_baseline
+						.params-lg__title
+							label(for='paramsLgModalPhotographer3') Сообщение
+						.params-lg__value
+							textarea#paramsLgModalPhotographer3.input(placeholder='Текст сообщения...')
+
+					.params-lg__row
+						.params-lg__title
+						.params-lg__value
+							input.btn.btn_fill.btn_sm(type='submit' value='Пригласить фотографа')
