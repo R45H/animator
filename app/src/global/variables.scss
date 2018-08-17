@@ -1,4 +1,5 @@
 $color-main: #4e50ac;
+$color-main-light: lighten($color-main, 32%);
 $color-second: #3ead75;
 $color-second-active: #0c8c4b;
 $color-third: #9e3aa1;
@@ -33,6 +34,7 @@ $point-xl: 1200px;
 
 $font-main: 'HelveticaNeueCyr', sans-serif; // 300/i, normal/i
 $font-fa: 'FontAwesome', sans-serif;
+$font-custom: 'Custom', sans-serif;
 
 $duration: .3s;
 

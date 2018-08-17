@@ -13,6 +13,7 @@ include ../mixins/params
 include ../mixins/banner
 include ../mixins/list
 include ../mixins/fancybox
+include ../mixins/check
 
 .section
 	.container
@@ -166,6 +167,28 @@ include ../mixins/fancybox
 						{"name": "актёр", "link": "#"}
 					]
 				})(class='tags_color_gray wrapper__tags')
+
+		.row.main__separator
+			.col-2
+				+check({
+					id: 'check-1',
+					text: '.check'
+				})
+			.col-3
+				+check({
+					id: 'check-2',
+					text: '.check.check_thin'
+				})(class='check_thin')
+			.col-3
+				+check({
+					id: 'check-3',
+					text: '.check.check_sm'
+				})(class='check_sm')
+			.col-3
+				+check({
+					id: 'check-4',
+					text: '.check.check_color_dark'
+				})(class='check_color_dark')
 
 		.row.main__separator
 			.col-1

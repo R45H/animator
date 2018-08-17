@@ -59,3 +59,16 @@
 	font-style: italic;
 }
 /* ========== */
+
+/* Custom */
+@font-face {
+	font-family: 'Custom';
+	src: url($path + 'fonts/custom/custom.eot?58922993');
+	src: url($path + 'fonts/custom/custom.eot?58922993#iefix') format('embedded-opentype'),
+		url($path + 'fonts/custom/custom.woff?58922993') format('woff'),
+		url($path + 'fonts/custom/custom.ttf?58922993') format('truetype'),
+		url($path + 'fonts/custom/custom.svg?58922993#custom') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* ===== */
