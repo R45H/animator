@@ -129,6 +129,12 @@ include ../mixins/radio
 
 		.row.main__separator
 			.col-3
+				input.input(type='text' placeholder='.input')
+			.col-3
+				textarea.input(placeholder='textarea.input')
+
+		.row.main__separator
+			.col-3
 				+tags({
 					icon: 'tags',
 					delimiter: ',',

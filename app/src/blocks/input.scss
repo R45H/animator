@@ -1,0 +1,46 @@
+$name: input;
+
+.#{$name} {
+	@extend %radius;
+	@extend %transition;
+	appearance: none;
+	background: transparent;
+	font-family: $font-main;
+	font-weight: normal;
+	outline: none;
+	display: block;
+	width: 100%;
+	font-size: 15px;
+	line-height: 1.2;
+	border: 1px solid $color-main-light;
+	padding: 10px 15px;
+	color: $color-text-dark;
+
+	@include input-autofill($color-text-dark);
+
+	@include input-placeholder {
+		color: $color-gray-dark;
+		font-weight: 300;
+		transition: $duration / 2 ease;
+	}
+
+	&:hover,
+	&:focus {
+		border-color: $color-second-light;
+	}
+
+	&:focus {
+
+		@include input-placeholder {
+			text-indent: 10px;
+		}
+	}
+
+	&:active {
+		border-color: $color-second-light-active;
+	}
+}
+
+textarea.#{$name} {
+	height: 5.334em;
+}
