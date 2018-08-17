@@ -22,6 +22,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/input/input.js'
 	}());
+	(function() {
+		//=require 'blocks/modal/modal.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
