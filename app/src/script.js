@@ -16,6 +16,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/slider/slider.js'
 	}());
+	(function() {
+		//=require 'blocks/radio/radio.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

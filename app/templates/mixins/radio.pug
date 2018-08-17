@@ -1,0 +1,12 @@
+mixin radio(data)
+	.radio(class= attributes.class)
+
+		each val, i in data.items
+			.radio__item
+				input.radio__input(
+					type='radio'
+					name= data.name
+					id= data.name + '-' + (i + 1)
+					value= val.text
+				)
+				label.radio__label(for= data.name + '-' + (i + 1))= val.text

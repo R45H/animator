@@ -57,13 +57,14 @@ $name: check;
 			transition: $duration / 2 linear;
 			margin-right: 10px;
 			pointer-events: none;
+			background: white;
 		}
 
 		&:hover {
 			color: $color-second;
 
 			&::before {
-				border-color: $color-second;
+				border-color: $color-second-light;
 				transition: none;
 			}
 		}
@@ -72,7 +73,7 @@ $name: check;
 			color: $color-second-active;
 
 			&::before {
-				border-color: $color-second-active;
+				border-color: $color-second-light-active;
 				transition: none;
 			}
 		}
@@ -127,7 +128,7 @@ $name: check;
 					color: $color-second;
 
 					&::before {
-						border-color: $color-second;
+						border-color: $color-second-light;
 					}
 				}
 
@@ -135,7 +136,7 @@ $name: check;
 					color: $color-second-active;
 
 					&::before {
-						border-color: $color-second-active;
+						border-color: $color-second-light-active;
 					}
 				}
 			}

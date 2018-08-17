@@ -2,6 +2,8 @@ $color-main: #4e50ac;
 $color-main-light: lighten($color-main, 32%);
 $color-second: #3ead75;
 $color-second-active: #0c8c4b;
+$color-second-light: lighten($color-second, 32%);
+$color-second-light-active: darken($color-second-light, 10%);
 $color-third: #9e3aa1;
 $color-fourth: #f7e858;
 $color-fourth-dark: darken($color-fourth, 20%);

@@ -14,6 +14,7 @@ include ../mixins/banner
 include ../mixins/list
 include ../mixins/fancybox
 include ../mixins/check
+include ../mixins/radio
 
 .section
 	.container
@@ -189,6 +190,35 @@ include ../mixins/check
 					id: 'check-4',
 					text: '.check.check_color_dark'
 				})(class='check_color_dark')
+
+		.row.main__separator
+			.col-2
+				+radio({
+					name: 'radio-group-1',
+					items: [
+						{text: '.radio'},
+						{text: '.radio'},
+						{text: '.radio'}
+					]
+				})
+			.col-3
+				+radio({
+					name: 'radio-group-2',
+					items: [
+						{text: '.radio.radio_can-uncheck'},
+						{text: '.radio.radio_can-uncheck'},
+						{text: '.radio.radio_can-uncheck'}
+					]
+				})(class='radio_can-uncheck')
+			.col-3
+				+radio({
+					name: 'radio-group-3',
+					items: [
+						{text: '.radio.radio_sm'},
+						{text: '.radio.radio_sm'},
+						{text: '.radio.radio_sm'}
+					]
+				})(class='radio_sm')
 
 		.row.main__separator
 			.col-1
