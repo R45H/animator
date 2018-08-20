@@ -1,9 +1,9 @@
 mixin select(data, opts)
-	.select(
-		class= opts && opts.wide ? 'select_wide' : ''
-		class= attributes.class
-	)
+	.select(class= attributes.class)
 		select.select__origin
+
+			if opts && opts.title
+				option(disabled selected)= opts.title
 
 			each val in data
 				option(value= val.value)= val.text

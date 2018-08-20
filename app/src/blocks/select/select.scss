@@ -104,10 +104,26 @@ $name: select;
 			}
 		}
 
+		.ui-state-disabled {
+
+			.ui-menu-item-wrapper {
+				outline: none;
+				color: $color-gray-dark;
+				cursor: default;
+				user-select: none;
+
+				&.ui-state-active,
+				&:active {
+					color: $color-gray-dark;
+				}
+			}
+		}
+
 		.ui-menu-item-wrapper {
 			@extend %transition;
 			cursor: pointer;
 			padding: 5px 20px;
+			font-weight: 400;
 
 			&.ui-state-active {
 				color: $color-second;
@@ -156,6 +172,74 @@ $name: select;
 
 			&__current {
 				width: 100%;
+			}
+		}
+	}
+
+	&_light {
+
+		.#{$name} {
+			// =====
+
+			&__current {
+				color: $color-gray-dark;
+				border-color: $color-main-light;
+				fill: $color-gray-dark;
+
+				&:hover {
+					color: $color-second-light;
+					border-color: $color-second-light;
+					fill: $color-second-light;
+				}
+
+				&:active {
+					color: $color-second-light-active;
+					border-color: $color-second-light-active;
+					fill: $color-second-light-active;
+				}
+
+				&_active {
+					color: $color-gray-dark;
+					border-color: $color-main;
+					border-bottom-color: transparent;
+					fill: $color-main;
+
+					&:hover,
+					&:active {
+						color: $color-gray-dark;
+						border-color: $color-main;
+						border-bottom-color: transparent;
+						fill: $color-main;
+					}
+				}
+			}
+		}
+	}
+
+	&_light-selected {
+
+		.#{$name} {
+			// ====
+
+			&__current {
+				color: $color-text-dark;
+
+				&:hover {
+					color: $color-second;
+				}
+
+				&:active {
+					color: $color-second-active;
+				}
+
+				&_active {
+					color: $color-text-dark;
+
+					&:hover,
+					&:active {
+						color: $color-text-dark;
+					}
+				}
 			}
 		}
 	}

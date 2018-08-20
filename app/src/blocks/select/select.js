@@ -1,15 +1,22 @@
 var
 	classBlock = 'select',
 	classSimple = classBlock + '_simple',
+	classLight = classBlock + '_light',
+	classLightSelected = classBlock + '_light-selected',
 	$select = $('.' + classBlock + '__origin');
 
 $select.each(function() {
 	var
 		$this = $(this),
+		$thisBlock = $this.closest('.' + classBlock),
 		classList = classBlock + '__list';
 
 	if ($this.closest('.' + classBlock).hasClass(classSimple)) {
 		classList += ' ' + classList + '_simple';
+	}
+
+	if ($this.closest('.' + classBlock).hasClass(classLight)) {
+		classList += ' ' + classList + '_light';
 	}
 
 	$this.selectmenu({
@@ -24,9 +31,18 @@ $select.each(function() {
 				.next()
 				.append('' +
 					'<svg class="' + classBlock + '__icon">' +
-					'<use xlink:href="img/sprite.svg#svg-arrow-down"></use>' +
+						'<use xlink:href="img/sprite.svg#svg-arrow-down"></use>' +
 					'</svg>'
 				);
+
+			if (!$thisBlock.hasClass(classLight)) return;
+			if ($this.find('option').first().attr('disabled')) return;
+			$thisBlock.addClass(classLightSelected);
+		},
+		change: function() {
+			if (!$thisBlock.hasClass(classLight)) return;
+			if ($thisBlock.hasClass(classLightSelected)) return;
+			$thisBlock.addClass(classLightSelected);
 		}
 	});
 });

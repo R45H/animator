@@ -117,15 +117,20 @@ include ../mixins/radio
 			.col-3
 				.btn.btn_sm .btn.btn_sm
 
-		.row.main__separator
+		.row.main__space-col
 			.col-3
 				+select(select)
 			.col-3
-				+select(select, {
-					wide: true
-				})
+				+select(select)(class='select_wide')
+			.col-3
+				+select(select)(class='select_light')
 			.col-3
 				+select(select)(class='select_simple')
+		.row.main__separator
+			.col-3
+				+select(select, {
+					title: 'Заголовок селекта'
+				})
 
 		.row.main__separator
 			.col-3
