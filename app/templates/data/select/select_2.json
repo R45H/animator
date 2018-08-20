@@ -1,0 +1,20 @@
+{
+	"select_2": [
+		{
+			"value": "select-animator",
+			"text": "Аниматор"
+		},
+		{
+			"value": "select-photographer",
+			"text": "Фотограф"
+		},
+		{
+			"value": "select-area",
+			"text": "Детская площадка / комната"
+		},
+		{
+			"value": "select-service",
+			"text": "Предоставление услуг"
+		}
+	]
+}

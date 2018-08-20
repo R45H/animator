@@ -1,4 +1,84 @@
+include ../mixins/select
+include ../mixins/check
+
 // MODAL
+#modalRegistration.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1 Регистрация
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form.modal__form
+				.params-lg
+					.params-lg__wrap
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalRegistration1') Имя
+							.params-lg__value
+								input#paramsLgModalRegistration1.input(type='text' placeholder='Как Вас зовут?')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label Профиль
+							.params-lg__value
+								+select(select_2, {
+									title: 'Выберите вариант из списка'
+								})(class='select_wide select_light')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalRegistration3') Мобильный телефон
+							.params-lg__value
+								input#paramsLgModalRegistration3.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalRegistration4') Электронная почта
+							.params-lg__value
+								input#paramsLgModalRegistration4.input(type='email' placeholder='mail@mail.ru')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalRegistration5') Придумайте пароль
+							.params-lg__value
+								input#paramsLgModalRegistration5.input(type='password' placeholder='**********')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalRegistration6') Повторите пароль
+							.params-lg__value
+								input#paramsLgModalRegistration6.input(type='password' placeholder='**********')
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm(type='submit' value='Зарегистрироваться')
+
+// Нигде не используется
+#modalChooseHeroes.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1 Выберите героев
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form.modal__form
+				.row.main__space-bot
+
+					each val, i in check
+						.col-sm-6.main__space-bot-half
+							+check({
+								id: 'checkHeroes-' + (i + 1),
+								text: val
+							})
+
+				.text-center
+					input.btn.btn_fill.btn_sm(type='submit' value='Применить')
+
 #modalInviteAnimator.modal
 	.modal__wrap
 
@@ -7,31 +87,32 @@
 			button.modal__close(data-modal-close)
 
 		.modal__body
-			.params-lg
-				.params-lg__wrap
+			form.modal__form
+				.params-lg
+					.params-lg__wrap
 
-					.params-lg__row
-						.params-lg__title
-							label(for='paramsLgModalAnimator1') Имя
-						.params-lg__value
-							input#paramsLgModalAnimator1.input(type='text' placeholder='Как Вас зовут?')
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAnimator1') Имя
+							.params-lg__value
+								input#paramsLgModalAnimator1.input(type='text' placeholder='Как Вас зовут?')
 
-					.params-lg__row
-						.params-lg__title
-							label(for='paramsLgModalAnimator2') Телефон
-						.params-lg__value
-							input#paramsLgModalAnimator2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAnimator2') Телефон
+							.params-lg__value
+								input#paramsLgModalAnimator2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
 
-					.params-lg__row.params-lg__row_valign_baseline
-						.params-lg__title
-							label(for='paramsLgModalAnimator3') Сообщение
-						.params-lg__value
-							textarea#paramsLgModalAnimator3.input(placeholder='Текст сообщения...')
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAnimator3') Сообщение
+							.params-lg__value
+								textarea#paramsLgModalAnimator3.input(placeholder='Текст сообщения...')
 
-					.params-lg__row
-						.params-lg__title
-						.params-lg__value
-							input.btn.btn_fill.btn_sm(type='submit' value='Пригласить аниматора')
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm(type='submit' value='Пригласить аниматора')
 
 #modalInvitePhotographer.modal
 	.modal__wrap
@@ -41,28 +122,262 @@
 			button.modal__close(data-modal-close)
 
 		.modal__body
-			.params-lg
-				.params-lg__wrap
+			form.modal__form
+				.params-lg
+					.params-lg__wrap
 
-					.params-lg__row
-						.params-lg__title
-							label(for='paramsLgModalPhotographer1') Имя
-						.params-lg__value
-							input#paramsLgModalPhotographer1.input(type='text' placeholder='Как Вас зовут?')
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPhotographer1') Имя
+							.params-lg__value
+								input#paramsLgModalPhotographer1.input(type='text' placeholder='Как Вас зовут?')
 
-					.params-lg__row
-						.params-lg__title
-							label(for='paramsLgModalPhotographer2') Телефон
-						.params-lg__value
-							input#paramsLgModalPhotographer2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPhotographer2') Телефон
+							.params-lg__value
+								input#paramsLgModalPhotographer2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
 
-					.params-lg__row.params-lg__row_valign_baseline
-						.params-lg__title
-							label(for='paramsLgModalPhotographer3') Сообщение
-						.params-lg__value
-							textarea#paramsLgModalPhotographer3.input(placeholder='Текст сообщения...')
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPhotographer3') Сообщение
+							.params-lg__value
+								textarea#paramsLgModalPhotographer3.input(placeholder='Текст сообщения...')
 
-					.params-lg__row
-						.params-lg__title
-						.params-lg__value
-							input.btn.btn_fill.btn_sm(type='submit' value='Пригласить фотографа')
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm(type='submit' value='Пригласить фотографа')
+
+// Нигде не используется
+#modalAddOffer.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1 Разместить предложение
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form.modal__form
+				.params-lg
+					.params-lg__wrap
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddOffer1') Телефон
+							.params-lg__value
+								input#paramsLgModalAddOffer1.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddOffer2') Название
+							.params-lg__value
+								input#paramsLgModalAddOffer2.input(type='text' placeholder='Введите название объявления...')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddOffer3') Цена
+							.params-lg__value
+								input#paramsLgModalAddOffer3.input.input_number(type='text' placeholder='Укажите стоимость...')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label Район
+							.params-lg__value
+								+select(select_3, {
+									title: 'Район'
+								})(class='select_wide select_light')
+
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddOffer4') Сообщение
+							.params-lg__value
+								textarea#paramsLgModalAddOffer4.input(placeholder='Текст сообщения...')
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm(type='submit' value='Разместить предложение')
+
+// Нигде не используется
+#modalAddJobOffer.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1 Разместить предложение о работе
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form.modal__form
+				.params-lg
+					.params-lg__wrap
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddJobOffer1') Название
+							.params-lg__value
+								input#paramsLgModalAddJobOffer1.input(type='text' placeholder='Название предложения...')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label Район
+							.params-lg__value
+								+select(select_3, {
+									title: 'Выберите район...'
+								})(class='select_wide select_light')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label Возраст ребёнка
+							.params-lg__value
+								+select(select_4, {
+									title: 'Выберите возраст...'
+								})(class='select_wide select_light')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label Тип праздника
+							.params-lg__value
+								+select(select_5, {
+									title: 'Какой праздник?'
+								})(class='select_wide select_light')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddJobOffer2') Количество детей
+							.params-lg__value
+								input#paramsLgModalAddJobOffer2.input.input_number(type='text' placeholder='Сколько будет детей?')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddJobOffer3') Цена на ребёнка
+							.params-lg__value
+								input#paramsLgModalAddJobOffer3.input.input_number(type='text' placeholder='Руб / час')
+
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddJobOffer4') Сообщение
+							.params-lg__value
+								textarea#paramsLgModalAddJobOffer4.input(placeholder='Текст сообщения...')
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm(type='submit' value='Разместить')
+
+// TODO: Нужно добавить прикрепление картинок
+// Нигде не используется
+#modalSellRequisite.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1 Разместить объявление
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form.modal__form
+				.params-lg
+					.params-lg__wrap
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalSellRequisite1') Название
+							.params-lg__value
+								input#paramsLgModalSellRequisite1.input(type='text' placeholder='Введите название объявления...')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalSellRequisite2') Цена
+							.params-lg__value
+								input#paramsLgModalSellRequisite2.input.input_number(type='text' placeholder='Укажите стоимость...')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label Район
+							.params-lg__value
+								+select(select_3, {
+									title: 'Выберите район...'
+								})(class='select_wide select_light')
+
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalSellRequisite3') Сообщение
+							.params-lg__value
+								textarea#paramsLgModalSellRequisite3.input(placeholder='Текст сообщения...')
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm(type='submit' value='Разместить объявление')
+
+// Нигде не используется
+#modalBuyRequisite.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1 Заявка на покупку реквизита
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form.modal__form
+				.params-lg
+					.params-lg__wrap
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalBuyRequisite1') Имя
+							.params-lg__value
+								input#paramsLgModalBuyRequisite1.input(type='text' placeholder='Как Вас зовут?')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalBuyRequisite2') Телефон
+							.params-lg__value
+								input#paramsLgModalBuyRequisite2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalBuyRequisite3') Сообщение
+							.params-lg__value
+								textarea#paramsLgModalBuyRequisite3.input(placeholder='Текст сообщения...')
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm(type='submit' value='Отправить заявку')
+
+// Нигде не используется
+#modalSubscribe.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1 Подать заявку
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form.modal__form
+				.params-lg
+					.params-lg__wrap
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalSubscribe1') Имя
+							.params-lg__value
+								input#paramsLgModalSubscribe1.input(type='text' placeholder='Как Вас зовут?')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalSubscribe2') Телефон
+							.params-lg__value
+								input#paramsLgModalSubscribe2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalSubscribe3') Сообщение
+							.params-lg__value
+								textarea#paramsLgModalSubscribe3.input(placeholder='Текст сообщения...')
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm(type='submit' value='Отправить заявку')

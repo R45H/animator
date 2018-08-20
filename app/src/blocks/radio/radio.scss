@@ -16,6 +16,7 @@ $name: radio;
 				&::before {
 					background: $color-main;
 					border: 6px solid white;
+					box-shadow: 0 0 0 1px $color-main;
 				}
 
 				&:hover {
@@ -23,6 +24,7 @@ $name: radio;
 					&::before {
 						transition: none;
 						background: $color-second;
+						box-shadow: 0 0 0 1px $color-second;
 					}
 				}
 
@@ -31,6 +33,7 @@ $name: radio;
 					&::before {
 						transition: none;
 						background: $color-second-active;
+						box-shadow: 0 0 0 1px $color-second-active;
 					}
 				}
 			}

@@ -1,0 +1,24 @@
+{
+	"select_3": [
+		{
+			"value": "select-region-1",
+			"text": "Центральный"
+		},
+		{
+			"value": "select-region-2",
+			"text": "Адмиралтейский"
+		},
+		{
+			"value": "select-region-3",
+			"text": "Выборгский"
+		},
+		{
+			"value": "select-region-4",
+			"text": "Приморский"
+		},
+		{
+			"value": "select-region-5",
+			"text": "Кировский"
+		}
+	]
+}

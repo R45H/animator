@@ -12,12 +12,14 @@ $name: check;
 
 				&::before {
 					color: $color-main;
+					border-color: $color-main;
 				}
 
 				&:hover {
 
 					&::before {
 						color: $color-second;
+						border-color: $color-second;
 					}
 				}
 
@@ -25,6 +27,7 @@ $name: check;
 
 					&::before {
 						color: $color-second-active;
+						border-color: $color-second-active;
 					}
 				}
 			}
@@ -115,6 +118,34 @@ $name: check;
 
 		.#{$name} {
 			// =====
+
+			&__input {
+
+				&:checked {
+
+					+ label {
+
+						&::before {
+							border-color: $color-gray-light;
+						}
+
+						&:hover {
+
+							&::before {
+								border-color: $color-second-light;
+							}
+						}
+
+						&:active {
+
+							&::before {
+								border-color: $color-second-light-active;
+							}
+						}
+					}
+				}
+			}
+
 
 			&__label {
 				color: $color-text-dark;

@@ -127,6 +127,11 @@ $name: modal;
 		}
 	}
 
+	&__form {
+		display: block;
+		width: 100%;
+	}
+
 	&_visible {
 		display: flex;
 	}
