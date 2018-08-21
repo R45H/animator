@@ -1,34 +1,27 @@
-var
-	$links = $('[data-modal]'),
-	classBlock = 'modal',
-	$blocks = $('.' + classBlock);
+var classBlock = 'modal';
 
-/* Обработка ссылок */
-$links.each(function() {
+/* Клик по кнопке, открывающей модалку */
+$(document).on('click', '[data-modal]', function() {
 	var
 		$this = $(this),
 		id = addIdHash($this.attr('data-modal'));
 
 	if (!$(id).length) return;
 
-	// Клик по кнопке, открывающей модалку
-	$this.on('click', function() {
-		toggleModal('open', id);
-		return false;
-	});
-	// =====
+	toggleModal('open', id);
+	return false;
 });
 /* ===== */
 
 /* Клик по серому фону */
-$blocks.on('click', function(event) {
+$(document).on('click', '.' + classBlock, function(event) {
 	if (!$(event.target).hasClass(classBlock)) return;
 	toggleModal('close', $(this).attr('id'));
 });
 /* ===== */
 
 /* Клик по кнопке "закрыть" */
-$blocks.find('[data-modal-close]').on('click', function(e) {
+$(document).on('click', '[data-modal-close]', function(e) {
 	e.preventDefault();
 	toggleModal('close', $(this).closest('.' + classBlock).attr('id'));
 });

@@ -131,6 +131,12 @@ include ../mixins/radio
 				+select(select, {
 					title: 'Заголовок селекта'
 				})
+			.col-3
+				+select(select_2, {
+					title: 'Выбрать героев',
+					modalTitle: 'Выберите героев',
+					modalBtn: 'Применить'
+				})(class='select_multiply')
 
 		.row.main__separator
 			.col-3

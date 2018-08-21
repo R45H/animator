@@ -44,7 +44,7 @@ $name: select;
 				// =====
 
 				&__icon {
-					transform: translateY(-50%) rotate(180deg);
+					transform: rotate(180deg);
 				}
 			}
 		}
@@ -59,9 +59,17 @@ $name: select;
 		right: 20px;
 		top: 50%;
 		width: 11px;
-		height: 6px;
-		transform: translateY(-50%);
+		height: 11px;
+		margin-top: -5px;
 		transition: transform $duration / 2 ease;
+
+		&_multiply-empty {
+
+		}
+
+		&_multiply-ready {
+			display: none;
+		}
 	}
 
 	&__text {
@@ -280,6 +288,28 @@ $name: select;
 
 			&__icon {
 				right: 0;
+			}
+		}
+	}
+
+	&_multiply {
+
+	}
+
+	&_multiply-ready {
+
+		.#{$name} {
+			// =====
+
+			&__icon {
+
+				&_multiply-empty {
+					display: none;
+				}
+
+				&_multiply-ready {
+					display: block;
+				}
 			}
 		}
 	}

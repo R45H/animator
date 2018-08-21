@@ -1,5 +1,9 @@
 mixin select(data, opts)
-	.select(class= attributes.class)
+	.select(
+		class= attributes.class
+		data-modal-title= opts && opts.modalTitle || null
+		data-modal-btn= opts && opts.modalBtn || null
+	)
 		select.select__origin
 
 			if opts && opts.title
