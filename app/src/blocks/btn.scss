@@ -17,6 +17,8 @@ $name: btn;
 	outline: none;
 	padding: 10px 40px;
 	word-break: break-word;
+	user-select: none;
+	fill: currentColor;
 
 	&:hover {
 		color: $color-second;
@@ -26,6 +28,16 @@ $name: btn;
 	&:active {
 		color: $color-second-active;
 		fill: $color-second-active;
+	}
+
+	&__text {
+
+	}
+
+	&__icon {
+		width: 2em;
+		height: .8em;
+		margin-left: .7em;
 	}
 
 	&_fill {
@@ -57,5 +69,13 @@ $name: btn;
 		font-size: 13px;
 		line-height: 1.3;
 		padding: 11px 30px;
+	}
+
+	&_icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
