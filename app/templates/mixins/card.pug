@@ -51,7 +51,10 @@ mixin card(data)
 
 				if data.btn_invite
 					.card__btn
-						a.btn.btn_wide.btn_sm.btn_fill(href='#' data-modal= data.btn_invite.modal)= data.btn_invite.text
+						a.btn.btn_wide.btn_sm.btn_fill(
+							href= data.btn_invite.link || '#'
+							data-modal= data.btn_invite.modal || null
+						)= data.btn_invite.text
 
 				if data.btn_profile
 					.card__btn

@@ -135,6 +135,35 @@
 				"modal": "modalInvitePhotographer"
 			},
 			"btn_profile": true
+		},
+		{
+			"img": "img/content/card/01.jpg",
+			"link": "detail-animator.html",
+			"title": "Оскар Лазарев",
+			"tel": {
+				"link": "+72146544487",
+				"name": "+7 (214) 654-44-87"
+			},
+			"tags": {
+				"icon": "tags",
+				"delimiter": ",",
+				"items": [
+					{"name": "аниматор", "link": "#"},
+					{"name": "фотограф", "link": "#"},
+					{"name": "актёр", "link": "#"}
+				]
+			},
+			"params": [
+				{"title": "Опыт", "value": "37 проведённых праздников"},
+				{"title": "Возраст", "value": "34 года"},
+				{"title": "Стоимость", "value": "2000 руб./час"}
+			],
+			"params_sm": true,
+			"btn_invite": {
+				"text": "Изменить личные данные"
+			},
+			"date": true,
+			"tel_down": true
 		}
 	]
 }

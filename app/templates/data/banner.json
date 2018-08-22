@@ -1,0 +1,34 @@
+{
+	"banner": [
+		{
+			"link": "#",
+			"img": "img/content/banner/01.png",
+			"text": "Предложения по работе"
+		},
+		{
+			"link": "#",
+			"img": "img/content/banner/02.png",
+			"text": "Форум"
+		},
+		{
+			"link": "#",
+			"img": "img/content/banner/03.png",
+			"text": "Объявления о продаже реквизита"
+		},
+		{
+			"link": "#",
+			"img": "img/content/banner/04.png",
+			"text": "Обучение"
+		},
+		{
+			"link": "#",
+			"img": "img/content/banner/05.png",
+			"text": "Заявки"
+		},
+		{
+			"link": "#",
+			"img": "img/content/banner/06.png",
+			"text": "Реклама и акции"
+		}
+	]
+}
