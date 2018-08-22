@@ -29,7 +29,7 @@ $name: select;
 			border-bottom-right-radius: 0;
 			border-bottom-left-radius: 0;
 			border-bottom-color: transparent;
-			background: rgba(white, .8);
+			background: white;
 
 			&::before {
 				display: block;
@@ -79,7 +79,7 @@ $name: select;
 	&__list {
 		z-index: 150;
 		border: 0;
-		background: rgba(white, .8);
+		background: white;
 
 		.ui-menu {
 			list-style-type: none;
@@ -263,7 +263,7 @@ $name: select;
 				border-radius: 0;
 				border: none;
 				border-bottom: 1px solid $color-gray;
-				padding: 6px 31px 6px 0;
+				padding: 6px 24px 6px 0;
 
 				&::before {
 					display: none;

@@ -18,9 +18,9 @@ $name: wrapper;
 
 	&__tab-header {
 		position: relative;
-		margin-bottom: -1px;
 
 		@include screen-sm() {
+			margin-bottom: -1px;
 			display: flex;
 			flex-wrap: wrap;
 		}
@@ -29,6 +29,7 @@ $name: wrapper;
 	&__tab-btn {
 		@extend %transition;
 		display: block;
+		width: 100%;
 		text-align: center;
 		padding: 20px 40px;
 		font-size: 20px;
@@ -42,6 +43,15 @@ $name: wrapper;
 		overflow: hidden;
 		font-weight: normal;
 		cursor: pointer;
+
+		@include screen-sm() {
+			width: 50%;
+		}
+
+		@include screen-lg() {
+			width: auto;
+			flex-grow: 1;
+		}
 
 		&:hover {
 			background-color: rgba(white, .3);
@@ -70,7 +80,7 @@ $name: wrapper;
 		overflow: hidden;
 		background: white;
 		display: flex;
-		height: 130px;
+		min-height: 130px;
 		padding: 30px;
 	}
 
@@ -79,7 +89,98 @@ $name: wrapper;
 
 		&_visible {
 			display: block;
+			width: 100%;
 		}
+	}
+
+	&__tab-row {
+		margin: 0 -15px;
+
+		@include screen-sm() {
+			display: flex;
+			height: 100%;
+		}
+	}
+
+	&__tab-col {
+		padding: 0 15px;
+
+		&_left {
+
+			@include screen-sm() {
+				flex: auto;
+				margin-bottom: -30px;
+				max-width: calc(100% - 195px);
+			}
+		}
+
+		&_right {
+			text-align: center;
+
+			@include screen-sm() {
+				display: flex;
+				align-items: center;
+				flex: none;
+			}
+		}
+
+		&_with-checkbox {
+			margin-bottom: 30px;
+
+			@include screen-sm() {
+				margin-bottom: -15px;
+			}
+
+			.#{$name} {
+				// =====
+
+				&__tab-item {
+					width: 33.33333%;
+					min-width: 130px;
+					margin-bottom: 0;
+
+					@include screen-sm() {
+						width: 20%;
+						margin-bottom: 15px;
+						flex-grow: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__tab-item-wrap {
+		display: flex;
+		margin: 0 -15px;
+		height: 100%;
+		flex-wrap: wrap;
+	}
+
+	&__tab-item {
+		flex-grow: 1;
+		padding: 0 15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-bottom: 30px;
+		width: 100%;
+
+		@include screen-sm() {
+			width: auto;
+			max-width: 100%;
+		}
+	}
+
+	&__tab-title {
+		color: $color-gray;
+		line-height: 1;
+		margin-bottom: 5px;
+	}
+
+	&__tab-submit {
+		width: 165px;
+		height: 100%;
+		max-height: 68px;
 	}
 
 	&_home {
@@ -249,6 +350,92 @@ $name: wrapper;
 
 				&_active {
 					color: $color-fourth-dark;
+				}
+			}
+
+			&__btn {
+				color: $color-fourth-dark;
+
+				&:hover {
+					@extend .btn:hover;
+				}
+
+				&:active {
+					@extend .btn:active;
+				}
+
+				&.btn_fill {
+					@extend .btn_fill;
+					background: $color-fourth;
+					border-color: $color-fourth;
+				}
+			}
+
+			&__check {
+
+				.check {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									color: $color-fourth-dark;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__radio {
+
+				.radio {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									background: $color-fourth-dark;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -422,6 +609,92 @@ $name: wrapper;
 					color: $color-fifth;
 				}
 			}
+
+			&__btn {
+				color: $color-fifth;
+
+				&:hover {
+					@extend .btn:hover;
+				}
+
+				&:active {
+					@extend .btn:active;
+				}
+
+				&.btn_fill {
+					@extend .btn_fill;
+					background: $color-fifth;
+					border-color: $color-fifth;
+				}
+			}
+
+			&__check {
+
+				.check {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									color: $color-fifth;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__radio {
+
+				.radio {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									background: $color-fifth;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -591,6 +864,92 @@ $name: wrapper;
 
 				&_active {
 					color: $color-sixth;
+				}
+			}
+
+			&__btn {
+				color: $color-sixth;
+
+				&:hover {
+					@extend .btn:hover;
+				}
+
+				&:active {
+					@extend .btn:active;
+				}
+
+				&.btn_fill {
+					@extend .btn_fill;
+					background: $color-sixth;
+					border-color: $color-sixth;
+				}
+			}
+
+			&__check {
+
+				.check {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									color: $color-sixth;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__radio {
+
+				.radio {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									background: $color-sixth;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -764,6 +1123,92 @@ $name: wrapper;
 					color: $color-seventh;
 				}
 			}
+
+			&__btn {
+				color: $color-seventh;
+
+				&:hover {
+					@extend .btn:hover;
+				}
+
+				&:active {
+					@extend .btn:active;
+				}
+
+				&.btn_fill {
+					@extend .btn_fill;
+					background: $color-seventh;
+					border-color: $color-seventh;
+				}
+			}
+
+			&__check {
+
+				.check {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									color: $color-seventh;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__radio {
+
+				.radio {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									background: $color-seventh;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -933,6 +1378,92 @@ $name: wrapper;
 
 				&_active {
 					color: $color-eighth-dark;
+				}
+			}
+
+			&__btn {
+				color: $color-eighth-dark;
+
+				&:hover {
+					@extend .btn:hover;
+				}
+
+				&:active {
+					@extend .btn:active;
+				}
+
+				&.btn_fill {
+					@extend .btn_fill;
+					background: $color-eighth;
+					border-color: $color-eighth;
+				}
+			}
+
+			&__check {
+
+				.check {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									color: $color-eighth-dark;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__radio {
+
+				.radio {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									background: $color-eighth-dark;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}

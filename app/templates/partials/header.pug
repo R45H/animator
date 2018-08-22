@@ -1,7 +1,9 @@
 include ../mixins/star
 include ../mixins/select
+include ../mixins/svg
 include ../mixins/logo
 include ../mixins/bread
+include ../mixins/check
 
 // HEADER
 header.header.wrapper__header(
@@ -24,9 +26,7 @@ header.header.wrapper__header(
 					.header__btns-col.header__btns-col_fixed
 						+star(999)(href='favourites.html')
 					.header__btns-col.header__btns-col_grow
-						+select(select, {
-							wide: true
-						})
+						+select(select)(class='select_wide')
 					.header__btns-col
 						a.btn.btn_fill.btn_wide(href='#' data-modal='modalRegistration') Личный кабинет
 
@@ -74,16 +74,118 @@ header.header.wrapper__header(
 
 							button.wrapper__tab-btn.js-wrapper__set-color(
 								data-tab-link='tab-4'
-								data-color='seventh'
+								data-color='eighth'
 								data-onload='service'
 							) Услуги
 
 						.wrapper__tab-body
 							.wrapper__tab-panel(data-tab-target='tab-1')
-								div target=1
+								.wrapper__tab-row
+
+									.wrapper__tab-col.wrapper__tab-col_left
+										.wrapper__tab-item-wrap
+
+											.wrapper__tab-item
+												.wrapper__tab-title Возраст ребёнка
+												+select(select_4, {
+													title: 'Выбрать возраст'
+												})(class='select_simple select_wide')
+
+											.wrapper__tab-item
+												.wrapper__tab-title Тип аниматора
+												+select(select_5, {
+													title: 'Выбрать тип'
+												})(class='select_simple select_wide')
+
+											.wrapper__tab-item
+												.wrapper__tab-title Анимационные герои
+												+select(select_6, {
+													title: 'Выбрать героев',
+													modalTitle: 'Анимационные герои',
+													modalBtn: 'Применить'
+												})(class='select_simple select_wide select_multiply')
+
+											.wrapper__tab-item
+												.wrapper__tab-title Программы
+												+select(select_7, {
+													title: 'Выбрать программы',
+													modalTitle: 'Анимационные программы',
+													modalBtn: 'Применить'
+												})(class='select_simple select_wide select_multiply')
+
+									.wrapper__tab-col.wrapper__tab-col_right
+										.btn.btn_fill.btn_icon.wrapper__btn.wrapper__tab-submit
+											span.btn__text Применить
+											+svg('arrow-right', 'btn__icon')
+
 							.wrapper__tab-panel(data-tab-target='tab-2')
-								div target=2
+								.wrapper__tab-row
+
+									.wrapper__tab-col.wrapper__tab-col_left
+										.wrapper__tab-item-wrap
+
+											.wrapper__tab-item
+												.wrapper__tab-title Район города
+												+select(select_3, {
+													title: 'Выбрать район'
+												})(class='select_simple select_wide')
+
+											.wrapper__tab-item
+												.wrapper__tab-title Вид фотосъёмки
+												+select(select_8, {
+													title: 'Выбрать'
+												})(class='select_simple select_wide')
+
+											.wrapper__tab-item
+												.wrapper__tab-title Тип фотоальбома
+												+select(select_9, {
+													title: 'Выбрать'
+												})(class='select_simple select_wide')
+
+									.wrapper__tab-col.wrapper__tab-col_right
+										.btn.btn_fill.btn_icon.wrapper__btn.wrapper__tab-submit
+											span.btn__text Применить
+											+svg('arrow-right', 'btn__icon')
+
 							.wrapper__tab-panel(data-tab-target='tab-3')
-								div target=3
+								.wrapper__tab-row
+
+									.wrapper__tab-col.wrapper__tab-col_left
+										.wrapper__tab-item-wrap
+
+											.wrapper__tab-item
+												.wrapper__tab-title Анимационные программы
+												+select(select_7, {
+													title: 'Выбрать программы',
+													modalTitle: 'Анимационные программы',
+													modalBtn: 'Применить'
+												})(class='select_simple select_wide select_multiply')
+
+											.wrapper__tab-item
+												.wrapper__tab-title Станция метро
+												+select(select_10, {
+													title: 'Выбрать станцию метро'
+												})(class='select_simple select_wide')
+
+									.wrapper__tab-col.wrapper__tab-col_right
+										.btn.btn_fill.btn_icon.wrapper__btn.wrapper__tab-submit
+											span.btn__text Применить
+											+svg('arrow-right', 'btn__icon')
+
 							.wrapper__tab-panel(data-tab-target='tab-4')
-								div target=4
+								.wrapper__tab-row
+
+									.wrapper__tab-col.wrapper__tab-col_left.wrapper__tab-col_with-checkbox
+										.wrapper__tab-item-wrap
+
+											each val, i in check
+												.wrapper__tab-item
+													+check({
+														id: 'tabServiceCheck-' + (i + 1),
+														text: val
+													})(class='check_thin check_sm check_color_dark wrapper__check')
+
+									.wrapper__tab-col.wrapper__tab-col_right
+										.btn.btn_fill.btn_icon.wrapper__btn.wrapper__tab-submit
+											span.btn__text Применить
+											+svg('arrow-right', 'btn__icon')

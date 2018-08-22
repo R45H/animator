@@ -1,12 +1,6 @@
 {
 	"select_5": [
-		{
-			"value": "select-celebration-1",
-			"text": "Какой-то тип"
-		},
-		{
-			"value": "select-celebration-2",
-			"text": "Какой-то тип"
-		}
+		"Частный аниматор",
+		"Юридическое лицо"
 	]
 }
