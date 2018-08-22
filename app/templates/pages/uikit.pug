@@ -318,20 +318,35 @@ include ../mixins/radio
 					link: false
 				})
 
-		.row.main__separator
-			.col-4
+		.row.main__space-col
+			.col-3
+				+banner
+			.col-3
 				+banner({
 					img: 'img/content/news/01.jpg'
 				})
-			.col-4
+			.col-3
 				+banner({
 					link: '#',
 					img: 'img/content/news/01.jpg'
 				})
-			.col-4
+			.col-3
 				+banner({
 					img: 'img/content/news/01.jpg'
 				})(class='banner_wide')
+
+		.row.main__separator
+			.col-3
+				+banner({
+					link: '#',
+					img: 'img/content/news/01.jpg'
+				})(class='banner_fog')
+			.col-3
+				+banner({
+					link: '#',
+					img: 'img/content/news/01.jpg',
+					text: 'Предложения по работе'
+				})
 
 		.row.main__space-col
 			.col-8.main__space-col

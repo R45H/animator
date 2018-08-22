@@ -1,4 +1,7 @@
+//- TODO: Надо, чтобы стрелка не падала на новую строку
+
 include global
+include svg
 
 mixin banner(data)
 	- data = data || {}
@@ -14,3 +17,7 @@ mixin banner(data)
 			aria-label='Image'
 			title='Image'
 		)
+
+		if data.text
+			.banner__text= data.text
+				+svg('arrow-right', 'banner__icon')

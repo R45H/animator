@@ -6,6 +6,7 @@ $name: banner;
 	overflow: hidden;
 	display: block;
 	width: 100%;
+	position: relative;
 
 	&__img {
 		display: block;
@@ -13,6 +14,27 @@ $name: banner;
 		padding-bottom: 100%;
 		background: $color-gray-light no-repeat center / cover;
 		transition: $duration linear;
+	}
+
+	&__text {
+		@extend %radius;
+		position: absolute;
+		bottom: 15px;
+		left: 15px;
+		width: calc(100% - 30px);
+		max-height: calc(100% - 30px);
+		padding: 5px;
+		font-size: 20px;
+		text-align: center;
+		z-index: 1;
+		background-color: rgba($color-gray, .9);
+	}
+
+	&__icon {
+		width: 1.4em;
+		height: .6em;
+		margin-left: .5em;
+		fill: currentColor;
 	}
 
 	&_wide {
@@ -25,11 +47,55 @@ $name: banner;
 			}
 		}
 	}
+
+	&_fog {
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $color-gray;
+			opacity: .9;
+			z-index: 1;
+			transition: $duration linear;
+		}
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				background-color: transparent;
+			}
+
+			&__text {
+				background-color: transparent;
+				transition: $duration linear;
+			}
+		}
+
+		&:hover {
+
+			.#{$name} {
+				// =====
+
+				&__text {
+					background-color: rgba($color-gray, .9);
+				}
+			}
+		}
+	}
 }
 
 a.#{$name} {
 
 	&:hover {
+
+		&::before {
+			opacity: 0;
+		}
 
 		.#{$name} {
 			// =====

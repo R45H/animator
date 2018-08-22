@@ -438,6 +438,40 @@ $name: wrapper;
 					}
 				}
 			}
+
+			&__banner {
+
+				&::before {
+					background-color: $color-fourth;
+				}
+
+				&.banner {
+
+					&__text {
+						background-color: rgba($color-fourth, .9);
+					}
+
+					&_fog {
+
+						.banner {
+
+							&__text {
+								background-color: transparent;
+							}
+						}
+
+						&:hover {
+
+							.banner {
+
+								&__text {
+									background-color: rgba($color-fourth, .9);
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -689,6 +723,40 @@ $name: wrapper;
 									&::before {
 										color: $color-second-active;
 									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__banner {
+
+				&::before {
+					background-color: $color-fifth;
+				}
+
+				&.banner {
+
+					&__text {
+						background-color: rgba($color-fifth, .9);
+					}
+
+					&_fog {
+
+						.banner {
+
+							&__text {
+								background-color: transparent;
+							}
+						}
+
+						&:hover {
+
+							.banner {
+
+								&__text {
+									background-color: rgba($color-fifth, .9);
 								}
 							}
 						}
@@ -952,6 +1020,40 @@ $name: wrapper;
 					}
 				}
 			}
+
+			&__banner {
+
+				&::before {
+					background-color: $color-sixth;
+				}
+
+				&.banner {
+
+					&__text {
+						background-color: rgba($color-sixth, .9);
+					}
+
+					&_fog {
+
+						.banner {
+
+							&__text {
+								background-color: transparent;
+							}
+						}
+
+						&:hover {
+
+							.banner {
+
+								&__text {
+									background-color: rgba($color-sixth, .9);
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -1209,6 +1311,40 @@ $name: wrapper;
 					}
 				}
 			}
+
+			&__banner {
+
+				&::before {
+					background-color: $color-seventh;
+				}
+
+				&.banner {
+
+					&__text {
+						background-color: rgba($color-seventh, .9);
+					}
+
+					&_fog {
+
+						.banner {
+
+							&__text {
+								background-color: transparent;
+							}
+						}
+
+						&:hover {
+
+							.banner {
+
+								&__text {
+									background-color: rgba($color-seventh, .9);
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -1460,6 +1596,40 @@ $name: wrapper;
 									&::before {
 										color: $color-second-active;
 									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__banner {
+
+				&::before {
+					background-color: $color-eighth;
+				}
+
+				&.banner {
+
+					&__text {
+						background-color: rgba($color-eighth, .9);
+					}
+
+					&_fog {
+
+						.banner {
+
+							&__text {
+								background-color: transparent;
+							}
+						}
+
+						&:hover {
+
+							.banner {
+
+								&__text {
+									background-color: rgba($color-eighth, .9);
 								}
 							}
 						}
