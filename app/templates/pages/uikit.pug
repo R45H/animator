@@ -434,4 +434,18 @@ include ../mixins/radio
 					list: g_img_list
 				})(dataSmCols='2' dataLgCols='3')
 
+		.row.main__separator
+			.col-12
+				.tab
+					.row
+						.col-2
+							.tab__link.tab__link_active(data-tab-link='testTab-1') .tab__link 1
+						.col-2
+							.tab__link(data-tab-link='testTab-2') .tab__link 2
+					.row
+						.col-12
+							.tab__target.tab__target_active(data-tab-target='testTab-1') .tab__target 1
+							.tab__target(data-tab-target='testTab-2') .tab__target 2
+
+
 	.main__footer-spacer

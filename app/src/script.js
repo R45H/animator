@@ -25,6 +25,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/modal/modal.js'
 	}());
+	(function() {
+		//=require 'blocks/tab/tab.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

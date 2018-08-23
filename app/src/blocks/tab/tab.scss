@@ -1,0 +1,25 @@
+$name: tab;
+
+.#{$name} {
+
+	&__link {
+
+		&_active {
+			color: $color-gray;
+			cursor: default;
+
+			&::before,
+			&::after {
+				opacity: 0;
+			}
+		}
+	}
+
+	&__target {
+		display: none;
+
+		&_active {
+			display: block;
+		}
+	}
+}
