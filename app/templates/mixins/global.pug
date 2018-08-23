@@ -1,5 +1,10 @@
 mixin g-tag(tag)
 	case tag
-		when 'a': a(class= attributes.class href= attributes.href): block
+		when 'a': a(
+			class= attributes.class
+			href= attributes.href
+			data-fancybox= attributes['data-fancybox']
+			data-caption= attributes['data-caption']
+		): block
 		when 'span': span(class= attributes.class): block
 		default: div(class= attributes.class): block

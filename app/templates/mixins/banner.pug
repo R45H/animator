@@ -1,21 +1,22 @@
-//- TODO: Надо, чтобы стрелка не падала на новую строку
-
 include global
 include svg
 
 mixin banner(data)
 	- data = data || {}
 
-	+g-tag(data && data.link ? 'a' : '')(
+	+g-tag(data && (data.link || data.fancybox) ? 'a' : '')(
 		class='banner'
 		class= attributes.class
-		href= data.link
+		class= data.fancybox ? 'fancybox' : ''
+		href= data.fancybox ? data.img : data.link
+		data-fancybox= data.fancybox ? 'group-' + ('BannerImage') : null
+		data-caption= data.fancybox && data.title ? data.title : null
 	)
 		.banner__img(
 			style= data && data.img ? 'background-image: url(' + data.img + ');' : ''
 			role='img'
-			aria-label='Image'
-			title='Image'
+			aria-label= data.title || 'Image'
+			title= data.title || 'Image'
 		)
 
 		if data.text

@@ -22,6 +22,7 @@ $name: fancybox;
 		background: rgba(black, .2);
 		opacity: 0;
 		transition: $duration ease;
+		z-index: 1;
 	}
 
 	&:hover {

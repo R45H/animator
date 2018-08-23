@@ -40,6 +40,23 @@ $name: btn;
 		margin-left: .7em;
 	}
 
+	&_light {
+		border-color: $color-main-light;
+		color: $color-gray-dark;
+
+		&:hover {
+			border-color: $color-second-light;
+			color: $color-second-light;
+			fill: $color-second-light;
+		}
+
+		&:active {
+			border-color: $color-second-light-active;
+			color: $color-second-light-active;
+			fill: $color-second-light-active;
+		}
+	}
+
 	&_fill {
 		color: white;
 		border-color: $color-main;
@@ -78,4 +95,8 @@ $name: btn;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+}
+
+input.#{$name} {
+	white-space: pre-wrap;
 }

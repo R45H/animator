@@ -100,14 +100,16 @@ include ../mixins/radio
 				a.link-line.link-line_simple(href='#') .link-line.link-line_simple
 
 		.row.main__separator
-			.col-3
+			.col-2
 				.btn .btn
-			.col-3
+			.col-2
 				a.btn(href='#') a.btn
-			.col-3
+			.col-2
 				input.btn(type='button' value='input.btn')
-			.col-3
+			.col-2
 				button.btn button.btn
+			.col-4
+				.btn.btn_light .btn_light
 
 		.row.main__separator
 			.col-3
@@ -318,6 +320,21 @@ include ../mixins/radio
 					link: false
 				})
 
+		.row.main__separator
+			.col-3
+				+fancybox({
+					link: 'img/content/slider/01.jpg',
+					title: 'Img 1',
+					group: 'group-1'
+				})
+			.col-3
+				+fancybox({
+					link: 'img/content/slider/01.jpg',
+					title: 'Img 2',
+					group: 'group-2',
+					bg: true
+				})
+
 		.row.main__space-col
 			.col-3
 				+banner
@@ -351,6 +368,12 @@ include ../mixins/radio
 				+banner({
 					img: 'img/content/news/01.jpg'
 				})(class='banner_contain')
+			.col-3
+				+banner({
+					img: 'img/content/news/01.jpg',
+					fancybox: true,
+					title: '.banner with fancybox'
+				})
 
 		.row.main__space-col
 			.col-8.main__space-col
@@ -379,21 +402,6 @@ include ../mixins/radio
 					h2.title.title_sm.main__space-bot-half .block.block_height_full
 					.text
 						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
-
-		.row.main__separator
-			.col-3
-				+fancybox({
-					link: 'img/content/slider/01.jpg',
-					title: 'Img 1',
-					group: 'group-1'
-				})
-			.col-3
-				+fancybox({
-					link: 'img/content/slider/01.jpg',
-					title: 'Img 2',
-					group: 'group-2',
-					bg: true
-				})
 
 		.row.main__separator
 			.col-sm-6.main__space-col
