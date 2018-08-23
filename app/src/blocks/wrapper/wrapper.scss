@@ -441,15 +441,19 @@ $name: wrapper;
 
 			&__banner {
 
-				&::before {
+				&::before,
+				&::after {
 					background-color: $color-fourth;
 				}
 
-				&.banner {
+				.banner {
 
 					&__text {
-						background-color: rgba($color-fourth, .9);
+						background-color: rgba($color-fourth, .85);
 					}
+				}
+
+				&.banner {
 
 					&_fog {
 
@@ -457,16 +461,6 @@ $name: wrapper;
 
 							&__text {
 								background-color: transparent;
-							}
-						}
-
-						&:hover {
-
-							.banner {
-
-								&__text {
-									background-color: rgba($color-fourth, .9);
-								}
 							}
 						}
 					}
@@ -732,15 +726,19 @@ $name: wrapper;
 
 			&__banner {
 
-				&::before {
+				&::before,
+				&::after {
 					background-color: $color-fifth;
 				}
 
-				&.banner {
+				.banner {
 
 					&__text {
-						background-color: rgba($color-fifth, .9);
+						background-color: rgba($color-fifth, .85);
 					}
+				}
+
+				&.banner {
 
 					&_fog {
 
@@ -748,16 +746,6 @@ $name: wrapper;
 
 							&__text {
 								background-color: transparent;
-							}
-						}
-
-						&:hover {
-
-							.banner {
-
-								&__text {
-									background-color: rgba($color-fifth, .9);
-								}
 							}
 						}
 					}
@@ -1023,15 +1011,19 @@ $name: wrapper;
 
 			&__banner {
 
-				&::before {
+				&::before,
+				&::after {
 					background-color: $color-sixth;
 				}
 
-				&.banner {
+				.banner {
 
 					&__text {
-						background-color: rgba($color-sixth, .9);
+						background-color: rgba($color-sixth, .85);
 					}
+				}
+
+				&.banner {
 
 					&_fog {
 
@@ -1039,16 +1031,6 @@ $name: wrapper;
 
 							&__text {
 								background-color: transparent;
-							}
-						}
-
-						&:hover {
-
-							.banner {
-
-								&__text {
-									background-color: rgba($color-sixth, .9);
-								}
 							}
 						}
 					}
@@ -1314,15 +1296,19 @@ $name: wrapper;
 
 			&__banner {
 
-				&::before {
+				&::before,
+				&::after {
 					background-color: $color-seventh;
 				}
 
-				&.banner {
+				.banner {
 
 					&__text {
-						background-color: rgba($color-seventh, .9);
+						background-color: rgba($color-seventh, .85);
 					}
+				}
+
+				&.banner {
 
 					&_fog {
 
@@ -1330,16 +1316,6 @@ $name: wrapper;
 
 							&__text {
 								background-color: transparent;
-							}
-						}
-
-						&:hover {
-
-							.banner {
-
-								&__text {
-									background-color: rgba($color-seventh, .9);
-								}
 							}
 						}
 					}
@@ -1605,15 +1581,19 @@ $name: wrapper;
 
 			&__banner {
 
-				&::before {
+				&::before,
+				&::after {
 					background-color: $color-eighth;
 				}
 
-				&.banner {
+				.banner {
 
 					&__text {
-						background-color: rgba($color-eighth, .9);
+						background-color: rgba($color-eighth, .85);
 					}
+				}
+
+				&.banner {
 
 					&_fog {
 
@@ -1621,16 +1601,6 @@ $name: wrapper;
 
 							&__text {
 								background-color: transparent;
-							}
-						}
-
-						&:hover {
-
-							.banner {
-
-								&__text {
-									background-color: rgba($color-eighth, .9);
-								}
 							}
 						}
 					}
