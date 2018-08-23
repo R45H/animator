@@ -55,11 +55,31 @@
 			]
 		},
 		{
+			"link": "stock.html",
+			"name": "Акции",
+			"sub": [
+				{
+					"link": "stock-detail.html",
+					"name": "Квест для детей в подарок ко дню рождения"
+				}
+			]
+		},
+		{
 			"link": "personal-animator.html",
 			"name": "Личный кабинет аниматора",
 			"sub": [
 				{
 					"link": "profile-animator.html",
+					"name": "Изменение личных данных"
+				}
+			]
+		},
+		{
+			"link": "personal-photographer.html",
+			"name": "Личный кабинет фотографа",
+			"sub": [
+				{
+					"link": "profile-photographer.html",
 					"name": "Изменение личных данных"
 				}
 			]

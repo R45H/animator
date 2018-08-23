@@ -1,0 +1,45 @@
+include ../components/slider
+include ../mixins/card
+include ../mixins/banner
+
+.section
+	.container
+		.row
+
+			.col-lg-9.col-xl-8
+
+				.main__space-col
+					+card(card[7])(class='card_thin')
+
+				.row
+
+					each val in banner
+						.col-sm-6.col-md-4.main__space-col
+							+banner({
+								link: val.link,
+								img: val.img,
+								text: val.text
+							})(class='banner_fog banner_contain wrapper__banner')
+
+				.main__space-col
+					.block.block_text
+						h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half О себе
+						.text
+							p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау". Попса трансформирует дорийский соноропериод, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков). Октавер интенсивен. Микрохроматический интервал, так или иначе, интенсивен. Легато параллельно.
+
+				.main__space-col
+					+slider({
+						title: 'Портфолио фотографа',
+						list: g_img_list
+					})(dataSmRows='2' dataSmCols='2' dataMdCols='3')
+
+			.col-lg-3.col-xl-4
+				.main__space-col
+					+banner({
+						link: '#'
+					})
+				.main__space-col
+					+banner({
+						link: '#'
+					})
+				.main__footer-spacer

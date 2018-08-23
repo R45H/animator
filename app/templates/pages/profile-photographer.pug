@@ -17,7 +17,7 @@ include ../mixins/select
 								.params-lg__row
 									.params-lg__title
 									.params-lg__value
-										h2.title.title_md.title_color_2.wrapper__text.main__space-bot-half Профиль аниматора
+										h2.title.title_md.title_color_2.wrapper__text.main__space-bot-half Профиль фотографа
 
 										.text-gray.main__space-bot
 											| Дата обновления: 30.11.2017 06:44:28
@@ -32,9 +32,9 @@ include ../mixins/select
 
 								.col-md-5.push-md-7.col-xl-4.push-xl-8.main__vertical_between.main__space-bot
 									+banner({
-										img: 'img/content/card/01.jpg',
+										img: 'img/content/card/02.jpg',
 										fancybox: true,
-										title: 'Фотография аниматора'
+										title: 'Фотография фотографа'
 									})(class='main__flex-banner main__space-bot')
 
 									input.btn.btn_sm.btn_wide.btn_light(type='button' value='Загрузить фотографию')
@@ -71,39 +71,10 @@ include ../mixins/select
 							.params-lg.params-lg_fixed-title.main__space-bot
 								.params-lg__wrap
 
-									.params-lg__row.params-lg__row_valign_baseline.params-lg__row_space_none
-										.params-lg__title Сфера деятельности
-										.params-lg__value
-											.row
-
-												each val, i in check_2
-													.col-sm-6.col-md-4.main__space-bot-half
-														+check({
-															id: 'profileCheck-1-' + i + 1,
-															text: val
-														})(class='wrapper__check')
-
-									.params-lg__row.params-lg__row_valign_baseline
-										.params-lg__title Программы
-										.params-lg__value
-											.row
-
-												each val, i in check_3
-													.col-sm-6.col-md-4.main__space-bot-half
-														+check({
-															id: 'profileCheck-2-' + i + 1,
-															text: val
-														})(class='wrapper__check')
-
 									.params-lg__row
 										.params-lg__title Стоимость работы
 										.params-lg__value
 											input.input.input_number(type='text' placeholder='руб./час')
-
-									.params-lg__row
-										.params-lg__title Образы
-										.params-lg__value
-											input.input(type='text' placeholder='Перечислить через запятую')
 
 									.params-lg__row.params-lg__row_valign_baseline
 										.params-lg__title О себе
@@ -114,15 +85,6 @@ include ../mixins/select
 								.col-md-8
 									.params-lg.params-lg_fixed-title
 										.params-lg__wrap
-
-											.params-lg__row
-												.params-lg__title Район
-												.params-lg__value
-													+select(select_3, {
-														title: 'Адмиралтейский',
-														modalTitle: 'Выберите героев',
-														modalBtn: 'Применить'
-													})(class='select_light select_wide select_multiply')
 
 											.params-lg__row
 												.params-lg__title
@@ -138,9 +100,9 @@ include ../mixins/select
 
 								.col-md-5.push-md-7.col-xl-4.push-xl-8.main__vertical_between.main__space-bot
 									+banner({
-										img: 'img/content/card/01.jpg',
+										img: 'img/content/card/02.jpg',
 										fancybox: true,
-										title: 'Фотография аниматора'
+										title: 'Фотография фотографа'
 									})(class='main__flex-banner main__space-bot')
 
 									input.btn.btn_sm.btn_wide.btn_light(type='button' value='Загрузить фотографию')
@@ -177,39 +139,10 @@ include ../mixins/select
 							.params-lg.params-lg_fixed-title.main__space-bot
 								.params-lg__wrap
 
-									.params-lg__row.params-lg__row_valign_baseline.params-lg__row_space_none
-										.params-lg__title Сфера деятельности
-										.params-lg__value
-											.row
-
-												each val, i in check_2
-													.col-sm-6.col-md-4.main__space-bot-half
-														+check({
-															id: 'profileCheck-1-' + i + 1,
-															text: val
-														})(class='wrapper__check')
-
-									.params-lg__row.params-lg__row_valign_baseline
-										.params-lg__title Программы
-										.params-lg__value
-											.row
-
-												each val, i in check_3
-													.col-sm-6.col-md-4.main__space-bot-half
-														+check({
-															id: 'profileCheck-2-' + i + 1,
-															text: val
-														})(class='wrapper__check')
-
 									.params-lg__row
 										.params-lg__title Стоимость работы
 										.params-lg__value
 											input.input.input_number(type='text' placeholder='руб./час')
-
-									.params-lg__row
-										.params-lg__title Образы
-										.params-lg__value
-											input.input(type='text' placeholder='Перечислить через запятую')
 
 									.params-lg__row.params-lg__row_valign_baseline
 										.params-lg__title О себе
@@ -220,15 +153,6 @@ include ../mixins/select
 								.col-md-8
 									.params-lg.params-lg_fixed-title
 										.params-lg__wrap
-
-											.params-lg__row
-												.params-lg__title Район
-												.params-lg__value
-													+select(select_3, {
-														title: 'Адмиралтейский',
-														modalTitle: 'Выберите героев',
-														modalBtn: 'Применить'
-													})(class='select_light select_wide select_multiply')
 
 											.params-lg__row
 												.params-lg__title
