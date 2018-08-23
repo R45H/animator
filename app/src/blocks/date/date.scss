@@ -97,6 +97,7 @@ $name: date;
 	}
 
 	a.ui-state-default {
+		@extend %radius;
 		@extend %transition;
 
 		&:hover {

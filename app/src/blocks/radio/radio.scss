@@ -40,18 +40,18 @@ $name: radio;
 	&__label {
 		transition: $duration / 2 linear;
 		display: inline-flex;
-		align-items: center;
+		align-items: flex-start;
 		cursor: pointer;
 		padding: 3px 0;
 		user-select: none;
 
 		&::before {
 			content: '';
-			width: 24px;
-			height: 24px;
+			width: 22px;
+			height: 22px;
 			border-radius: 50%;
 			box-shadow: 0 0 0 1px $color-main-light;
-			border: 12px solid white;
+			border: 11px solid white;
 			background: currentColor;
 			margin-right: 10px;
 			transition: $duration / 2 linear box-shadow, $duration / 2 linear background, $duration / 2 linear border;
@@ -103,6 +103,7 @@ $name: radio;
 					width: 14px;
 					height: 14px;
 					border-width: 7px;
+					margin-top: 4px;
 				}
 			}
 		}
