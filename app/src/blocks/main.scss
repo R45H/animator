@@ -35,4 +35,33 @@ $name: main;
 	&__bg_black {
 		background: black;
 	}
+
+	&__vertical_between {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__flex-banner {
+		flex-grow: 1;
+		display: flex;
+
+		.banner {
+
+			&__img {
+
+				@include screen-md() {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__link-line {
+		margin-right: 30px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }

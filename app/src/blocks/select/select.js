@@ -69,9 +69,18 @@ $selects.each(function() {
 					.on('click', function() {
 						var
 							count = 1, // Счётчик для установки ID чекбоксам
-							currentValues = $thisBlock.attr('data-values') ? JSON.parse($thisBlock.attr('data-values')) : []; // Выбранные ранее значения для этого селекта
+							currentValues = []; // Выбранные ранее значения для этого селекта
 
 						$thisBlock.addClass(classMultiplyOpened);
+
+						/* Сбор ранее выбранных значений в массив */
+						$this
+							.find('option:selected')
+							.filter(':not(:disabled)')
+							.each(function() {
+								currentValues.push($(this).text());
+							});
+						/* ===== */
 
 						/* Установка текста заголовка и кнопки. Удаление старых чекбоксов */
 						$modalTitle.text(modalTitleText);

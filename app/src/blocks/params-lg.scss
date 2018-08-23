@@ -54,6 +54,27 @@ $name: params-lg;
 				}
 			}
 		}
+
+		&_space_none {
+
+			.#{$name} {
+				// =====
+
+				&__title {
+
+					@include screen-sm() {
+						padding-bottom: 0;
+					}
+				}
+
+				&__value {
+
+					@include screen-sm() {
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
 	}
 
 	&__title {
@@ -77,6 +98,20 @@ $name: params-lg;
 			display: table-cell;
 			vertical-align: middle;
 			text-align: left;
+		}
+	}
+
+	&_fixed-title {
+
+		.#{$name} {
+			// =====
+
+			&__title {
+
+				@include screen-sm() {
+					width: 130px;
+				}
+			}
 		}
 	}
 }
