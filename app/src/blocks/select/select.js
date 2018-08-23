@@ -169,8 +169,23 @@ $modalBtn.on('click', function(e) {
 		$currentSelect
 			.addClass(classMultiplyReady)
 			.find('.select__text')
-			.text(values.join(', '));
+			.text(values.join(', '))
+			.end()
+			.find('.select__origin option')
+			.each(function() {
+				var
+					$thisOption = $(this),
+					thisText = $thisOption.text();
 
+				$thisOption.prop('selected', false);
+
+				$.each(values, function(i, val) {
+					if (thisText == val) {
+						$thisOption.prop('selected', true);
+					}
+				});
+			});
+		
 		if ($currentSelect.hasClass(classLight)) {
 			$currentSelect.addClass(classLightSelected);
 		}
@@ -184,7 +199,12 @@ $modalBtn.on('click', function(e) {
 					.find('option')
 					.first()
 					.text()
-			);
+			)
+			.end()
+			.find('.select__origin option')
+			.prop('selected', false)
+			.first()
+			.prop('selected', true);
 
 		if ($currentSelect.hasClass(classLightSelected)) {
 			$currentSelect.removeClass(classLightSelected);

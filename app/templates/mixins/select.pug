@@ -4,7 +4,9 @@ mixin select(data, opts)
 		data-modal-title= opts && opts.modalTitle || null
 		data-modal-btn= opts && opts.modalBtn || null
 	)
-		select.select__origin
+		select.select__origin(
+			multiple= attributes.class && ~attributes.class.indexOf('select_multiply') ? true : null
+		)
 
 			if opts && opts.title
 				option(disabled selected)= opts.title
