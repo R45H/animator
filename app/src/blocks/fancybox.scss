@@ -6,14 +6,14 @@ $name: fancybox;
 	outline: none;
 
 	&::after {
-		content: '\f002';
-		font-family: $font-fa;
+		content: '\e803';
+		font-family: $font-custom;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-size: 5rem;
 		color: white;
-		text-shadow: 0 0 1px $color-text;
+		text-shadow: 2px 1px 1px $color-text;
 		position: absolute;
 		top: 0;
 		left: 0;

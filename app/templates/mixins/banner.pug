@@ -7,7 +7,7 @@ mixin banner(data)
 	+g-tag(data && (data.link || data.fancybox) ? 'a' : '')(
 		class='banner'
 		class= attributes.class
-		class= data.fancybox ? 'fancybox' : ''
+		class= data.fancybox ? 'fancybox wrapper__fancybox' : ''
 		href= data.fancybox ? data.img : data.link
 		data-fancybox= data.fancybox ? 'group-' + ('BannerImage') : null
 		data-caption= data.fancybox && data.title ? data.title : null

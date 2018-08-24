@@ -10,7 +10,7 @@ mixin card(data)
 		if data.img
 			.card__img-wrap
 				a.card__img-link(
-					class= data.link ? '' : 'fancybox'
+					class= data.link ? '' : 'fancybox wrapper__fancybox'
 					href= data.link || data.img
 					data-fancybox= data.link ? null : 'group-card'
 					data-caption= data.link ? null : data.title
