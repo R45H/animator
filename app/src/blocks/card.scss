@@ -156,6 +156,25 @@ $name: card;
 			}
 		}
 	}
+
+	&_wide {
+
+		.#{$name} {
+			// =====
+
+			&__img-wrap {
+
+				@include screen-md() {
+					width: 50%;
+					max-width: none;
+				}
+			}
+
+			&__img {
+				padding-bottom: 66%;
+			}
+		}
+	}
 }
 
 a.#{$name}__img-link {
@@ -167,6 +186,20 @@ a.#{$name}__img-link {
 
 			&__img {
 				transform: scale(1.03) rotate(-.5deg);
+			}
+		}
+	}
+
+	&.fancybox {
+
+		&:hover {
+
+			.#{$name} {
+				// =====
+
+				&__img {
+					transform: none;
+				}
 			}
 		}
 	}

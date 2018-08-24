@@ -2,6 +2,7 @@ $name: tags;
 
 .#{$name} {
 	display: flex;
+	white-space: pre-wrap;
 
 	&__outer {
 		@extend %transition;
@@ -23,6 +24,10 @@ $name: tags;
 
 	&__item {
 
+	}
+
+	&__delimiter {
+		display: inline-block;
 	}
 
 	&__icon {

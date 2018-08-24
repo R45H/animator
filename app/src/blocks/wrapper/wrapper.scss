@@ -1074,7 +1074,7 @@ $name: wrapper;
 				.banner {
 
 					&__text {
-						background-color: rgba($color-sixth, .85);
+						background-color: rgba($color-sixth-light, .85);
 					}
 				}
 
@@ -1084,7 +1084,7 @@ $name: wrapper;
 
 						&::before,
 						&::after {
-							background-color: $color-sixth;
+							background-color: $color-sixth-light;
 						}
 
 						.banner {

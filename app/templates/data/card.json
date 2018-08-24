@@ -4,6 +4,7 @@
 			"img": "img/content/card/01.jpg",
 			"link": "detail-animator.html",
 			"title": "Оскар Лазарев",
+			"favourite": true,
 			"tel": {
 				"link": "+72146544487",
 				"name": "+7 (214) 654-44-87"
@@ -25,9 +26,14 @@
 			"btn_profile": true
 		},
 		{
-			"img": "img/content/card/01.jpg",
+			"img": "img/content/card/03.jpg",
 			"link": "detail-area.html",
 			"title": "Общество Юных Архитекторов",
+			"favourite": true,
+			"tel": {
+				"link": "+72146544487",
+				"name": "+7 (214) 654-44-87"
+			},
 			"tags": {
 				"icon": "tags",
 				"delimiter": ",",
@@ -42,8 +48,8 @@
 		},
 		{
 			"img": "img/content/card/01.jpg",
-			"link": "detail-animator.html",
 			"title": "Оскар Лазарев",
+			"favourite": true,
 			"tel": {
 				"link": "+72146544487",
 				"name": "+7 (214) 654-44-87"
@@ -72,8 +78,8 @@
 		},
 		{
 			"img": "img/content/card/02.jpg",
-			"link": "detail-photographer.html",
 			"title": "Оскар Лазарев",
+			"favourite": true,
 			"tel": {
 				"link": "+72146544487",
 				"name": "+7 (214) 654-44-87"
@@ -99,9 +105,10 @@
 			"tel_down": true
 		},
 		{
-			"img": "img/content/card/03.jpg",
+			"img": "img/content/card/04.jpg",
 			"link": "detail-service.html",
 			"title": "Украшение помещений",
+			"favourite": true,
 			"tel": {
 				"link": "+72146544487",
 				"name": "+7 (214) 654-44-87"
@@ -113,6 +120,7 @@
 			"img": "img/content/card/02.jpg",
 			"link": "detail-photographer.html",
 			"title": "Оскар Лазарев",
+			"favourite": true,
 			"tel": {
 				"link": "+72146544487",
 				"name": "+7 (214) 654-44-87"
@@ -138,7 +146,6 @@
 		},
 		{
 			"img": "img/content/card/01.jpg",
-			"link": "detail-animator.html",
 			"title": "Оскар Лазарев",
 			"tel": {
 				"link": "+72146544487",
@@ -168,7 +175,6 @@
 		},
 		{
 			"img": "img/content/card/02.jpg",
-			"link": "detail-photographer.html",
 			"title": "Оскар Лазарев",
 			"tel": {
 				"link": "+72146544487",
@@ -192,6 +198,32 @@
 				"link": "profile-photographer.html"
 			},
 			"date": true,
+			"tel_down": true
+		},
+		{
+			"img": "img/content/card/03.jpg",
+			"title": "Название площадки",
+			"tel": [
+				{"link": "+72146544487", "name": "+7 (214) 654-44-87"},
+				{"link": "+72146544487", "name": "+7 (214) 654-44-87"}
+			],
+			"tags": {
+				"icon": "tags",
+				"delimiter": ",",
+				"items": [
+					{"name": "название площадки", "link": "#"},
+					{"name": "академическая", "link": "#"}
+				]
+			},
+			"params": [
+				{"title": "Метро", "value": "Академическая"},
+				{"title": "Адрес", "value": "Санкт-Петербург, ул. Рылеева, д. 10"}
+			],
+			"params_sm": true,
+			"btn_invite": {
+				"text": "Изменить личные данные",
+				"link": "profile-area.html"
+			},
 			"tel_down": true
 		}
 	]

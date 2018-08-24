@@ -1,0 +1,91 @@
+include ../mixins/banner
+include ../mixins/check
+include ../mixins/select
+
+.main__space-col
+	.block.tab
+
+		.params-lg.params-lg_fixed-title.main__space-bot-half
+			.params-lg__wrap
+
+				.params-lg__row
+					.params-lg__title
+					.params-lg__value
+						h2.title.title_md.title_color_2.wrapper__text.main__space-bot-half Профиль площадки
+
+						.text-gray.main__space-bot
+							| Дата обновления: 30.11.2017 06:44:28
+							br
+							| Последняя авторизация: 30.11.2017 06:44:33
+
+		form
+			.row
+
+				.col-md-4.push-md-8.col-xl-4.push-xl-8.main__vertical_between.main__space-bot
+					+banner({
+						img: 'img/content/card/03.jpg',
+						fancybox: true,
+						title: 'Фотография площадки'
+					})(class='main__flex-banner main__space-bot')
+
+					input.btn.btn_sm.btn_wide.btn_light(type='button' value='Загрузить фотографию')
+
+				.col-md-8.pull-md-4.col-xl-8.pull-xl-4.main__space-bot
+					.params-lg.params-lg_fixed-title
+						.params-lg__wrap
+
+							.params-lg__row
+								.params-lg__title Название площадки
+								.params-lg__value
+									input.input(type='text' placeholder='Введите название...')
+
+							.params-lg__row
+								.params-lg__title Теги
+								.params-lg__value
+									input.input(type='text' placeholder='Перечислите через запятую...')
+
+							.params-lg__row
+								.params-lg__title Номер телефона
+								.params-lg__value
+									input.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+							.params-lg__row
+								.params-lg__title Станция метро
+								.params-lg__value
+									+select(select_10, {
+										title: 'Выберите станцию...'
+									})(class='select_light select_wide')
+
+			.params-lg.params-lg_fixed-title.main__space-bot
+				.params-lg__wrap
+
+					.params-lg__row.params-lg__row_valign_baseline
+						.params-lg__title Анимационные программы
+						.params-lg__value
+							.row
+
+								each val, i in check
+									.col-6.col-md-3.main__space-bot-half
+										+check({
+											id: 'profileCheck-2-' + i + 1,
+											text: val
+										})(class='wrapper__check')
+
+					.params-lg__row.params-lg__row_valign_baseline
+						.params-lg__title Описание
+						.params-lg__value
+							textarea.input(placeholder='Введите описание компании или площадки...')
+
+			.row
+				.col-md-8
+					.params-lg.params-lg_fixed-title
+						.params-lg__wrap
+
+							.params-lg__row
+								.params-lg__title
+								.params-lg__value
+									.row
+										.col-sm-6.main__space-bot
+											input.btn.btn_wide.btn_sm.btn_fill(type='submit' value='Сохранить')
+										.col-sm-6.main__space-bot
+											input.btn.btn_wide.btn_sm(type='reset' value='Отмена')
