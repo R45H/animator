@@ -3,58 +3,41 @@ include ../mixins/card
 include ../mixins/banner
 include ../mixins/list
 
-.section
-	.container
-		.row
+.main__space-col
+	+card(card[6])(class='card_thin')
 
-			.col-lg-9.col-xl-8
+.row
 
-				.main__space-col
-					+card(card[6])(class='card_thin')
+	each val in banner
+		.col-sm-6.col-md-4.main__space-col
+			+banner({
+				link: val.link,
+				img: val.img,
+				text: val.text
+			})(class='banner_fog banner_contain wrapper__banner')
 
-				.row
+.main__space-col
+	.block.block_text
+		h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half О себе
+		.text
+			p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау". Попса трансформирует дорийский соноропериод, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков). Октавер интенсивен. Микрохроматический интервал, так или иначе, интенсивен. Легато параллельно.
 
-					each val in banner
-						.col-sm-6.col-md-4.main__space-col
-							+banner({
-								link: val.link,
-								img: val.img,
-								text: val.text
-							})(class='banner_fog banner_contain wrapper__banner')
+.row
 
-				.main__space-col
-					.block.block_text
-						h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half О себе
-						.text
-							p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау". Попса трансформирует дорийский соноропериод, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков). Октавер интенсивен. Микрохроматический интервал, так или иначе, интенсивен. Легато параллельно.
+	.col-sm-5.col-md-4.main__space-col
+		.block.block_height_full
+			.main__space-bot
+				h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half Программы
+				+list(['Детский праздник', 'Новый год', 'Шоу программа', 'Вечеринка'])(class='list_sm wrapper__fill')
+			.main__space-bot
+				h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half Образы
+				+list(['Клоун', 'Пират', 'Человек-паук', 'Гарри Поттер'])(class='list_sm wrapper__fill')
+			div
+				h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half Районы города
+				+list(['Адмиралтейский', 'Приморский'])(class='list_sm wrapper__fill')
 
-				.row
-
-					.col-sm-5.col-md-4.main__space-col
-						.block.block_height_full
-							.main__space-bot
-								h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half Программы
-								+list(['Детский праздник', 'Новый год', 'Шоу программа', 'Вечеринка'])(class='list_sm wrapper__fill')
-							.main__space-bot
-								h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half Образы
-								+list(['Клоун', 'Пират', 'Человек-паук', 'Гарри Поттер'])(class='list_sm wrapper__fill')
-							div
-								h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half Районы города
-								+list(['Адмиралтейский', 'Приморский'])(class='list_sm wrapper__fill')
-
-					.col-sm-7.col-md-8.main__space-col
-						+slider({
-							title: 'Фото',
-							list: g_img_list
-						})(class='slider_height_full' dataSmRows='2' dataMdCols='2')
-
-			.col-lg-3.col-xl-4
-				.main__space-col
-					+banner({
-						link: '#'
-					})
-				.main__space-col
-					+banner({
-						link: '#'
-					})
-				.main__footer-spacer
+	.col-sm-7.col-md-8.main__space-col
+		+slider({
+			title: 'Фото',
+			list: g_img_list
+		})(class='slider_height_full' dataSmRows='2' dataMdCols='2')

@@ -9,11 +9,35 @@ $name: banner;
 	position: relative;
 	background: white;
 
+	&::before {
+		content: '\e802';
+		font-family: $font-custom;
+		font-size: 100px;
+		color: $color-gray;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: .5;
+		transition: $duration linear;
+	}
+
+	&:hover {
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
 	&__img {
 		display: block;
 		width: 100%;
 		padding-bottom: 100%;
-		background: $color-gray-light no-repeat center / cover;
+		background: no-repeat center / cover;
 		transition: $duration linear;
 		position: relative;
 		z-index: 1;
@@ -77,10 +101,6 @@ $name: banner;
 		.#{$name} {
 			// =====
 
-			&__img {
-				background-color: transparent;
-			}
-
 			&__text {
 				background-color: transparent;
 			}
@@ -111,7 +131,6 @@ $name: banner;
 			// =====
 
 			&__img {
-				background-color: transparent;
 				background-size: contain;
 			}
 		}
@@ -121,6 +140,10 @@ $name: banner;
 a.#{$name} {
 
 	&:hover {
+
+		&::before {
+			transform: scale(1.06);
+		}
 
 		.#{$name} {
 			// =====

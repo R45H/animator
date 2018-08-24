@@ -1,28 +1,10 @@
 include ../components/pagination
 include ../mixins/news
-include ../mixins/banner
 
-.section
-	.container
-		.row
+- for (var i = 0; i < 6; i++) {
+	.main__space-col
+		+news(news[0])(class='news_arrow wrapper__news')
+- }
 
-			.col-lg-9.col-xl-8
-
-				- for (var i = 0; i < 6; i++) {
-					.main__space-col
-						+news(news[0])(class='news_arrow wrapper__news')
-				- }
-
-				.main__space-col
-					+pagination(3, 1)(class='wrapper__pagination')
-
-			.col-lg-3.col-xl-4
-				.main__space-col
-					+banner({
-						link: '#'
-					})
-				.main__space-col
-					+banner({
-						link: '#'
-					})
-				.main__footer-spacer
+.main__space-col
+	+pagination(3, 1)(class='wrapper__pagination')

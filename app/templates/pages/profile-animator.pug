@@ -2,250 +2,233 @@ include ../mixins/banner
 include ../mixins/check
 include ../mixins/select
 
-.section
-	.container
-		.row
+.main__space-col
+	.block.tab
 
-			.col-lg-9.col-xl-8
+		.params-lg.params-lg_fixed-title.main__space-bot-half
+			.params-lg__wrap
 
-				.main__space-col
-					.block.tab
+				.params-lg__row
+					.params-lg__title
+					.params-lg__value
+						h2.title.title_md.title_color_2.wrapper__text.main__space-bot-half Профиль аниматора
 
-						.params-lg.params-lg_fixed-title.main__space-bot-half
-							.params-lg__wrap
+						.text-gray.main__space-bot
+							| Дата обновления: 30.11.2017 06:44:28
+							br
+							| Последняя авторизация: 30.11.2017 06:44:33
 
-								.params-lg__row
-									.params-lg__title
-									.params-lg__value
-										h2.title.title_md.title_color_2.wrapper__text.main__space-bot-half Профиль аниматора
+						a.link-line.link-line_simple.wrapper__link-line.main__link-line.main__space-bot-half.tab__link.tab__link_active(href='#' data-tab-link='tab-1') Физическое лицо
+						a.link-line.link-line_simple.wrapper__link-line.main__link-line.main__space-bot-half.tab__link(href='#' data-tab-link='tab-2') Юридическое лицо
 
-										.text-gray.main__space-bot
-											| Дата обновления: 30.11.2017 06:44:28
-											br
-											| Последняя авторизация: 30.11.2017 06:44:33
+		form.tab__target.tab__target_active(data-tab-target='tab-1')
+			.row
 
-										a.link-line.link-line_simple.wrapper__link-line.main__link-line.main__space-bot-half.tab__link.tab__link_active(href='#' data-tab-link='tab-1') Физическое лицо
-										a.link-line.link-line_simple.wrapper__link-line.main__link-line.main__space-bot-half.tab__link(href='#' data-tab-link='tab-2') Юридическое лицо
-
-						form.tab__target.tab__target_active(data-tab-target='tab-1')
-							.row
-
-								.col-md-4.push-md-8.col-xl-4.push-xl-8.main__vertical_between.main__space-bot
-									+banner({
-										img: 'img/content/card/01.jpg',
-										fancybox: true,
-										title: 'Фотография аниматора'
-									})(class='main__flex-banner main__space-bot')
-
-									input.btn.btn_sm.btn_wide.btn_light(type='button' value='Загрузить фотографию')
-
-								.col-md-8.pull-md-4.col-xl-8.pull-xl-4.main__space-bot
-									.params-lg.params-lg_fixed-title
-										.params-lg__wrap
-
-											.params-lg__row
-												.params-lg__title Имя
-												.params-lg__value
-													input.input(type='text' placeholder='Иван')
-
-											.params-lg__row
-												.params-lg__title Фамилия
-												.params-lg__value
-													input.input(type='text' placeholder='Иванов')
-
-											.params-lg__row
-												.params-lg__title Телефон
-												.params-lg__value
-													input.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
-
-											.params-lg__row
-												.params-lg__title Опыт
-												.params-lg__value
-													input.input.input_number(type='text' placeholder='3 года')
-
-											.params-lg__row
-												.params-lg__title Возраст
-												.params-lg__value
-													input.input.input_number(type='text' placeholder='28 лет')
-
-							.params-lg.params-lg_fixed-title.main__space-bot
-								.params-lg__wrap
-
-									.params-lg__row.params-lg__row_valign_baseline.params-lg__row_space_none
-										.params-lg__title Сфера деятельности
-										.params-lg__value
-											.row
-
-												each val, i in check_2
-													.col-sm-6.col-md-4.main__space-bot-half
-														+check({
-															id: 'profileCheck-1-' + i + 1,
-															text: val
-														})(class='wrapper__check')
-
-									.params-lg__row.params-lg__row_valign_baseline
-										.params-lg__title Программы
-										.params-lg__value
-											.row
-
-												each val, i in check_3
-													.col-sm-6.col-md-4.main__space-bot-half
-														+check({
-															id: 'profileCheck-2-' + i + 1,
-															text: val
-														})(class='wrapper__check')
-
-									.params-lg__row
-										.params-lg__title Стоимость работы
-										.params-lg__value
-											input.input.input_number(type='text' placeholder='руб./час')
-
-									.params-lg__row
-										.params-lg__title Образы
-										.params-lg__value
-											input.input(type='text' placeholder='Перечислить через запятую')
-
-									.params-lg__row.params-lg__row_valign_baseline
-										.params-lg__title О себе
-										.params-lg__value
-											textarea.input(placeholder='Введите описание...')
-
-							.row
-								.col-md-8
-									.params-lg.params-lg_fixed-title
-										.params-lg__wrap
-
-											.params-lg__row
-												.params-lg__title Район
-												.params-lg__value
-													+select(select_3, {
-														title: 'Адмиралтейский',
-														modalTitle: 'Выберите героев',
-														modalBtn: 'Применить'
-													})(class='select_light select_wide select_multiply')
-
-											.params-lg__row
-												.params-lg__title
-												.params-lg__value
-													.row
-														.col-sm-6.main__space-bot
-															input.btn.btn_wide.btn_sm.btn_fill(type='submit' value='Сохранить')
-														.col-sm-6.main__space-bot
-															input.btn.btn_wide.btn_sm(type='reset' value='Отмена')
-
-						form.tab__target(data-tab-target='tab-2')
-							.row
-
-								.col-md-4.push-md-8.col-xl-4.push-xl-8.main__vertical_between.main__space-bot
-									+banner({
-										img: 'img/content/card/01.jpg',
-										fancybox: true,
-										title: 'Фотография аниматора'
-									})(class='main__flex-banner main__space-bot')
-
-									input.btn.btn_sm.btn_wide.btn_light(type='button' value='Загрузить фотографию')
-
-								.col-md-8.pull-md-4.col-xl-8.pull-xl-4.main__space-bot
-									.params-lg.params-lg_fixed-title
-										.params-lg__wrap
-
-											.params-lg__row
-												.params-lg__title Название организации
-												.params-lg__value
-													input.input(type='text' placeholder='Введите название организации')
-
-											.params-lg__row
-												.params-lg__title Юридический адрес
-												.params-lg__value
-													input.input(type='text' placeholder='Введите юридический адрес')
-
-											.params-lg__row
-												.params-lg__title Телефон
-												.params-lg__value
-													input.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
-
-											.params-lg__row
-												.params-lg__title Опыт
-												.params-lg__value
-													input.input.input_number(type='text' placeholder='3 года')
-
-											.params-lg__row
-												.params-lg__title Возраст
-												.params-lg__value
-													input.input.input_number(type='text' placeholder='28 лет')
-
-							.params-lg.params-lg_fixed-title.main__space-bot
-								.params-lg__wrap
-
-									.params-lg__row.params-lg__row_valign_baseline.params-lg__row_space_none
-										.params-lg__title Сфера деятельности
-										.params-lg__value
-											.row
-
-												each val, i in check_2
-													.col-sm-6.col-md-4.main__space-bot-half
-														+check({
-															id: 'profileCheck-3-' + i + 1,
-															text: val
-														})(class='wrapper__check')
-
-									.params-lg__row.params-lg__row_valign_baseline
-										.params-lg__title Программы
-										.params-lg__value
-											.row
-
-												each val, i in check_3
-													.col-sm-6.col-md-4.main__space-bot-half
-														+check({
-															id: 'profileCheck-4-' + i + 1,
-															text: val
-														})(class='wrapper__check')
-
-									.params-lg__row
-										.params-lg__title Стоимость работы
-										.params-lg__value
-											input.input.input_number(type='text' placeholder='руб./час')
-
-									.params-lg__row
-										.params-lg__title Образы
-										.params-lg__value
-											input.input(type='text' placeholder='Перечислить через запятую')
-
-									.params-lg__row.params-lg__row_valign_baseline
-										.params-lg__title О себе
-										.params-lg__value
-											textarea.input(placeholder='Введите описание...')
-
-							.row
-								.col-md-8
-									.params-lg.params-lg_fixed-title
-										.params-lg__wrap
-
-											.params-lg__row
-												.params-lg__title Район
-												.params-lg__value
-													+select(select_3, {
-														title: 'Адмиралтейский',
-														modalTitle: 'Выберите героев',
-														modalBtn: 'Применить'
-													})(class='select_light select_wide select_multiply')
-
-											.params-lg__row
-												.params-lg__title
-												.params-lg__value
-													.row
-														.col-sm-6.main__space-bot
-															input.btn.btn_wide.btn_sm.btn_fill(type='submit' value='Сохранить')
-														.col-sm-6.main__space-bot
-															input.btn.btn_wide.btn_sm(type='reset' value='Отмена')
-
-			.col-lg-3.col-xl-4
-				.main__space-col
+				.col-md-4.push-md-8.col-xl-4.push-xl-8.main__vertical_between.main__space-bot
 					+banner({
-						link: '#'
-					})
-				.main__space-col
+						img: 'img/content/card/01.jpg',
+						fancybox: true,
+						title: 'Фотография аниматора'
+					})(class='main__flex-banner main__space-bot')
+
+					input.btn.btn_sm.btn_wide.btn_light(type='button' value='Загрузить фотографию')
+
+				.col-md-8.pull-md-4.col-xl-8.pull-xl-4.main__space-bot
+					.params-lg.params-lg_fixed-title
+						.params-lg__wrap
+
+							.params-lg__row
+								.params-lg__title Имя
+								.params-lg__value
+									input.input(type='text' placeholder='Иван')
+
+							.params-lg__row
+								.params-lg__title Фамилия
+								.params-lg__value
+									input.input(type='text' placeholder='Иванов')
+
+							.params-lg__row
+								.params-lg__title Телефон
+								.params-lg__value
+									input.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+							.params-lg__row
+								.params-lg__title Опыт
+								.params-lg__value
+									input.input.input_number(type='text' placeholder='3 года')
+
+							.params-lg__row
+								.params-lg__title Возраст
+								.params-lg__value
+									input.input.input_number(type='text' placeholder='28 лет')
+
+			.params-lg.params-lg_fixed-title.main__space-bot
+				.params-lg__wrap
+
+					.params-lg__row.params-lg__row_valign_baseline.params-lg__row_space_none
+						.params-lg__title Сфера деятельности
+						.params-lg__value
+							.row
+
+								each val, i in check_2
+									.col-sm-6.col-md-4.main__space-bot-half
+										+check({
+											id: 'profileCheck-1-' + i + 1,
+											text: val
+										})(class='wrapper__check')
+
+					.params-lg__row.params-lg__row_valign_baseline
+						.params-lg__title Программы
+						.params-lg__value
+							.row
+
+								each val, i in check_3
+									.col-sm-6.col-md-4.main__space-bot-half
+										+check({
+											id: 'profileCheck-2-' + i + 1,
+											text: val
+										})(class='wrapper__check')
+
+					.params-lg__row
+						.params-lg__title Стоимость работы
+						.params-lg__value
+							input.input.input_number(type='text' placeholder='руб./час')
+
+					.params-lg__row
+						.params-lg__title Образы
+						.params-lg__value
+							input.input(type='text' placeholder='Перечислить через запятую')
+
+					.params-lg__row.params-lg__row_valign_baseline
+						.params-lg__title О себе
+						.params-lg__value
+							textarea.input(placeholder='Введите описание...')
+
+			.row
+				.col-md-8
+					.params-lg.params-lg_fixed-title
+						.params-lg__wrap
+
+							.params-lg__row
+								.params-lg__title Район
+								.params-lg__value
+									+select(select_3, {
+										title: 'Адмиралтейский',
+										modalTitle: 'Выберите героев',
+										modalBtn: 'Применить'
+									})(class='select_light select_wide select_multiply')
+
+							.params-lg__row
+								.params-lg__title
+								.params-lg__value
+									.row
+										.col-sm-6.main__space-bot
+											input.btn.btn_wide.btn_sm.btn_fill(type='submit' value='Сохранить')
+										.col-sm-6.main__space-bot
+											input.btn.btn_wide.btn_sm(type='reset' value='Отмена')
+
+		form.tab__target(data-tab-target='tab-2')
+			.row
+
+				.col-md-4.push-md-8.col-xl-4.push-xl-8.main__vertical_between.main__space-bot
 					+banner({
-						link: '#'
-					})
-				.main__footer-spacer
+						img: 'img/content/card/01.jpg',
+						fancybox: true,
+						title: 'Фотография аниматора'
+					})(class='main__flex-banner main__space-bot')
+
+					input.btn.btn_sm.btn_wide.btn_light(type='button' value='Загрузить фотографию')
+
+				.col-md-8.pull-md-4.col-xl-8.pull-xl-4.main__space-bot
+					.params-lg.params-lg_fixed-title
+						.params-lg__wrap
+
+							.params-lg__row
+								.params-lg__title Название организации
+								.params-lg__value
+									input.input(type='text' placeholder='Введите название организации')
+
+							.params-lg__row
+								.params-lg__title Юридический адрес
+								.params-lg__value
+									input.input(type='text' placeholder='Введите юридический адрес')
+
+							.params-lg__row
+								.params-lg__title Телефон
+								.params-lg__value
+									input.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+							.params-lg__row
+								.params-lg__title Опыт
+								.params-lg__value
+									input.input.input_number(type='text' placeholder='3 года')
+
+							.params-lg__row
+								.params-lg__title Возраст
+								.params-lg__value
+									input.input.input_number(type='text' placeholder='28 лет')
+
+			.params-lg.params-lg_fixed-title.main__space-bot
+				.params-lg__wrap
+
+					.params-lg__row.params-lg__row_valign_baseline.params-lg__row_space_none
+						.params-lg__title Сфера деятельности
+						.params-lg__value
+							.row
+
+								each val, i in check_2
+									.col-sm-6.col-md-4.main__space-bot-half
+										+check({
+											id: 'profileCheck-3-' + i + 1,
+											text: val
+										})(class='wrapper__check')
+
+					.params-lg__row.params-lg__row_valign_baseline
+						.params-lg__title Программы
+						.params-lg__value
+							.row
+
+								each val, i in check_3
+									.col-sm-6.col-md-4.main__space-bot-half
+										+check({
+											id: 'profileCheck-4-' + i + 1,
+											text: val
+										})(class='wrapper__check')
+
+					.params-lg__row
+						.params-lg__title Стоимость работы
+						.params-lg__value
+							input.input.input_number(type='text' placeholder='руб./час')
+
+					.params-lg__row
+						.params-lg__title Образы
+						.params-lg__value
+							input.input(type='text' placeholder='Перечислить через запятую')
+
+					.params-lg__row.params-lg__row_valign_baseline
+						.params-lg__title О себе
+						.params-lg__value
+							textarea.input(placeholder='Введите описание...')
+
+			.row
+				.col-md-8
+					.params-lg.params-lg_fixed-title
+						.params-lg__wrap
+
+							.params-lg__row
+								.params-lg__title Район
+								.params-lg__value
+									+select(select_3, {
+										title: 'Адмиралтейский',
+										modalTitle: 'Выберите героев',
+										modalBtn: 'Применить'
+									})(class='select_light select_wide select_multiply')
+
+							.params-lg__row
+								.params-lg__title
+								.params-lg__value
+									.row
+										.col-sm-6.main__space-bot
+											input.btn.btn_wide.btn_sm.btn_fill(type='submit' value='Сохранить')
+										.col-sm-6.main__space-bot
+											input.btn.btn_wide.btn_sm(type='reset' value='Отмена')

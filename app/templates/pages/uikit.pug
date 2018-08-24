@@ -16,436 +16,431 @@ include ../mixins/fancybox
 include ../mixins/check
 include ../mixins/radio
 
-.section
-	.container
-		.row.main__space-col
-			.col-2
-				h2.title .title
-			.col-2
-				h2.title.title_sm .title.title_sm
-			.col-2
-				h2.title.title_md .title.title_md
-			.col-3
-				h2.title.title_lg .title.title_lg
-			.col-3
-				h2.title.title_color_1 .title.title_color_1
-		.row.main__space-col
-			.col-3
-				h2.title.title_color_2 .title.title_color_2
-			.col-4
-				h2.title.title_color_dark .title.title_color_dark
-			.col-4.main__bg_black
-				h2.title.title_color_white .title.title_color_white
-		.row.main__separator
-			.col-4
-				h2.title.title_bold .title.title_bold
+.row.main__space-col
+	.col-2
+		h2.title .title
+	.col-2
+		h2.title.title_sm .title.title_sm
+	.col-2
+		h2.title.title_md .title.title_md
+	.col-3
+		h2.title.title_lg .title.title_lg
+	.col-3
+		h2.title.title_color_1 .title.title_color_1
+.row.main__space-col
+	.col-3
+		h2.title.title_color_2 .title.title_color_2
+	.col-4
+		h2.title.title_color_dark .title.title_color_dark
+	.col-4.main__bg_black
+		h2.title.title_color_white .title.title_color_white
+.row.main__separator
+	.col-4
+		h2.title.title_bold .title.title_bold
 
-		.row.main__separator
-			.col-6
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur cumque est in ipsa minima nobis nostrum nulla omnis, quaerat? Alias, autem eius explicabo incidunt ipsum magni officia quo rerum?
-			.col-2
+.row.main__separator
+	.col-6
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur cumque est in ipsa minima nobis nostrum nulla omnis, quaerat? Alias, autem eius explicabo incidunt ipsum magni officia quo rerum?
+	.col-2
 
-		.row.main__space-col
-			.col-1
-				a.link(href='#') .link
-			.col-1
-				span.link span.link
-			.col-2
-				a.link.link_line_none(href='#') .link.link_line_none
-			.col-2
-				a.link.link_nowrap(href='#') .link.link_nowrap
-			.col-2
-				a.link.link_color_1(href='#') .link.link_color_1
+.row.main__space-col
+	.col-1
+		a.link(href='#') .link
+	.col-1
+		span.link span.link
+	.col-2
+		a.link.link_line_none(href='#') .link.link_line_none
+	.col-2
+		a.link.link_nowrap(href='#') .link.link_nowrap
+	.col-2
+		a.link.link_color_1(href='#') .link.link_color_1
 
-		.row.main__separator
-			.col-3
-				a.link.link_icon_before(href='#')
-					| .link.link_icon_before
-					+svg('tel', 'link__icon')
-			.col-3
-				a.link.link_icon_after(href='#')
-					| .link.link_icon_after
-					+svg('tel', 'link__icon link__icon_after')
-			.col-3
-				span.link.link_icon_before
-					| span.link.link_icon_before
-					+svg('tel', 'link__icon')
+.row.main__separator
+	.col-3
+		a.link.link_icon_before(href='#')
+			| .link.link_icon_before
+			+svg('tel', 'link__icon')
+	.col-3
+		a.link.link_icon_after(href='#')
+			| .link.link_icon_after
+			+svg('tel', 'link__icon link__icon_after')
+	.col-3
+		span.link.link_icon_before
+			| span.link.link_icon_before
+			+svg('tel', 'link__icon')
 
-		.row.main__separator
-			.col-4
-				+link-arrow .link-arrow
-			.col-4
-				+link-arrow({
-					dir: 'left'
-				}) .link-arrow.link-arrow_left
-			.col-4
-				+link-arrow({
-					disabled: true
-				}) .link-arrow.link-arrow_disabled
+.row.main__separator
+	.col-4
+		+link-arrow .link-arrow
+	.col-4
+		+link-arrow({
+			dir: 'left'
+		}) .link-arrow.link-arrow_left
+	.col-4
+		+link-arrow({
+			disabled: true
+		}) .link-arrow.link-arrow_disabled
 
-		.row.main__separator
-			.col-12
-				+pagination(10, 1)
+.row.main__separator
+	.col-12
+		+pagination(10, 1)
 
-		.row.main__separator
-			.col-3
-				+list(list)
-			.col-3
-				+list(list)(class='list_sm')
+.row.main__separator
+	.col-3
+		+list(list)
+	.col-3
+		+list(list)(class='list_sm')
 
-		.row.main__separator
-			.col-5
-				a.link-line(href='#') .link-line
-			.col-7
-				a.link-line.link-line_simple(href='#') .link-line.link-line_simple
+.row.main__separator
+	.col-5
+		a.link-line(href='#') .link-line
+	.col-7
+		a.link-line.link-line_simple(href='#') .link-line.link-line_simple
 
-		.row.main__separator
-			.col-2
-				.btn .btn
-			.col-2
-				a.btn(href='#') a.btn
-			.col-2
-				input.btn(type='button' value='input.btn')
-			.col-2
-				button.btn button.btn
-			.col-4
-				.btn.btn_light .btn_light
+.row.main__separator
+	.col-2
+		.btn .btn
+	.col-2
+		a.btn(href='#') a.btn
+	.col-2
+		input.btn(type='button' value='input.btn')
+	.col-2
+		button.btn button.btn
+	.col-4
+		.btn.btn_light .btn_light
 
-		.row.main__separator
-			.col-3
-				.btn.btn_fill .btn.btn_fill
-			.col-3
-				.btn.btn_wide .btn.btn_wide
-			.col-3
-				.btn.btn_sm .btn.btn_sm
-			.col-3
-				.btn.btn_icon
-					span.btn__text .btn.btn_icon
-					+svg('arrow-right', 'btn__icon')
+.row.main__separator
+	.col-3
+		.btn.btn_fill .btn.btn_fill
+	.col-3
+		.btn.btn_wide .btn.btn_wide
+	.col-3
+		.btn.btn_sm .btn.btn_sm
+	.col-3
+		.btn.btn_icon
+			span.btn__text .btn.btn_icon
+			+svg('arrow-right', 'btn__icon')
 
-		.row.main__space-col
-			.col-3
-				+select(select)
-			.col-3
-				+select(select)(class='select_wide')
-			.col-3
-				+select(select)(class='select_light')
-			.col-3
-				+select(select)(class='select_simple')
-		.row.main__separator
-			.col-3
-				+select(select, {
-					title: 'Заголовок селекта'
-				})
-			.col-3
-				+select(select_2, {
-					title: 'Выбрать героев',
-					modalTitle: 'Выберите героев',
-					modalBtn: 'Применить'
-				})(class='select_multiply')
+.row.main__space-col
+	.col-3
+		+select(select)
+	.col-3
+		+select(select)(class='select_wide')
+	.col-3
+		+select(select)(class='select_light')
+	.col-3
+		+select(select)(class='select_simple')
+.row.main__separator
+	.col-3
+		+select(select, {
+			title: 'Заголовок селекта'
+		})
+	.col-3
+		+select(select_2, {
+			title: 'Выбрать героев',
+			modalTitle: 'Выберите героев',
+			modalBtn: 'Применить'
+		})(class='select_multiply')
 
-		.row.main__separator
-			.col-3
-				input.input(type='text' placeholder='.input')
-			.col-3
-				input.input.input_tel(type='tel' placeholder='.input.input_tel')
-			.col-3
-				input.input.input_number(type='text' placeholder='.input.input_number')
-			.col-3
-				textarea.input(placeholder='textarea.input')
+.row.main__separator
+	.col-3
+		input.input(type='text' placeholder='.input')
+	.col-3
+		input.input.input_tel(type='tel' placeholder='.input.input_tel')
+	.col-3
+		input.input.input_number(type='text' placeholder='.input.input_number')
+	.col-3
+		textarea.input(placeholder='textarea.input')
 
-		.row.main__separator
-			.col-3
-				+tags({
-					icon: 'tags',
-					delimiter: ',',
-					items: [
-						{"name": "аниматор", "link": "#"},
-						{"name": "фотограф", "link": "#"},
-						{"name": "актёр", "link": "#"}
-					]
-				})
-			.col-3
-				+tags({
-					icon: 'tags',
-					delimiter: ',',
-					items: [
-						'аниматор',
-						'фотограф',
-						'актёр'
-					]
-				})
-			.col-3
-				+tags({
-					icon: 'tags',
-					delimiter: ',',
-					items: [
-						{"name": "аниматор", "link": "#"},
-						{"name": "фотограф", "link": "#"},
-						{"name": "актёр", "link": "#"}
-					]
-				})(class='tags_sm wrapper__tags')
-			.col-3
-				+tags({
-					icon: 'tags',
-					delimiter: ',',
-					items: [
-						{"name": "аниматор", "link": "#"},
-						{"name": "фотограф", "link": "#"},
-						{"name": "актёр", "link": "#"}
-					]
-				})(class='tags_color_gray wrapper__tags')
+.row.main__separator
+	.col-3
+		+tags({
+			icon: 'tags',
+			delimiter: ',',
+			items: [
+				{"name": "аниматор", "link": "#"},
+				{"name": "фотограф", "link": "#"},
+				{"name": "актёр", "link": "#"}
+			]
+		})
+	.col-3
+		+tags({
+			icon: 'tags',
+			delimiter: ',',
+			items: [
+				'аниматор',
+				'фотограф',
+				'актёр'
+			]
+		})
+	.col-3
+		+tags({
+			icon: 'tags',
+			delimiter: ',',
+			items: [
+				{"name": "аниматор", "link": "#"},
+				{"name": "фотограф", "link": "#"},
+				{"name": "актёр", "link": "#"}
+			]
+		})(class='tags_sm wrapper__tags')
+	.col-3
+		+tags({
+			icon: 'tags',
+			delimiter: ',',
+			items: [
+				{"name": "аниматор", "link": "#"},
+				{"name": "фотограф", "link": "#"},
+				{"name": "актёр", "link": "#"}
+			]
+		})(class='tags_color_gray wrapper__tags')
 
-		.row.main__separator
-			.col-2
-				+check({
-					id: 'check-1',
-					text: '.check'
-				})
-			.col-3
-				+check({
-					id: 'check-2',
-					text: '.check.check_thin'
-				})(class='check_thin')
-			.col-3
-				+check({
-					id: 'check-3',
-					text: '.check.check_sm'
-				})(class='check_sm')
-			.col-3
-				+check({
-					id: 'check-4',
-					text: '.check.check_color_dark'
-				})(class='check_color_dark')
+.row.main__separator
+	.col-2
+		+check({
+			id: 'check-1',
+			text: '.check'
+		})
+	.col-3
+		+check({
+			id: 'check-2',
+			text: '.check.check_thin'
+		})(class='check_thin')
+	.col-3
+		+check({
+			id: 'check-3',
+			text: '.check.check_sm'
+		})(class='check_sm')
+	.col-3
+		+check({
+			id: 'check-4',
+			text: '.check.check_color_dark'
+		})(class='check_color_dark')
 
-		.row.main__separator
-			.col-2
-				+radio({
-					name: 'radio-group-1',
-					items: [
-						{text: '.radio'},
-						{text: '.radio'},
-						{text: '.radio'}
-					]
-				})
-			.col-3
-				+radio({
-					name: 'radio-group-2',
-					items: [
-						{text: '.radio.radio_can-uncheck'},
-						{text: '.radio.radio_can-uncheck'},
-						{text: '.radio.radio_can-uncheck'}
-					]
-				})(class='radio_can-uncheck')
-			.col-3
-				+radio({
-					name: 'radio-group-3',
-					items: [
-						{text: '.radio.radio_sm'},
-						{text: '.radio.radio_sm'},
-						{text: '.radio.radio_sm'}
-					]
-				})(class='radio_sm')
+.row.main__separator
+	.col-2
+		+radio({
+			name: 'radio-group-1',
+			items: [
+				{text: '.radio'},
+				{text: '.radio'},
+				{text: '.radio'}
+			]
+		})
+	.col-3
+		+radio({
+			name: 'radio-group-2',
+			items: [
+				{text: '.radio.radio_can-uncheck'},
+				{text: '.radio.radio_can-uncheck'},
+				{text: '.radio.radio_can-uncheck'}
+			]
+		})(class='radio_can-uncheck')
+	.col-3
+		+radio({
+			name: 'radio-group-3',
+			items: [
+				{text: '.radio.radio_sm'},
+				{text: '.radio.radio_sm'},
+				{text: '.radio.radio_sm'}
+			]
+		})(class='radio_sm')
 
-		.row.main__separator
-			.col-1
-				+star
-			.col-1
-				+star(999)
-			.col-1
-				+star(href='favourites.html')
+.row.main__separator
+	.col-1
+		+star
+	.col-1
+		+star(999)
+	.col-1
+		+star(href='favourites.html')
 
-		.row.main__separator
-			.col-2
-				+social(social)
+.row.main__separator
+	.col-2
+		+social(social)
 
-		.row.main__separator
-			.col-3
-				+params(params)
-			.col-3
-				+params(params)(class='params_sm')
+.row.main__separator
+	.col-3
+		+params(params)
+	.col-3
+		+params(params)(class='params_sm')
 
-		.row.main__separator
-			.col-4
-				.params-lg
-					.params-lg__wrap
-						.params-lg__row
-							.params-lg__title Заголовок
-							.params-lg__value
-								input.input(type='text' placeholder='Значение')
-						.params-lg__row
-							.params-lg__title Очень длинный заголовок
-							.params-lg__value
-								input.input(type='text' placeholder='Значение')
-						.params-lg__row
-							.params-lg__title Заголовок
-							.params-lg__value
-								textarea.input(placeholder='Значение')
-						.params-lg__row.params-lg__row_valign_baseline
-							.params-lg__title Заголовок
-							.params-lg__value
-								textarea.input(placeholder='Значение')
+.row.main__separator
+	.col-4
+		.params-lg
+			.params-lg__wrap
+				.params-lg__row
+					.params-lg__title Заголовок
+					.params-lg__value
+						input.input(type='text' placeholder='Значение')
+				.params-lg__row
+					.params-lg__title Очень длинный заголовок
+					.params-lg__value
+						input.input(type='text' placeholder='Значение')
+				.params-lg__row
+					.params-lg__title Заголовок
+					.params-lg__value
+						textarea.input(placeholder='Значение')
+				.params-lg__row.params-lg__row_valign_baseline
+					.params-lg__title Заголовок
+					.params-lg__value
+						textarea.input(placeholder='Значение')
 
-		.row.main__separator
-			.col
-				+date
+.row.main__separator
+	.col
+		+date
 
-		.row.main__separator
-			.col-3
-				a.link(href='#' data-modal='modalInviteAnimator') .modal
+.row.main__separator
+	.col-3
+		a.link(href='#' data-modal='modalInviteAnimator') .modal
 
-		.row.main__space-col
-			.col-10.offset-sm-1
-				+news(news[0])
+.row.main__space-col
+	.col-10.offset-sm-1
+		+news(news[0])
 
-		.row.main__separator
-			.col-10.offset-sm-1
-				+news(news[0])(class='news_arrow')
+.row.main__separator
+	.col-10.offset-sm-1
+		+news(news[0])(class='news_arrow')
 
-		.row.main__separator
-			.col-12.main__space-col
-				+card(card[0])
-			.col-12.main__space-col
-				+card(card[1])
-			.col-12.main__space-col
-				+card(card[4])
-			.col-12.main__space-col
-				+card(card[2])(class='card_thin')
+.row.main__separator
+	.col-12.main__space-col
+		+card(card[0])
+	.col-12.main__space-col
+		+card(card[1])
+	.col-12.main__space-col
+		+card(card[4])
+	.col-12.main__space-col
+		+card(card[2])(class='card_thin')
 
-		.row.main__separator
-			.col-6
-				+logo()
-			.col-6
-				+logo({
-					link: false
-				})
+.row.main__separator
+	.col-6
+		+logo()
+	.col-6
+		+logo({
+			link: false
+		})
 
-		.row.main__separator
-			.col-3
-				+fancybox({
-					link: 'img/content/slider/01.jpg',
-					title: 'Img 1',
-					group: 'group-1'
-				})
-			.col-3
-				+fancybox({
-					link: 'img/content/slider/01.jpg',
-					title: 'Img 2',
-					group: 'group-2',
-					bg: true
-				})
+.row.main__separator
+	.col-3
+		+fancybox({
+			link: 'img/content/slider/01.jpg',
+			title: 'Img 1',
+			group: 'group-1'
+		})
+	.col-3
+		+fancybox({
+			link: 'img/content/slider/01.jpg',
+			title: 'Img 2',
+			group: 'group-2',
+			bg: true
+		})
 
-		.row.main__space-col
-			.col-3
-				+banner
-			.col-3
-				+banner({
-					img: 'img/content/news/01.jpg'
-				})
-			.col-3
-				+banner({
-					link: '#',
-					img: 'img/content/news/01.jpg'
-				})
-			.col-3
-				+banner({
-					img: 'img/content/news/01.jpg'
-				})(class='banner_wide')
+.row.main__space-col
+	.col-3
+		+banner
+	.col-3
+		+banner({
+			img: 'img/content/news/01.jpg'
+		})
+	.col-3
+		+banner({
+			link: '#',
+			img: 'img/content/news/01.jpg'
+		})
+	.col-3
+		+banner({
+			img: 'img/content/news/01.jpg'
+		})(class='banner_wide')
 
-		.row.main__separator
-			.col-3
-				+banner({
-					link: '#',
-					img: 'img/content/news/01.jpg'
-				})(class='banner_fog')
-			.col-3
-				+banner({
-					link: '#',
-					img: 'img/content/news/01.jpg',
-					text: 'Предложения по работе'
-				})
-			.col-3
-				+banner({
-					img: 'img/content/news/01.jpg'
-				})(class='banner_contain')
-			.col-3
-				+banner({
-					img: 'img/content/news/01.jpg',
-					fancybox: true,
-					title: '.banner with fancybox'
-				})
+.row.main__separator
+	.col-3
+		+banner({
+			link: '#',
+			img: 'img/content/news/01.jpg'
+		})(class='banner_fog')
+	.col-3
+		+banner({
+			link: '#',
+			img: 'img/content/news/01.jpg',
+			text: 'Предложения по работе'
+		})
+	.col-3
+		+banner({
+			img: 'img/content/news/01.jpg'
+		})(class='banner_contain')
+	.col-3
+		+banner({
+			img: 'img/content/news/01.jpg',
+			fancybox: true,
+			title: '.banner with fancybox'
+		})
 
-		.row.main__space-col
-			.col-8.main__space-col
-				.block
-					h2.title.title_sm.main__space-bot-half .block
-					.text
-						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
+.row.main__space-col
+	.col-8.main__space-col
+		.block
+			h2.title.title_sm.main__space-bot-half .block
+			.text
+				p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
 
-			.col-8.main__space-col
-				.block.block_text
-					h2.title.title_sm.main__space-bot-half .block.block_text
-					.text
-						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
-			.col-8
-				.block.block_lg
-					.title.title_sm .block.block_lg
-		.row.main__separator
-			.col-6.main__space-col
-				.block.block_height_full
-					h2.title.title_sm.main__space-bot-half .block.block_height_full
-					.text
-						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
-						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
-			.col-6.main__space-col
-				.block.block_height_full
-					h2.title.title_sm.main__space-bot-half .block.block_height_full
-					.text
-						p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
+	.col-8.main__space-col
+		.block.block_text
+			h2.title.title_sm.main__space-bot-half .block.block_text
+			.text
+				p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
+	.col-8
+		.block.block_lg
+			.title.title_sm .block.block_lg
+.row.main__separator
+	.col-6.main__space-col
+		.block.block_height_full
+			h2.title.title_sm.main__space-bot-half .block.block_height_full
+			.text
+				p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
+				p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
+	.col-6.main__space-col
+		.block.block_height_full
+			h2.title.title_sm.main__space-bot-half .block.block_height_full
+			.text
+				p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау".
 
-		.row.main__separator
-			.col-sm-6.main__space-col
-				+slider({
-					title: '.slider',
-					list: g_img_list
-				})
-			.col-sm-6.main__space-col
-				+slider({
-					title: '.slider.slider_narrow',
-					list: g_img_list
-				})(class='slider_narrow')
-			.col-sm-6.main__space-col
-				+slider({
-					list: g_img_list
-				})(class='slider_arrows_inner')
-			.col-sm-6.main__space-col
-				+slider({
-					title: '.slider[data-rows=2]',
-					list: g_img_list
-				})(dataRows='2')
-			.col-sm-6.main__space-col
-				+slider({
-					title: '.slider[data-cols=2]',
-					list: g_img_list
-				})(dataCols='2')
-			.col-sm-6.main__space-col
-				+slider({
-					title: '.slider[data-sm-cols=2&data-lg-cols=3]',
-					list: g_img_list
-				})(dataSmCols='2' dataLgCols='3')
+.row.main__separator
+	.col-sm-6.main__space-col
+		+slider({
+			title: '.slider',
+			list: g_img_list
+		})
+	.col-sm-6.main__space-col
+		+slider({
+			title: '.slider.slider_narrow',
+			list: g_img_list
+		})(class='slider_narrow')
+	.col-sm-6.main__space-col
+		+slider({
+			list: g_img_list
+		})(class='slider_arrows_inner')
+	.col-sm-6.main__space-col
+		+slider({
+			title: '.slider[data-rows=2]',
+			list: g_img_list
+		})(dataRows='2')
+	.col-sm-6.main__space-col
+		+slider({
+			title: '.slider[data-cols=2]',
+			list: g_img_list
+		})(dataCols='2')
+	.col-sm-6.main__space-col
+		+slider({
+			title: '.slider[data-sm-cols=2&data-lg-cols=3]',
+			list: g_img_list
+		})(dataSmCols='2' dataLgCols='3')
 
-		.row.main__separator
-			.col-12
-				.tab
-					.row
-						.col-2
-							.tab__link.tab__link_active(data-tab-link='testTab-1') .tab__link 1
-						.col-2
-							.tab__link(data-tab-link='testTab-2') .tab__link 2
-					.row
-						.col-12
-							.tab__target.tab__target_active(data-tab-target='testTab-1') .tab__target 1
-							.tab__target(data-tab-target='testTab-2') .tab__target 2
-
-
-	.main__footer-spacer
+.row.main__separator
+	.col-12
+		.tab
+			.row
+				.col-2
+					.tab__link.tab__link_active(data-tab-link='testTab-1') .tab__link 1
+				.col-2
+					.tab__link(data-tab-link='testTab-2') .tab__link 2
+			.row
+				.col-12
+					.tab__target.tab__target_active(data-tab-target='testTab-1') .tab__target 1
+					.tab__target(data-tab-target='testTab-2') .tab__target 2

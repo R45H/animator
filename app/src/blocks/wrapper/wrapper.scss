@@ -457,9 +457,8 @@ $name: wrapper;
 
 			&__banner {
 
-				&::before,
-				&::after {
-					background-color: $color-fourth;
+				&::before {
+					color: $color-fourth;
 				}
 
 				.banner {
@@ -472,6 +471,11 @@ $name: wrapper;
 				&.banner {
 
 					&_fog {
+
+						&::before,
+						&::after {
+							background-color: $color-fourth;
+						}
 
 						.banner {
 
@@ -758,9 +762,8 @@ $name: wrapper;
 
 			&__banner {
 
-				&::before,
-				&::after {
-					background-color: $color-fifth;
+				&::before {
+					color: $color-fifth;
 				}
 
 				.banner {
@@ -773,6 +776,11 @@ $name: wrapper;
 				&.banner {
 
 					&_fog {
+
+						&::before,
+						&::after {
+							background-color: $color-fifth;
+						}
 
 						.banner {
 
@@ -1059,9 +1067,8 @@ $name: wrapper;
 
 			&__banner {
 
-				&::before,
-				&::after {
-					background-color: $color-sixth;
+				&::before {
+					color: $color-sixth;
 				}
 
 				.banner {
@@ -1074,6 +1081,11 @@ $name: wrapper;
 				&.banner {
 
 					&_fog {
+
+						&::before,
+						&::after {
+							background-color: $color-sixth;
+						}
 
 						.banner {
 
@@ -1360,9 +1372,8 @@ $name: wrapper;
 
 			&__banner {
 
-				&::before,
-				&::after {
-					background-color: $color-seventh;
+				&::before {
+					color: $color-seventh;
 				}
 
 				.banner {
@@ -1375,6 +1386,11 @@ $name: wrapper;
 				&.banner {
 
 					&_fog {
+
+						&::before,
+						&::after {
+							background-color: $color-seventh;
+						}
 
 						.banner {
 
@@ -1661,9 +1677,8 @@ $name: wrapper;
 
 			&__banner {
 
-				&::before,
-				&::after {
-					background-color: $color-eighth;
+				&::before {
+					color: $color-eighth;
 				}
 
 				.banner {
@@ -1676,6 +1691,11 @@ $name: wrapper;
 				&.banner {
 
 					&_fog {
+
+						&::before,
+						&::after {
+							background-color: $color-eighth;
+						}
 
 						.banner {
 

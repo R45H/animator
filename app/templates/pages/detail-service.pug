@@ -1,62 +1,44 @@
 include ../components/slider
-include ../mixins/banner
 include ../mixins/params
 include ../mixins/tags
 
-.section
-	.container
-		.row
+.main__space-col
+	+slider({
+		title: 'Украшение помещений',
+		list: g_img_list
+	})(class='slider_narrow')
 
-			.col-lg-9.col-xl-8
-
-				.main__space-col
-					+slider({
-						title: 'Украшение помещений',
-						list: g_img_list
-					})(class='slider_narrow')
-
-				.main__space-col
-					.block.block_text
-						h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half Описание
-						.text
-							p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау". Попса трансформирует дорийский соноропериод, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков). Октавер интенсивен. Микрохроматический интервал, так или иначе, интенсивен. Легато параллельно.
+.main__space-col
+	.block.block_text
+		h2.title.title_sm.title_color_2.wrapper__text.main__space-bot-half Описание
+		.text
+			p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау". Попса трансформирует дорийский соноропериод, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков). Октавер интенсивен. Микрохроматический интервал, так или иначе, интенсивен. Легато параллельно.
 
 
-				.main__space-col
-					.block
+.main__space-col
+	.block
 
-						.main__space-bot
-							+tags({
-								icon: 'tags',
-								delimiter: ',',
-								items: [
-									{"name": "Украшение помещений", "link": "#"},
-									{"name": "декор", "link": "#"}
-								]
-							})(class='tags_sm tags_color_gray')
+		.main__space-bot
+			+tags({
+				icon: 'tags',
+				delimiter: ',',
+				items: [
+					{"name": "Украшение помещений", "link": "#"},
+					{"name": "декор", "link": "#"}
+				]
+			})(class='tags_sm tags_color_gray')
 
-						.main__space-bot
-							+tags({
-								icon: 'tel',
-								delimiter: ';',
-								items: [
-									{"name": "+7 (214) 654-44-87", "link": "tel:+72146544487"},
-									{"name": "+7 (911) 845-23-08", "link": "tel:+79118452308"}
-								]
-							})(class='wrapper__tags')
+		.main__space-bot
+			+tags({
+				icon: 'tel',
+				delimiter: ';',
+				items: [
+					{"name": "+7 (214) 654-44-87", "link": "tel:+72146544487"},
+					{"name": "+7 (911) 845-23-08", "link": "tel:+79118452308"}
+				]
+			})(class='wrapper__tags')
 
-						.main__space-bot
-							+params(params_1)(class='params_sm')
+		.main__space-bot
+			+params(params_1)(class='params_sm')
 
-						a.btn.btn_fill.btn_sm(href='#') Добавить в избранное
-
-			.col-lg-3.col-xl-4
-				.main__space-col
-					+banner({
-						link: '#'
-					})
-				.main__space-col
-					+banner({
-						link: '#'
-					})
-				.main__footer-spacer
+		a.btn.btn_fill.btn_sm(href='#') Добавить в избранное

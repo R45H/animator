@@ -9,17 +9,14 @@ html(lang="ru")
 		title #{page.title} | #{global[0].name}
 	body
 
-		.wrapper(class= page.color ? 'wrapper_color_' + page.color : '')
+		.wrapper(
+			class= page.isHome ? 'wrapper_home' : ''
+			class= page.color ? 'wrapper_color_' + page.color : ''
+		)
 			include ../partials/header
 
 			main.main
-				.section
-					.container
-						.row
-							.col-lg-9.col-xl-8
-								block content
-							.col-lg-3.col-xl-4
-								include ../partials/banners
+				block content
 
 			include ../partials/footer
 

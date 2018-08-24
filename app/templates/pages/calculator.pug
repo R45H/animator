@@ -1,32 +1,14 @@
 include ../components/pagination
 include ../mixins/card
-include ../mixins/banner
 
-.section
-	.container
-		.row
+each val, i in [0, 5, 1, 4]
 
-			.col-lg-9.col-xl-8
+	.wrapper__tab-panel(data-tab-target='tab-' + (i + 1))
 
-				each val, i in [0, 5, 1, 4]
+		- for (j = 0; j < 3; j++) {
+			.main__space-col
+				+card(card[val])
+		- }
 
-					.wrapper__tab-panel(data-tab-target='tab-' + (i + 1))
-
-						- for (j = 0; j < 3; j++) {
-							.main__space-col
-								+card(card[val])
-						- }
-
-						.main__space-col
-							+pagination(3, 1)(class='wrapper__pagination')
-
-			.col-lg-3.col-xl-4
-				.main__space-col
-					+banner({
-						link: '#'
-					})
-				.main__space-col
-					+banner({
-						link: '#'
-					})
-				.main__footer-spacer
+		.main__space-col
+			+pagination(3, 1)(class='wrapper__pagination')
