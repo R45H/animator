@@ -48,7 +48,7 @@ $name: card;
 		flex-direction: column;
 	}
 
-	&__date-wrap {
+	&__calendar-wrap {
 		flex: none;
 		padding-top: 15px;
 		display: flex;
@@ -63,6 +63,10 @@ $name: card;
 
 	&__row {
 		margin-bottom: 15px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	&__top {
@@ -99,12 +103,7 @@ $name: card;
 	}
 
 	&__tel-wrap {
-		white-space: nowrap;
 		margin-bottom: 15px;
-
-		&_space_none {
-			margin-bottom: 0;
-		}
 	}
 
 	&__tags {
@@ -132,6 +131,19 @@ $name: card;
 		}
 	}
 
+	&__date-wrap {
+		display: flex;
+		align-items: flex-end;
+		flex-wrap: wrap;
+	}
+
+	&__date {
+		font-size: 13px;
+		color: $color-gray;
+		margin-top: 15px;
+		margin-left: auto;
+	}
+
 	&_thin {
 
 		@include screen-md() {
@@ -148,7 +160,7 @@ $name: card;
 				}
 			}
 
-			&__date-wrap {
+			&__calendar-wrap {
 
 				@include screen-md() {
 					padding-left: 15px;

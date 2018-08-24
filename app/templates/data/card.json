@@ -73,7 +73,7 @@
 				"text": "Пригласить аниматора",
 				"modal": "modalInviteAnimator"
 			},
-			"date": true,
+			"calendar": true,
 			"tel_down": true
 		},
 		{
@@ -101,7 +101,7 @@
 				"text": "Пригласить фотографа",
 				"modal": "modalInvitePhotographer"
 			},
-			"date": true,
+			"calendar": true,
 			"tel_down": true
 		},
 		{
@@ -170,7 +170,7 @@
 				"text": "Изменить личные данные",
 				"link": "profile-animator.html"
 			},
-			"date": true,
+			"calendar": true,
 			"tel_down": true
 		},
 		{
@@ -197,7 +197,7 @@
 				"text": "Изменить личные данные",
 				"link": "profile-photographer.html"
 			},
-			"date": true,
+			"calendar": true,
 			"tel_down": true
 		},
 		{
@@ -225,6 +225,48 @@
 				"link": "profile-area.html"
 			},
 			"tel_down": true
+		},
+		{
+			"img": "img/content/card/01.jpg",
+			"title": "Костюм лунтика",
+			"sm_name": "Екатерина",
+			"tel": {
+				"link": "+72146544487",
+				"name": "+7 (214) 654-44-87"
+			},
+			"tel_down": true,
+			"desc": "Куплю костюм Лунтика, готова забрать сегодня.",
+			"params": [
+				{"title": "Район", "value": "Центральный район"},
+				{"title": "Цена", "value": "5000 руб."}
+			],
+			"params_sm": true,
+			"params_down": true,
+			"application": {
+				"icon": "buy",
+				"text": "Заявка на покупку"
+			},
+			"date": "25.05.2018 17:25"
+		},
+		{
+			"title": "Иванова Мария",
+			"tel": {
+				"link": "+72146544487",
+				"name": "+7 (214) 654-44-87"
+			},
+			"tel_down": true,
+			"desc": "Нужен аниматор для проведения нового года.",
+			"params": [
+				{"title": "Район", "value": "Центральный район"},
+				{"title": "Цена", "value": "5000 руб."}
+			],
+			"params_sm": true,
+			"params_down": true,
+			"application": {
+				"icon": "hands",
+				"text": "Предложение по работе"
+			},
+			"date": "25.05.2018 17:25"
 		}
 	]
 }

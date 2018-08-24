@@ -7,19 +7,20 @@ include ../mixins/params
 mixin card(data)
 	.card(class= attributes.class)
 
-		.card__img-wrap
-			a.card__img-link(
-				class= data.link ? '' : 'fancybox'
-				href= data.link || data.img
-				data-fancybox= data.link ? null : 'group-card'
-				data-caption= data.link ? null : data.title
-			)
-				.card__img(
-					style='background-image: url(' + data.img + ');'
-					role='img'
-					aria-label= data.title
-					title= data.title
+		if data.img
+			.card__img-wrap
+				a.card__img-link(
+					class= data.link ? '' : 'fancybox'
+					href= data.link || data.img
+					data-fancybox= data.link ? null : 'group-card'
+					data-caption= data.link ? null : data.title
 				)
+					.card__img(
+						style='background-image: url(' + data.img + ');'
+						role='img'
+						aria-label= data.title
+						title= data.title
+					)
 
 		.card__content-wrap
 
@@ -39,7 +40,7 @@ mixin card(data)
 					.card__tel-wrap
 
 						if data.tel.link
-							a.link.link_line_none.link_icon_before.wrapper__link(href='tel:' + data.tel.link)= data.tel.name
+							a.link.link_line_none.link_icon_before.link_nowrap.wrapper__link(href='tel:' + data.tel.link)= data.tel.name
 								+svg('tel', 'link__icon')
 						else
 							- var arr = []
@@ -51,30 +52,38 @@ mixin card(data)
 								delimiter: ';',
 								items: arr
 							})(class='wrapper__tags')
+
+				if data.application
+					.card__tel-wrap
+						span.link.link_line_none.link_icon_before.wrapper__link= data.application.text
+							+svg(data.application.icon, 'link__icon')
 
 			if data.tags
 				.card__row.card__tags
 					+tags(data.tags)(class='tags_color_gray tags_sm')
 
+			if data.sm_name
+				.card__row
+					.card__name= data.sm_name
+
 			if data.tel_down
 				.card__row
-					.card__tel-wrap.card__tel-wrap_space_none
 
-						if data.tel.link
-							a.link.link_line_none.link_icon_before.wrapper__link(href='tel:' + data.tel.link)= data.tel.name
-								+svg('tel', 'link__icon')
-						else
-							- var arr = []
-							each val in data.tel
-								- arr.push({name: val.name, link: 'tel:' + val.link})
+					if data.tel.link
+						a.link.link_line_none.link_icon_before.link_nowrap.wrapper__link(href='tel:' + data.tel.link)= data.tel.name
+							+svg('tel', 'link__icon')
+					else
+						- var arr = []
+						each val in data.tel
+							- arr.push({name: val.name, link: 'tel:' + val.link})
 
-							+tags({
-								icon: 'tel',
-								delimiter: ';',
-								items: arr
-							})(class='wrapper__tags')
+						+tags({
+							icon: 'tel',
+							delimiter: ';',
+							items: arr
+						})(class='wrapper__tags')
 
-			if data.params
+			if data.params && !data.params_down
 				.card__row
 					+params(data.params)(class= data.params_sm ? 'params_sm' : '')
 
@@ -82,19 +91,25 @@ mixin card(data)
 				.card__row
 					.text.card__text!= data.desc
 
-			.card__btn-wrap
+			if data.btn_invite || data.btn_profile
+				.card__btn-wrap
 
-				if data.btn_invite
-					.card__btn
-						a.btn.btn_wide.btn_sm.btn_fill(
-							href= data.btn_invite.link || '#'
-							data-modal= data.btn_invite.modal || null
-						)= data.btn_invite.text
+					if data.btn_invite
+						.card__btn
+							a.btn.btn_wide.btn_sm.btn_fill(
+								href= data.btn_invite.link || '#'
+								data-modal= data.btn_invite.modal || null
+							)= data.btn_invite.text
 
-				if data.btn_profile && data.link
-					.card__btn
-						a.btn.btn_wide.btn_sm(href= data.link) Посмотреть профиль
+					if data.btn_profile && data.link
+						.card__btn
+							a.btn.btn_wide.btn_sm(href= data.link) Посмотреть профиль
 
-		if data.date
-			.card__date-wrap
+			if data.params && data.params_down
+				.card__row(class= data.date ? 'card__date-wrap' : '')
+					+params(data.params)(class= data.params_sm ? 'params_sm' : '')
+					.card__date= data.date
+
+		if data.calendar
+			.card__calendar-wrap
 				+date
