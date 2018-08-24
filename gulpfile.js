@@ -106,7 +106,7 @@ lazyRequireTask('js:libs', tasks + 'js-libs', {
  * Переносит растровые картинки, ужимает по весу
  */
 lazyRequireTask('img', tasks + 'img', {
-	src: app + 'img/**/*.{jpg,jpeg,png,gif,ico}', // Путь к исходникам
+	src: app + 'img/**/*.{jpg,jpeg,png,gif,ico,xml,webmanifest}', // Путь к исходникам
 	dist: dist + 'img', // Путь для готовых файлов
 	prod: prod // Флаг сборки на продакшн
 });
