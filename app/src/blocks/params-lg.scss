@@ -106,6 +106,10 @@ $name: params-lg;
 		.#{$name} {
 			// =====
 
+			&__wrap {
+				table-layout: fixed;
+			}
+
 			&__title {
 
 				@include screen-sm() {
