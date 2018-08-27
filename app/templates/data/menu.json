@@ -71,6 +71,10 @@
 				{
 					"link": "profile-animator.html",
 					"name": "Изменение личных данных"
+				},
+				{
+					"link": "application.html",
+					"name": "Заявки"
 				}
 			]
 		},

@@ -1,8 +1,9 @@
+include ../components/pagination
 include ../mixins/card
 
+each val in [9, 10, 10]
+	.main__space-col
+		+card(card[val])(class='card_thin')
+
 .main__space-col
-	+card(card[9])(class='card_thin')
-.main__space-col
-	+card(card[10])(class='card_thin')
-.main__space-col
-	+card(card[10])(class='card_thin')
+	+pagination(3, 1)(class='wrapper__pagination')
