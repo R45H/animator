@@ -39,12 +39,21 @@ header.header.wrapper__header(
 						+bread(class='header__bread')
 
 						if page.hasTitle
-							h1.title.title_color_white.header__title(class= page.hasTitle !== 'small' ? 'title_lg title_bold' : '')= page.title
+							h1.title.title_color_white.header__title(
+								class= page.hasTitle !== 'small' ? 'title_lg title_bold' : ''
+								class= page.offerBtn ? 'header__title_space-bot_lg' : ''
+							)= page.title
 
 						if page.date
 							.header__date-wrap
 								span.link.link_line_none.link_icon_before.header__date= page.date
 									+svg('calendar', 'link__icon')
+
+						if page.offerBtn
+							.header__offer-btn
+								a.btn.btn_fill.btn_lg.btn_icon(href='#' data-modal= page.offerBtn)
+									span.btn__text Разместить предложение
+									+svg('arrow-right', 'btn__icon')
 
 	if page.tabs
 		.container
@@ -114,7 +123,7 @@ header.header.wrapper__header(
 												})(class='select_simple select_wide select_multiply')
 
 									.wrapper__tab-col.wrapper__tab-col_right
-										button.btn.btn_fill.btn_icon.wrapper__btn.wrapper__tab-submit(type='submit')
+										button.btn.btn_fill.btn_lg.btn_icon.wrapper__btn.wrapper__tab-submit(type='submit')
 											span.btn__text Применить
 											+svg('arrow-right', 'btn__icon')
 
@@ -143,7 +152,7 @@ header.header.wrapper__header(
 												})(class='select_simple select_wide')
 
 									.wrapper__tab-col.wrapper__tab-col_right
-										button.btn.btn_fill.btn_icon.wrapper__btn.wrapper__tab-submit(type='submit')
+										button.btn.btn_fill.btn_lg.btn_icon.wrapper__btn.wrapper__tab-submit(type='submit')
 											span.btn__text Применить
 											+svg('arrow-right', 'btn__icon')
 
@@ -168,7 +177,7 @@ header.header.wrapper__header(
 												})(class='select_simple select_wide')
 
 									.wrapper__tab-col.wrapper__tab-col_right
-										button.btn.btn_fill.btn_icon.wrapper__btn.wrapper__tab-submit(type='submit')
+										button.btn.btn_fill.btn_lg.btn_icon.wrapper__btn.wrapper__tab-submit(type='submit')
 											span.btn__text Применить
 											+svg('arrow-right', 'btn__icon')
 
@@ -186,6 +195,6 @@ header.header.wrapper__header(
 													})(class='check_thin check_sm check_color_dark wrapper__check')
 
 									.wrapper__tab-col.wrapper__tab-col_right
-										button.btn.btn_fill.btn_icon.wrapper__btn.wrapper__tab-submit(type='submit')
+										button.btn.btn_fill.btn_lg.btn_icon.wrapper__btn.wrapper__tab-submit(type='submit')
 											span.btn__text Применить
 											+svg('arrow-right', 'btn__icon')

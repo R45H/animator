@@ -160,6 +160,13 @@ $name: header;
 			margin-top: auto;
 			margin-bottom: auto;
 		}
+
+		&_space-bot_lg {
+
+			@include screen-sm() {
+				padding-bottom: 110px;
+			}
+		}
 	}
 
 	&__bread {
@@ -172,6 +179,19 @@ $name: header;
 
 	&__date {
 		font-size: 13px;
+	}
+
+	&__offer-btn {
+		text-align: center;
+		margin-bottom: 20px;
+
+		@include screen-sm() {
+			margin-bottom: 0;
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 
 	&_home {

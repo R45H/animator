@@ -129,6 +129,10 @@ $name: card;
 		@include screen-lg() {
 			max-width: 320px;
 		}
+
+		&_align_center {
+			text-align: center;
+		}
 	}
 
 	&__date-wrap {
@@ -184,6 +188,67 @@ $name: card;
 
 			&__img {
 				padding-bottom: 66%;
+			}
+		}
+	}
+
+	&_vertical {
+
+		@include screen-md() {
+			flex-direction: column;
+		}
+
+		.#{$name} {
+			// =====
+
+			&__img-wrap {
+
+				@include screen-md() {
+					width: 100%;
+					max-width: none;
+					padding-right: 0;
+					padding-bottom: 15px;
+				}
+			}
+
+			&__calendar-wrap {
+
+				@include screen-md() {
+					padding-top: 15px;
+					padding-left: 0;
+				}
+			}
+
+			&__top {
+
+				@include screen-sm() {
+					display: block;
+				}
+			}
+
+			&__title-wrap {
+
+				@include screen-sm() {
+					margin-right: 0;
+				}
+			}
+
+			&__btn {
+
+				@include screen-lg() {
+					max-width: none;
+				}
+			}
+		}
+	}
+
+	&_contain {
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				background-size: contain;
 			}
 		}
 	}

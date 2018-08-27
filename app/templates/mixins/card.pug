@@ -5,7 +5,10 @@ include ../mixins/tags
 include ../mixins/params
 
 mixin card(data)
-	.card(class= attributes.class)
+	.card(
+		class= attributes.class
+		class= data.contain ? 'card_contain' : ''
+	)
 
 		if data.img
 			.card__img-wrap
@@ -83,7 +86,7 @@ mixin card(data)
 							items: arr
 						})(class='wrapper__tags')
 
-			if data.params && !data.params_down
+			if data.params && !data.params_down && !data.params_after_desc
 				.card__row
 					+params(data.params)(class= data.params_sm ? 'params_sm' : '')
 
@@ -91,19 +94,27 @@ mixin card(data)
 				.card__row
 					.text.card__text!= data.desc
 
+			if data.params && data.params_after_desc
+				.card__row
+					+params(data.params)(class= data.params_sm ? 'params_sm' : '')
+
 			if data.btn_invite || data.btn_profile
 				.card__btn-wrap
 
 					if data.btn_invite
-						.card__btn
-							a.btn.btn_wide.btn_sm.btn_fill(
+						.card__btn(class= data.btn_center ? 'card__btn_align_center' : '')
+							a.btn.btn_sm.btn_fill(
+								class= data.btn_center ? '' : 'btn_wide'
 								href= data.btn_invite.link || '#'
 								data-modal= data.btn_invite.modal || null
 							)= data.btn_invite.text
 
 					if data.btn_profile && data.link
-						.card__btn
-							a.btn.btn_wide.btn_sm(href= data.link) Посмотреть профиль
+						.card__btn(class= data.btn_center ? 'card__btn_align_center' : '')
+							a.btn.btn_sm(
+								class= data.btn_center ? '' : 'btn_wide'
+								href= data.link
+							) Посмотреть профиль
 
 			if data.params && data.params_down
 				.card__row(class= data.date ? 'card__date-wrap' : '')

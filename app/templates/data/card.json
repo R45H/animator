@@ -227,7 +227,7 @@
 			"tel_down": true
 		},
 		{
-			"img": "img/content/card/01.jpg",
+			"img": "img/content/card/05.png",
 			"title": "Костюм лунтика",
 			"sm_name": "Екатерина",
 			"tel": {
@@ -246,7 +246,8 @@
 				"icon": "buy",
 				"text": "Заявка на покупку"
 			},
-			"date": "25.05.2018 17:25"
+			"date": "25.05.2018 17:25",
+			"contain": true
 		},
 		{
 			"title": "Иванова Мария",
@@ -267,6 +268,47 @@
 				"text": "Предложение по работе"
 			},
 			"date": "25.05.2018 17:25"
+		},
+		{
+			"img": "img/content/card/06.jpg",
+			"title": "Курсы актёрского мастерства",
+			"tel": {
+				"link": "+72146544487",
+				"name": "+7 (214) 654-44-87"
+			},
+			"params": [
+				{"title": "Район", "value": "Центральный район"},
+				{"title": "Цена", "value": "5000 руб."}
+			],
+			"params_sm": true,
+			"params_after_desc": true,
+			"desc": "Объявляется набор на курсы по актёрскому мастерству",
+			"btn_invite": {
+				"text": "Подать заявку",
+				"modal": "modalSubscribe"
+			},
+			"tel_down": true,
+			"btn_center": true
+		},
+		{
+			"title": "Курсы актёрского мастерства",
+			"tel": {
+				"link": "+72146544487",
+				"name": "+7 (214) 654-44-87"
+			},
+			"params": [
+				{"title": "Район", "value": "Центральный район"},
+				{"title": "Цена", "value": "5000 руб."}
+			],
+			"params_sm": true,
+			"params_after_desc": true,
+			"desc": "Объявляется набор на курсы по актёрскому мастерству",
+			"btn_invite": {
+				"text": "Подать заявку",
+				"modal": "modalSubscribe"
+			},
+			"tel_down": true,
+			"btn_center": true
 		}
 	]
 }

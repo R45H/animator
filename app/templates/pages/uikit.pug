@@ -106,16 +106,18 @@ include ../mixins/radio
 		input.btn(type='button' value='input.btn')
 	.col-2
 		button.btn button.btn
-	.col-4
-		.btn.btn_light .btn_light
+	.col-2
+		.btn.btn_sm .btn.btn_sm
+	.col-2
+		.btn.btn_lg .btn.btn_lg
 
 .row.main__separator
-	.col-3
+	.col-2
+		.btn.btn_light .btn_light
+	.col-2
 		.btn.btn_fill .btn.btn_fill
 	.col-3
 		.btn.btn_wide .btn.btn_wide
-	.col-3
-		.btn.btn_sm .btn.btn_sm
 	.col-3
 		.btn.btn_icon
 			span.btn__text .btn.btn_icon
@@ -315,6 +317,8 @@ include ../mixins/radio
 		+card(card[9])(class='card_thin')
 	.col-10.main__space-col
 		+card(card[10])(class='card_thin')
+	.col-4.main__space-col
+		+card(card[11])(class='card_vertical')
 
 .row.main__separator
 	.col-6

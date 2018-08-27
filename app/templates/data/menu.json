@@ -75,6 +75,10 @@
 				{
 					"link": "application.html",
 					"name": "Заявки"
+				},
+				{
+					"link": "offers-training.html",
+					"name": "Обучение"
 				}
 			]
 		},
