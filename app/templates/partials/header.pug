@@ -51,8 +51,8 @@ header.header.wrapper__header(
 
 						if page.offerBtn
 							.header__offer-btn
-								a.btn.btn_fill.btn_lg.btn_icon(href='#' data-modal= page.offerBtn)
-									span.btn__text Разместить предложение
+								a.btn.btn_fill.btn_lg.btn_icon(href='#' data-modal= page.offerBtn.modal)
+									span.btn__text= page.offerBtn.name
 									+svg('arrow-right', 'btn__icon')
 
 	if page.tabs

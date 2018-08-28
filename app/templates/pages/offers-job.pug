@@ -1,0 +1,12 @@
+include ../components/pagination
+include ../mixins/card
+
+.row
+
+	- for (var i = 0; i < 4; i++) {
+		.col-md-6.main__space-col
+			+card(card[12])(class='card_thin card_wide card_vertical')
+	- }
+
+.main__space-col
+	+pagination(3, 1)(class='wrapper__pagination')

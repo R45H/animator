@@ -79,6 +79,10 @@
 				{
 					"link": "offers-training.html",
 					"name": "Обучение"
+				},
+				{
+					"link": "offers-job.html",
+					"name": "Предложения по работе"
 				}
 			]
 		},

@@ -3,16 +3,16 @@ extends layouts/default
 block vars
 	-
 		page = {
-			title: 'Обучение',
+			title: 'Предложения по работе',
 			hasTitle: true,
-			link: 'offers-training.html',
+			link: 'offers-job.html',
 			img: 'img/content/header/01.jpg',
 			color: 'fourth',
 			offerBtn: {
 				name: 'Разместить предложение',
-				modal: 'modalAddOffer'
+				modal: 'modalAddJobOffer'
 			}
 		}
 
 block content
-	include pages/offers-training
+	include pages/offers-job
