@@ -9,7 +9,7 @@ $name: card;
 
 	@include screen-md() {
 		display: flex;
-		padding: 30px;
+		padding: 20px;
 	}
 
 	&__img-wrap {
@@ -18,10 +18,10 @@ $name: card;
 		padding-bottom: 15px;
 
 		@include screen-md() {
-			width: 30%;
+			width: 33%;
 			max-width: 300px;
 			padding-bottom: 0;
-			padding-right: 30px;
+			padding-right: 20px;
 		}
 	}
 
@@ -57,7 +57,7 @@ $name: card;
 
 		@include screen-md() {
 			padding-top: 0;
-			padding-left: 30px;
+			padding-left: 20px;
 		}
 	}
 
@@ -148,7 +148,7 @@ $name: card;
 		margin-left: auto;
 	}
 
-	&_thin {
+	&_space_sm {
 
 		@include screen-md() {
 			padding: 15px;
@@ -160,6 +160,7 @@ $name: card;
 			&__img-wrap {
 
 				@include screen-md() {
+					width: 30%;
 					padding-right: 15px;
 				}
 			}
@@ -173,7 +174,7 @@ $name: card;
 		}
 	}
 
-	&_wide {
+	&_img_sm {
 
 		.#{$name} {
 			// =====
@@ -188,6 +189,25 @@ $name: card;
 
 			&__img {
 				padding-bottom: 66%;
+			}
+		}
+	}
+
+	&_img_md {
+
+		.#{$name} {
+			// =====
+
+			&__img-wrap {
+
+				@include screen-md() {
+					width: 40%;
+					max-width: none;
+				}
+			}
+
+			&__img {
+				padding-bottom: 83%;
 			}
 		}
 	}

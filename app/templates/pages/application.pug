@@ -1,9 +1,13 @@
 include ../components/pagination
 include ../mixins/card
 
-each val in [9, 10, 10]
+.main__space-col
+	+card(card[9])(class='card_img_md')
+
+- for (var i = 0; i < 2; i++) {
 	.main__space-col
-		+card(card[val])(class='card_thin')
+		+card(card[10])
+- }
 
 .main__space-col
 	+pagination(3, 1)(class='wrapper__pagination')
