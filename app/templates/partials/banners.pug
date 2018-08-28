@@ -1,11 +1,12 @@
 include ../mixins/banner
 
-.main__space-col
-	+banner({
-		link: '#'
-	})(class='wrapper__banner')
-.main__space-col
-	+banner({
-		link: '#'
-	})(class='wrapper__banner')
+.row
+
+	- for (var i = 0; i < 2; i++) {
+		.col-sm-6.col-lg-12.main__space-col
+			+banner({
+				link: '#'
+			})(class='wrapper__banner')
+	- }
+
 .main__footer-spacer

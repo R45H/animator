@@ -80,6 +80,8 @@ $name: select;
 		z-index: 150;
 		border: 0;
 		background: white;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
 
 		.ui-menu {
 			list-style-type: none;
