@@ -312,6 +312,28 @@
 			},
 			"tel_down": true,
 			"btn_center": true
+		},
+		{
+			"img": "img/content/card/05.png",
+			"title": "Костюм Лунтика",
+			"tel": {
+				"link": "+72146544487",
+				"name": "+7 (214) 654-44-87"
+			},
+			"params": [
+				{"title": "Район", "value": "Центральный район"},
+				{"title": "Цена", "value": "5000 руб."}
+			],
+			"params_sm": true,
+			"params_after_desc": true,
+			"desc": "Продаётся костюм Лунтика в отличном состоянии, новый.",
+			"btn_invite": {
+				"text": "Купить реквизит",
+				"modal": "modalBuyRequisite"
+			},
+			"tel_down": true,
+			"btn_center": true,
+			"contain": true
 		}
 	]
 }

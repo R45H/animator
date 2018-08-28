@@ -83,6 +83,10 @@
 				{
 					"link": "offers-job.html",
 					"name": "Предложения по работе"
+				},
+				{
+					"link": "offers-prop.html",
+					"name": "Объявления о продаже реквизита"
 				}
 			]
 		},
