@@ -69,7 +69,7 @@ function toggleModal(action, modalId) {
 		}
 
 		$modal
-			.trigger('show.modal')
+			.trigger('show.custom.modal')
 			.addClass(classVisible);
 
 		toggleBodyScroll(true);
@@ -84,7 +84,7 @@ function toggleModal(action, modalId) {
 
 		setTimeout(function() {
 			$modal
-				.trigger('shown.modal')
+				.trigger('shown.custom.modal')
 				.find('.' + classInput)
 				.first()
 				.focus();
@@ -103,7 +103,7 @@ function toggleModal(action, modalId) {
 			return;
 		}
 
-		$modal.trigger('hide.modal');
+		$modal.trigger('hide.custom.modal');
 
 		$(document).off('keydown', closeOnEsc);
 
@@ -119,7 +119,7 @@ function toggleModal(action, modalId) {
 			$modal.removeClass(classVisible);
 			toggleBodyScroll(false);
 			$('.' + classFog).remove();
-			$modal.trigger('hidden.modal');
+			$modal.trigger('hidden.custom.modal');
 		}, delay);
 	}
 }

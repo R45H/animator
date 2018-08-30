@@ -21,7 +21,8 @@ $blocks.each(function() {
 		reader.onload = function(e) {
 			$block
 				.addClass(classBlock + '_selected')
-				.css('background-image', 'url(' + e.target.result + ')');
+				.css('background-image', 'url(' + e.target.result + ')')
+				.trigger('added.custom.fileimg');
 		};
 
 		reader.readAsDataURL(file);
@@ -29,13 +30,16 @@ $blocks.each(function() {
 	/* ===== */
 
 	/* Обработка удаления картинки */
-	$reset.on('click', function() {
+	$reset.on('click', function(e) {
+
+		e.preventDefault();
+
+		$input.val('');
 
 		$block
 			.removeClass(classBlock + '_selected')
-			.css('background-image', '');
-
-		$input.val('');
+			.css('background-image', '')
+			.trigger('removed.custom.fileimg');
 	});
 	/* ===== */
 

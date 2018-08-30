@@ -228,7 +228,7 @@ $modalBtn.on('click', function(e) {
 /* ===== */
 
 /* Удаление класса селекта с открытой модалкой при её закрытии */
-$modal.on('hide.modal', function() {
+$modal.on('hide.custom.modal', function() {
 	$('.' + classMultiplyOpened).removeClass(classMultiplyOpened);
 });
 /* ===== */

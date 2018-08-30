@@ -31,6 +31,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/file-img/file-img.js'
 	}());
+	(function() {
+		//=require 'blocks/file-group/file-group.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

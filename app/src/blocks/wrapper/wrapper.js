@@ -54,7 +54,7 @@ $setters.on('click', function(e) {
 	/* ===== */
 
 	/* Генерация события */
-	$block.trigger('changecolor.wrapper', {
+	$block.trigger('changecolor.custom.wrapper', {
 		color: color,
 		target: $this
 	});

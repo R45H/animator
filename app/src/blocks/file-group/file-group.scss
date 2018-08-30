@@ -1,0 +1,16 @@
+$name: file-group;
+
+.#{$name} {
+
+	&__item-wrap {
+		display: none;
+
+		&_visible {
+			display: block;
+		}
+	}
+
+	&__item {
+
+	}
+}

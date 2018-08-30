@@ -158,12 +158,27 @@ include ../mixins/file-img
 .row.main__separator
 	.col-2
 		+file-img({
-			id: 'file-image-1'
+			id: 'fileImageTest1'
 		})
 	.col-2
 		+file-img({
-			id: 'file-image-2'
+			id: 'fileImageTest2'
 		})(class='file-img_contain')
+
+.row.main__separator
+	.col-12
+		.row.file-group
+			.col-3.file-group__item-wrap.file-group__item-wrap_visible
+				+file-img({
+					id: 'fileGroupTest1'
+				})(class='file-group__item')
+			.col-3.file-group__item-wrap
+				+file-img({
+					id: 'fileGroupTest2'
+				})(class='file-group__item')
+				+file-img({
+					id: 'fileGroupTest2'
+				})(class='file-group__item')
 
 .row.main__separator
 	.col-3
