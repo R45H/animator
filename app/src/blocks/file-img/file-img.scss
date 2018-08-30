@@ -1,0 +1,243 @@
+$name: file-img;
+
+.#{$name} {
+	@extend %radius;
+	display: block;
+	width: 100%;
+	border: 1px solid $color-main-light;
+	background: no-repeat center / cover;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	transition: $duration / 2 linear;
+
+	&:hover,
+	&_focus {
+		transition: none;
+		border-color: $color-second-light;
+
+		.#{$name} {
+			// =====
+
+			&__reset {
+				border-color: $color-second-light;
+				transition: none;
+
+				&::before,
+				&::after {
+					background: $color-second-light;
+					transition: none;
+				}
+			}
+		}
+	}
+
+	&:active {
+		border-color: $color-second-light-active;
+
+		.#{$name} {
+			// =====
+
+			&__reset {
+				border-color: $color-second-light-active;
+
+				&::before,
+				&::after {
+					background: $color-second-light-active;
+				}
+			}
+		}
+	}
+
+	&__input {
+		width: .1px;
+		height: .1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+
+	&__label {
+		display: block;
+		width: 100%;
+		padding-bottom: 100%;
+		cursor: inherit;
+	}
+
+	&__reset {
+		background: white;
+		outline: none;
+		padding: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		border: 1px solid $color-gray;
+		cursor: inherit;
+		transition: $duration / 2 linear;
+		pointer-events: none;
+
+		$width: 24px;
+		$height: 2px;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: $width;
+			height: $height;
+			top: 50%;
+			left: 50%;
+			margin-top: -($height / 2);
+			margin-left: -($width / 2);
+			background: $color-main-light;
+			transition: $duration / 2 linear;
+		}
+
+		&::before {
+			transform: rotate(90deg);
+		}
+
+		&:hover {
+			border-color: $color-second-light;
+			transition: none;
+
+			&::before,
+			&::after {
+				background: $color-second-light;
+				transition: none;
+			}
+		}
+
+		&:active {
+			border-color: $color-second-light-active;
+
+			&::before,
+			&::after {
+				background: $color-second-light-active;
+			}
+		}
+	}
+
+	&_selected {
+		background-color: white;
+		border-color: $color-gray-light;
+		cursor: default;
+
+		.#{$name} {
+			// =====
+
+			&__reset {
+				width: 25px;
+				height: 25px;
+				transform: none;
+				top: 10px;
+				right: 10px;
+				left: auto;
+				pointer-events: auto;
+				cursor: pointer;
+
+				&::before,
+				&::after {
+					width: 15px;
+					height: 1px;
+					margin-top: -1px;
+					margin-left: -7px;
+				}
+
+				&::before {
+					transform: rotate(45deg);
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+
+		&:hover,
+		&.#{$name}_focus {
+			border-color: $color-gray-light;
+
+			.#{$name} {
+				// =====
+
+				&__reset {
+					border-color: $color-gray;
+					transition: $duration / 2 linear;
+
+					&::before,
+					&::after {
+						background: $color-main-light;
+						transition: $duration / 2 linear;
+					}
+
+					&:hover {
+						border-color: $color-second-light;
+						transition: none;
+
+						&::before,
+						&::after {
+							background: $color-second-light;
+							transition: none;
+						}
+					}
+
+					&:active {
+						border-color: $color-second-light-active;
+
+						&::before,
+						&::after {
+							background: $color-second-light-active;
+						}
+					}
+				}
+			}
+		}
+
+		&:active {
+			border-color: $color-gray-light;
+
+			.#{$name} {
+				// =====
+
+				&__reset {
+					border-color: $color-gray;
+
+					&::before,
+					&::after {
+						background: $color-main-light;
+					}
+
+					&:hover {
+						border-color: $color-second-light;
+						transition: none;
+
+						&::before,
+						&::after {
+							background: $color-second-light;
+							transition: none;
+						}
+					}
+
+					&:active {
+						border-color: $color-second-light-active;
+
+						&::before,
+						&::after {
+							background: $color-second-light-active;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&_contain {
+		background-size: contain;
+	}
+}

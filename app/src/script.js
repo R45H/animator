@@ -28,6 +28,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/tab/tab.js'
 	}());
+	(function() {
+		//=require 'blocks/file-img/file-img.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

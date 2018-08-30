@@ -1,0 +1,9 @@
+mixin file-img(data)
+	.file-img(class= attributes.class)
+		input.file-img__input(
+			type='file'
+			accept='image/*'
+			id= data.id
+		)
+		label.file-img__label(for= data.id)
+		button.file-img__reset(tabindex='-1')
