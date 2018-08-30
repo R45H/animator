@@ -101,6 +101,16 @@ $name: params-lg;
 		}
 	}
 
+	&__row-i {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px -20px;
+	}
+
+	&__col-i {
+		padding: 0 10px 20px;
+	}
+
 	&_fixed-title {
 
 		.#{$name} {

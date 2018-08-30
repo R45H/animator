@@ -1,5 +1,6 @@
 include ../mixins/select
 include ../mixins/check
+include ../mixins/file-img
 
 // MODAL
 #modalRegistration.modal
@@ -254,7 +255,6 @@ include ../mixins/check
 							.params-lg__value
 								input.btn.btn_fill.btn_sm.modal__btn(type='submit' value='Разместить')
 
-// TODO: Нужно добавить прикрепление картинок
 #modalSellRequisite.modal
 	.modal__wrap
 
@@ -292,6 +292,18 @@ include ../mixins/check
 								label.params-lg__label(for='paramsLgModalSellRequisite3') Сообщение
 							.params-lg__value
 								textarea#paramsLgModalSellRequisite3.input(placeholder='Текст сообщения...')
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								.params-lg__row-i.file-group
+
+									- for (var i = 0; i < 4; i++) {
+										.col-6.params-lg__col-i.file-group__item-wrap(class= !i ? 'file-group__item-wrap_visible' : '')
+											+file-img({
+												id: 'fileImageModalSellRequisite' + (i + 1)
+											})(class='file-group__item')
+									- }
 
 						.params-lg__row
 							.params-lg__title
