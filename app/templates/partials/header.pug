@@ -4,6 +4,7 @@ include ../mixins/svg
 include ../mixins/logo
 include ../mixins/bread
 include ../mixins/check
+include ../components/toggle
 
 // HEADER
 header.header.wrapper__header(
@@ -27,8 +28,11 @@ header.header.wrapper__header(
 						+star(999)(href='favourites.html')
 					.header__btns-col.header__btns-col_grow
 						+select(select)(class='select_wide')
-					.header__btns-col
+					.header__btns-col(class= !page.isHome ? 'header__toggle-wrap' : '')
 						a.btn.btn_fill.btn_wide(href='#' data-modal='modalRegistration') Личный кабинет
+
+						if !page.isHome
+							+toggle(class='js-aside__toggle header__toggle')
 
 	if page.img
 		.header__bg-outer

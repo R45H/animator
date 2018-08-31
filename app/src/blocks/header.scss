@@ -116,6 +116,30 @@ $name: header;
 		}
 	}
 
+	&__toggle-wrap {
+		display: flex;
+		padding-right: 0;
+
+		@include screen-xl() {
+			padding-right: 0;
+		}
+	}
+
+	&__toggle {
+		flex: none;
+		margin-left: 7px;
+		padding-left: 7px;
+		padding-right: 7px;
+		width: 51px;
+
+		@include screen-xl() {
+			margin-left: 15px;
+			padding-left: 15px;
+			padding-right: 15px;
+			width: 65px;
+		}
+	}
+
 	&__bg-outer {
 		padding: 15px 0 0;
 		overflow: hidden;
