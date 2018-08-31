@@ -8,9 +8,9 @@ aside.aside
 	ul.aside__list
 		li.aside__item
 
-			+g-tag((global[0].link_home === page.link) ? 'span' : 'a')(
-				class='aside__link'
+			a.aside__link(
 				href= global[0].link_home
+				class= global[0].link_home === page.link ? 'aside__link_active' : ''
 			)
 				+svg('list', 'aside__icon')
 				span.aside__text Главная
@@ -19,10 +19,10 @@ aside.aside
 
 			if val.aside
 				li.aside__item
-
-					+g-tag((val.link === page.link) ? 'span' : 'a')(
-						class='aside__link aside__link_color_' + val.aside
+					a.aside__link(
 						href= val.link
+						class='aside__link_color_' + val.aside
+						class= val.link === page.link ? 'aside__link_active' : ''
 					)
 						+svg('list', 'aside__icon')
 						span.aside__text= val.name_for_main || val.name

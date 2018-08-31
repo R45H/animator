@@ -1,6 +1,8 @@
 var
 	classAside = 'aside',
 	classAsideOpened = classAside + '_opened',
+	classAsideLink = classAside + '__link',
+	classAsideLinkActive = classAsideLink + '_active',
 	classToggle = 'toggle',
 	classToggleActive = classToggle + '_opened',
 	classToggleInactive = classToggle + '_closed',
@@ -8,6 +10,7 @@ var
 	classAsideToggle = 'js-' + classAside + '__' + classToggle,
 	$body = $('body'),
 	$aside = $('.' + classAside),
+	$asideLinks = $aside.find('.' + classAsideLink),
 	$toggle = $('.' + classAsideToggle),
 	$closeBtn = $('.' + classAside + '__close'),
 	delay = 300;
@@ -36,12 +39,20 @@ $closeBtn.on('click', function() {
 });
 /* ===== */
 
-// Закрытие бокового меню при нажатии ESC
+/* Клик по ссылке */
+$asideLinks.on('click', function() {
+	var $link = $(this);
+
+	if ($link.hasClass(classAsideLinkActive)) return false;
+});
+/* ===== */
+
+/* Закрытие бокового меню при нажатии ESC */
 var closeAsideOnEsc = function(event) {
 	if (event.keyCode !== 27) return;
 	toggleAside('close');
 };
-// =====
+/* ===== */
 
 /* Показывает или скрывает боковое меню */
 function toggleAside(action) {
@@ -57,7 +68,7 @@ function toggleAside(action) {
 	if (action === 'close') {
 		$(document).off('keydown', closeAsideOnEsc);
 		$aside.removeClass(classAsideOpened);
-		$('.' + classFog).fadeOut(delay);
+		$('.' + classFog).fadeOut(delay / 2);
 		$toggle
 			.removeClass(classToggleActive)
 			.addClass(classToggleInactive);

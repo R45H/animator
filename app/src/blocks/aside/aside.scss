@@ -1,7 +1,6 @@
 $name: aside;
 
 .#{$name} {
-	@extend %transition;
 	position: fixed;
 	top: 0;
 	right: -200px;
@@ -11,6 +10,7 @@ $name: aside;
 	background: $color-main;
 	padding: 16rem 0 0;
 	z-index: 100;
+	transition: $duration / 2 ease;
 
 	&__close {
 		@extend %transition;
@@ -109,6 +109,15 @@ $name: aside;
 			border-color: white;
 		}
 
+		&_active {
+			cursor: default;
+			border-color: white;
+
+			&:hover {
+				border-color: white;
+			}
+		}
+
 		&_color_fourth {
 			color: $color-fourth;
 			border-color: rgba($color-fourth, .15);
@@ -119,6 +128,18 @@ $name: aside;
 
 			&:active {
 				border-color: $color-fourth;
+			}
+
+			&.#{$name} {
+				// =====
+
+				&__link_active {
+					border-color: $color-fourth;
+
+					&:hover {
+						border-color: $color-fourth;
+					}
+				}
 			}
 		}
 
@@ -133,6 +154,18 @@ $name: aside;
 			&:active {
 				border-color: $color-fifth;
 			}
+
+			&.#{$name} {
+				// =====
+
+				&__link_active {
+					border-color: $color-fifth;
+
+					&:hover {
+						border-color: $color-fifth;
+					}
+				}
+			}
 		}
 
 		&_color_sixth {
@@ -145,6 +178,18 @@ $name: aside;
 
 			&:active {
 				border-color: $color-sixth;
+			}
+
+			&.#{$name} {
+				// =====
+
+				&__link_active {
+					border-color: $color-sixth;
+
+					&:hover {
+						border-color: $color-sixth;
+					}
+				}
 			}
 		}
 
@@ -159,6 +204,18 @@ $name: aside;
 			&:active {
 				border-color: $color-seventh;
 			}
+
+			&.#{$name} {
+				// =====
+
+				&__link_active {
+					border-color: $color-seventh;
+
+					&:hover {
+						border-color: $color-seventh;
+					}
+				}
+			}
 		}
 
 		&_color_eighth {
@@ -171,6 +228,18 @@ $name: aside;
 
 			&:active {
 				border-color: $color-eighth;
+			}
+
+			&.#{$name} {
+				// =====
+
+				&__link_active {
+					border-color: $color-eighth;
+
+					&:hover {
+						border-color: $color-eighth;
+					}
+				}
 			}
 		}
 	}
@@ -192,8 +261,4 @@ $name: aside;
 		right: 0;
 		transition: $duration ease;
 	}
-}
-
-span.#{$name}__link {
-
 }
