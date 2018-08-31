@@ -2,6 +2,7 @@ include ../components/social
 include ../components/date
 include ../components/slider
 include ../components/pagination
+include ../components/toggle
 include ../mixins/star
 include ../mixins/select
 include ../mixins/news
@@ -481,3 +482,7 @@ include ../mixins/file-img
 				.col-12
 					.tab__target.tab__target_active(data-tab-target='testTab-1') .tab__target 1
 					.tab__target(data-tab-target='testTab-2') .tab__target 2
+
+.row.main__separator
+	.col-12
+		+toggle

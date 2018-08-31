@@ -34,6 +34,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/file-group/file-group.js'
 	}());
+	(function() {
+		//=require 'blocks/toggle/toggle.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
