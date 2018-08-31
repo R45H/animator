@@ -1,9 +1,32 @@
 {
 	"menu": [
 		{
+			"link": "stock.html",
+			"name": "Акции",
+			"aside": "eighth",
+			"sub": [
+				{
+					"link": "stock-detail.html",
+					"name": "Квест для детей в подарок ко дню рождения"
+				}
+			]
+		},
+		{
+			"link": "news.html",
+			"name": "Новости",
+			"aside": "seventh",
+			"sub": [
+				{
+					"link": "news-detail.html",
+					"name": "Названы лучшие актёры 2017 года"
+				}
+			]
+		},
+		{
 			"link": "calculator.html#animator",
 			"name": "Калькулятор",
 			"name_for_main": "Аниматоры",
+			"aside": "fourth",
 			"sub": [
 				{
 					"link": "detail-animator.html",
@@ -15,6 +38,7 @@
 			"link": "calculator.html#photographer",
 			"name": "Калькулятор",
 			"name_for_main": "Фотографы",
+			"aside": "fifth",
 			"sub": [
 				{
 					"link": "detail-photographer.html",
@@ -26,6 +50,7 @@
 			"link": "calculator.html#area",
 			"name": "Калькулятор",
 			"name_for_main": "Площадки",
+			"aside": "sixth",
 			"sub": [
 				{
 					"link": "detail-area.html",
@@ -37,30 +62,11 @@
 			"link": "calculator.html#service",
 			"name": "Калькулятор",
 			"name_for_main": "Услуги",
+			"aside": "eighth",
 			"sub": [
 				{
 					"link": "detail-service.html",
 					"name": "Страница дополнительной услуги"
-				}
-			]
-		},
-		{
-			"link": "news.html",
-			"name": "Новости",
-			"sub": [
-				{
-					"link": "news-detail.html",
-					"name": "Названы лучшие актёры 2017 года"
-				}
-			]
-		},
-		{
-			"link": "stock.html",
-			"name": "Акции",
-			"sub": [
-				{
-					"link": "stock-detail.html",
-					"name": "Квест для детей в подарок ко дню рождения"
 				}
 			]
 		},

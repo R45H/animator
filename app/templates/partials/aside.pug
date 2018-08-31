@@ -1,0 +1,28 @@
+include ../mixins/global
+
+// ASIDE
+aside.aside
+
+	button.aside__close
+
+	ul.aside__list
+		li.aside__item
+
+			+g-tag((global[0].link_home === page.link) ? 'span' : 'a')(
+				class='aside__link'
+				href= global[0].link_home
+			)
+				+svg('list', 'aside__icon')
+				span.aside__text Главная
+
+		each val in menu
+
+			if val.aside
+				li.aside__item
+
+					+g-tag((val.link === page.link) ? 'span' : 'a')(
+						class='aside__link aside__link_color_' + val.aside
+						href= val.link
+					)
+						+svg('list', 'aside__icon')
+						span.aside__text= val.name_for_main || val.name

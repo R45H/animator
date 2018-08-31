@@ -37,6 +37,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/toggle/toggle.js'
 	}());
+	(function() {
+		//=require 'blocks/aside/aside.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
