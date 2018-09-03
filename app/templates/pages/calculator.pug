@@ -6,9 +6,9 @@ each val, i in [0, 5, 1, 4]
 	.wrapper__tab-panel(data-tab-target='tab-' + (i + 1))
 
 		- for (j = 0; j < 3; j++) {
-			.main__space-col
+			.mb-15.mb-sm-30
 				+card(card[val])
 		- }
 
-		.main__space-col
+		.mb-15.mb-sm-30
 			+pagination(3, 1)(class='wrapper__pagination')

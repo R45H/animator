@@ -4,9 +4,9 @@ include ../mixins/card
 .row
 
 	- for (var i = 0; i < 4; i++) {
-		.col-md-6.main__space-col
+		.col-md-6.mb-15.mb-sm-30
 			+card(card[11])(class='card_img_sm card_vertical')
 	- }
 
-.main__space-col
+.mb-15.mb-sm-30
 	+pagination(3, 1)(class='wrapper__pagination')

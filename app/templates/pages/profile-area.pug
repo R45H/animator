@@ -2,18 +2,18 @@ include ../mixins/banner
 include ../mixins/check
 include ../mixins/select
 
-.main__space-col
+.mb-30
 	.block.tab
 
-		.params-lg.params-lg_fixed-title.main__space-bot-half
+		.params-lg.params-lg_fixed-title.mb-10
 			.params-lg__wrap
 
 				.params-lg__row
 					.params-lg__title
 					.params-lg__value
-						h2.title.title_md.wrapper__text.main__space-bot-half Профиль площадки
+						h2.title.title_md.wrapper__text.mb-10 Профиль площадки
 
-						.text-gray.main__space-bot
+						.text-gray.mb-20
 							| Дата обновления: 30.11.2017 06:44:28
 							br
 							| Последняя авторизация: 30.11.2017 06:44:33
@@ -21,16 +21,16 @@ include ../mixins/select
 		form
 			.row
 
-				.col-md-4.push-md-8.col-xl-4.push-xl-8.main__vertical_between.main__space-bot
+				.col-md-4.push-md-8.col-xl-4.push-xl-8.main__vertical_between.mb-20
 					+banner({
 						img: 'img/content/card/03.jpg',
 						fancybox: true,
 						title: 'Фотография площадки'
-					})(class='main__flex-banner main__space-bot')
+					})(class='main__flex-banner mb-20')
 
 					input.btn.btn_sm.btn_wide.btn_light(type='button' value='Загрузить фотографию')
 
-				.col-md-8.pull-md-4.col-xl-8.pull-xl-4.main__space-bot
+				.col-md-8.pull-md-4.col-xl-8.pull-xl-4.mb-20
 					.params-lg.params-lg_fixed-title
 						.params-lg__wrap
 
@@ -56,7 +56,7 @@ include ../mixins/select
 										title: 'Выберите станцию...'
 									})(class='select_light select_wide')
 
-			.params-lg.params-lg_fixed-title.main__space-bot
+			.params-lg.params-lg_fixed-title.mb-20
 				.params-lg__wrap
 
 					.params-lg__row.params-lg__row_valign_baseline
@@ -65,7 +65,7 @@ include ../mixins/select
 							.row
 
 								each val, i in check
-									.col-6.col-md-3.main__space-bot-half
+									.col-6.col-md-3.mb-10
 										+check({
 											id: 'profileCheck-2-' + i + 1,
 											text: val
@@ -85,7 +85,7 @@ include ../mixins/select
 								.params-lg__title
 								.params-lg__value
 									.row
-										.col-sm-6.main__space-bot
+										.col-sm-6.mb-20
 											input.btn.btn_wide.btn_sm.btn_fill(type='submit' value='Сохранить')
-										.col-sm-6.main__space-bot
+										.col-sm-6.mb-20
 											input.btn.btn_wide.btn_sm(type='reset' value='Отмена')

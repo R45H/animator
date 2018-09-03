@@ -174,3 +174,58 @@ svg {
 .text-gray {
 	color: $color-gray-dark;
 }
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.mb-10 {
+	margin-bottom: 10px;
+}
+
+.mb-15 {
+	margin-bottom: 15px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+.mb-sm-0 {
+
+	@include screen-sm() {
+		margin-bottom: 0;
+	}
+}
+
+.mb-sm-10 {
+
+	@include screen-sm() {
+		margin-bottom: 10px;
+	}
+}
+
+.mb-sm-15 {
+
+	@include screen-sm() {
+		margin-bottom: 15px;
+	}
+}
+
+.mb-sm-20 {
+
+	@include screen-sm() {
+		margin-bottom: 20px;
+	}
+}
+
+.mb-sm-30 {
+
+	@include screen-sm() {
+		margin-bottom: 30px;
+	}
+}

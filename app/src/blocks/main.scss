@@ -13,18 +13,6 @@ $name: main;
 		}
 	}
 
-	&__space-col {
-		margin-bottom: 30px;
-	}
-
-	&__space-bot {
-		margin-bottom: 20px;
-	}
-
-	&__space-bot-half {
-		margin-bottom: 10px;
-	}
-
 	&__footer-spacer {
 
 		@include screen-lg() {

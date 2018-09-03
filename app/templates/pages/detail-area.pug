@@ -2,29 +2,29 @@ include ../components/slider
 include ../mixins/params
 include ../mixins/tags
 
-.main__space-col
+.mb-15.mb-sm-30
 	.block.block_lg
 		h1.title.title_md.wrapper__text Название площадки
 
-.main__space-col
+.mb-15.mb-sm-30
 	+slider({
 		list: g_img_list
 	})(class='slider_narrow slider_arrows_inner')
 
-.main__space-col
+.mb-15.mb-sm-30
 	.block.block_text
-		h2.title.title_sm.wrapper__text.main__space-bot-half Описание
+		h2.title.title_sm.wrapper__text.mb-10 Описание
 		.text
 			p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау". Попса трансформирует дорийский соноропериод, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков). Октавер интенсивен. Микрохроматический интервал, так или иначе, интенсивен. Легато параллельно.
 
 
-.main__space-col
+.mb-30
 	.block
 
-		.main__space-bot
+		.mb-15
 			h2.title.title_sm.wrapper__text Контакты
 
-		.main__space-bot
+		.mb-15
 			+tags({
 				icon: 'tel',
 				delimiter: ';',
@@ -34,7 +34,7 @@ include ../mixins/tags
 				]
 			})(class='wrapper__tags')
 
-		.main__space-bot
+		.mb-15
 			+params(params_1)(class='params_sm')
 
 		a.btn.btn_fill.btn_sm(href='#') Добавить в избранное

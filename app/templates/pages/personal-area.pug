@@ -3,38 +3,38 @@ include ../mixins/card
 include ../mixins/banner
 include ../mixins/list
 
-.main__space-col
+.mb-15.mb-sm-30
 	+card(card[8])(class='card_space_sm card_img_sm')
 
 .row
 
 	each val in [0, 5, 4]
 
-		.col-sm-6.col-md-4.main__space-col
+		.col-sm-6.col-md-4.mb-15.mb-sm-30
 			+banner({
 				link: banner[val].link,
 				img: banner[val].img,
 				text: banner[val].text
 			})(class='banner_fog banner_contain wrapper__banner')
 
-.main__space-col
+.mb-15.mb-sm-30
 	.block.block_text
-		h2.title.title_sm.wrapper__text.main__space-bot-half О себе
+		h2.title.title_sm.wrapper__text.mb-10 О себе
 		.text
 			p Микрохроматический интервал имеет шоу-бизнес. Гармоническое микророндо представляет собой звукосниматель. Громкостнoй прогрессийный период регрессийно заканчивает аккорд. Цикл вызывает целотоновый эффект "вау-вау". Попса трансформирует дорийский соноропериод, благодаря быстрой смене тембров (каждый инструмент играет минимум звуков). Октавер интенсивен. Микрохроматический интервал, так или иначе, интенсивен. Легато параллельно.
 
 .row
 
-	.col-sm-5.col-md-4.main__space-col
+	.col-sm-5.col-md-4.mb-15.mb-sm-30
 		.block.block_height_full
-			.main__space-bot
-				h2.title.title_sm.wrapper__text.main__space-bot-half Программы
+			.mb-20
+				h2.title.title_sm.wrapper__text.mb-10 Программы
 				+list(['Детский праздник', 'Новый год', 'Шоу программа', 'Вечеринка'])(class='list_sm wrapper__fill')
-			.main__space-bot
-				h2.title.title_sm.wrapper__text.main__space-bot-half Станции метро
+			.mb-20
+				h2.title.title_sm.wrapper__text.mb-10 Станции метро
 				+list(['Садовая', 'Адмиралтейская', 'Ладожская', 'Комендантский проспект'])(class='list_sm wrapper__fill')
 
-	.col-sm-7.col-md-8.main__space-col
+	.col-sm-7.col-md-8.mb-30
 		+slider({
 			title: 'Фото',
 			list: g_img_list
