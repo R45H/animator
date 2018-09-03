@@ -24,7 +24,7 @@ $name: link;
 	&_icon_before,
 	&_icon_after {
 		position: relative;
-		fill: $color-third;
+		fill: $color-main;
 
 		&:hover {
 			fill: $color-second;
@@ -52,8 +52,8 @@ $name: link;
 	}
 
 	&_color_1 {
-		color: $color-third;
-		border-color: $color-third;
+		color: $color-main;
+		border-color: $color-main;
 	}
 }
 
@@ -70,16 +70,16 @@ span.#{$name} {
 
 		&:hover,
 		&:active {
-			fill: $color-third;
+			fill: $color-main;
 		}
 	}
 
 	&_color_1 {
-		color: $color-third;
+		color: $color-main;
 
 		&:hover,
 		&:active {
-			color: $color-third;
+			color: $color-main;
 		}
 	}
 }

@@ -58,6 +58,13 @@ $name: text;
 					color: $color-fourth-dark;
 				}
 			}
+
+			&:nth-child(5n+6) {
+
+				&::first-letter {
+					color: $color-third-light;
+				}
+			}
 		}
 	}
 }

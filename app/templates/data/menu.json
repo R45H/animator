@@ -3,7 +3,7 @@
 		{
 			"link": "stock.html",
 			"name": "Акции",
-			"aside": "eighth",
+			"aside": "third",
 			"sub": [
 				{
 					"link": "stock-detail.html",

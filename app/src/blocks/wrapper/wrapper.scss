@@ -204,6 +204,318 @@ $name: wrapper;
 		}
 	}
 
+	&_color_third {
+
+		.#{$name} {
+			// =====
+
+			&__header {
+
+				&::after {
+					background-color: $color-third-light;
+				}
+			}
+
+			&__text {
+				color: $color-third;
+			}
+
+			&__fill {
+				fill: $color-third;
+			}
+
+			&__link {
+				fill: $color-third;
+
+				&.link_color_1 {
+					color: $color-third;
+					border-color: $color-third;
+
+					&:hover {
+						@extend a:not([class]):hover;
+					}
+
+					&:active {
+						@extend a:not([class]):active;
+					}
+				}
+
+				&:hover {
+					@extend .link_icon_before:hover;
+				}
+
+				&:active {
+					@extend .link_icon_before:active;
+				}
+			}
+
+			&__link-line {
+				color: $color-third;
+
+				&.tab__link_active {
+					@extend .tab__link_active;
+				}
+
+				&:hover {
+					@extend .link-line:hover;
+				}
+
+				&:active {
+					@extend .link-line:active;
+				}
+			}
+
+			&__star {
+				color: $color-third;
+				stroke: $color-third;
+
+				&:hover {
+					@extend .star:hover;
+				}
+
+				&:active {
+					@extend .star:active;
+				}
+
+				&.star {
+					// =====
+
+					&_fill {
+						fill: $color-third;
+
+						&:hover {
+							@extend .star:hover;
+						}
+
+						&:active {
+							@extend .star:active;
+						}
+					}
+				}
+			}
+
+			&__tags {
+
+				.tags {
+					// =====
+
+					&__outer {
+						fill: $color-third;
+
+						&:hover {
+							@extend .tags__outer:hover;
+						}
+
+						&:active {
+							@extend .tags__outer:active;
+						}
+					}
+				}
+
+				&.tags_color_gray {
+
+					.tags {
+						// =====
+
+						&__outer {
+							fill: $color-gray;
+							color: $color-gray;
+
+							&:hover {
+								@extend .tags__outer:hover;
+							}
+
+							&:active {
+								@extend .tags__outer:active;
+							}
+						}
+					}
+				}
+			}
+
+			&__pagination {
+
+				span.pagination {
+					// =====
+
+					&__num-text {
+						color: $color-third;
+					}
+				}
+			}
+
+			&__news {
+
+				.news {
+					// =====
+
+					&__img {
+
+						&::after {
+							background-color: $color-third-light;
+						}
+					}
+
+					&__title {
+						color: $color-third;
+					}
+				}
+			}
+
+			&__tab-btn {
+
+				&_active {
+					color: $color-third;
+				}
+			}
+
+			&__btn {
+				color: $color-third;
+
+				&:hover {
+					@extend .btn:hover;
+				}
+
+				&:active {
+					@extend .btn:active;
+				}
+
+				&.btn_fill {
+					@extend .btn_fill;
+					background: $color-third-light;
+					border-color: $color-third-light;
+				}
+			}
+
+			&__check {
+
+				.check {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									color: $color-third;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__radio {
+
+				.radio {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									background: $color-third;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__banner {
+
+				&::before {
+					color: $color-third-light;
+				}
+
+				.banner {
+
+					&__text {
+						background-color: rgba($color-third, .85);
+					}
+				}
+
+				&.banner {
+
+					&_fog {
+
+						&::before,
+						&::after {
+							background-color: $color-third-light;
+						}
+
+						.banner {
+
+							&__text {
+								background-color: transparent;
+							}
+						}
+					}
+				}
+			}
+
+			&__fancybox {
+
+				&::after {
+					color: $color-third-light;
+				}
+			}
+		}
+
+		span.#{$name} {
+			// =====
+
+			&__link {
+
+				&.link_color_1 {
+
+					&:hover,
+					&:active {
+						color: $color-third;
+					}
+				}
+
+				&:hover,
+				&:active {
+					fill: $color-third;
+				}
+			}
+		}
+	}
+
 	&_color_fourth {
 
 		.#{$name} {

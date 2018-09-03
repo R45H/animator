@@ -118,6 +118,31 @@ $name: aside;
 			}
 		}
 
+		&_color_third {
+			color: $color-third-light;
+			border-color: rgba($color-third-light, .2);
+
+			&:hover {
+				border-color: rgba($color-third-light, .6);
+			}
+
+			&:active {
+				border-color: $color-third-light;
+			}
+
+			&.#{$name} {
+				// =====
+
+				&__link_active {
+					border-color: $color-third-light;
+
+					&:hover {
+						border-color: $color-third-light;
+					}
+				}
+			}
+		}
+
 		&_color_fourth {
 			color: $color-fourth;
 			border-color: rgba($color-fourth, .15);

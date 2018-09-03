@@ -7,7 +7,7 @@ $name: tags;
 	&__outer {
 		@extend %transition;
 		position: relative;
-		fill: $color-third;
+		fill: $color-main;
 
 		&:hover {
 			fill: $color-second;
