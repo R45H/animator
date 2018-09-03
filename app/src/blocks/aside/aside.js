@@ -41,9 +41,32 @@ $closeBtn.on('click', function() {
 
 /* Клик по ссылке */
 $asideLinks.on('click', function() {
-	var $link = $(this);
+	var
+		$link = $(this),
+		link = $link.attr('href'), // Ссылка в кнопке
+		hash = link.slice(link.indexOf('#')); // Хеш ссылки
 
-	if ($link.hasClass(classAsideLinkActive)) return false;
+	/* Обработка активной кнопки */
+	if ($link.hasClass(classAsideLinkActive)) {
+		toggleAside('close');
+		return false;
+	}
+	/* ===== */
+
+	/* Обработка кнопки со ссылкой на калькулятор */
+	if (hash[0] !== '#') return;
+	hash = hash.slice(1);
+
+	var $thisTab = $('.wrapper__tab-btn'); // Кнопки переключения табов
+
+	if (!$thisTab.length) return;
+
+	$thisTab
+		.filter('[data-onload=' + hash + ']')
+		.trigger('click');
+
+	toggleAside('close');
+	/* ===== */
 });
 /* ===== */
 

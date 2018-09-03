@@ -71,7 +71,8 @@ var
 	classTabPanelVisible = classTabPanel + '_visible', // Класс видимой панели
 	$tab = $block.find('.' + classBlock + '__tab'), // Контейнер табов
 	$tabPanels = $block.find('.' + classTabPanel), // Все панели
-	$tabBtns = $tab.find('.' + classTabBtn); // Кнопки
+	$tabBtns = $tab.find('.' + classTabBtn), // Кнопки
+	$asideLinks = $('.aside__link'); // Кнопки бокового меню
 
 /* Клик по кнопке таба */
 $tabBtns.on('click', function() {
@@ -90,6 +91,24 @@ $tabBtns.on('click', function() {
 	$this.addClass(classTabBtnActive);
 	$tabPanels.removeClass(classTabPanelVisible);
 	$target.addClass(classTabPanelVisible);
+
+	/* Обработка ссылок бокового меню */
+	$asideLinks.each(function() {
+		var
+			$asideLink = $(this), // Кнопка бокового меню
+			asideLink = $asideLink.attr('href'), // Ссылка в кнопке
+			hash = asideLink.slice(asideLink.indexOf('#')); // Хеш ссылки
+
+		if (hash[0] !== '#') return;
+
+		hash = hash.slice(1);
+
+		if ($this.attr('data-onload') == hash) {
+			$asideLinks.removeClass('aside__link_active');
+			$asideLink.addClass('aside__link_active');
+		}
+	});
+	/* ===== */
 });
 /* ===== */
 
