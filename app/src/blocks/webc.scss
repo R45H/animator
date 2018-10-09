@@ -38,5 +38,16 @@ $name: webc;
 				fill: $color-webcenter-1;
 			}
 		}
+
+		&:active {
+
+			.cls-1 {
+				fill: darken($color-webcenter-2, 10%);
+			}
+
+			.cls-2 {
+				fill: darken($color-webcenter-1, 20%);
+			}
+		}
 	}
 }
