@@ -8,6 +8,7 @@ $name: tags;
 		@extend %transition;
 		position: relative;
 		fill: $color-main;
+		display: flex;
 
 		&:hover {
 			fill: $color-second;
@@ -20,6 +21,8 @@ $name: tags;
 
 	&__wrap {
 		padding-left: 30px;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	&__item {
