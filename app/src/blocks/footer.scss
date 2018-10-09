@@ -9,7 +9,7 @@ $name: footer;
 		padding-bottom: 15px;
 	}
 
-	&__social-wrap {
+	&__social-outer {
 		text-align: center;
 		margin-bottom: 15px;
 
@@ -17,7 +17,12 @@ $name: footer;
 			position: absolute;
 			bottom: 100%;
 			right: 15px;
+			text-align: right;
 		}
+	}
+
+	&__requisite {
+		display: none;
 	}
 
 	&__text-wrap {
@@ -50,11 +55,19 @@ $name: footer;
 				}
 			}
 
-			&__social-wrap {
+			&__social-outer {
 
 				@include screen-lg() {
-					margin-bottom: 70px;
+					margin-bottom: 35px;
 				}
+			}
+
+			&__social-wrap {
+				margin-bottom: 15px;
+			}
+
+			&__requisite {
+				display: inline;
 			}
 
 			&__text-wrap {

@@ -5,13 +5,18 @@ include ../components/social
 footer.footer(class= page.isHome ? 'footer_home' : '')
 	.container.footer__wrap
 
-		.footer__social-wrap
-			+social(social)
+		.footer__social-outer
+			.footer__social-wrap
+				+social(social)
+			a.link.link_color_1.footer__requisite(href='#') Реквизиты компании
 
 		.footer__text-wrap
 
 			.footer__text-col
 				div © animator-city.ru, 2018
+
+			.footer__text-col
+				a(href='#') Реквизиты компании
 
 			.footer__text-col
 				+webc
