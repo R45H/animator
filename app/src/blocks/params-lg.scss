@@ -76,7 +76,7 @@ $name: params-lg;
 			}
 		}
 
-		&_space_none {
+		&_space_half {
 
 			.#{$name} {
 				// =====
@@ -84,15 +84,12 @@ $name: params-lg;
 				&__title {
 
 					@include screen-sm() {
-						padding-bottom: 0;
+						padding-bottom: 10px;
 					}
 				}
 
 				&__value {
-
-					@include screen-sm() {
-						padding-bottom: 0;
-					}
+					padding-bottom: 10px;
 				}
 			}
 		}
@@ -144,7 +141,7 @@ $name: params-lg;
 			&__title {
 
 				@include screen-sm() {
-					width: 130px;
+					width: 140px;
 				}
 			}
 		}

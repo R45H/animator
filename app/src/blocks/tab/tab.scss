@@ -18,8 +18,26 @@ $name: tab;
 	&__target {
 		display: none;
 
+		@include screen-sm() {
+			display: none;
+		}
+
 		&_active {
 			display: block;
+
+			@include screen-sm() {
+				display: block;
+			}
+
+			&.#{$name}__target {
+
+				&_display_table-row {
+
+					@include screen-sm() {
+						display: table-row;
+					}
+				}
+			}
 		}
 	}
 }

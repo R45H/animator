@@ -11,8 +11,7 @@ $blocks.each(function() {
 	var
 		$block = $(this),
 		$links = $block.find('.' + classLink),
-		$targets = $block.find('.' + classTarget),
-		isChanging = false;
+		$targets = $block.find('.' + classTarget);
 
 	$links.each(function() {
 		var
@@ -25,12 +24,6 @@ $blocks.each(function() {
 
 			if ($link.hasClass(classLinkActive)) return;
 
-			if (isChanging) {
-				return;
-			} else {
-				isChanging = true;
-			}
-
 			$links
 				.filter('.' + classLinkActive)
 				.removeClass(classLinkActive);
@@ -39,20 +32,9 @@ $blocks.each(function() {
 
 			$targets
 				.filter('.' + classTargetActive)
-				.fadeOut(delay / 2, function() {
-					$(this)
-						.removeClass(classTargetActive)
-						.css('display', '');
+				.removeClass(classTargetActive);
 
-					$target
-						.fadeIn(delay / 2, function() {
-							$(this)
-								.addClass(classTargetActive)
-								.css('display', '');
-
-							isChanging = false;
-						});
-				});
+			$target.addClass(classTargetActive);
 		});
 	});
 });

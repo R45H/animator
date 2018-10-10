@@ -19,7 +19,13 @@ include ../mixins/file-img
 							.params-lg__title
 								label.params-lg__label(for='paramsLgModalRegistration1') Имя
 							.params-lg__value
-								input#paramsLgModalRegistration1.input(type='text' placeholder='Как вас зовут?')
+								input#paramsLgModalRegistration1.input(type='text' placeholder='Иван?')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalRegistration2') Фамилия
+							.params-lg__value
+								input#paramsLgModalRegistration2.input(type='text' placeholder='Иванов?')
 
 						.params-lg__row
 							.params-lg__title
@@ -536,7 +542,7 @@ include ../mixins/file-img
 							.params-lg__value
 								.params-lg__row-i.file-group
 
-									- for (var i = 0; i < 4; i++) {
+									- for (var i = 0; i < 18; i++) {
 										.col-6.params-lg__col-i.file-group__item-wrap(class= !i ? 'file-group__item-wrap_visible' : '')
 											+file-img({
 												id: 'fileImageModalPlacing' + (i + 1)
