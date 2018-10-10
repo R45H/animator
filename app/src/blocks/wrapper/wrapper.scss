@@ -85,12 +85,8 @@ $name: wrapper;
 	}
 
 	&__tab-panel {
+		width: 100%;
 		display: none;
-
-		&_visible {
-			display: block;
-			width: 100%;
-		}
 	}
 
 	&__tab-row {
@@ -181,6 +177,10 @@ $name: wrapper;
 		width: 165px;
 		height: 100%;
 		max-height: 68px;
+	}
+
+	&__visible {
+		display: block;
 	}
 
 	&_home {

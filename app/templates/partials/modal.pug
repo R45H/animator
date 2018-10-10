@@ -19,7 +19,7 @@ include ../mixins/file-img
 							.params-lg__title
 								label.params-lg__label(for='paramsLgModalRegistration1') Имя
 							.params-lg__value
-								input#paramsLgModalRegistration1.input(type='text' placeholder='Как Вас зовут?')
+								input#paramsLgModalRegistration1.input(type='text' placeholder='Как вас зовут?')
 
 						.params-lg__row
 							.params-lg__title
@@ -87,7 +87,7 @@ include ../mixins/file-img
 							.params-lg__title
 								label.params-lg__label(for='paramsLgModalAnimator1') Имя
 							.params-lg__value
-								input#paramsLgModalAnimator1.input(type='text' placeholder='Как Вас зовут?')
+								input#paramsLgModalAnimator1.input(type='text' placeholder='Как вас зовут?')
 
 						.params-lg__row
 							.params-lg__title
@@ -122,7 +122,7 @@ include ../mixins/file-img
 							.params-lg__title
 								label.params-lg__label(for='paramsLgModalPhotographer1') Имя
 							.params-lg__value
-								input#paramsLgModalPhotographer1.input(type='text' placeholder='Как Вас зовут?')
+								input#paramsLgModalPhotographer1.input(type='text' placeholder='Как вас зовут?')
 
 						.params-lg__row
 							.params-lg__title
@@ -150,26 +150,38 @@ include ../mixins/file-img
 
 		.modal__body
 			form.modal__form
-				.params-lg
+				.params-lg.params-lg_fixed-title
 					.params-lg__wrap
 
 						.params-lg__row
 							.params-lg__title
-								label.params-lg__label(for='paramsLgModalAddOffer1') Телефон
+								label.params-lg__label(for='paramsLgModalAddOffer1') Название
 							.params-lg__value
-								input#paramsLgModalAddOffer1.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+								input#paramsLgModalAddOffer1.input(type='text' placeholder='Введите название...')
 
 						.params-lg__row
 							.params-lg__title
-								label.params-lg__label(for='paramsLgModalAddOffer2') Название
+								label.params-lg__label(for='paramsLgModalAddOffer2') Телефон
 							.params-lg__value
-								input#paramsLgModalAddOffer2.input(type='text' placeholder='Введите название объявления...')
+								input#paramsLgModalAddOffer2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
 
 						.params-lg__row
 							.params-lg__title
-								label.params-lg__label(for='paramsLgModalAddOffer3') Цена
+								label.params-lg__label(for='paramsLgModalAddOffer3') Дополнительный телефон
 							.params-lg__value
-								input#paramsLgModalAddOffer3.input.input_number(type='text' placeholder='Укажите стоимость...')
+								input#paramsLgModalAddOffer3.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddOffer4') Электронная почта
+							.params-lg__value
+								input#paramsLgModalAddOffer4.input.input_tel(type='email' placeholder='mail@mail.ru')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddOffer5') Стоимость
+							.params-lg__value
+								input#paramsLgModalAddOffer5.input.input_number(type='text' placeholder='Укажите стоимость...')
 
 						.params-lg__row
 							.params-lg__title
@@ -181,9 +193,22 @@ include ../mixins/file-img
 
 						.params-lg__row.params-lg__row_valign_baseline
 							.params-lg__title
-								label.params-lg__label(for='paramsLgModalAddOffer4') Сообщение
+								label.params-lg__label(for='paramsLgModalAddOffer6') Сообщение
 							.params-lg__value
-								textarea#paramsLgModalAddOffer4.input(placeholder='Текст сообщения...')
+								textarea#paramsLgModalAddOffer6.input(placeholder='Напишите кратко о предложении, которое хотите разместить...')
+
+						.params-lg__row.params-lg__row_valign_top
+							.params-lg__title
+								label.params-lg__label Изображения
+							.params-lg__value
+								.params-lg__row-i.file-group
+
+									- for (var i = 0; i < 4; i++) {
+										.col-6.params-lg__col-i.file-group__item-wrap(class= !i ? 'file-group__item-wrap_visible' : '')
+											+file-img({
+												id: 'fileImageModalAddOffer' + (i + 1)
+											})(class='file-group__item')
+									- }
 
 						.params-lg__row
 							.params-lg__title
@@ -199,7 +224,7 @@ include ../mixins/file-img
 
 		.modal__body
 			form.modal__form
-				.params-lg
+				.params-lg.params-lg_fixed-title
 					.params-lg__wrap
 
 						.params-lg__row
@@ -229,7 +254,7 @@ include ../mixins/file-img
 								label.params-lg__label Тип праздника
 							.params-lg__value
 								+select(select_11, {
-									title: 'Какой праздник?'
+									title: 'День рождения, Новый год...'
 								})(class='select_wide select_light')
 
 						.params-lg__row
@@ -240,15 +265,15 @@ include ../mixins/file-img
 
 						.params-lg__row
 							.params-lg__title
-								label.params-lg__label(for='paramsLgModalAddJobOffer3') Цена на ребёнка
+								label.params-lg__label(for='paramsLgModalAddJobOffer3') Стоимость на ребёнка
 							.params-lg__value
-								input#paramsLgModalAddJobOffer3.input.input_number(type='text' placeholder='Руб / час')
+								input#paramsLgModalAddJobOffer3.input.input_number(type='text' placeholder='Руб. / час')
 
 						.params-lg__row.params-lg__row_valign_baseline
 							.params-lg__title
 								label.params-lg__label(for='paramsLgModalAddJobOffer4') Сообщение
 							.params-lg__value
-								textarea#paramsLgModalAddJobOffer4.input(placeholder='Текст сообщения...')
+								textarea#paramsLgModalAddJobOffer4.input(placeholder='Напишите кратко о предложении, которое хотите разместить...')
 
 						.params-lg__row
 							.params-lg__title
@@ -326,7 +351,7 @@ include ../mixins/file-img
 							.params-lg__title
 								label.params-lg__label(for='paramsLgModalBuyRequisite1') Имя
 							.params-lg__value
-								input#paramsLgModalBuyRequisite1.input(type='text' placeholder='Как Вас зовут?')
+								input#paramsLgModalBuyRequisite1.input(type='text' placeholder='Как вас зовут?')
 
 						.params-lg__row
 							.params-lg__title
@@ -361,7 +386,7 @@ include ../mixins/file-img
 							.params-lg__title
 								label.params-lg__label(for='paramsLgModalSubscribe1') Имя
 							.params-lg__value
-								input#paramsLgModalSubscribe1.input(type='text' placeholder='Как Вас зовут?')
+								input#paramsLgModalSubscribe1.input(type='text' placeholder='Как вас зовут?')
 
 						.params-lg__row
 							.params-lg__title
@@ -374,6 +399,223 @@ include ../mixins/file-img
 								label.params-lg__label(for='paramsLgModalSubscribe3') Сообщение
 							.params-lg__value
 								textarea#paramsLgModalSubscribe3.input(placeholder='Текст сообщения...')
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm.modal__btn(type='submit' value='Отправить заявку')
+
+#modalAddAdvertising.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1.modal__title Заявка на размещение рекламы
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form.modal__form
+				.params-lg.params-lg_fixed-title
+					.params-lg__wrap
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddAdvertising1') Имя
+							.params-lg__value
+								input#paramsLgModalAddAdvertising1.input(type='text' placeholder='Как вас зовут?')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddAdvertising2') Телефон
+							.params-lg__value
+								input#paramsLgModalAddAdvertising2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddAdvertising3') Дополнительный телефон
+							.params-lg__value
+								input#paramsLgModalAddAdvertising3.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddAdvertising4') Электронная почта
+							.params-lg__value
+								input#paramsLgModalAddAdvertising4.input(type='email' placeholder='mail@mail.ru')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddAdvertising5') Ссылка на сайт
+							.params-lg__value
+								input#paramsLgModalAddAdvertising5.input(type='text' placeholder='Вставьте ссылку на сайт...')
+
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalAddAdvertising6') Сообщение
+							.params-lg__value
+								textarea#paramsLgModalAddAdvertising6.input(placeholder='Напишите кратко о рекламе, которую хотите разместить...')
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								.params-lg__row-i.file-group
+
+									- for (var i = 0; i < 4; i++) {
+										.col-6.params-lg__col-i.file-group__item-wrap(class= !i ? 'file-group__item-wrap_visible' : '')
+											+file-img({
+												id: 'fileImageModalAddAdvertising' + (i + 1)
+											})(class='file-group__item')
+									- }
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm.modal__btn(type='submit' value='Отправить заявку')
+
+#modalPlacing.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1.modal__title Заявка на размещение
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form.modal__form
+				.params-lg.params-lg_fixed-title
+					.params-lg__wrap
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacing1') Имя
+							.params-lg__value
+								input#paramsLgModalPlacing1.input(type='text' placeholder='Иван Иванов')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacing2') Телефон
+							.params-lg__value
+								input#paramsLgModalPlacing2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacing3') Дополнительный телефон
+							.params-lg__value
+								input#paramsLgModalPlacing3.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacing4') Электронная почта
+							.params-lg__value
+								input#paramsLgModalPlacing4.input(type='email' placeholder='mail@mail.ru')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacing5') Опыт
+							.params-lg__value
+								input#paramsLgModalPlacing5.input(type='text' placeholder='3 года')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacing6') Возраст
+							.params-lg__value
+								input#paramsLgModalPlacing6.input(type='text' placeholder='28 лет')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacing7') Стоимость
+							.params-lg__value
+								input#paramsLgModalPlacing7.input.input_number(type='text' placeholder='Руб. / час')
+
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacing8') О себе
+							.params-lg__value
+								textarea#paramsLgModalPlacing8.input(placeholder='Расскажите о себе...')
+
+						.params-lg__row.params-lg__row_valign_top
+							.params-lg__title
+								label.params-lg__label Примеры работ
+							.params-lg__value
+								.params-lg__row-i.file-group
+
+									- for (var i = 0; i < 4; i++) {
+										.col-6.params-lg__col-i.file-group__item-wrap(class= !i ? 'file-group__item-wrap_visible' : '')
+											+file-img({
+												id: 'fileImageModalPlacing' + (i + 1)
+											})(class='file-group__item')
+									- }
+
+						.params-lg__row
+							.params-lg__title
+							.params-lg__value
+								input.btn.btn_fill.btn_sm.modal__btn(type='submit' value='Отправить заявку')
+
+#modalPlacingService.modal
+	.modal__wrap
+
+		.modal__head
+			h2.title.title_sm.title_color_1.modal__title Заявка на размещение услуги
+			button.modal__close(data-modal-close)
+
+		.modal__body
+			form.modal__form
+				.params-lg.params-lg_fixed-title
+					.params-lg__wrap
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacingService1') Название услуги
+							.params-lg__value
+								input#paramsLgModalPlacingService1.input(type='text' placeholder='Введите название услуги')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacingService2') Телефон
+							.params-lg__value
+								input#paramsLgModalPlacingService2.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacingService3') Дополнительный телефон
+							.params-lg__value
+								input#paramsLgModalPlacingService3.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacingService4') Электронная почта
+							.params-lg__value
+								input#paramsLgModalPlacingService4.input(type='email' placeholder='mail@mail.ru')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label Метро
+							.params-lg__value
+								+select(select_10, {
+									title: 'Выберите станцию метро...'
+								})(class='select_light select_wide')
+
+						.params-lg__row
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacingService5') Адрес
+							.params-lg__value
+								input#paramsLgModalPlacingService5.input(type='text' placeholder='Введите адрес')
+
+						.params-lg__row.params-lg__row_valign_baseline
+							.params-lg__title
+								label.params-lg__label(for='paramsLgModalPlacingService6') Описание услуги
+							.params-lg__value
+								textarea#paramsLgModalPlacingService6.input(placeholder='Расскажите подробнее об услуге...')
+
+						.params-lg__row.params-lg__row_valign_top
+							.params-lg__title
+								label.params-lg__label Изображения
+							.params-lg__value
+								.params-lg__row-i.file-group
+
+									- for (var i = 0; i < 4; i++) {
+										.col-6.params-lg__col-i.file-group__item-wrap(class= !i ? 'file-group__item-wrap_visible' : '')
+											+file-img({
+												id: 'fileImageModalPlacingService' + (i + 1)
+											})(class='file-group__item')
+									- }
 
 						.params-lg__row
 							.params-lg__title

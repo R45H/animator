@@ -40,13 +40,20 @@ header.header.wrapper__header(
 				.row.header__bg-row
 					.col-md-10.offset-md-1.header__bg-col
 
+						.header__offer-btn-top(data-wrapper-target='tab-2')
+							a.btn.btn_fill.btn_lg.btn_icon(href='#' data-modal='modalPlacing')
+								span.btn__text Заявка на размещение
+								+svg('arrow-right', 'btn__icon')
+
+						.header__offer-btn-top(data-wrapper-target='tab-4')
+							a.btn.btn_fill.btn_lg.btn_icon(href='#' data-modal='modalPlacingService')
+								span.btn__text Заявка на размещение услуги
+								+svg('arrow-right', 'btn__icon')
+
 						+bread(class='header__bread')
 
 						if page.hasTitle
-							h1.title.title_color_white.header__title(
-								class= page.hasTitle !== 'small' ? 'title_lg title_bold' : ''
-								class= page.offerBtn ? 'header__title_space-bot_lg' : ''
-							)= page.title
+							h1.title.title_color_white.header__title(class= page.hasTitle !== 'small' ? 'title_lg title_bold' : '')= page.title
 
 						if page.date
 							.header__date-wrap
@@ -68,31 +75,31 @@ header.header.wrapper__header(
 						.wrapper__tab-header
 
 							button.wrapper__tab-btn.js-wrapper__set-color(
-								data-tab-link='tab-1'
+								data-wrapper-link='tab-1'
 								data-color='fourth'
 								data-onload='animator'
 							) Аниматоры
 
 							button.wrapper__tab-btn.js-wrapper__set-color(
-								data-tab-link='tab-2'
+								data-wrapper-link='tab-2'
 								data-color='fifth'
 								data-onload='photographer'
 							) Фотографы
 
 							button.wrapper__tab-btn.js-wrapper__set-color(
-								data-tab-link='tab-3'
+								data-wrapper-link='tab-3'
 								data-color='sixth'
 								data-onload='area'
 							) Площадки
 
 							button.wrapper__tab-btn.js-wrapper__set-color(
-								data-tab-link='tab-4'
+								data-wrapper-link='tab-4'
 								data-color='eighth'
 								data-onload='service'
 							) Услуги
 
 						.wrapper__tab-body
-							.wrapper__tab-panel(data-tab-target='tab-1')
+							.wrapper__tab-panel(data-wrapper-target='tab-1')
 								form.wrapper__tab-row
 
 									.wrapper__tab-col.wrapper__tab-col_left
@@ -131,7 +138,7 @@ header.header.wrapper__header(
 											span.btn__text Применить
 											+svg('arrow-right', 'btn__icon')
 
-							.wrapper__tab-panel(data-tab-target='tab-2')
+							.wrapper__tab-panel(data-wrapper-target='tab-2')
 								form.wrapper__tab-row
 
 									.wrapper__tab-col.wrapper__tab-col_left
@@ -160,7 +167,7 @@ header.header.wrapper__header(
 											span.btn__text Применить
 											+svg('arrow-right', 'btn__icon')
 
-							.wrapper__tab-panel(data-tab-target='tab-3')
+							.wrapper__tab-panel(data-wrapper-target='tab-3')
 								form.wrapper__tab-row
 
 									.wrapper__tab-col.wrapper__tab-col_left
@@ -185,7 +192,7 @@ header.header.wrapper__header(
 											span.btn__text Применить
 											+svg('arrow-right', 'btn__icon')
 
-							.wrapper__tab-panel(data-tab-target='tab-4')
+							.wrapper__tab-panel(data-wrapper-target='tab-4')
 								form.wrapper__tab-row
 
 									.wrapper__tab-col.wrapper__tab-col_left.wrapper__tab-col_with-checkbox

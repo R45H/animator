@@ -55,6 +55,27 @@ $name: params-lg;
 			}
 		}
 
+		&_valign_top {
+
+			.#{$name} {
+				// =====
+
+				&__title {
+
+					@include screen-sm() {
+						vertical-align: top;
+					}
+				}
+
+				&__value {
+
+					@include screen-sm() {
+						vertical-align: top;
+					}
+				}
+			}
+		}
+
 		&_space_none {
 
 			.#{$name} {

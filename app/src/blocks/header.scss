@@ -192,6 +192,12 @@ $name: header;
 		}
 	}
 
+	&__offer-btn-top {
+		padding-bottom: 30px;
+		text-align: center;
+		display: none;
+	}
+
 	&__bread {
 		padding-bottom: 30px;
 	}
@@ -207,14 +213,6 @@ $name: header;
 	&__offer-btn {
 		text-align: center;
 		margin-bottom: 20px;
-
-		@include screen-sm() {
-			margin-bottom: 0;
-			position: absolute;
-			bottom: 20px;
-			left: 50%;
-			transform: translateX(-50%);
-		}
 	}
 
 	&_home {

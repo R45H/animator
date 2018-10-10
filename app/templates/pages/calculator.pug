@@ -3,7 +3,7 @@ include ../mixins/card
 
 each val, i in [0, 5, 1, 4]
 
-	.wrapper__tab-panel(data-tab-target='tab-' + (i + 1))
+	.wrapper__tab-panel(data-wrapper-target='tab-' + (i + 1))
 
 		- for (j = 0; j < 3; j++) {
 			.mb-15.mb-sm-30

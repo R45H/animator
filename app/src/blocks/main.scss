@@ -20,6 +20,13 @@ $name: main;
 		}
 	}
 
+	&__footer-spacer-half {
+
+		@include screen-lg() {
+			margin-bottom: 45px;
+		}
+	}
+
 	&__bg_black {
 		background: black;
 	}

@@ -68,9 +68,9 @@ var
 	classTabBtn = classTab + '-btn', // Класс кнопок
 	classTabBtnActive = classTabBtn + '_active', // Класс активной кнопки
 	classTabPanel = classTab + '-panel', // Класс панели
-	classTabPanelVisible = classTabPanel + '_visible', // Класс видимой панели
+	classVisible = classBlock + '__visible', // Класс видимой панели
 	$tab = $block.find('.' + classBlock + '__tab'), // Контейнер табов
-	$tabPanels = $block.find('.' + classTabPanel), // Все панели
+	$tabTargets = $('[data-wrapper-target]'), // Цели
 	$tabBtns = $tab.find('.' + classTabBtn), // Кнопки
 	$asideLinks = $('.aside__link'); // Кнопки бокового меню
 
@@ -78,8 +78,8 @@ var
 $tabBtns.on('click', function() {
 	var
 		$this = $(this),
-		link = $this.attr('data-tab-link'), // Ссылка на панель
-		$target = $tabPanels.filter('[data-tab-target=' + link + ']'); // Панели с нужной ссылкой
+		link = $this.attr('data-wrapper-link'), // Ссылка на панель
+		$targets = $('[data-wrapper-target=' + link + ']'); // Цели с нужной ссылкой
 
 	if ($this.hasClass(classTabBtnActive)) {
 		return;
@@ -89,8 +89,8 @@ $tabBtns.on('click', function() {
 
 	$tabBtns.removeClass(classTabBtnActive);
 	$this.addClass(classTabBtnActive);
-	$tabPanels.removeClass(classTabPanelVisible);
-	$target.addClass(classTabPanelVisible);
+	$tabTargets.removeClass(classVisible);
+	$targets.addClass(classVisible);
 
 	/* Обработка ссылок бокового меню */
 	$asideLinks.each(function() {
