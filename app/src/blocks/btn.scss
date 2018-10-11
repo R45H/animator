@@ -20,7 +20,8 @@ $name: btn;
 	user-select: none;
 	fill: currentColor;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		color: $color-second;
 		fill: $color-second;
 	}
@@ -43,7 +44,8 @@ $name: btn;
 		border-color: $color-main-light;
 		color: $color-gray-dark;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			border-color: $color-second-light;
 			color: $color-second-light;
 			fill: $color-second-light;
@@ -61,7 +63,8 @@ $name: btn;
 		border-color: $color-main;
 		background: $color-main;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: white;
 			fill: white;
 			border-color: $color-second;

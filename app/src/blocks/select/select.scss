@@ -35,7 +35,8 @@ $name: select;
 				display: block;
 			}
 
-			&:hover {
+			&:hover,
+			&:focus {
 				color: $color-main;
 				fill: $color-main;
 			}
@@ -196,7 +197,8 @@ $name: select;
 				border-color: $color-main-light;
 				fill: $color-gray-dark;
 
-				&:hover {
+				&:hover,
+				&:focus {
 					color: $color-second-light;
 					border-color: $color-second-light;
 					fill: $color-second-light;
@@ -215,6 +217,7 @@ $name: select;
 					fill: $color-main;
 
 					&:hover,
+					&:focus,
 					&:active {
 						color: $color-gray-dark;
 						border-color: $color-main;
@@ -234,7 +237,8 @@ $name: select;
 			&__current {
 				color: $color-text-dark;
 
-				&:hover {
+				&:hover,
+				&:focus {
 					color: $color-second;
 				}
 
@@ -246,6 +250,7 @@ $name: select;
 					color: $color-text-dark;
 
 					&:hover,
+					&:focus,
 					&:active {
 						color: $color-text-dark;
 					}
@@ -271,7 +276,8 @@ $name: select;
 					display: none;
 				}
 
-				&:hover {
+				&:hover,
+				&:focus {
 					color: $color-second;
 				}
 
@@ -281,7 +287,8 @@ $name: select;
 
 				&_active {
 
-					&:hover {
+					&:hover,
+					&:focus {
 						color: $color-text-dark;
 						fill: $color-text;
 					}
