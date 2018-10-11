@@ -1,0 +1,78 @@
+$name: cloud;
+
+.#{$name} {
+	overflow: hidden;
+
+	&__tags {
+		margin: 0 -5px;
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+
+	&__tag {
+		@extend .input;
+		color: $color-gray-dark;
+		padding: 5px 30px 5px 10px;
+		cursor: default;
+		margin: 0 5px 10px;
+		position: relative;
+		width: auto;
+		user-select: none;
+	}
+
+	&__tag-text {
+		word-break: break-word;
+	}
+
+	&__tag-close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 30px;
+		cursor: pointer;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		fill: $color-gray-dark;
+
+		&:hover {
+			fill: $color-second;
+		}
+
+		&:active {
+			fill: $color-second-active;
+		}
+	}
+
+	&__tag-close-icon {
+		@extend %transition;
+		transform: rotate(45deg);
+		width: 50%;
+		height: 50%;
+	}
+
+	&__input-wrap {
+		position: relative;
+	}
+
+	&__input {
+		padding-right: 77px;
+	}
+
+	&__btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		opacity: 1;
+
+		&_hidden {
+			opacity: 0;
+			display: none;
+		}
+	}
+}

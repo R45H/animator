@@ -17,6 +17,7 @@ include ../mixins/fancybox
 include ../mixins/check
 include ../mixins/radio
 include ../mixins/file-img
+include ../mixins/cloud
 
 .row.mb-30
 	.col-2
@@ -122,6 +123,9 @@ include ../mixins/file-img
 		.btn.btn_icon
 			span.btn__text .btn.btn_icon
 			+svg('arrow-right', 'btn__icon')
+	.col-2
+		.btn.btn_icon_only
+			+svg('arrow-right', 'btn__icon')
 
 .row.mb-30
 	.col-3
@@ -153,6 +157,10 @@ include ../mixins/file-img
 		input.input.input_number(type='text' placeholder='.input.input_number')
 	.col-3
 		textarea.input(placeholder='textarea.input')
+
+.row.main__separator
+	.col-4
+		+cloud(cloud)
 
 .row.main__separator
 	.col-2

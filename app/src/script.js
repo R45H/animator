@@ -40,6 +40,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/aside/aside.js'
 	}());
+	(function() {
+		//=require 'blocks/cloud/cloud.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
