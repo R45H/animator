@@ -2,6 +2,7 @@ include ../mixins/banner
 include ../mixins/check
 include ../mixins/select
 include ../mixins/file-img
+include ../mixins/cloud
 
 .mb-30
 	.block
@@ -46,9 +47,9 @@ include ../mixins/file-img
 									input.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
 
 							.params-lg__row
-								.params-lg__title Теги
+								.params-lg__title Дополнительный телефон
 								.params-lg__value
-									input.input(type='text' placeholder='Перечислите через запятую...')
+									input.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
 
 							.params-lg__row
 								.params-lg__title Станция метро
@@ -95,6 +96,11 @@ include ../mixins/file-img
 				.col-md-8
 					.params-lg.params-lg_fixed-title
 						.params-lg__wrap
+
+							.params-lg__row.params-lg__row_valign_baseline
+								.params-lg__title Теги
+								.params-lg__value
+									+cloud
 
 							.params-lg__row
 								.params-lg__title
