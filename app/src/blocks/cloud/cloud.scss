@@ -3,11 +3,15 @@ $name: cloud;
 .#{$name} {
 	overflow: hidden;
 
+	&__tags-wrap {
+		margin-left: -5px;
+	}
+
 	&__tags {
-		margin: 0 -5px;
 		display: flex;
 		align-items: flex-start;
-		flex-wrap: wrap;
+		white-space: nowrap;
+		overflow: auto;
 	}
 
 	&__tag {
@@ -15,7 +19,7 @@ $name: cloud;
 		color: $color-gray-dark;
 		padding: 5px 30px 5px 10px;
 		cursor: default;
-		margin: 0 5px 10px;
+		margin: 10px 5px;
 		position: relative;
 		width: auto;
 		user-select: none;
@@ -34,6 +38,7 @@ $name: cloud;
 		cursor: pointer;
 		overflow: hidden;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		fill: $color-gray-dark;

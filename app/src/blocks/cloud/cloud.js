@@ -7,9 +7,11 @@ $blocks.each(function() {
 	var
 		$block = $(this),
 		$tagsWrap = $block.find('.' + classBlock + '__tags'),
+		$tags = $block.find('.' + classBlock + '__tag'),
 		$input = $block.find('.' + classBlock + '__input'),
 		$btn = $block.find('.' + classBlock + '__btn'),
-		isFill = false;
+		isFill = false,
+		isAlreadyExist = false;
 
 	/* Обработка появления кнопки при вводе в поле ввода */
 	$input.on('input', function() {
@@ -17,18 +19,37 @@ $blocks.each(function() {
 			$this = $(this),
 			val = $this.val();
 
+		$tags.each(function() {
+			var tagText = $(this).find('.' + classBlock + '__tag-text').text();
+
+			if (val && val == tagText) {
+				isAlreadyExist = true;
+				return false;
+			} else {
+				isAlreadyExist = false;
+			}
+		});
+
 		if (val) {
 
-			if (isFill) {
-				return;
+			if (isAlreadyExist) {
+				isFill = false;
+				$btn.animate({
+					opacity: 0
+				}, delay / 2);
 			} else {
-				isFill = true;
-				$btn
-					.css('opacity', 0)
-					.removeClass(classBlock + '__btn_hidden')
-					.animate({
-						opacity: 1
-					}, delay / 2);
+
+				if (isFill) {
+					return;
+				} else {
+					isFill = true;
+					$btn
+						.css('opacity', 0)
+						.removeClass(classBlock + '__btn_hidden')
+						.animate({
+							opacity: 1
+						}, delay / 2);
+				}
 			}
 		} else {
 
@@ -51,7 +72,7 @@ $blocks.each(function() {
 			val = $input.val(),
 			newTag;
 
-		if (!val) return;
+		if (!isFill || isAlreadyExist) return false;
 
 		newTag = '' +
 			'<div class="cloud__tag">' +
@@ -64,6 +85,9 @@ $blocks.each(function() {
 			'</div>';
 
 		$tagsWrap.append(newTag);
+		$tags = $block.find('.' + classBlock + '__tag');
+
+		$tagsWrap.scrollLeft($tagsWrap.offset().left + $tagsWrap.width());
 
 		$input
 			.val('')
@@ -84,6 +108,7 @@ $blocks.each(function() {
 
 		$thisTag.fadeOut(delay, function() {
 			$thisTag.remove();
+			$tags = $block.find('.' + classBlock + '__tag');
 		});
 	});
 	/* ===== */

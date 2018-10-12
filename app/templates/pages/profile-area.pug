@@ -46,10 +46,10 @@ include ../mixins/cloud
 								.params-lg__value
 									input.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
 
-							.params-lg__row
-								.params-lg__title Дополнительный телефон
+							.params-lg__row.params-lg__row_valign_baseline
+								.params-lg__title Теги
 								.params-lg__value
-									input.input.input_tel(type='tel' placeholder='+7 (___) ___-__-__')
+									+cloud
 
 							.params-lg__row
 								.params-lg__title Станция метро
@@ -95,12 +95,6 @@ include ../mixins/cloud
 			.row
 				.col-md-8
 					.params-lg.params-lg_fixed-title
-						.params-lg__wrap
-
-							.params-lg__row.params-lg__row_valign_baseline
-								.params-lg__title Теги
-								.params-lg__value
-									+cloud
 
 							.params-lg__row
 								.params-lg__title
