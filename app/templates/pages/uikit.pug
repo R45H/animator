@@ -486,8 +486,9 @@ include ../mixins/cloud
 					.tab__link(data-tab-link='testTab-2') .tab__link 2
 			.row
 				.col-12
-					.tab__target.tab__target_active(data-tab-target='testTab-1') .tab__target 1
-					.tab__target(data-tab-target='testTab-2') .tab__target 2
+					.tab__target(
+						data-tab-target='[{"target": "testTab-1", "text": "Имя"}, {"target": "testTab-2", "text": "Название организации"}]'
+					)
 
 .row.main__separator
 	.col-12

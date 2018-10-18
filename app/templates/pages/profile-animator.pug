@@ -39,25 +39,25 @@ include ../mixins/cloud
 					.params-lg.params-lg_fixed-title
 						.params-lg__wrap
 
-							.params-lg__row.tab__target.tab__target_display_table-row.tab__target_active(data-tab-target='tab-1')
-								.params-lg__title Имя
+							.params-lg__row
+								.params-lg__title.tab__target(
+									data-tab-target='[{"target": "tab-1", "text": "Имя"}, {"target": "tab-2", "text": "Название организации"}]'
+								)
 								.params-lg__value
-									input.input(type='text' placeholder='Иван')
+									input.input.tab__target(
+										type='text'
+										data-tab-target='[{"target": "tab-1", "attrs": {"placeholder": "Иван"}}, {"target": "tab-2", "attrs": {"placeholder": "Введите название организации"}}]'
+									)
 
-							.params-lg__row.tab__target.tab__target_display_table-row.tab__target_active(data-tab-target='tab-1')
-								.params-lg__title Фамилия
+							.params-lg__row
+								.params-lg__title.tab__target(
+									data-tab-target='[{"target": "tab-1", "text": "Фамилия"}, {"target": "tab-2", "text": "Юридический адрес"}]'
+								)
 								.params-lg__value
-									input.input(type='text' placeholder='Иванов')
-
-							.params-lg__row.tab__target.tab__target_display_table-row(data-tab-target='tab-2')
-								.params-lg__title Название организации
-								.params-lg__value
-									input.input(type='text' placeholder='Введите название организации')
-
-							.params-lg__row.tab__target.tab__target_display_table-row(data-tab-target='tab-2')
-								.params-lg__title Юридический адрес
-								.params-lg__value
-									input.input(type='text' placeholder='Введите юридический адрес')
+									input.input.tab__target(
+										type='text'
+										data-tab-target='[{"target": "tab-1", "attrs": {"placeholder": "Иванов"}}, {"target": "tab-2", "attrs": {"placeholder": "Введите юридический адрес"}}]'
+									)
 
 							.params-lg__row
 								.params-lg__title Телефон
