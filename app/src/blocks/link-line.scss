@@ -74,4 +74,8 @@ $name: link-line;
 			margin-top: -.3em;
 		}
 	}
+
+	&.tab__link_active {
+		@extend .tab__link_active;
+	}
 }
