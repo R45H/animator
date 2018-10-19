@@ -39,6 +39,20 @@ $name: input;
 	&:active {
 		border-color: $color-second-light-active;
 	}
+
+	&_error {
+		color: $color-error;
+		border-color: $color-error-light;
+
+		&:hover,
+		&:focus {
+			border-color: $color-error-light;
+		}
+
+		&:active {
+			border-color: $color-error-light-active;
+		}
+	}
 }
 
 textarea.#{$name} {

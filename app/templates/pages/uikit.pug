@@ -149,14 +149,16 @@ include ../mixins/cloud
 		})(class='select_multiply')
 
 .row.main__separator
-	.col-3
+	.col-3.mb-30
 		input.input(type='text' placeholder='.input')
-	.col-3
+	.col-3.mb-30
 		input.input.input_tel(type='tel' placeholder='.input.input_tel')
-	.col-3
+	.col-3.mb-30
 		input.input.input_number(type='text' placeholder='.input.input_number')
-	.col-3
+	.col-3.mb-30
 		textarea.input(placeholder='textarea.input')
+	.col-3
+		input.input.input_error(type='text' placeholder='.input.input_error')
 
 .row.main__separator
 	.col-4
@@ -298,8 +300,27 @@ include ../mixins/cloud
 		+params(params)(class='params_sm')
 
 .row.main__separator
-	.col-4
+	.col-6
 		.params-lg
+			.params-lg__wrap
+				.params-lg__row
+					.params-lg__title Заголовок
+					.params-lg__value
+						input.input(type='text' placeholder='Значение')
+				.params-lg__row
+					.params-lg__title Очень длинный заголовок
+					.params-lg__value
+						input.input(type='text' placeholder='Значение')
+				.params-lg__row
+					.params-lg__title Заголовок
+					.params-lg__value
+						textarea.input(placeholder='Значение')
+				.params-lg__row.params-lg__row_valign_baseline
+					.params-lg__title Заголовок
+					.params-lg__value
+						textarea.input(placeholder='Значение')
+	.col-6
+		.params-lg.params-lg_fixed-title
 			.params-lg__wrap
 				.params-lg__row
 					.params-lg__title Заголовок
