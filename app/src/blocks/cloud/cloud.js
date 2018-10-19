@@ -10,8 +10,22 @@ $blocks.each(function() {
 		$tags = $block.find('.' + classBlock + '__tag'),
 		$input = $block.find('.' + classBlock + '__input'),
 		$btn = $block.find('.' + classBlock + '__btn'),
+		$data = $block.find('.' + classBlock + '__data'),
+		data,
 		isFill = false,
 		isAlreadyExist = false;
+
+	try {
+		data = JSON.parse($data.val());
+	} catch(e) {
+		data = [];
+	}
+
+	/* Начальное заполнение тегами */
+	$.each(data, function(index, value) {
+		appendTag($tagsWrap, value);
+	});
+	/* ===== */
 
 	/* Обработка появления кнопки при вводе в поле ввода */
 	$input.on('input', function() {
@@ -69,25 +83,16 @@ $blocks.each(function() {
 	$btn.on('click', function() {
 		var
 			$this = $(this),
-			val = $input.val(),
-			newTag;
+			val = $input.val();
 
 		if (!isFill || isAlreadyExist) return false;
 
-		newTag = '' +
-			'<div class="cloud__tag">' +
-				'<div class="cloud__tag-text">' + val + '</div>' +
-				'<div class="cloud__tag-close">' +
-					'<svg class="cloud__tag-close-icon">' +
-						'<use xlink:href="img/sprite.svg#svg-plus"></use>' +
-					'</svg>' +
-				'</div>' +
-			'</div>';
+		appendTag($tagsWrap, val);
 
-		$tagsWrap.append(newTag);
+		data.push(val);
+		$data.val(JSON.stringify(data));
+
 		$tags = $block.find('.' + classBlock + '__tag');
-
-		$tagsWrap.scrollLeft($tagsWrap.offset().left + $tagsWrap.width());
 
 		$input
 			.val('')
@@ -104,10 +109,17 @@ $blocks.each(function() {
 	$block.on('click', '.' + classBlock + '__tag-close', function() {
 		var
 			$this = $(this),
-			$thisTag = $this.closest('.' + classBlock + '__tag');
+			$thisTag = $this.closest('.' + classBlock + '__tag'),
+			curDataIndex = data.indexOf($thisTag.text());
 
 		$thisTag.fadeOut(delay, function() {
 			$thisTag.remove();
+
+			if (~curDataIndex) {
+				data.splice(curDataIndex, 1);
+				$data.val(JSON.stringify(data));
+			}
+
 			$tags = $block.find('.' + classBlock + '__tag');
 		});
 	});
@@ -124,3 +136,20 @@ $blocks.each(function() {
 	});
 	/* ===== */
 });
+
+function appendTag($wrap, text) {
+	var
+		newTag = '' +
+			'<div class="cloud__tag">' +
+				'<div class="cloud__tag-text">' + text + '</div>' +
+				'<div class="cloud__tag-close">' +
+					'<svg class="cloud__tag-close-icon">' +
+						'<use xlink:href="img/sprite.svg#svg-plus"></use>' +
+					'</svg>' +
+				'</div>' +
+			'</div>';
+
+	$wrap
+		.append(newTag)
+		.scrollLeft($wrap[0].scrollWidth - $wrap.width());
+}

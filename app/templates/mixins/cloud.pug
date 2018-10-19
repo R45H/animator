@@ -3,6 +3,15 @@ include svg
 mixin cloud(data)
 	.cloud
 
+		- var str = [];
+
+		if data
+
+			each val in data
+				- str.push(val);
+
+		input.cloud__data(type='hidden' value= str)
+
 		.cloud__input-wrap
 			input.input.cloud__input(type='text' placeholder='Введите тег...')
 			button.btn.btn_light.btn_icon_only.cloud__btn.cloud__btn_hidden
@@ -10,11 +19,3 @@ mixin cloud(data)
 
 		.cloud__tags-wrap
 			.cloud__tags
-
-				if data
-
-					each val in data
-						.cloud__tag
-							.cloud__tag-text= val
-							.cloud__tag-close
-								+svg('plus', 'cloud__tag-close-icon')
