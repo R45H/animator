@@ -135,3 +135,17 @@ function addIdHash(id) {
 	return id;
 }
 /* ========== */
+
+/* Генерация случайной строки */
+function makeRandomId() {
+	var
+		text = '',
+		possible = "abcdefghijklmnopqrstuvwxyz";
+
+	for (var i = 0; i < 7; i++) {
+		text += possible.charAt(Math.floor(Math.random() * possible.length));
+	}
+
+	return text;
+}
+/* ===== */

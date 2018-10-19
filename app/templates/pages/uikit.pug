@@ -173,13 +173,15 @@ include ../mixins/cloud
 		})(class='file-img_contain')
 
 .row.main__separator
-	.col-12
+	.col-12.mb-30
 		.row.file-group
-			.col-3.file-group__item-wrap.file-group__item-wrap_visible
+			.col-3.mb-30.file-group__item-wrap.file-group__item-wrap_visible
 				+file-img({
 					id: 'fileGroupTest1'
 				})(class='file-group__item')
-			.col-3.file-group__item-wrap
+	.col-12
+		.row.file-group(data-count='3')
+			.col-3.mb-30.file-group__item-wrap.file-group__item-wrap_visible
 				+file-img({
 					id: 'fileGroupTest2'
 				})(class='file-group__item')

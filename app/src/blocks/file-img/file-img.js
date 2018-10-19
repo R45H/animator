@@ -1,55 +1,57 @@
-var
-	classBlock = 'file-img',
-	$blocks = $('.' + classBlock);
+var classBlock = 'file-img';
 
-$blocks.each(function() {
+/* Обработка добавления картинки */
+$(document).on('change', '.' + classBlock + '__input', function() {
 	var
-		$block = $(this),
-		$input = $block.find('.' + classBlock + '__input'), // Инпут
-		$reset = $block.find('.' + classBlock + '__reset'); // Кнопка сброса
+		$thisInput = $(this),
+		$thisBlock = $thisInput.closest('.' + classBlock),
+		inputFiles = this.files; // Картинки
 
-	/* Обработка добавления картинки */
-	$input.on('change', function() {
-		var inputFiles = this.files; // Картинки
+	if (!(inputFiles && inputFiles.length)) return;
 
-		if (!(inputFiles && inputFiles.length)) return;
+	var
+		reader = new FileReader(), // Объект для чтения прикреплённой картинки
+		file = inputFiles[0]; // Картинка
 
-		var
-			reader = new FileReader(), // Объект для чтения прикреплённой картинки
-			file = inputFiles[0]; // Картинка
+	reader.onload = function(e) {
+		$thisBlock
+			.addClass(classBlock + '_selected')
+			.css('background-image', 'url(' + e.target.result + ')')
+			.trigger('added.custom.fileimg');
+	};
 
-		reader.onload = function(e) {
-			$block
-				.addClass(classBlock + '_selected')
-				.css('background-image', 'url(' + e.target.result + ')')
-				.trigger('added.custom.fileimg');
-		};
-
-		reader.readAsDataURL(file);
-	});
-	/* ===== */
-
-	/* Обработка удаления картинки */
-	$reset.on('click', function(e) {
-
-		e.preventDefault();
-
-		$input.val('');
-
-		$block
-			.removeClass(classBlock + '_selected')
-			.css('background-image', '')
-			.trigger('removed.custom.fileimg');
-	});
-	/* ===== */
-
-	/* Обработка фокуса на Firefox */
-	$input.on('focus', function() {
-		$block.addClass(classBlock + '_focus');
-	});
-
-	$input.on('blur', function() {
-		$block.removeClass(classBlock + '_focus');
-	});
-	/*  */
+	reader.readAsDataURL(file);
 });
+/* ===== */
+
+/* Обработка удаления картинки */
+$(document).on('click', '.' + classBlock + '__reset', function(e) {
+	var
+		$thisReset = $(this),
+		$thisBlock = $thisReset.closest('.' + classBlock),
+		$thisInput = $thisBlock.find('.' + classBlock + '__input');
+
+	e.preventDefault();
+
+	$thisInput.val('');
+
+	$thisBlock
+		.removeClass(classBlock + '_selected')
+		.css('background-image', '')
+		.trigger('removed.custom.fileimg');
+});
+/* ===== */
+
+/* Обработка фокуса на Firefox */
+$(document).on('focus', '.' + classBlock + '__input', function() {
+	$(this)
+		.closest('.' + classBlock)
+		.addClass(classBlock + '_focus');
+});
+
+$(document).on('blur', '.' + classBlock + '__input', function() {
+	$(this)
+		.closest('.' + classBlock)
+		.removeClass(classBlock + '_focus');
+});
+/* ===== */

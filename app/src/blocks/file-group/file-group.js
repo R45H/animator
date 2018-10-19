@@ -1,68 +1,100 @@
 var
 	classBlock = 'file-group',
-	$blocks = $('.' + classBlock),
 	delay = 300;
 
-$blocks.each(function() {
+/* Обработка добавления */
+$(document).on('added.custom.fileimg', '.' + classBlock + '__item', function() {
 	var
-		$block = $(this),
-		$wraps = $block.find('.' + classBlock + '__item-wrap');
+		$thisItem = $(this),
+		$thisBlock = $thisItem.closest('.' + classBlock),
+		$thisWrap = $thisItem.closest('.' + classBlock + '__item-wrap'),
+		$wrapLayout,
+		maxCount = $thisBlock.attr('data-count'), // Доступное количество элементов
+		currentCount = $thisBlock.find('.' + classBlock + '__item').length; // Текущее количество
 
-	$wraps.each(function() {
-		var
-			$wrap = $(this),
-			$item = $wrap.find('.' + classBlock + '__item');
+	$thisWrap.addClass(classBlock + '__item-wrap_fill');
 
-		/* Обработка добавления */
-		$item.on('added.custom.fileimg', function() {
+	/* Если следующего элемента нет */
+	if (!$thisWrap.next().length) {
 
-			$wrap.addClass(classBlock + '__item-wrap_fill');
-
-			/* Если следующего элемента нет или он уже видимый, дальше ничего не делать */
-			if (!$wrap.next().length || $wrap.next().hasClass(classBlock + '__item-wrap_visible')) return;
-			/* ===== */
-
-			$wrap
-				.next()
-				.fadeIn(delay, function() {
-					$(this).addClass(classBlock + '__item-wrap_visible');
-				});
-		});
+		/* Ограничение количества */
+		if (currentCount && currentCount >= maxCount) {
+			return;
+		}
 		/* ===== */
 
-		/* Обработка удаления */
-		$item.on('removed.custom.fileimg', function() {
-			var $nextWrap = $wrap.next();
+		var randomId = 'id-' + makeRandomId();
 
-			$wrap.removeClass(classBlock + '__item-wrap_fill');
+		$wrapLayout = $thisWrap
+			.clone(true)
+			.removeClass(classBlock + '__item-wrap_fill');
 
-			if (!$nextWrap.length) return;
+		$wrapLayout
+			.find('.' + classBlock + '__item')
+			.removeClass('file-img_selected file-img_focus')
+			.css('background-image', '')
+			.end()
+			.find('.file-img__input')
+			.val('')
+			.attr('id', randomId)
+			.end()
+			.find('.file-img__label')
+			.attr('for', randomId);
 
-			if (!$nextWrap.hasClass(classBlock + '__item-wrap_fill')) {
+		$wrapLayout.appendTo($thisBlock);
+		return;
+	}
+	/* ===== */
 
-				$wrap.fadeOut(delay, function() {
-					$(this)
-						.removeClass(classBlock + '__item-wrap_visible')
-						.appendTo($block);
-				});
-			} else {
+	/* Если следующий элемент уже видимый */
+	if ($thisWrap.next().hasClass(classBlock + '__item-wrap_visible')) {
+		return;
+	}
+	/* ===== */
 
-				if ($wrap.nextAll().last().hasClass(classBlock + '__item-wrap_fill')) {
-					$wrap
-						.fadeOut(delay, function() {
-							$(this)
-								.appendTo($block)
-								.fadeIn(0);
-						});
-				} else {
-					$wrap.fadeOut(delay, function() {
-						$(this)
-							.removeClass(classBlock + '__item-wrap_visible')
-							.appendTo($block);
-					});
-				}
-			}
+	$thisWrap
+		.next()
+		.fadeIn(delay, function() {
+			$(this).addClass(classBlock + '__item-wrap_visible');
 		});
-		/* ===== */
-	});
 });
+/* ===== */
+
+/* Обработка удаления */
+$(document).on('removed.custom.fileimg', '.' + classBlock + '__item', function() {
+	var
+		$thisItem = $(this),
+		$thisBlock = $thisItem.closest('.' + classBlock),
+		$thisWrap = $thisItem.closest('.' + classBlock + '__item-wrap'),
+		$nextWrap = $thisWrap.next();
+
+	$thisWrap.removeClass(classBlock + '__item-wrap_fill');
+
+	if (!$nextWrap.length) return;
+
+	if (!$nextWrap.hasClass(classBlock + '__item-wrap_fill')) {
+
+		$thisWrap.fadeOut(delay, function() {
+			$(this)
+				.removeClass(classBlock + '__item-wrap_visible')
+				.appendTo($thisBlock);
+		});
+	} else {
+
+		if ($thisWrap.nextAll().last().hasClass(classBlock + '__item-wrap_fill')) {
+			$thisWrap
+				.fadeOut(delay, function() {
+					$(this)
+						.appendTo($thisBlock)
+						.fadeIn(0);
+				});
+		} else {
+			$thisWrap.fadeOut(delay, function() {
+				$(this)
+					.removeClass(classBlock + '__item-wrap_visible')
+					.appendTo($thisBlock);
+			});
+		}
+	}
+});
+/* ===== */

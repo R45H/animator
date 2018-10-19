@@ -129,14 +129,11 @@ include ../mixins/cloud
 					.params-lg__row.params-lg__row_valign_top
 						.params-lg__title Фото
 						.params-lg__value
-							.params-lg__row-i.file-group
-
-								- for (var i = 0; i < 16; i++) {
-									.col-6.col-md-4.params-lg__col-i.file-group__item-wrap(class= !i ? 'file-group__item-wrap_visible' : '')
-										+file-img({
-											id: 'fileImageParamsLg1-' + (i + 1)
-										})(class='file-group__item')
-								- }
+							.params-lg__row-i.file-group(data-count='16')
+								.col-6.col-md-4.params-lg__col-i.file-group__item-wrap(class= !i ? 'file-group__item-wrap_visible' : '')
+									+file-img({
+										id: 'fileImageParamsLg1-' + (i + 1)
+									})(class='file-group__item')
 
 			.row
 				.col-md-8
