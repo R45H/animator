@@ -118,12 +118,10 @@ $name: modal;
 
 	&__body {
 		position: relative;
-		padding: 15px 50px 50px;
+		padding: 15px;
 
-		@include screen-sm(max) {
-			height: 100%;
-			overflow-y: auto;
-			padding: 15px;
+		@include screen-sm() {
+			padding: 15px 50px 50px;
 		}
 	}
 
