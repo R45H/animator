@@ -516,3 +516,16 @@ include ../mixins/cloud
 .row.main__separator
 	.col-12
 		+toggle
+
+.row.main__separator
+	.col-4
+		.tab-slide
+			.tab-slide__item(data-tab-slide-target='tabSlide1')
+				a.tab-slide__link(href='#' data-tab-slide-link='tabSlide2') .tab-slide LinkTo2
+				a.tab-slide__link(href='#' data-tab-slide-link='tabSlide3') .tab-slide LinkTo3
+			.tab-slide__item.tab-slide__item_hidden(data-tab-slide-target='tabSlide2')
+				a.tab-slide__link(href='#' data-tab-slide-link='tabSlide1') .tab-slide LinkTo1
+				a.tab-slide__link(href='#' data-tab-slide-link='tabSlide3') .tab-slide LinkTo3
+			.tab-slide__item.tab-slide__item_hidden(data-tab-slide-target='tabSlide3')
+				a.tab-slide__link(href='#' data-tab-slide-link='tabSlide1') .tab-slide LinkTo1
+				a.tab-slide__link(href='#' data-tab-slide-link='tabSlide2') .tab-slide LinkTo2

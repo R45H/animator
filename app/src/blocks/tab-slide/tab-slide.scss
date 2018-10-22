@@ -1,0 +1,15 @@
+$name: tab-slide;
+
+.#{$name} {
+
+	&__link {
+
+	}
+
+	&__item {
+
+		&_hidden {
+			display: none;
+		}
+	}
+}

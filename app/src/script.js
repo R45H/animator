@@ -43,6 +43,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/cloud/cloud.js'
 	}());
+	(function() {
+		//=require 'blocks/tab-slide/tab-slide.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
