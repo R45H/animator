@@ -130,6 +130,16 @@ $name: modal;
 		width: 100%;
 	}
 
+	&__btn {
+
+		@include screen-sm(max) {
+			display: block;
+			width: 100%;
+			max-width: 350px;
+			margin: 0 auto;
+		}
+	}
+
 	&_visible {
 		display: flex;
 	}
