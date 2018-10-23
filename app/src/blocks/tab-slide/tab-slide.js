@@ -7,7 +7,8 @@ $blocks.each(function() {
 	var
 		$block = $(this),
 		$targets = $block.find('.' + classBlock + '__item'),
-		$links = $block.find('.' + classBlock + '__link');
+		$links = $block.find('.' + classBlock + '__link'),
+		$modal = $block.closest('.modal');
 
 	$links.each(function() {
 		var
@@ -34,4 +35,15 @@ $blocks.each(function() {
 			});
 		});
 	});
+
+	if ($modal.length) {
+
+		$modal.on('hidden.custom.modal', function() {
+			$targets
+				.css('display', '')
+				.addClass(classBlock + '__item_hidden')
+				.first()
+				.removeClass(classBlock + '__item_hidden');
+		});
+	}
 });
