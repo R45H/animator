@@ -56,7 +56,6 @@ $selects.each(function() {
 
 				/* Обработка селекта с модалкой */
 				$this
-					.selectmenu('disable')
 					.next()
 					.append('' +
 						'<svg class="' + classBlock + '__icon ' + classBlock + '__icon_multiply-empty">' +
@@ -137,6 +136,16 @@ $selects.each(function() {
 			if (!$thisBlock.hasClass(classLight)) return;
 			if ($thisNative.find('option').first().attr('disabled')) return;
 			$thisBlock.addClass(classLightSelected);
+			/* ===== */
+		},
+
+		// Действия при открытии селекта
+		open: function() {
+
+			/* Отмена открытия списка для элемента с модалкой */
+			if ($thisBlock.hasClass(classMultiply)) {
+				$thisNative.selectmenu('close');
+			}
 			/* ===== */
 		},
 
