@@ -50,7 +50,9 @@ $blocks.each(function() {
 				isFill = false;
 				$btn.animate({
 					opacity: 0
-				}, delay / 2);
+				}, delay / 2, function() {
+					$(this).css('pointer-events', 'none')
+				});
 			} else {
 
 				if (isFill) {
@@ -58,7 +60,10 @@ $blocks.each(function() {
 				} else {
 					isFill = true;
 					$btn
-						.css('opacity', 0)
+						.css({
+							'opacity': 0,
+							'pointer-events': ''
+						})
 						.removeClass(classBlock + '__btn_hidden')
 						.animate({
 							opacity: 1
@@ -73,7 +78,9 @@ $blocks.each(function() {
 				isFill = false;
 				$btn.animate({
 					opacity: 0
-				}, delay / 2);
+				}, delay / 2, function() {
+					$(this).css('pointer-events', 'none')
+				});
 			}
 		}
 	});
