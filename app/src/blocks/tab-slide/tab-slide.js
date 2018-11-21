@@ -17,7 +17,7 @@ $blocks.each(function() {
 
 		$link.on('click', function(e) {
 			var
-				$target = $targets.filter('[data-tab-slide-target="' + link + '"]');
+				$target = $targets.filter('[data-tab-slide-target="' + link + '"]'),
 				$restTarget = $targets.filter(':not(.' + classBlock + '__item_hidden)');
 
 			e.preventDefault();
