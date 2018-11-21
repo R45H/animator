@@ -31,6 +31,7 @@ $name: card;
 		overflow: hidden;
 		display: block;
 		width: 100%;
+		position: relative;
 	}
 
 	&__img {
@@ -40,6 +41,8 @@ $name: card;
 		height: 100%;
 		background: no-repeat center / cover;
 		transition: $duration linear;
+		position: relative;
+		z-index: 1;
 	}
 
 	&__content-wrap {
@@ -269,6 +272,60 @@ $name: card;
 
 			&__img {
 				background-size: contain;
+			}
+		}
+	}
+
+	&_noimage {
+
+		.#{$name} {
+			// =====
+
+			&__img-link {
+
+				&::before {
+					content: '\e802';
+					font-family: $font-custom;
+					font-size: 100px;
+					color: $color-gray;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					opacity: .5;
+					transition: $duration linear;
+				}
+
+				&:hover {
+
+					&::before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		a.#{$name}__img-link {
+
+			&:hover {
+
+				&::before {
+					transform: scale(1.06);
+				}
+			}
+
+			&.fancybox {
+
+				&:hover {
+
+					&::before {
+						transform: none;
+					}
+				}
 			}
 		}
 	}
