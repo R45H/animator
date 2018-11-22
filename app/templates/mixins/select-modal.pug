@@ -1,0 +1,14 @@
+mixin select-modal(data, opts)
+	.select-modal(
+		class= attributes.class
+		data-modal-title= opts.modalTitle
+		data-modal-btn= opts.modalBtn
+	)
+		select.select-modal__origin(multiple)
+			option(disabled selected)= opts.title
+
+			each val in data
+				option= val
+
+		.select-modal__current
+			.select-modal__text= opts.title

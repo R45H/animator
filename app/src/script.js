@@ -46,6 +46,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/tab-slide/tab-slide.js'
 	}());
+	(function() {
+		//=require 'blocks/select-modal/select-modal.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

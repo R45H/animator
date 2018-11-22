@@ -5,6 +5,7 @@ include ../components/pagination
 include ../components/toggle
 include ../mixins/star
 include ../mixins/select
+include ../mixins/select-modal
 include ../mixins/news
 include ../mixins/link-arrow
 include ../mixins/logo
@@ -141,12 +142,32 @@ include ../mixins/cloud
 		+select(select, {
 			title: 'Заголовок селекта'
 		})
+
+.row.main__separator
 	.col-3
-		+select(select_2, {
+		+select-modal(select_3, {
 			title: 'Выбрать героев',
 			modalTitle: 'Выберите героев',
 			modalBtn: 'Применить'
-		})(class='select_multiply')
+		})
+	.col-3
+		+select-modal(select_4, {
+			title: 'Выбрать героев',
+			modalTitle: 'Выберите героев',
+			modalBtn: 'Применить'
+		})(class='select-modal_wide')
+	.col-3
+		+select-modal(select_5, {
+			title: 'Выбрать героев',
+			modalTitle: 'Выберите героев',
+			modalBtn: 'Применить'
+		})(class='select-modal_light')
+	.col-3
+		+select-modal(select_6, {
+			title: 'Выбрать героев',
+			modalTitle: 'Выберите героев',
+			modalBtn: 'Применить'
+		})(class='select-modal_simple')
 
 .row.main__separator
 	.col-3.mb-30

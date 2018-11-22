@@ -1,0 +1,168 @@
+$name: select-modal;
+
+.#{$name} {
+	display: inline-block;
+	max-width: 100%;
+
+	&__origin {
+		display: none;
+	}
+
+	&__current {
+		@extend .btn;
+		width: auto;
+		max-width: 100%;
+		fill: $color-main;
+		outline: none;
+		padding-left: 20px;
+		padding-right: 51px;
+		margin: 0;
+		appearance: none;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 20px;
+			right: 20px;
+			height: 1px;
+			background: lighten($color-main, 30%);
+			display: none;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		width: 11px;
+		height: 11px;
+		margin-top: -5px;
+		transition: transform $duration / 2 ease;
+
+		&_empty {
+
+		}
+
+		&_ready {
+			display: none;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		text-align: left;
+	}
+
+	&_ready {
+
+		.#{$name} {
+			// =====
+
+			&__icon {
+
+				&_empty {
+					display: none;
+				}
+
+				&_ready {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&_wide {
+		display: block;
+
+		.#{$name} {
+
+			&__current {
+				width: 100%;
+			}
+		}
+	}
+
+	&_light {
+
+		.#{$name} {
+			// =====
+
+			&__current {
+				color: $color-gray-dark;
+				border-color: $color-main-light;
+				fill: $color-gray-dark;
+
+				&:hover,
+				&:focus {
+					color: $color-second-light;
+					border-color: $color-second-light;
+					fill: $color-second-light;
+				}
+
+				&:active {
+					color: $color-second-light-active;
+					border-color: $color-second-light-active;
+					fill: $color-second-light-active;
+				}
+			}
+		}
+	}
+
+	&_light-selected {
+
+		.#{$name} {
+			// ====
+
+			&__current {
+				color: $color-text-dark;
+
+				&:hover,
+				&:focus {
+					color: $color-second;
+				}
+
+				&:active {
+					color: $color-second-active;
+				}
+			}
+		}
+	}
+
+	&_simple {
+
+		.#{$name} {
+			// =====
+
+			&__current {
+				fill: $color-text;
+				color: $color-text-dark;
+				border-radius: 0;
+				border: none;
+				border-bottom: 1px solid $color-gray;
+				padding: 6px 24px 6px 0;
+
+				&::before {
+					display: none;
+				}
+
+				&:hover,
+				&:focus {
+					color: $color-second;
+				}
+
+				&:active {
+					color: $color-second-active;
+				}
+			}
+
+			&__icon {
+				right: 0;
+			}
+		}
+	}
+}
