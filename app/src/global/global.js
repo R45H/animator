@@ -14,15 +14,3 @@ $(document).on('click', 'a', function(event) {
 });
 
 svg4everybody();
-
-/* Сброс кастомных селектов при нажатии на reset формы */
-$('input[type=reset]').on('click', function() {
-	var $selectBlocks = $(this).closest('form').find('.select');
-
-	$selectBlocks.each(function() {
-		$(this)
-			.attr('data-values', null)
-			.removeClass('select_multiply-ready select_light-selected');
-	});
-});
-/* ===== */

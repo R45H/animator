@@ -63,14 +63,6 @@ $name: select;
 		height: 11px;
 		margin-top: -5px;
 		transition: transform $duration / 2 ease;
-
-		&_multiply-empty {
-
-		}
-
-		&_multiply-ready {
-			display: none;
-		}
 	}
 
 	&__text {
@@ -297,28 +289,6 @@ $name: select;
 
 			&__icon {
 				right: 0;
-			}
-		}
-	}
-
-	&_multiply {
-
-	}
-
-	&_multiply-ready {
-
-		.#{$name} {
-			// =====
-
-			&__icon {
-
-				&_multiply-empty {
-					display: none;
-				}
-
-				&_multiply-ready {
-					display: block;
-				}
 			}
 		}
 	}
