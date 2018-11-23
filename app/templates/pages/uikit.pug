@@ -252,26 +252,31 @@ include ../mixins/cloud
 		})(class='tags_color_gray wrapper__tags')
 
 .row.main__separator
-	.col-2
+	.col-2.mb-15
 		+check({
 			id: 'check-1',
 			text: '.check'
 		})
-	.col-3
+	.col-3.mb-15
 		+check({
 			id: 'check-2',
 			text: '.check.check_thin'
 		})(class='check_thin')
-	.col-3
+	.col-3.mb-15
 		+check({
 			id: 'check-3',
 			text: '.check.check_sm'
 		})(class='check_sm')
-	.col-3
+	.col-3.mb-15
 		+check({
 			id: 'check-4',
 			text: '.check.check_color_dark'
 		})(class='check_color_dark')
+	.col-3.mb-15
+		+check({
+			id: 'check-5',
+			text: '.check.check_fat'
+		})(class='check_fat')
 
 .row.main__separator
 	.col-2
@@ -301,6 +306,14 @@ include ../mixins/cloud
 				{text: '.radio.radio_sm'}
 			]
 		})(class='radio_sm')
+	.col-3
+		+radio({
+			name: 'radio-group-4',
+			items: [
+				{text: '.radio.radio_fat'},
+				{text: '.radio.radio_fat'}
+			]
+		})(class='radio_fat')
 
 .row.main__separator
 	.col-1

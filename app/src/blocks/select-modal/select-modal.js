@@ -102,8 +102,8 @@ $selects.each(function() {
 
 			/* Запись чекбокса в модалку */
 			$modalValuesWrap.append('' +
-				'<div class="col-sm-6 mb-10">' +
-					'<div class="check">' +
+				'<div class="col-sm-6">' +
+					'<div class="check check_fat">' +
 						'<input class="check__input" id="modalSelectItem-' + count + '" type="checkbox" ' + (isChecked ? 'checked' : '') + '>' +
 						'<label class="check__label" for="modalSelectItem-' + count++ + '">' + $thisOption.text() + '</label>' +
 					'</div>' +

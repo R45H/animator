@@ -26,7 +26,7 @@ include ../mixins/cloud
 		form
 			.row
 
-				.col-md-4.push-md-8.col-xl-4.push-xl-8.main__vertical_between.mb-20
+				.col-md-4.push-md-8.col-xl-4.push-xl-8.main__vertical_between.mb-20.mb-md-15
 					+banner({
 						img: 'img/content/card/01.jpg',
 						fancybox: true,
@@ -35,7 +35,7 @@ include ../mixins/cloud
 
 					input.btn.btn_sm.btn_wide.btn_light(type='button' value='Загрузить фотографию')
 
-				.col-md-8.pull-md-4.col-xl-8.pull-xl-4.mb-20
+				.col-md-8.pull-md-4.col-xl-8.pull-xl-4.mb-20.mb-sm-15
 					.params-lg.params-lg_fixed-title
 						.params-lg__wrap
 
@@ -80,14 +80,14 @@ include ../mixins/cloud
 					.params-lg__row.params-lg__row_valign_baseline.params-lg__row_space_half
 						.params-lg__title Сфера деятельности
 						.params-lg__value
-							.row
+							.row.mb-5
 
 								each val, i in check_2
-									.col-sm-6.col-md-4.mb-10
+									.col-sm-6.col-md-4
 										+check({
 											id: 'profileCheck-1-' + i + 1,
 											text: val
-										})(class='wrapper__check')
+										})(class='check_fat wrapper__check')
 
 					.params-lg__row
 						.params-lg__title Стоимость работы
