@@ -103,62 +103,6 @@ svg {
 	background: $color-main;
 }
 
-.hidden-xs {
-
-	@include screen-sm(max) {
-		display: none !important;
-	}
-}
-
-.hidden-sm {
-
-	@include screen-md(max) {
-		display: none !important;
-	}
-}
-
-.hidden-md {
-
-	@include screen-lg(max) {
-		display: none !important;
-	}
-}
-
-.hidden-lg {
-
-	@include screen-xl(max) {
-		display: none !important;
-	}
-}
-
-.visible-xs {
-
-	@include screen-sm() {
-		display: none !important;
-	}
-}
-
-.visible-sm {
-
-	@include screen-md() {
-		display: none !important;
-	}
-}
-
-.visible-md {
-
-	@include screen-lg() {
-		display: none !important;
-	}
-}
-
-.visible-lg {
-
-	@include screen-xl() {
-		display: none !important;
-	}
-}
-
 .text-left {
 	text-align: left;
 }
@@ -237,6 +181,132 @@ svg {
 .mb-sm-30 {
 
 	@include screen-sm() {
+		margin-bottom: 30px;
+	}
+}
+
+.mb-md-0 {
+
+	@include screen-md() {
+		margin-bottom: 0;
+	}
+}
+
+.mb-md-5 {
+
+	@include screen-md() {
+		margin-bottom: 5px;
+	}
+}
+
+.mb-md-10 {
+
+	@include screen-md() {
+		margin-bottom: 10px;
+	}
+}
+
+.mb-md-15 {
+
+	@include screen-md() {
+		margin-bottom: 15px;
+	}
+}
+
+.mb-md-20 {
+
+	@include screen-md() {
+		margin-bottom: 20px;
+	}
+}
+
+.mb-md-30 {
+
+	@include screen-md() {
+		margin-bottom: 30px;
+	}
+}
+
+.mb-lg-0 {
+
+	@include screen-lg() {
+		margin-bottom: 0;
+	}
+}
+
+.mb-lg-5 {
+
+	@include screen-lg() {
+		margin-bottom: 5px;
+	}
+}
+
+.mb-lg-10 {
+
+	@include screen-lg() {
+		margin-bottom: 10px;
+	}
+}
+
+.mb-lg-15 {
+
+	@include screen-lg() {
+		margin-bottom: 15px;
+	}
+}
+
+.mb-lg-20 {
+
+	@include screen-lg() {
+		margin-bottom: 20px;
+	}
+}
+
+.mb-lg-30 {
+
+	@include screen-lg() {
+		margin-bottom: 30px;
+	}
+}
+
+.mb-xl-0 {
+
+	@include screen-xl() {
+		margin-bottom: 0;
+	}
+}
+
+.mb-xl-5 {
+
+	@include screen-xl() {
+		margin-bottom: 5px;
+	}
+}
+
+.mb-xl-10 {
+
+	@include screen-xl() {
+		margin-bottom: 10px;
+	}
+}
+
+.mb-xl-15 {
+
+	@include screen-xl() {
+		margin-bottom: 15px;
+	}
+}
+
+.mb-xl-20 {
+
+	@include screen-xl() {
+		margin-bottom: 20px;
+	}
+}
+
+.mb-xl-30 {
+
+	@include screen-xl() {
 		margin-bottom: 30px;
 	}
 }
