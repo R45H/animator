@@ -179,6 +179,10 @@ svg {
 	margin-bottom: 0;
 }
 
+.mb-5 {
+	margin-bottom: 5px;
+}
+
 .mb-10 {
 	margin-bottom: 10px;
 }
@@ -199,6 +203,13 @@ svg {
 
 	@include screen-sm() {
 		margin-bottom: 0;
+	}
+}
+
+.mb-sm-5 {
+
+	@include screen-sm() {
+		margin-bottom: 5px;
 	}
 }
 
