@@ -112,6 +112,17 @@ $name: check;
 		}
 	}
 
+	&_fat {
+
+		.#{$name} {
+			// =====
+
+			&__label {
+				padding: 8px 0;
+			}
+		}
+	}
+
 	&_color_dark {
 
 		.#{$name} {
