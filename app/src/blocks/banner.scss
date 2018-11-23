@@ -141,10 +141,6 @@ a.#{$name} {
 
 	&:hover {
 
-		&::before {
-			transform: scale(1.06);
-		}
-
 		.#{$name} {
 			// =====
 

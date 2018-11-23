@@ -3,6 +3,7 @@ include ../mixins/check
 include ../mixins/select
 include ../mixins/file-img
 include ../mixins/cloud
+include ../mixins/file-avatar
 
 .mb-30
 	.block.tab
@@ -27,13 +28,10 @@ include ../mixins/cloud
 			.row
 
 				.col-md-4.push-md-8.col-xl-4.push-xl-8.main__vertical_between.mb-20.mb-md-15
-					+banner({
-						img: 'img/content/card/01.jpg',
-						fancybox: true,
+					+file-avatar({
+						id: 'fileAvatarAnimator',
 						title: 'Фотография аниматора'
-					})(class='main__flex-banner mb-20')
-
-					input.btn.btn_sm.btn_wide.btn_light(type='button' value='Загрузить фотографию')
+					})(class='main__flex-banner')
 
 				.col-md-8.pull-md-4.col-xl-8.pull-xl-4.mb-20.mb-sm-15
 					.params-lg.params-lg_fixed-title

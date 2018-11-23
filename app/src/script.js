@@ -49,6 +49,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/select-modal/select-modal.js'
 	}());
+	(function() {
+		//=require 'blocks/file-avatar/file-avatar.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

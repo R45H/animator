@@ -1,0 +1,27 @@
+mixin file-avatar(data)
+	.file-avatar(class= attributes.class)
+
+		.file-avatar__wrap.mb-20
+
+			.banner.file-avatar__img-wrap.wrapper__banner
+				a.file-avatar__link(
+					class='fancybox wrapper__fancybox'
+					href='#'
+					data-fancybox='group-' + data.id
+					data-caption= data.title
+				)
+					.file-avatar__img.banner__img(
+						role='img'
+						aria-label= data.title
+						title= data.title
+					)
+
+			input.file-avatar__input(
+				type='file'
+				accept='image/*'
+				id= data.id
+			)
+
+			button.file-avatar__reset(tabindex='-1')
+
+		label.btn.btn_sm.btn_wide.btn_light.file-avatar__label(for= data.id) Загрузить фотографию

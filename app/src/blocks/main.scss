@@ -38,12 +38,18 @@ $name: main;
 	}
 
 	&__flex-banner {
-		flex-grow: 1;
+		height: 100%;
 		display: flex;
+		flex-direction: column;
 
-		.banner {
+		.file-avatar {
 
-			&__img {
+			&__wrap {
+				display: flex;
+				flex-direction: column;
+			}
+
+			&__img-wrap {
 
 				@include screen-md() {
 					padding-bottom: 0;

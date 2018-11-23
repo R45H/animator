@@ -308,26 +308,6 @@ $name: card;
 				}
 			}
 		}
-
-		a.#{$name}__img-link {
-
-			&:hover {
-
-				&::before {
-					transform: scale(1.06);
-				}
-			}
-
-			&.fancybox {
-
-				&:hover {
-
-					&::before {
-						transform: none;
-					}
-				}
-			}
-		}
 	}
 }
 
