@@ -56,5 +56,10 @@ $name: input;
 }
 
 textarea.#{$name} {
-	height: 5.334em;
+	min-height: 148px;
+	resize: vertical;
+
+	@include screen-md() {
+		min-height: 94px;
+	}
 }
