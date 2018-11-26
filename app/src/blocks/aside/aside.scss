@@ -13,62 +13,10 @@ $name: aside;
 	transition: $duration / 2 ease;
 
 	&__close {
-		@extend %transition;
-		background: none;
-		outline: none;
-		padding: 0;
 		position: absolute;
 		top: 10px;
 		right: 10px;
-		cursor: pointer;
 		z-index: 1;
-		width: 25px;
-		height: 25px;
-		border-radius: 50%;
-		border: 1px solid rgba(white, .15);
-
-		$width: 15px;
-		$height: 1px;
-
-		&::before,
-		&::after {
-			@extend %transition;
-			content: '';
-			position: absolute;
-			width: $width;
-			height: $height;
-			top: 50%;
-			left: 50%;
-			margin-top: -(round($height / 2));
-			margin-left: -(round($width / 2));
-			background: rgba(white, .6);
-		}
-
-		&::before {
-			transform: rotate(45deg);
-		}
-
-		&::after {
-			transform: rotate(-45deg);
-		}
-
-		&:hover {
-			border-color: rgba(white, .6);
-
-			&::before,
-			&::after {
-				background: white;
-			}
-		}
-
-		&:active {
-			border-color: white;
-
-			&::before,
-			&::after {
-				background: white;
-			}
-		}
 	}
 
 	&__list {

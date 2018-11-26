@@ -1,0 +1,88 @@
+$name: btn-close;
+
+.#{$name} {
+	@extend %transition;
+	background: none;
+	outline: none;
+	padding: 0;
+	position: relative;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 1px solid $color-gray;
+
+	$width: 16px;
+	$height: 1px;
+
+	&::before,
+	&::after {
+		@extend %transition;
+		content: '';
+		position: absolute;
+		width: $width;
+		height: $height;
+		top: 50%;
+		left: 50%;
+		margin-top: -(round($height / 2));
+		margin-left: -(round($width / 2));
+		background-color: $color-gray-dark;
+	}
+
+	&::before {
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		transform: rotate(-45deg);
+	}
+
+	&:hover {
+		border-color: $color-second-light;
+
+		&::before,
+		&::after {
+			background-color: $color-second;
+		}
+	}
+
+	&:active {
+		border-color: $color-second-light-active;
+
+		&::before,
+		&::after {
+			background-color: $color-second-active;
+		}
+	}
+
+	&_light {
+		border-color: rgba(white, .15);
+
+		&::before,
+		&::after {
+			background-color: rgba(white, .6);
+		}
+
+		&:hover {
+			border-color: rgba(white, .6);
+
+			&::before,
+			&::after {
+				background-color: white;
+			}
+		}
+
+		&:active {
+			border-color: white;
+
+			&::before,
+			&::after {
+				background-color: white;
+			}
+		}
+	}
+
+	&_fill {
+		background-color: white;
+	}
+}
