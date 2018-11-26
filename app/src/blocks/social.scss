@@ -5,6 +5,8 @@ $name: social;
 
 	&__wrap {
 		margin: -5px;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	&__link {
