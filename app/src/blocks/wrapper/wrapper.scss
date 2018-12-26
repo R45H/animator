@@ -130,8 +130,14 @@ $name: wrapper;
 			.#{$name} {
 				// =====
 
+				&__tab-item-wrap {
+					flex-direction: row;
+					flex-wrap: wrap;
+				}
+
 				&__tab-item {
 					width: 33.33333%;
+					flex-grow: 1;
 					min-width: 130px;
 					margin-bottom: 0;
 
@@ -147,13 +153,16 @@ $name: wrapper;
 
 	&__tab-item-wrap {
 		display: flex;
+		flex-direction: column;
 		margin: 0 -15px;
 		height: 100%;
-		flex-wrap: wrap;
+
+		@include screen-lg() {
+			flex-direction: row;
+		}
 	}
 
 	&__tab-item {
-		flex-grow: 1;
 		padding: 0 15px;
 		display: flex;
 		flex-direction: column;
@@ -161,9 +170,9 @@ $name: wrapper;
 		margin-bottom: 30px;
 		width: 100%;
 
-		@include screen-sm() {
-			width: auto;
-			max-width: 100%;
+		@include screen-lg() {
+			width: 25%;
+			flex-grow: 1;
 		}
 	}
 
