@@ -144,7 +144,7 @@ include ../mixins/file-avatar
 			title: 'Заголовок селекта'
 		})
 
-.row.main__separator
+.row.mb-30
 	.col-3
 		+select-modal(select_3, {
 			title: 'Выбрать героев',
@@ -169,6 +169,14 @@ include ../mixins/file-avatar
 			modalTitle: 'Выберите героев',
 			modalBtn: 'Применить'
 		})(class='select-modal_simple')
+.row.main__separator
+	.col-3
+		+select-modal(select_7, {
+			title: 'Выбрать героев',
+			modalTitle: 'Выберите героев',
+			modalBtn: 'Применить',
+			hiddenInputs: true
+		})
 
 .row.main__separator
 	.col-3.mb-30

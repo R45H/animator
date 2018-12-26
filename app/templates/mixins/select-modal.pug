@@ -1,14 +1,31 @@
 mixin select-modal(data, opts)
 	.select-modal(
 		class= attributes.class
+		class= opts.hiddenInputs ? 'select-modal_inputs' : ''
 		data-modal-title= opts.modalTitle
 		data-modal-btn= opts.modalBtn
 	)
-		select.select-modal__origin(multiple)
-			option(disabled selected)= opts.title
 
-			each val in data
-				option= val
+		if (opts.hiddenInputs)
+			.select-modal__origin
+				input(
+					type='hidden'
+					data-title= opts.title
+					disabled
+				)
+
+				each val in data
+					input(
+						type='hidden'
+						data-title= val
+					)
+
+		else
+			select.select-modal__origin(multiple)
+				option(disabled selected)= opts.title
+
+				each val in data
+					option= val
 
 		.select-modal__current
 			.select-modal__text= opts.title
