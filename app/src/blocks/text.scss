@@ -15,6 +15,81 @@ $name: text;
 		}
 	}
 
+	ul,
+	ol {
+		text-align: justify;
+		margin: 1em 0;
+		list-style-type: none;
+
+		li {
+			margin: .5em 0;
+			padding-left: 4rem;
+			position: relative;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		ul,
+		ol {
+
+			&:first-child {
+				margin-top: 1em;
+			}
+
+			&:last-child {
+				margin-bottom: 1em;
+			}
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	ul {
+
+		li {
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: .5em;
+				left: 1.7rem;
+				width: 6px;
+				height: 6px;
+				background: $color-third;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	ol {
+		counter-reset: cnt;
+
+		li {
+			counter-increment: cnt;
+
+			&::before {
+				content: counter(cnt) '.';
+				position: absolute;
+				top: 0;
+				left: 1.7rem;
+				color: $color-third;
+				font-weight: normal;
+			}
+		}
+	}
+
 	&_colored {
 
 		p {
@@ -63,6 +138,102 @@ $name: text;
 
 				&::first-letter {
 					color: $color-third-light;
+				}
+			}
+		}
+
+		ul {
+
+			li {
+
+				&:nth-child(5n+1) {
+
+					&::before {
+						background-color: $color-sixth;
+					}
+				}
+
+				&:nth-child(5n+2) {
+
+					&::before {
+						background-color: $color-eighth-dark;
+					}
+				}
+
+				&:nth-child(5n+3) {
+
+					&::before {
+						background-color: $color-fifth;
+					}
+				}
+
+				&:nth-child(5n+4) {
+
+					&::before {
+						background-color: $color-seventh;
+					}
+				}
+
+				&:nth-child(5n+5) {
+
+					&::before {
+						background-color: $color-fourth-dark;
+					}
+				}
+
+				&:nth-child(5n+6) {
+
+					&::before {
+						background-color: $color-third-light;
+					}
+				}
+			}
+		}
+
+		ol {
+
+			li {
+
+				&:nth-child(5n+1) {
+
+					&::before {
+						color: $color-sixth;
+					}
+				}
+
+				&:nth-child(5n+2) {
+
+					&::before {
+						color: $color-eighth-dark;
+					}
+				}
+
+				&:nth-child(5n+3) {
+
+					&::before {
+						color: $color-fifth;
+					}
+				}
+
+				&:nth-child(5n+4) {
+
+					&::before {
+						color: $color-seventh;
+					}
+				}
+
+				&:nth-child(5n+5) {
+
+					&::color {
+						color: $color-fourth-dark;
+					}
+				}
+
+				&:nth-child(5n+6) {
+
+					&::before {
+						color: $color-third-light;
+					}
 				}
 			}
 		}
