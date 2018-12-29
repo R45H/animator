@@ -1,15 +1,14 @@
 mixin select(data, opts)
 	.select(
 		class= attributes.class
-		data-modal-title= opts && opts.modalTitle || null
-		data-modal-btn= opts && opts.modalBtn || null
+		class= opts && opts.bindSetter ? 'js-select-bind-setter' : ''
+		class= opts && opts.bindGetter ? 'js-select-bind-getter' : ''
+		data-getter= opts && opts.bindGetter || null
 	)
-		select.select__origin(
-			multiple= attributes.class && ~attributes.class.indexOf('select_multiply') ? true : null
-		)
+		select.select__origin
 
 			if opts && opts.title
 				option(disabled selected)= opts.title
 
 			each val in data
-				option= val
+				option(value= val)= val

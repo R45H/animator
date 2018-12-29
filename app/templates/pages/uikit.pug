@@ -587,3 +587,29 @@ include ../mixins/file-avatar
 			.tab-slide__item.tab-slide__item_hidden(data-tab-slide-target='tabSlide3')
 				a.tab-slide__link(href='#' data-tab-slide-link='tabSlide1') .tab-slide LinkTo1
 				a.tab-slide__link(href='#' data-tab-slide-link='tabSlide2') .tab-slide LinkTo2
+
+.row.main__separator
+	.col-12
+
+		.js-select-bind-data(
+			data-setter='Санкт-Петербург'
+			data-getter='getter1'
+			data-items='{"key1": "MetroSpb1", "key2": "MetroSpb2", "key3": "MetroSpb3"}'
+		)
+
+		.js-select-bind-data(
+			data-setter='Москва'
+			data-getter='getter1'
+			data-items='{"key1": "MetroMsc1", "key2": "MetroMsc2", "key3": "MetroMsc3"}'
+		)
+
+		.row
+			.col-4
+				+select(select, {
+					bindSetter: true
+				})
+			.col-4
+				+select(select_2, {
+					title: '12345',
+					bindGetter: 'getter1'
+				})

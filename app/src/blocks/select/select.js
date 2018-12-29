@@ -56,6 +56,8 @@ $selects.each(function() {
 		// Действия при смене значения
 		change: function() {
 
+			$thisNative.trigger('change');
+
 			/* Установка нужных стилей для светлого селекта */
 			if (!$thisBlock.hasClass(classLight)) return;
 			if ($thisBlock.hasClass(classLightSelected)) return;

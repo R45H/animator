@@ -52,6 +52,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/file-avatar/file-avatar.js'
 	}());
+	(function() {
+		//=require 'blocks/js-select-bind.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

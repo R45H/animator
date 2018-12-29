@@ -224,7 +224,7 @@ $name: text;
 
 				&:nth-child(5n+5) {
 
-					&::color {
+					&::before {
 						color: $color-fourth-dark;
 					}
 				}
