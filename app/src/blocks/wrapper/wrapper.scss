@@ -131,8 +131,7 @@ $name: wrapper;
 				// =====
 
 				&__tab-item-wrap {
-					flex-direction: row;
-					flex-wrap: wrap;
+					flex-flow: row wrap;
 				}
 
 				&__tab-item {

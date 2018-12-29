@@ -129,6 +129,8 @@ $blocks.each(function() {
 
 			$tags = $block.find('.' + classBlock + '__tag');
 		});
+
+		return false;
 	});
 	/* ===== */
 
@@ -147,13 +149,15 @@ $blocks.each(function() {
 function appendTag($wrap, text) {
 	var
 		newTag = '' +
-			'<div class="cloud__tag">' +
-				'<div class="cloud__tag-text">' + text + '</div>' +
-				'<div class="cloud__tag-close">' +
-					'<svg class="cloud__tag-close-icon">' +
+			'<div class="cloud-item cloud__tag">' +
+				'<div class="cloud-item__text-wrap">' +
+					'<div class="cloud-item__text cloud__tag-text">' + text + '</div>' +
+				'</div>' +
+				'<a href="#" class="cloud-item__close cloud__tag-close">' +
+					'<svg class="cloud-item__close-icon">' +
 						'<use xlink:href="img/sprite.svg#svg-plus"></use>' +
 					'</svg>' +
-				'</div>' +
+				'</a>' +
 			'</div>';
 
 	$wrap

@@ -18,6 +18,7 @@ include ../mixins/fancybox
 include ../mixins/check
 include ../mixins/radio
 include ../mixins/file-img
+include ../mixins/cloud-item
 include ../mixins/cloud
 include ../mixins/file-avatar
 
@@ -197,6 +198,30 @@ include ../mixins/file-avatar
 		button.btn-close.btn-close_light
 	.col-2.main__bg_black
 		button.btn-close.btn-close_fill
+
+.row.main__separator
+	.col-2
+		+cloud-item({
+			text: '.cloud-item'
+		})
+	.col-2
+		+cloud-item({
+			link: '#',
+			text: '.cloud-item'
+		})
+
+	.col-4
+		+cloud-item({
+			link: '#',
+			text: '.cloud-item.cloud-item_no-close',
+			noClose: true
+		})
+	.col-4
+		+cloud-item({
+			link: '#',
+			text: '.cloud-item.cloud-item_close-only',
+			closeOnly: true
+		})
 
 .row.main__separator
 	.col-4

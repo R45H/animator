@@ -1,0 +1,18 @@
+include ../mixins/global
+
+mixin cloud-item(data)
+	.cloud-item(
+		class= data.noClose ? 'cloud-item_no-close' : ''
+		class= data.closeOnly ? 'cloud-item_close-only' : ''
+	)
+
+		+g-tag(data.link ? 'a' : '')(
+			class= 'cloud-item__text-wrap'
+			href= data.link
+		)
+			.cloud-item__text= data.text
+
+		if !data.noClose
+			a(href='#').cloud-item__close
+				svg.cloud-item__close-icon
+					use(xlink:href="img/sprite.svg#svg-plus")

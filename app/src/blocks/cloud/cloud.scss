@@ -15,48 +15,7 @@ $name: cloud;
 	}
 
 	&__tag {
-		@extend .input;
-		color: $color-gray-dark;
-		padding: 5px 30px 5px 10px;
-		cursor: default;
 		margin: 10px 5px;
-		position: relative;
-		width: auto;
-		user-select: none;
-	}
-
-	&__tag-text {
-		word-break: break-word;
-	}
-
-	&__tag-close {
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100%;
-		width: 30px;
-		cursor: pointer;
-		overflow: hidden;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		fill: $color-gray-dark;
-
-		&:hover {
-			fill: $color-second;
-		}
-
-		&:active {
-			fill: $color-second-active;
-		}
-	}
-
-	&__tag-close-icon {
-		@extend %transition;
-		transform: rotate(45deg);
-		width: 50%;
-		height: 50%;
 	}
 
 	&__input-wrap {

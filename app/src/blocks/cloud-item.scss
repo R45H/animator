@@ -1,0 +1,122 @@
+$name: cloud-item;
+
+.#{$name} {
+	position: relative;
+	width: auto;
+	display: inline-block;
+
+	&__text-wrap {
+		@extend .input;
+		color: $color-gray-dark;
+		padding: 5px 30px 5px 10px;
+		user-select: none;
+
+		&:hover,
+		&:focus,
+		&:active {
+			border-color: $color-main-light;
+		}
+	}
+
+	&__text {
+		word-break: break-word;
+	}
+
+	&__close {
+		@extend %transition;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 30px;
+		cursor: pointer;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		fill: $color-gray-dark;
+
+		&:hover {
+			fill: $color-second;
+		}
+
+		&:active {
+			fill: $color-second-active;
+		}
+	}
+
+	&__close-icon {
+		transform: rotate(45deg);
+		width: 50%;
+		height: 50%;
+	}
+
+	&_no-close {
+
+		.#{$name} {
+			// =====
+
+			&__text-wrap {
+				padding-right: 10px;
+			}
+		}
+	}
+
+	&_close-only {
+
+		.#{$name} {
+			// =====
+
+			&__text-wrap {
+				padding: 14px;
+			}
+
+			&__text {
+				display: none;
+			}
+		}
+
+		&:hover,
+		&:focus {
+
+			.#{$name} {
+				// =====
+
+				&__text-wrap {
+					transition: none;
+					border-color: $color-second-light;
+				}
+			}
+		}
+
+		&:active {
+
+			.#{$name} {
+				// =====
+
+				&__text-wrap {
+					transition: none;
+					border-color: $color-second-light-active;
+				}
+			}
+		}
+	}
+}
+
+a.#{$name} {
+
+	&__text-wrap {
+
+		&:hover,
+		&:focus {
+			color: $color-second-light;
+			border-color: currentColor;
+		}
+
+		&:active {
+			color: $color-second-light-active;
+			border-color: currentColor;
+		}
+	}
+}
