@@ -74,7 +74,7 @@ $selects.each(function() {
 				selectTop = $thisBlock.offset().top,
 				selectHeight = $thisBlock.outerHeight();
 
-			if (selectWidth !== popupWidth) {
+			if (selectWidth !== popupWidth && selectWidth + 2 > popupWidth) {
 				$thisPopup.outerWidth(selectWidth + 'px');
 			}
 
