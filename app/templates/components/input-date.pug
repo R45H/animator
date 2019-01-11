@@ -1,0 +1,6 @@
+include ../mixins/svg
+
+mixin input-date(data)
+	.input-date
+		input.input.input-date__input(type='text' placeholder='Выберите дату')
+		+svg('calendar', 'input-date__btn')

@@ -511,6 +511,22 @@ $name: wrapper;
 					color: $color-third-light;
 				}
 			}
+
+			&__input-date {
+
+				.input-date__btn {
+					fill: $color-third;
+
+					&:hover,
+					&:focus {
+						fill: $color-second;
+					}
+
+					&:active {
+						fill: $color-second-active;
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -831,6 +847,22 @@ $name: wrapper;
 
 				&::after {
 					color: $color-fourth;
+				}
+			}
+
+			&__input-date {
+
+				.input-date__btn {
+					fill: $color-fourth-dark;
+
+					&:hover,
+					&:focus {
+						fill: $color-second;
+					}
+
+					&:active {
+						fill: $color-second-active;
+					}
 				}
 			}
 		}
@@ -1155,6 +1187,22 @@ $name: wrapper;
 					color: $color-fifth;
 				}
 			}
+
+			&__input-date {
+
+				.input-date__btn {
+					fill: $color-fifth;
+
+					&:hover,
+					&:focus {
+						fill: $color-second;
+					}
+
+					&:active {
+						fill: $color-second-active;
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -1475,6 +1523,22 @@ $name: wrapper;
 
 				&::after {
 					color: $color-sixth-light;
+				}
+			}
+
+			&__input-date {
+
+				.input-date__btn {
+					fill: $color-sixth;
+
+					&:hover,
+					&:focus {
+						fill: $color-second;
+					}
+
+					&:active {
+						fill: $color-second-active;
+					}
 				}
 			}
 		}
@@ -1799,6 +1863,22 @@ $name: wrapper;
 					color: $color-seventh;
 				}
 			}
+
+			&__input-date {
+
+				.input-date__btn {
+					fill: $color-seventh;
+
+					&:hover,
+					&:focus {
+						fill: $color-second;
+					}
+
+					&:active {
+						fill: $color-second-active;
+					}
+				}
+			}
 		}
 
 		span.#{$name} {
@@ -2119,6 +2199,22 @@ $name: wrapper;
 
 				&::after {
 					color: $color-eighth;
+				}
+			}
+
+			&__input-date {
+
+				.input-date__btn {
+					fill: $color-eighth-dark;
+
+					&:hover,
+					&:focus {
+						fill: $color-second;
+					}
+
+					&:active {
+						fill: $color-second-active;
+					}
 				}
 			}
 		}

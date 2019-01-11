@@ -14,6 +14,9 @@ $(function() {
 		//=require 'blocks/date/date.js'
 	}());
 	(function() {
+		//=require 'blocks/input-date/input-date.js'
+	}());
+	(function() {
 		//=require 'blocks/slider/slider.js'
 	}());
 	(function() {
