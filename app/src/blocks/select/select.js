@@ -71,8 +71,8 @@ $selects.each(function() {
 				$thisPopup = $('#' + $thisNative.attr('id') + '-menu'), // Выпадающий список текущего селекта
 				selectWidth = $thisBlock[0].getBoundingClientRect().width, // Ширина селекта
 				popupWidth = $thisPopup[0].getBoundingClientRect().width, // Ширина выпадающего списка
-				selectTop = $thisBlock.offset().top,
-				selectHeight = $thisBlock.outerHeight();
+				selectTop = $thisBlock[0].getBoundingClientRect().top,
+				selectHeight = $thisBlock[0].getBoundingClientRect().height;
 
 			if (selectWidth !== popupWidth && selectWidth + 2 > popupWidth) {
 				$thisPopup.outerWidth(selectWidth + 'px');
@@ -81,7 +81,7 @@ $selects.each(function() {
 			if (window.devicePixelRatio > 1) {
 				$thisPopup
 					.parent()
-					.css('top', selectTop + selectHeight - .1 + 'px');
+					.css('top', selectTop + selectHeight + 'px');
 			}
 		}
 	});
