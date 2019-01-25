@@ -22,10 +22,10 @@ $blocks.each(function() {
 			file = inputFiles[0]; // Картинка
 
 		reader.onload = function(e) {
-			$block.addClass(classBlock + '_selected');
 			$link.attr('href', e.target.result);
-			$img
-				.css('background-image', 'url(' + e.target.result + ')')
+			$img.css('background-image', 'url(' + e.target.result + ')');
+			$block
+				.addClass(classBlockSelected)
 				.trigger('added.custom.fileavatar');
 		};
 
@@ -42,8 +42,7 @@ $blocks.each(function() {
 		$link.attr('href', '#');
 		$img.css('background-image', '');
 		$block
-			.removeClass(classBlock + '_selected')
-			.css('background-image', '')
+			.removeClass(classBlockSelected)
 			.trigger('removed.custom.fileavatar');
 	});
 	/* ===== */

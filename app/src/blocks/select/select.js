@@ -48,7 +48,7 @@ $selects.each(function() {
 
 			/* Установка нужных стилей для светлого селекта без тайтла */
 			if (!$thisBlock.hasClass(classLight)) return;
-			if ($thisNative.find('option').first().attr('disabled')) return;
+			if ($thisNative.find('option').first().attr('selected') && $thisNative.find('option').first().attr('disabled')) return;
 			$thisBlock.addClass(classLightSelected);
 			/* ===== */
 		},
