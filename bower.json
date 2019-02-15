@@ -10,7 +10,7 @@
 	"dependencies": {
 		"bootstrap": "v4.0.0-alpha.6",
 		"fontawesome": "4.*",
-		"jquery": "2.*",
+		"jquery": "3.*",
 		"normalize-css": "^7.0.0",
 		"slick-carousel": "^1.8.0",
 		"svg4everybody": "^2.1.9"
