@@ -2239,4 +2239,342 @@ $name: wrapper;
 			}
 		}
 	}
+
+	&_color_ninth {
+
+		.#{$name} {
+			// =====
+
+			&__header {
+
+				&::after {
+					background-color: $color-ninth;
+				}
+			}
+
+			&__text {
+				color: $color-ninth;
+			}
+
+			&__fill {
+				fill: $color-ninth;
+			}
+
+			&__link {
+				fill: $color-ninth;
+
+				&.link_color_1 {
+					color: $color-ninth;
+					border-color: $color-ninth;
+
+					&:hover {
+						@extend a:not([class]):hover;
+					}
+
+					&:active {
+						@extend a:not([class]):active;
+					}
+				}
+
+				&:hover {
+					@extend .link_icon_before:hover;
+				}
+
+				&:active {
+					@extend .link_icon_before:active;
+				}
+			}
+
+			&__link-line {
+				color: $color-ninth;
+
+				&.tab__link_active {
+					@extend .tab__link_active;
+				}
+
+				&:hover {
+					@extend .link-line:hover;
+				}
+
+				&:active {
+					@extend .link-line:active;
+				}
+			}
+
+			&__star {
+				color: $color-ninth;
+				stroke: $color-ninth;
+
+				&:hover {
+					@extend .star:hover;
+				}
+
+				&:active {
+					@extend .star:active;
+				}
+
+				&.star {
+					// =====
+
+					&_fill {
+						fill: $color-ninth;
+
+						&:hover {
+							@extend .star:hover;
+						}
+
+						&:active {
+							@extend .star:active;
+						}
+					}
+				}
+			}
+
+			&__tags {
+
+				.tags {
+					// =====
+
+					&__outer {
+						fill: $color-ninth;
+
+						&:hover {
+							@extend .tags__outer:hover;
+						}
+
+						&:active {
+							@extend .tags__outer:active;
+						}
+					}
+				}
+
+				&.tags_color_gray {
+
+					.tags {
+						// =====
+
+						&__outer {
+							fill: $color-ninth;
+							color: $color-ninth;
+
+							&:hover {
+								@extend .tags__outer:hover;
+							}
+
+							&:active {
+								@extend .tags__outer:active;
+							}
+						}
+					}
+				}
+			}
+
+			&__pagination {
+
+				span.pagination {
+					// =====
+
+					&__num-text {
+						color: $color-ninth;
+					}
+				}
+			}
+
+			&__news {
+
+				.news {
+					// =====
+
+					&__img {
+
+						&::after {
+							background-color: $color-ninth;
+						}
+					}
+
+					&__title {
+						color: $color-ninth;
+					}
+				}
+			}
+
+			&__tab-btn {
+
+				&_active {
+					color: $color-ninth;
+				}
+			}
+
+			&__btn {
+				color: $color-ninth;
+
+				&:hover {
+					@extend .btn:hover;
+				}
+
+				&:active {
+					@extend .btn:active;
+				}
+
+				&.btn_fill {
+					@extend .btn_fill;
+					background: $color-ninth;
+					border-color: $color-ninth;
+				}
+			}
+
+			&__check {
+
+				.check {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									color: $color-ninth;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__radio {
+
+				.radio {
+					// =====
+
+					&__input {
+
+						&:checked {
+
+							+ label {
+
+								&::before {
+									background: $color-ninth;
+								}
+
+								&:hover {
+
+									&::before {
+										color: $color-second;
+									}
+								}
+
+								&:active {
+
+									&::before {
+										color: $color-second-active;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&__banner {
+
+				&::before {
+					color: $color-ninth;
+				}
+
+				.banner {
+
+					&__text {
+						background-color: rgba($color-ninth, .85);
+					}
+				}
+
+				&.banner {
+
+					&_fog {
+
+						&::before,
+						&::after {
+							background-color: $color-ninth;
+						}
+
+						.banner {
+
+							&__text {
+								background-color: transparent;
+							}
+						}
+					}
+				}
+			}
+
+			&__card {
+
+				.card__img-link {
+
+					&::before {
+						color: $color-ninth;
+					}
+				}
+			}
+
+			&__fancybox {
+
+				&::after {
+					color: $color-ninth;
+				}
+			}
+
+			&__input-date {
+
+				.input-date__btn {
+					fill: $color-ninth;
+
+					&:hover,
+					&:focus {
+						fill: $color-second;
+					}
+
+					&:active {
+						fill: $color-second-active;
+					}
+				}
+			}
+		}
+
+		span.#{$name} {
+			// =====
+
+			&__link {
+
+				&.link_color_1 {
+
+					&:hover,
+					&:active {
+						color: $color-ninth;
+					}
+				}
+
+				&:hover,
+				&:active {
+					fill: $color-ninth;
+				}
+			}
+		}
+	}
 }
