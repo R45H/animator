@@ -16,11 +16,12 @@ var
 $selects.each(function() {
 	var
 		$thisNative = $(this), // Нативный селект
-		values = [], // Значения активных option селекта
+		values = [], // Значения option селекта
 		$thisBlock = $thisNative.closest('.' + classBlock), // Контейнер селекта
 		$thisWrap = $thisBlock.find('.' + classBlock + '__current'), // Внутренний контейнер селекта
 		modalTitleText = $thisBlock.attr('data-modal-title'), // Текст для вставки в заголовок модалки
-		modalBtnText = $thisBlock.attr('data-modal-btn'); // Текст для вставки в кнопку модалки
+		modalBtnText = $thisBlock.attr('data-modal-btn'), // Текст для вставки в кнопку модалки
+		selectedCount; // Количество выбранных элементов селекта
 
 	/* Добавление иконок */
 	$thisWrap.append('' +
@@ -34,26 +35,27 @@ $selects.each(function() {
 	/* ===== */
 
 	/* Начальное заполнение селекта */
-	if ($thisBlock.hasClass(classInputs)) {
-		$thisNative
-			.find('input[type="hidden"][value="Y"]:not(:disabled)')
-			.each(function() {
-				values.push($(this).attr('data-title'));
-			});
-	} else {
-		$thisNative
-			.find('option:selected:not(:disabled)')
-			.each(function() {
-				values.push($(this).text());
-			});
-	}
+	updateValues();
 
-	if (values.length) {
+	selectedCount = values.filter(function(item) {
+		return item.selected;
+	}).length;
+
+	if (selectedCount) {
 		$thisBlock
 			.attr('data-values', JSON.stringify(values))
 			.addClass(classReady)
 			.find('.' + classBlock + '__text')
-			.text(values.join(', '));
+			.text(
+				values
+					.filter(function(item) {
+						return item.selected;
+					})
+					.map(function(item) {
+						return item.text;
+					})
+					.join(', ')
+			);
 
 		/* Установка нужных стилей для светлого селекта без тайтла */
 		if ($thisBlock.hasClass(classLight)) {
@@ -69,31 +71,11 @@ $selects.each(function() {
 
 	/* Обработка клика по селекту */
 	$thisWrap.on('click', function() {
-		var
-			count = 1, // Счётчик для установки ID чекбоксам
-			$options, // Элементы селекта
-			$optionsSelected, // Выбранные элементы селекта
-			currentValues = []; // Выбранные ранее значения для этого селекта
+		var count = 1; // Счётчик для установки ID чекбоксам
 
 		$thisBlock.addClass(classOpened);
 
-		/* Сбор ранее выбранных значений в массив */
-		if ($thisBlock.hasClass(classInputs)) {
-			$options = $thisNative.find('input[type="hidden"]:not(:disabled)');
-			$optionsSelected = $options.filter('[value="Y"]');
-
-			$optionsSelected.each(function() {
-				currentValues.push($(this).attr('data-title'));
-			});
-		} else {
-			$options = $thisNative.find('option:not(:disabled)');
-			$optionsSelected = $options.filter(':selected');
-
-			$optionsSelected.each(function() {
-				currentValues.push($(this).text());
-			});
-		}
-		/* ===== */
+		updateValues();
 
 		/* Установка текста заголовка и кнопки. Удаление старых чекбоксов */
 		$modalTitle.text(modalTitleText);
@@ -101,41 +83,49 @@ $selects.each(function() {
 		$modalValuesWrap.html('');
 		/* ===== */
 
-		$options.each(function() {
-			var
-				$thisOption = $(this), // Текущий option
-				optionValue, // Значение текущего option
-				isChecked = false; // Флаг активного чекбокса
-
-			if ($thisBlock.hasClass(classInputs)) {
-				optionValue = $thisOption.attr('data-title');
-			} else {
-				optionValue = $thisOption.text();
-			}
-
-			/* Установка чекбокса в активное состояние */
-			if (currentValues.length) {
-
-				for (var i = 0; i < currentValues.length; i++) {
-					if (currentValues[i] == optionValue) {
-						isChecked = true;
-					}
-				}
-			}
-			/* ===== */
+		$.each(values, function(i, item) {
 
 			/* Запись чекбокса в модалку */
 			$modalValuesWrap.append('' +
 				'<div class="col-12">' +
 					'<div class="check check_fat">' +
-						'<input class="check__input" id="modalSelectItem-' + count + '" type="checkbox" ' + (isChecked ? 'checked' : '') + '>' +
-						'<label class="check__label" for="modalSelectItem-' + count++ + '">' + optionValue + '</label>' +
+						'<input class="check__input" id="modalSelectItem-' + count + '" type="checkbox" ' + (item.selected ? 'checked' : '') + '>' +
+						'<label class="check__label" for="modalSelectItem-' + count++ + '" data-value="' + item.value + '">' + item.text + '</label>' +
 					'</div>' +
 				'</div>'
 			);
 			/* ===== */
 		});
 	});
+	/* ===== */
+
+	/* Функция обновления values */
+	function updateValues() {
+
+		values = [];
+
+		if ($thisBlock.hasClass(classInputs)) {
+			$thisNative
+				.find('input[type="hidden"]:not(:disabled)')
+				.each(function() {
+					values.push({
+						text: $(this).attr('data-title'),
+						value: $(this).val(),
+						selected: $(this).val() === 'Y'
+					});
+				});
+		} else {
+			$thisNative
+				.find('option:not(:disabled)')
+				.each(function() {
+					values.push({
+						text: $(this).text(),
+						value: $(this).val(),
+						selected: $(this).prop('selected')
+					});
+				});
+		}
+	}
 	/* ===== */
 });
 
@@ -150,8 +140,9 @@ $modalBtn.on('click', function(e) {
 		$optionsSelected, // Выбранные элементы селекта
 		$selectTitle, // Элемент, содержащий заголовок селекта
 		selectTitle, // Заголовок селекта
-		$selectedItems = $modalValuesWrap.find('.check__input').filter(':checked'), // Выборка активных чекбоксов
-		values = []; // Значения активных чекбоксов
+		$items = $modalValuesWrap.find('.check__input'), // Выборка чекбоксов
+		values = [], // Значения чекбоксов
+		selectedCount;
 
 	/* Выборка элементов текущего селекта */
 	if ($currentSelect.hasClass(classInputs)) {
@@ -168,44 +159,74 @@ $modalBtn.on('click', function(e) {
 	/* ===== */
 
 	/* Заполнение массива значениями */
-	$selectedItems.each(function() {
-		values.push($(this).next().text());
-	});
+	if ($currentSelect.hasClass(classInputs)) {
+		$items.each(function() {
+			values.push({
+				text: $(this).next().text(),
+				value: $(this).prop('checked') ? 'Y' : '',
+				selected: $(this).prop('checked')
+			});
+		});
+	} else {
+		$items.each(function() {
+			values.push({
+				text: $(this).next().text(),
+				value: $(this).next().attr('data-value'),
+				selected: $(this).prop('checked')
+			});
+		});
+	}
 	/* ===== */
+
+	selectedCount = values.filter(function(item) {
+		return item.selected;
+	}).length;
 
 	/* Обновление значений текущего селекта */
 	$currentSelect.attr('data-values', JSON.stringify(values));
 	/* ===== */
 
 	/* Обработка селекта в зависимости от того, заполнен он значениями или нет */
-	if (values.length) {
+	if (selectedCount) {
 		$currentSelect
 			.addClass(classReady)
 			.find('.' + classBlock + '__text')
-			.text(values.join(', '));
+			.text(
+				values
+					.filter(function(item) {
+						return item.selected;
+					})
+					.map(function(item) {
+						return item.text;
+					})
+					.join(', ')
+			);
 
 		$options.each(function() {
 			var
 				$thisOption = $(this),
-				thisText;
+				thisValue;
 
 			if ($currentSelect.hasClass(classInputs)) {
-				thisText = $thisOption.attr('data-title');
+				thisValue = $thisOption.attr('data-title');
 				$thisOption.attr('value', null);
-			} else {
-				thisText = $thisOption.text();
-				$thisOption.prop('selected', false);
-			}
 
-			$.each(values, function(i, val) {
-				if (thisText == val) {
-					if ($currentSelect.hasClass(classInputs)) {
+				$.each(values, function(i, item) {
+					if (thisValue === item.text && item.selected) {
 						$thisOption.val('Y');
-					} else {
+					}
+				});
+
+			} else {
+				thisValue = $thisOption.val();
+				$thisOption.prop('selected', false);
+
+				$.each(values, function(i, item) {
+					if (thisValue === item.value && item.selected) {
 						$thisOption.prop('selected', true);
 					}
-				}
-			});
+				});
+			}
 		});
 
 		/* Установка нужных стилей для светлого селекта */
