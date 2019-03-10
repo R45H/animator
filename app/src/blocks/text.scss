@@ -21,7 +21,7 @@ $name: text;
 		margin: 1em 0;
 		list-style-type: none;
 
-		li {
+		> li {
 			margin: .5em 0;
 			padding-left: 4rem;
 			position: relative;
@@ -58,7 +58,7 @@ $name: text;
 
 	ul {
 
-		li {
+		> li {
 
 			&::before {
 				content: '';
@@ -76,7 +76,7 @@ $name: text;
 	ol {
 		counter-reset: cnt;
 
-		li {
+		> li {
 			counter-increment: cnt;
 
 			&::before {
@@ -144,7 +144,7 @@ $name: text;
 
 		ul {
 
-			li {
+			> li {
 
 				&:nth-child(5n+1) {
 
@@ -192,7 +192,7 @@ $name: text;
 
 		ol {
 
-			li {
+			> li {
 
 				&:nth-child(5n+1) {
 

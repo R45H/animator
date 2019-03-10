@@ -78,6 +78,22 @@ $name: modal;
 		width: 100%;
 	}
 
+	&__form-col {
+
+		@include screen-sm() {
+			column-count: 2;
+			display: block;
+		}
+
+		> div {
+
+			@include screen-sm() {
+				page-break-inside: avoid;
+				break-inside: avoid;
+			}
+		}
+	}
+
 	&__btn {
 
 		@include screen-sm(max) {
